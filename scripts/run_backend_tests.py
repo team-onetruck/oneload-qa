@@ -63,6 +63,11 @@ def main() -> int:
         and not (root / "oneload_agent/hangil_r2/__init__.py").is_file()
     ):
         ap.error("Backend now requires sibling oneload_agent; no Docker started")
+    if (
+        any(dep.startswith("hangil-rag") for dep in dependencies)
+        and not (root / "oneload-rag/src/hangil_rag/__init__.py").is_file()
+    ):
+        ap.error("Backend now requires sibling oneload-rag; no Docker started")
     sys.path.insert(0, str(repo))
     try:
         directory = (
@@ -134,7 +139,12 @@ def main() -> int:
             LANGSMITH_TRACING="false",
             LANGCHAIN_TRACING_V2="false",
             OPENAI_API_KEY="",
-            PYTHONPATH=os.pathsep.join((str(root / "oneload_agent"), str(repo))),
+            RAG_BACKEND="memory",
+            RAG_KNOWLEDGE_DIR=str(root / "oneload-rag/knowledge"),
+            RAG_INCLUDE_COMMUNITY="0",
+            PYTHONPATH=os.pathsep.join(
+                (str(root / "oneload_agent"), str(repo), str(root / "oneload-rag/src"))
+            ),
         )
         result = subprocess.run(
             [
@@ -215,7 +225,32 @@ def main() -> int:
             probe_log = probe.stdout.replace(password, "[LOCAL_TEST_PASSWORD]")
             (out / "integration-probe.log").write_text(probe_log, encoding="utf-8")
             print(probe_log)
-            return probe.returncode
+            if probe.returncode:
+                return probe.returncode
+            production_probe = subprocess.run(
+                [
+                    sys.executable,
+                    str(Path(__file__).with_name("probe_production_api.py")),
+                    "--project-root",
+                    str(root),
+                    "--output",
+                    str(out / "production-api-probe.json"),
+                ],
+                check=False,
+                cwd=repo,
+                env=env,
+                text=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+            )
+            production_log = production_probe.stdout.replace(
+                password, "[LOCAL_TEST_PASSWORD]"
+            )
+            (out / "production-api-probe.log").write_text(
+                production_log, encoding="utf-8"
+            )
+            print(production_log)
+            return production_probe.returncode
         return result.returncode
     finally:
         if created:

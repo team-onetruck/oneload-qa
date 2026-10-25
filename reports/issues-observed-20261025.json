@@ -1,0 +1,89 @@
+{
+  "scope": "Read-only GitHub issue snapshots. Comments are author reports, not R6 execution evidence. No issue state or comment was changed.",
+  "issues": [
+    {
+      "repository": "oneload-backend",
+      "issue_number": 2,
+      "url": "https://github.com/team-onetruck/oneload-backend/issues/2",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-24T16:21:40Z",
+      "closed_at": "2026-10-24T16:20:19Z",
+      "comment_urls": [
+        "https://github.com/team-onetruck/oneload-backend/issues/2#issuecomment-6386584127"
+      ],
+      "context": "Maintainer reports9067553 fixes changed-slot facts, protects PATCH facts and completed refunds; R6 independently revalidated API26 and Backend71."
+    },
+    {
+      "repository": "oneload-data",
+      "issue_number": 2,
+      "url": "https://github.com/team-onetruck/oneload-data/issues/2",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-23T08:04:35Z",
+      "closed_at": null,
+      "comment_urls": [
+        "https://github.com/team-onetruck/oneload-data/issues/2#issuecomment-6360392244"
+      ],
+      "context": "Previous R6 comment preserves Data#2 until real passage directions/gates are confirmed; latest local matrix still fails19/24."
+    },
+    {
+      "repository": "oneload_agent",
+      "issue_number": 7,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/7",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-23T08:04:21Z",
+      "closed_at": null,
+      "comment_urls": [
+        "https://github.com/team-onetruck/oneload_agent/issues/7#issuecomment-6360388291"
+      ],
+      "context": "Agent#7 retains frontend schema work after Backend intent/slots fix; Agent#5 has no response and remains open."
+    },
+    {
+      "repository": "oneload_agent",
+      "issue_number": 5,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/5",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-23T05:03:08Z",
+      "closed_at": null,
+      "comment_urls": [],
+      "context": "Agent#7 retains frontend schema work after Backend intent/slots fix; Agent#5 has no response and remains open."
+    },
+    {
+      "repository": "oneload-rag",
+      "issue_number": 3,
+      "url": "https://github.com/team-onetruck/oneload-rag/issues/3",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-23T11:07:42Z",
+      "closed_at": null,
+      "comment_urls": [
+        "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6356152143",
+        "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6357527651",
+        "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6363404853"
+      ],
+      "context": "R3 reports corpus growth shifted lexical boundary; proposes separating retrieval recall from answer support; not accepted automatically."
+    },
+    {
+      "repository": "oneload-qa",
+      "issue_number": 3,
+      "url": "https://github.com/team-onetruck/oneload-qa/issues/3",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-23T06:33:16Z",
+      "closed_at": null,
+      "comment_urls": [
+        "https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6355715939",
+        "https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6356090717",
+        "https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6357529653",
+        "https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6357819427",
+        "https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6358997912"
+      ],
+      "context": "R6 previously preserved threshold approval and deployed/default runtime conditions; latest local memory entrypoint check is separate from deployment."
+    }
+  ],
+  "observed_date_kst": "2026-10-25",
+  "recorded_at_kst": "2026-10-25T11:31:58.360989+09:00"
+}

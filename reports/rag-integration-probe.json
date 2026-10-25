@@ -1,25 +1,26 @@
 {
   "probe_version": "r6-boundary-v2",
-  "executed_at_utc": "2026-10-23T07:58:00.383683+00:00",
+  "executed_at_utc": "2026-10-25T02:29:38.361158+00:00",
   "commits": {
-    "oneload-app": "42455dc8e08cc34a596b58fc70431bd25c8dd5e5",
-    "oneload-backend": "b1aa5f58a3fe6045797e715f0e246439903fc319",
-    "oneload_agent": "eca420e9321272333db5c5499a2af752e1cb7b69",
-    "oneload-data": "9fc786eeb92fd3b79d5df0a56a2738f820e8a858",
-    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107"
+    "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+    "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+    "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+    "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+    "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
   },
   "map": {
     "source_repository": "oneload-data",
     "path": "maps/seoul-station.json",
     "map_id": "seoul-station",
-    "version": "2026-10-23.1",
-    "sha256": "13202e24774dbcaaa86c09962863be641758f8ef2d9767fd9bb6a81305296526"
+    "version": "2026-10-25.1",
+    "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
   },
   "scope": "Real Backend API + R2 modules; FakeLLM, rag knowledge, synthetic JPEG; disposable DB; explicit injection, not production defaults",
   "knowledge_profile": "rag",
   "rag": {
     "repository": "oneload-rag",
-    "commit": "8c8e902013fc12a1790762b38a34e282930cb667",
+    "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
     "working_tree_clean": true,
     "backend": "MemorySearch",
     "min_score": 0.25,
@@ -37,6 +38,7 @@
       "doc-fare-arex-express",
       "doc-fare-passes-cards",
       "doc-foreigner-transit-cards",
+      "doc-seoul-arex-transfer",
       "doc-seoul-help-desks",
       "doc-seoul-transit-basics",
       "doc-tmoney-card",
@@ -44,18 +46,19 @@
     ],
     "knowledge_sha256": {
       "README.md": "69b16ad3992eda254ad1c170b92f01b66366c95ccbae6ceb1829c3d5df4d26d4",
-      "doc-allstop-ticket.md": "8a4e6897ba5a4b926fc8c59dc49933591389ada2856129711c2080eb55a42ec2",
+      "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
       "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
       "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
       "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
-      "doc-community-seoul-station-tips.md": "8f0c9e74f39c8756d5996c01fad0db4e22741152526eb30606abc0b396394f1b",
-      "doc-deposit-refund.md": "717523cf79349a4955113a1bc3312d83d39fe588af2e80871726aee7d2679de1",
-      "doc-express-ticket.md": "44de8b84375a07b960d78a1166274aa0a760e439c349e3e59686b61a00770deb",
-      "doc-fare-arex-allstop.md": "06722c12bbfb00a33aa00a1dfc15395939e80b5356bc8f519ca869b7b036d8c5",
+      "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+      "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+      "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+      "doc-fare-arex-allstop.md": "8c4a751bb15521eaa4be205f1d9c055fffca51d699c5830775557b62e4c8db33",
       "doc-fare-arex-express.md": "6dc1ca6cc6c7d1e3cf8b9cfc192ca11cabb55effdc2e3107bdd00dc86a651ca7",
-      "doc-fare-passes-cards.md": "bc0d87a96b95de060189c3887fd7b06675542bbe03bb59ad369b22b9b7e83e67",
+      "doc-fare-passes-cards.md": "f05c5533036ade4159f7c373f377b5bab59809d0b6c72f4925322d19210ca699",
       "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
-      "doc-seoul-help-desks.md": "8a4c5828dc86e0da6e69f303fe6f71161c3cf29cf59623ee6634b10f9fe2ab00",
+      "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+      "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
       "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
       "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
       "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
@@ -66,13 +69,13 @@
       "src/hangil_rag/loader.py": "8b67ebe687d7ace619cbe7d874821c715e5bacf8c6c621a659a5b6b178575066",
       "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
       "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
-      "src/hangil_rag/search_memory.py": "1a9623ea63315e11759d797c13364d84179c8eea62af9e6e59fadb22d7615878",
+      "src/hangil_rag/search_memory.py": "5c13065a5c351b6a3786680baa133899b3aeae89feff04254da6abe245e53e8f",
       "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
     },
     "live_model_calls": 0,
     "live_embedding_calls": 0
   },
-  "runner_sha256": "3d0b3dca41bfb364289ebbc0e71a5f7e4f4016efdf62317827085f7b59ed8246",
+  "runner_sha256": "7c7c5ac06a2a97f5d3dcb2ce446b24b396f1f00092ca226c5c38e116640a5aa2",
   "rag_inputs_sha256": "e20f59ba94b507f8ce818b2ed0fd6d939d2bc39dd97b956326aa54c93a770aa1",
   "checks": [
     {
@@ -413,7 +416,7 @@
     },
     {
       "id": "API-26-plan-follows-reported-refund",
-      "passed": false,
+      "passed": true,
       "expected": {
         "http": 200,
         "refund_status": "REFUNDED",
@@ -421,12 +424,12 @@
       },
       "actual": {
         "http": 200,
-        "refund_status": "NOT_REFUNDED",
-        "unfinished_refund_steps": 1
+        "refund_status": "REFUNDED",
+        "unfinished_refund_steps": 0
       }
     }
   ],
-  "passed": 27,
+  "passed": 28,
   "total": 28,
   "production_ai_quality_measured": false
 }

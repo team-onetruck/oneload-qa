@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "observed_at_kst": "2026-10-23T16:53:44.562921+09:00",
-  "purpose": "Current Data/Backend review and complete boundary-v2 baseline; failures remain failures and observed CI is distinct from local tests.",
+  "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+  "purpose": "2026-10-25 takeover: latest main observations and actual fresh-clone FakeLLM/disposable-DB baseline; route failures and quality limitations preserved.",
   "qa": {
     "repository": "team-onetruck/oneload-qa",
     "directory": "qa",
     "url": "https://github.com/team-onetruck/oneload-qa.git",
     "revision": "self",
-    "code_base_commit": "b1efdff4c48a33f131badadb5e698b8a6086214b",
-    "note": "self is this review commit. Boundary probe v2 adds seven checks without changing frozen component/retrieval datasets. Complete baseline includes API-26 failure. Previous architecture review at b1efdff is historical."
+    "code_base_commit": "52883be4b7bf3450435083b86318ab1499229e61",
+    "note": "This local review commit includes runtime dependency repair, selected RAG source support, global entrypoint API and route gate. Frozen datasets unchanged."
   },
   "qa_baseline": "reports/baseline.json",
   "rag_issue_review_evidence": [
@@ -20,45 +20,45 @@
       "repository": "team-onetruck/oneload-app",
       "directory": "oneload-app",
       "url": "https://github.com/team-onetruck/oneload-app.git",
-      "observed_main_commit": "42455dc8e08cc34a596b58fc70431bd25c8dd5e5",
-      "qa_baseline_commit": "42455dc8e08cc34a596b58fc70431bd25c8dd5e5",
+      "observed_main_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+      "qa_baseline_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
       "rag_issue_review_commit": null,
-      "observed_at_kst": "2026-10-23T16:53:44.562921+09:00",
-      "review_evidence": "reports/data-backend-review-20261023.json",
-      "historical_review_evidence": "reports/architecture-review-20261023.json"
+      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "review_evidence": "reports/takeover-review-20261025.json",
+      "historical_review_evidence": "reports/data-backend-review-20261023.json"
     },
     {
       "repository": "team-onetruck/oneload-backend",
       "directory": "oneload-backend",
       "url": "https://github.com/team-onetruck/oneload-backend.git",
-      "observed_main_commit": "b1aa5f58a3fe6045797e715f0e246439903fc319",
-      "qa_baseline_commit": "b1aa5f58a3fe6045797e715f0e246439903fc319",
+      "observed_main_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+      "qa_baseline_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
       "rag_issue_review_commit": "a82b7befa6509c28c843a0dc84af46d75143a047",
-      "observed_at_kst": "2026-10-23T16:53:44.562921+09:00",
-      "review_evidence": "reports/data-backend-review-20261023.json",
-      "historical_review_evidence": "reports/architecture-review-20261023.json"
+      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "review_evidence": "reports/takeover-review-20261025.json",
+      "historical_review_evidence": "reports/data-backend-review-20261023.json"
     },
     {
       "repository": "team-onetruck/oneload_agent",
       "directory": "oneload_agent",
       "url": "https://github.com/team-onetruck/oneload_agent.git",
-      "observed_main_commit": "eca420e9321272333db5c5499a2af752e1cb7b69",
-      "qa_baseline_commit": "eca420e9321272333db5c5499a2af752e1cb7b69",
+      "observed_main_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+      "qa_baseline_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
       "rag_issue_review_commit": "250271edb6c50e8cc71cd1443143e94cb9191a74",
-      "observed_at_kst": "2026-10-23T16:53:44.562921+09:00",
-      "review_evidence": "reports/data-backend-review-20261023.json",
-      "historical_review_evidence": "reports/architecture-review-20261023.json"
+      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "review_evidence": "reports/takeover-review-20261025.json",
+      "historical_review_evidence": "reports/data-backend-review-20261023.json"
     },
     {
       "repository": "team-onetruck/oneload-data",
       "directory": "oneload-data",
       "url": "https://github.com/team-onetruck/oneload-data.git",
-      "observed_main_commit": "9fc786eeb92fd3b79d5df0a56a2738f820e8a858",
-      "qa_baseline_commit": "9fc786eeb92fd3b79d5df0a56a2738f820e8a858",
+      "observed_main_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+      "qa_baseline_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
       "rag_issue_review_commit": "606f6485e4e83cdf673e61b29fbd5458bb998bce",
-      "observed_at_kst": "2026-10-23T16:53:44.562921+09:00",
-      "review_evidence": "reports/data-backend-review-20261023.json",
-      "historical_review_evidence": "reports/architecture-review-20261023.json"
+      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "review_evidence": "reports/takeover-review-20261025.json",
+      "historical_review_evidence": "reports/data-backend-review-20261023.json"
     },
     {
       "repository": "team-onetruck/oneload-infra",
@@ -67,49 +67,68 @@
       "observed_main_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
       "qa_baseline_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
       "rag_issue_review_commit": null,
-      "observed_at_kst": "2026-10-23T16:53:44.562921+09:00",
-      "review_evidence": "reports/data-backend-review-20261023.json",
-      "historical_review_evidence": "reports/architecture-review-20261023.json"
+      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "review_evidence": "reports/takeover-review-20261025.json",
+      "historical_review_evidence": "reports/data-backend-review-20261023.json"
     },
     {
       "repository": "team-onetruck/oneload-rag",
       "directory": "oneload-rag",
       "url": "https://github.com/team-onetruck/oneload-rag.git",
-      "observed_main_commit": "8c8e902013fc12a1790762b38a34e282930cb667",
-      "qa_baseline_commit": null,
+      "observed_main_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+      "qa_baseline_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
       "rag_issue_review_commit": "f1ec584634cdbc2eca5da0e1aa8eeff13e13cfc0",
-      "observed_at_kst": "2026-10-23T16:53:44.562921+09:00",
-      "rag_profile_review_commit": "8c8e902013fc12a1790762b38a34e282930cb667",
-      "review_evidence": "reports/data-backend-review-20261023.json",
-      "retrieval_review_commit": "e6c03f242482151a69d00ce94056c502d724c205",
-      "historical_review_evidence": "reports/architecture-review-20261023.json"
+      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "rag_profile_review_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+      "review_evidence": "reports/takeover-review-20261025.json",
+      "retrieval_review_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+      "historical_review_evidence": "reports/data-backend-review-20261023.json"
     }
   ],
-  "updated_at_kst": "2026-10-23T17:01:17.053457+09:00",
+  "updated_at_kst": "2026-10-25T12:04:11.371645+09:00",
   "rag_profile_evidence": [
     "reports/rag-integration-probe.json",
-    "reports/rag-issue3-revalidation.json"
+    "reports/production-api-probe.json",
+    "reports/retrieval-exposed-20261025.json"
   ],
   "frontend_wiring_review": "reports/frontend-wiring-review.json",
-  "frontend_current_review": "reports/current-system-review-20261023.json",
+  "frontend_current_review": "reports/frontend-review-20261025.json",
   "rag_issue3_review": {
     "request_comment": "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6356152143",
     "freeze_commit": "7f41130e3d3bac6ebb340da31a71b0a3b45f2a4a",
-    "evidence": "reports/rag-issue3-revalidation.json",
-    "decision": "keep_open; fresh holdout top3 17/20, out-of-scope empty 17/20",
-    "protocol": "official-only MemorySearch min_score0.25 k3 relative0.5; no sweep"
+    "evidence": "reports/retrieval-exposed-20261025.json",
+    "decision": "keep_open; exposed v2 regression top3 17/20, out-of-scope empty15/20; no new holdout",
+    "protocol": "official-only MemorySearch min_score0.25 k3 relative0.5; no sweep",
+    "historical_pre_post_evidence": "reports/rag-issue3-revalidation.json"
   },
-  "current_update_review": "reports/data-backend-review-20261023.json",
-  "backend_deployed_agent_commit": "eca420e9321272333db5c5499a2af752e1cb7b69",
+  "current_update_review": "reports/takeover-review-20261025.json",
   "backend_development_agent_source": {
     "path": "../oneload_agent",
     "editable": true
   },
   "current_architecture": "docs/architecture-current-20261023.md",
-  "deployment_observation": {
+  "historical_deployment_observation": {
     "evidence": "reports/data-backend-server-readonly-20261023.json",
     "server_map_version": "2026-10-23.1",
     "repository_map_version": "2026-10-23.1",
     "note": "Latest Backend and re-run Agent workflows both deployed b1aa5f5/eca420e/9fc786e/42455dc; log observation plus public GET, not live-model acceptance."
+  },
+  "backend_deployed_agent_commit_historical": "eca420e9321272333db5c5499a2af752e1cb7b69",
+  "deployment_observation": {
+    "evidence": "reports/remote-ci-20261025.json",
+    "latest_deployment_success_verified": false,
+    "note": "App deploy cancelled; Backend/Agent deploy queued. Historical20261023 deployed SHAs are not re-labeled as current runtime."
+  },
+  "current_architecture_note": "Historical20261023 architecture; latest differences and verified scope in docs/handoff.md and reports/takeover-review-20261025.json",
+  "publication": {
+    "evidence": "reports/publication-20261025.json",
+    "account": "mootwo0202",
+    "validated_qa_commit": "6f0f815caedf32f986939e62a298c044fa1cb4e0",
+    "validated_tree": "885224fe7fc55699b52fa60ffba42c713943d094",
+    "repository": "team-onetruck/oneload-qa",
+    "branch": "qa/mootwo-takeover-20261025",
+    "pull_request": "https://github.com/team-onetruck/oneload-qa/pull/6",
+    "upstream_main_updated": false,
+    "server_context": "deployment server switched off; local verification only"
   }
 }

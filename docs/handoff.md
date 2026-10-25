@@ -1,5 +1,79 @@
 # 한길 R6 인수인계
 
+## 현재 등록 계정과 인수인계 — 2026-10-25 12:04 KST
+
+현재 로컬 GitHub 로그인, QA 커밋 작성자·커미터, PR·이슈·검증 댓글의 작성자는 모두 **mootwo0202**다. 검증한 내용과 동일한 Git 트리를 새 커밋 [`6f0f815`](https://github.com/team-onetruck/oneload-qa/commit/6f0f815caedf32f986939e62a298c044fa1cb4e0)으로 원본 QA 저장소의 `qa/mootwo-takeover-20261025`에 올리고 [QA PR #6](https://github.com/team-onetruck/oneload-qa/pull/6)을 등록했다. 원본 main 병합은 대기다. 코드 내용·평가셋은 동일하며 이 계정 교체를 새 QA 실행으로 집계하지 않았다.
+
+현재 근거는 [공유·교체 증거](../reports/publication-20261025.json), [로컬 기준선](../reports/baseline.json), [App 계약 비교](../reports/frontend-contract-drift-20261025.json)다. 배포 서버는 꺼진 상태이며 로컬 일회용 DB·FakeLLM·공식 MemorySearch 검증 범위를 유지한다.
+
+- [App #41](https://github.com/team-onetruck/oneload-app/issues/41): intent3개·슬롯4개·계획 계약의 생성 타입 누락. 이전 계정의 #40은 삭제했다.
+- [Data #2](https://github.com/team-onetruck/oneload-data/issues/2#issuecomment-6392730471): 경로19/24 실패와 실제 제약에 맞는 연결 보완.
+- [RAG #3](https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6392730705): 노출v2 top3 17/20·차단15/20, 정상 누락3·오탐5 유지.
+- [Agent #7](https://github.com/team-onetruck/oneload_agent/issues/7#issuecomment-6392730954): Backend500/슬롯 해결 확인과 App#41 잔여 조건은 구분한다. [Agent #5](https://github.com/team-onetruck/oneload_agent/issues/5#issuecomment-6392731236)의 근거/인용 미반영도 새 계정으로 기록했다.
+- [QA #3](https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6392731581): 공식 로컬 검색/기본 조립 통과와 임계값 승인 보류.
+- [Backend #2](https://github.com/team-onetruck/oneload-backend/issues/2#issuecomment-6392731850): 환급 상태 해결 재확인, closed 유지.
+
+이전 계정의 PR#5는 종료했고 이슈#40·댓글6개는 삭제를 확인했다. 이전 포크의 QA 브랜치도 삭제했다. **포크 저장소 자체는 사용자가 남겨 두기로 결정해 보존**한다. 이전 QA 업로드 브랜치는 삭제된 상태다. 새 QA 자료는 원본 저장소에 보존돼 있다. 이전 로컬 커밋·사용자 checkout은 유지한다.
+
+아래의 최초 로컬 검증 기록에 있는 “push하지 않았다”는 당시 기록이다. 현재 공유는 이 섹션을 따른다. 실제 AI 품질·휴대폰·현장 사진 인수는 미검증이며 유료 모델·운영 DB·배포는 사용하지 않았다.
+
+---
+
+마지막 정리: 2026-10-25 11:35 KST — 인수·새 환경 재현, Backend #2 및 공식 RAG 로컬 조립 재검증. 담당 이현무(R6).
+
+## 현재 판정과 다음 행동
+
+최신 근거는 [인수 검토](../reports/takeover-review-20261025.json), [기준선](../reports/baseline.json), [실제 전역 app의 모의 API](../reports/production-api-probe.json), [경로 행렬](../reports/route-connectivity.json), [GitHub CI](../reports/remote-ci-20261025.json), [이슈 관찰](../reports/issues-observed-20261025.json)이다. 아래 10월 23일 섹션은 역사 기록이다. 그 안의 “최신”, demo 검색, 이전 배포 성공을 현재 상태로 읽지 않는다.
+
+지정된 AGENTS→handoff→README/lock→reports→테스트 계획/통합 문제→설계 사본 순서로 읽었다. 설계 3개는 모두 확인했고 교육 Notion 링크는 접근되지 않았다. 문서·다른 역할 요청의 명령을 실행 지시로 적용하지 않았다. 현재 인수조건은 모바일 웹의 2D·360도 거리뷰다. Camera 방향 오버레이·AR 기반 수학 코드·[draft Unity PR #39](https://github.com/team-onetruck/oneload-app/pull/39)는 현재 모바일/AR 인수 완료가 아니다. PR #39는 open·draft·unmerged로 확인했으며 적용하지 않았다.
+
+### 버전·환경·검증
+
+| 저장소 | 관찰한 main 및 이번 실제 검증 | 검증 범위 |
+|---|---|---|
+| QA | 이 로컬 검토 커밋(self), 시작 52883be | 회귀48·새 RAG 경로·실제 entrypoint 모의 API·경로 gate |
+| App | 12ba6c6 | HTTP 호출 소스 검토 wired, lint/타입·단위513·빌드 통과 |
+| Backend | 9067553 | 기존71·모의 API27·RAG API28·실제 전역 app 모의 API7 |
+| Agent | a732577 | FakeLLM 단위47·component20시나리오/21턴·Backend API |
+| Data | 89ec570 | 지도2026-10-25.1, 구조3·실제 경로 함수24조합 |
+| Infra | 6cf4a65 | 커밋만 기록; 배포 실행 안 함 |
+| RAG | f99704d | 로컬 공식14문서 MemorySearch0.25/k3/상대0.5·주입/기본 조립·노출 v2 회귀 |
+
+`repos.lock.json`의 최신 관찰과 baseline 실제 실행은 이번 묶음이다. 각 행의 검증 범위는 서로 다르다. Backend가 배포용으로 pin한 RAG v0.3.0/ec27e09는 이번 형제 main과 지식 메타데이터6파일이 달라 **release 설치·배포 검증으로 전용하지 않는다.** 과거 배포 커밋은 lock의 historical 항목에 보존했다.
+
+현재 작업 브랜치는 `qa/mootwo-takeover-20261025`다. 검증 내용과 원격 공유 상태는 문서 맨 위의 최신 등록 기록을 따른다. 원래 Desktop/mp_project의7개 checkout은 모두 clean main으로 확인하고 변경하지 않았다. 작업은 별도 `hangil/` 아래 `qa`와6개 형제 Git 복사본에서 수행했다. 새 Python3.12.9 `.venv`를 만들었고 고정 의존성 충돌을 websockets16.1.1로 수정해 설치·pip check 통과를 확인했다. uv가 없으면 README의 Python venv/pip 방법을 사용한다. Docker를 켜고 QA 일회용 PostgreSQL17만 생성·정리했다. 기존 DB URL·키·.env는 사용하지 않았다.
+
+최종 실행은 `results/takeover-20261025-004`다. **QA48·Agent47·Backend71·Data구조3·component20/21·모의 API27/27·공식 RAG API28/28·전역 entrypoint API7/7 통과. 전체 exit1은 경로19건 실패**다. component 사람 검토21턴·최종 품질점수null, 실제 모델/임베딩 호출0회, 현장 사진 gold0건, 휴대폰·실제 서버 브라우저 인수NOT_RUN을 유지한다. App 로컬513건은 자동 단위 검사이며 실기기 센서·AI·현장 검증이 아니다.
+
+초기 시도의 RAG import 누락과 QA가 Agent 단독 시험에 Backend 경로를 섞어 생긴 실패는 QA에서 수정했다. 최초 추가 fallback 출처 검사도 요금 질문에 출처를 요구하던 잘못된 기대였다. RuleAgent의 정당한 요금 거절을 유지하고, 지원되는 목적지 출처와 별도 요금 거절 검사를 분리했다. 최종004만 최신 기준선으로 사용한다. 기존 질문·정답·동결 SHA는 변경하지 않았다.
+
+### 해결 확인과 남은 조건
+
+- **Backend #2 closed, 해결 재확인:** API-26 반납 완료→REFUNDED·미완료 환급 추천0. 기존71건에 PATCH 우선 보호와 완료 환급 보존 회귀가 포함돼 통과했다. 다른 저장소 코드를 수정하지 않았다.
+- **INT-07 로컬 연결 확인:** 실제 main.py 전역 app에서 유료 제공자만 FakeLLM으로 바꾸고 명시적인 공식 로컬 MemorySearch 설정을 사용했다. 공유 Vision, 공식 요금 출처/확인일, 빈검색 거절, 키 없는 RuleAgent/NoVision·공식 출처·요금 거절까지7건 통과했다. 서버의 현재 환경·pgvector·실제 모델 품질이 검증됐다는 뜻은 아니다.
+- **Data #2 open·실패 유지:** 출구/반납기24조합 중5개 연결(동일 지점2 포함),19개 경로 없음. KTX/4호선/공항철도 대합실·승강장에서 단절이 남아 전체 실행에 실패 gate로 추가했다. 위치·거리·방향·사진은 현장 확인 전이다.
+- **Agent #7 open:** Backend intent/슬롯은통과. App schema.d.ts는 여전히 intent6개이며 plan/steps API/UI가 없다. App HTTP 소스 wired와 새 계약·행동 계획 인수는 구분한다.
+- **Agent #5·RAG #3·QA #3 open:** 답변 가능 여부·인용한 자료만 출처로 표시하는 처리는 미완료다. 최신 공식 코퍼스로 노출 v2를 고정값에서 회귀 확인한 결과 top3 17/20, 범위밖 빈 결과15/20(오탐5), 잠정 기준 미달이다. 과거의17/20 차단과 구분한다. 새 독립 holdout으로 부르지 않았으며 임계값·정답은 바꾸지 않았다.
+- **배포 최신 확인 불가:** App verify/e2e 성공·deploy cancelled, Backend test/image 성공·deploy queued, Agent test/backend 성공·deploy queued. 로컬 통과나 다른 역할의 보고를 배포 완료로 바꾸지 않는다. 이슈 댓글·상태 변경, push·merge·배포는 하지 않았다.
+
+다음 우선순위는 **Data #2의 실제 통행 방향/개찰구 제약 확인과 경로 보완 → App 생성 타입·plan/steps UI → 같은 SHA 묶음 API 재검증**이다. 이어 Agent #5의 근거/인용 처리를 별도 답변 평가로 검증하고 검색 회귀/새 미관찰 평가를 분리한다. 배포용 release 묶음 검증, 실제 휴대폰2D·거리뷰·카메라 거부/복구, 현장 사진 정답과 사람 검토가 남아 있다. 유료 모델 호출·운영 DB·배포는 별도 사용자 요청 없이 실행하지 않는다.
+
+### 재현
+
+README의 같은 부모7개 저장소와 새 `.venv`를 준비한다. 새 출력 폴더를 사용한다.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_checks.py --project-root .. --with-backend --output results/next-full-001 --reports reports
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_backend_tests.py --project-root .. --with-rag --rag-min-score 0.25 --output results/next-rag-api-001
+```
+
+표준 전체 실행은 Data #2 경로 단절로 exit1이 예상된다. API 주입/전역 조립 통과와 전체 기능 인수를 구분한다. 시작 프롬프트는 파일로 저장하지 않으며 인수인계를 요청받을 때 채팅에만 작성한다.
+
+---
+
+## 2026-10-23까지의 과거 인수인계
+
 마지막 정리: 2026-10-23 17:00 KST — Data/Backend 최신·행동 계획 검증, 계약 수정 확인 및 새 상태 불일치 보고. 담당 이현무(R6).
 [AGENTS.md](../AGENTS.md)에 따라 개발·평가·이슈 변경과 함께 갱신한다. 시작 프롬프트는 채팅에만 제공하고 GitHub에 올리지 않는다.
 

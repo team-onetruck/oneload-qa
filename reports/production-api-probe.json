@@ -1,0 +1,162 @@
+{
+  "probe_version": "r6-production-entrypoint-v1",
+  "executed_at_kst": "2026-10-25T11:30:39.526600+09:00",
+  "commits": {
+    "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+    "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+    "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+    "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+    "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+  },
+  "map": {
+    "source_repository": "oneload-data",
+    "path": "maps/seoul-station.json",
+    "map_id": "seoul-station",
+    "version": "2026-10-25.1",
+    "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
+  },
+  "rag": {
+    "repository": "oneload-rag",
+    "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+    "working_tree_clean": true,
+    "backend": "MemorySearch",
+    "min_score": 0.25,
+    "k": 3,
+    "relative_cutoff": 0.5,
+    "scope_gate_min_coverage": 0.25,
+    "community": false,
+    "document_ids": [
+      "doc-allstop-ticket",
+      "doc-arex-train-types",
+      "doc-climate-card-short-term",
+      "doc-deposit-refund",
+      "doc-express-ticket",
+      "doc-fare-arex-allstop",
+      "doc-fare-arex-express",
+      "doc-fare-passes-cards",
+      "doc-foreigner-transit-cards",
+      "doc-seoul-arex-transfer",
+      "doc-seoul-help-desks",
+      "doc-seoul-transit-basics",
+      "doc-tmoney-card",
+      "doc-wowpass"
+    ],
+    "knowledge_sha256": {
+      "README.md": "69b16ad3992eda254ad1c170b92f01b66366c95ccbae6ceb1829c3d5df4d26d4",
+      "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+      "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+      "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+      "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+      "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+      "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+      "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+      "doc-fare-arex-allstop.md": "8c4a751bb15521eaa4be205f1d9c055fffca51d699c5830775557b62e4c8db33",
+      "doc-fare-arex-express.md": "6dc1ca6cc6c7d1e3cf8b9cfc192ca11cabb55effdc2e3107bdd00dc86a651ca7",
+      "doc-fare-passes-cards.md": "f05c5533036ade4159f7c373f377b5bab59809d0b6c72f4925322d19210ca699",
+      "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+      "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+      "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+      "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+      "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+      "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+    },
+    "code_sha256": {
+      "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+      "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+      "src/hangil_rag/loader.py": "8b67ebe687d7ace619cbe7d874821c715e5bacf8c6c621a659a5b6b178575066",
+      "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+      "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+      "src/hangil_rag/search_memory.py": "5c13065a5c351b6a3786680baa133899b3aeae89feff04254da6abe245e53e8f",
+      "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+    },
+    "live_model_calls": 0,
+    "live_embedding_calls": 0
+  },
+  "entrypoint_sha256": "75b12b65ff3b4c522d08e22ffa261e1b6728b6e858530102e5d7928c71c0c8a7",
+  "scope": "Actual global app; FakeLLM provider; forced local official MemorySearch; disposable DB. Not deployed runtime or AI quality.",
+  "checks": [
+    {
+      "id": "PROD-01-default-assembly",
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "passed": true
+    },
+    {
+      "id": "PROD-02-official-fare",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "PROD-03-shared-vision",
+      "expected": [
+        200,
+        "needs_confirmation",
+        true
+      ],
+      "actual": [
+        200,
+        "needs_confirmation",
+        true
+      ],
+      "passed": true
+    },
+    {
+      "id": "PROD-04-empty-search-control",
+      "expected": [
+        "cannot_answer",
+        []
+      ],
+      "actual": [
+        "cannot_answer",
+        []
+      ],
+      "passed": true
+    },
+    {
+      "id": "PROD-05-no-key-fallback",
+      "expected": [
+        "RuleAgent",
+        "NoVision"
+      ],
+      "actual": [
+        "RuleAgent",
+        "NoVision"
+      ],
+      "passed": true
+    },
+    {
+      "id": "PROD-06-fallback-official-sources",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "PROD-07-fallback-refuses-unverified-fare",
+      "expected": [
+        "cannot_answer",
+        []
+      ],
+      "actual": [
+        "cannot_answer",
+        []
+      ],
+      "passed": true
+    }
+  ],
+  "passed": 7,
+  "total": 7,
+  "real_model_calls": 0,
+  "real_embedding_calls": 0,
+  "deployed_runtime_verified": false,
+  "runner_sha256": "44eee1eb3c669b50c659466ed10e8277040783c59c3a42fe4d90f2ad8396948e"
+}

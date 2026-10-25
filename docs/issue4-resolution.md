@@ -1,5 +1,7 @@
 # QA #4: INT-06 오판 수정
 
+2026-10-25: App12ba6c6의 HTTP 단일 어댑터 호출 경로를 검토해 app-12ba6c6 profile을 추가했다. [검토 증거](../reports/frontend-review-20261025.json)는 소스 검토·로컬 단위513·빌드를 구분하며 실제 휴대폰/브라우저 인수는 NOT_RUN으로 유지한다.
+
 [QA #4](https://github.com/team-onetruck/oneload-qa/issues/4)는 mock 분기에 남은 `AI_DELAY_MS`·`SCENARIOS` 문자열로 실제 HTTP 화면 연결을 미연결 P0로 판정하던 문제다. 이 조건을 제거하고 검토한 호출 경로의 판정을 해당 런타임 소스에만 적용하도록 바꿨다.
 
 ## 판정 방식

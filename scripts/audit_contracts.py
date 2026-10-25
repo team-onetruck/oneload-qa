@@ -54,7 +54,11 @@ def main() -> int:
     ap.add_argument("--output", type=Path, required=True)
     args = ap.parse_args()
     root = args.project_root.resolve()
-    sys.path[:0] = [str(root / "oneload-backend"), str(root / "oneload_agent")]
+    sys.path[:0] = [
+        str(root / "oneload-backend"),
+        str(root / "oneload_agent"),
+        str(root / "oneload-rag/src"),
+    ]
     from app.ai import contracts as backend
     from app.ai.guard import guard
     from app.domain import localization as loc
@@ -201,11 +205,17 @@ def main() -> int:
             frontend,
         )
     production = probe_entrypoint(root / "oneload-backend/app/main.py")
+    local_wired = (
+        production["agent_vision_conditionally_wired"]
+        and production["official_memory_search_wired"]
+    )
     checks.append(
         {
             "id": "INT-07",
-            "passed": False,
-            "status": "partial"
+            "passed": local_wired,
+            "status": "wired_local_memory_profile"
+            if local_wired
+            else "partial"
             if production["agent_vision_conditionally_wired"]
             else "incomplete",
             "validation_level": "actual_entrypoint_with_fake_provider",
@@ -226,7 +236,7 @@ def main() -> int:
             "R2 Agent/Vision selection is wired; production knowledge still uses MockKnowledgeSearch",
             production,
         )
-    else:
+    elif not local_wired:
         add(
             "INT-07",
             "review_required",

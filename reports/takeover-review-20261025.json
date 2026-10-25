@@ -1,0 +1,183 @@
+{
+  "recorded_at_kst": "2026-10-25T11:31:58.360989+09:00",
+  "qa_code_base_commit": "52883be4b7bf3450435083b86318ab1499229e61",
+  "qa_revision": "self; this local review commit includes source and evidence changes",
+  "source_observations": [
+    {
+      "directory": "qa",
+      "branch": "main",
+      "commit": "52883be4b7bf3450435083b86318ab1499229e61",
+      "observed_remote_main_commit": "52883be4b7bf3450435083b86318ab1499229e61",
+      "working_tree_clean": false,
+      "ahead_behind": "0\t0"
+    },
+    {
+      "directory": "oneload-app",
+      "branch": "main",
+      "commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+      "observed_remote_main_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+      "working_tree_clean": true,
+      "ahead_behind": "0\t0"
+    },
+    {
+      "directory": "oneload-backend",
+      "branch": "main",
+      "commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+      "observed_remote_main_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+      "working_tree_clean": true,
+      "ahead_behind": "0\t0"
+    },
+    {
+      "directory": "oneload_agent",
+      "branch": "main",
+      "commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+      "observed_remote_main_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+      "working_tree_clean": true,
+      "ahead_behind": "0\t0"
+    },
+    {
+      "directory": "oneload-data",
+      "branch": "main",
+      "commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+      "observed_remote_main_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+      "working_tree_clean": true,
+      "ahead_behind": "0\t0"
+    },
+    {
+      "directory": "oneload-infra",
+      "branch": "main",
+      "commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+      "observed_remote_main_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+      "working_tree_clean": true,
+      "ahead_behind": "0\t0"
+    },
+    {
+      "directory": "oneload-rag",
+      "branch": "main",
+      "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+      "observed_remote_main_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+      "working_tree_clean": true,
+      "ahead_behind": "0\t0"
+    }
+  ],
+  "original_user_checkouts": "All seven original Desktop mp_project checkouts were clean main; preserved without fetch, checkout or writes. Fresh no-hardlink clones used in hangil/ with QA directory qa.",
+  "environment": {
+    "python": "3.12.9",
+    "node": "v25.2.1",
+    "pnpm": "11.13.0",
+    "venv": "new qa/.venv; not copied",
+    "pip_check": "no broken requirements",
+    "dependency_repair": "websockets17.3 conflicts with langgraph-sdk0.4.8 (<17,>=14); pinned websockets16.1.1, successful install and pip check",
+    "database": "QA-created disposable PostgreSQL17 Docker containers, loopback, removed after each run",
+    "real_model_calls": 0,
+    "real_embedding_calls": 0
+  },
+  "executions": {
+    "standard": "results/takeover-20261025-004/run.json",
+    "baseline": "reports/baseline.json",
+    "standard_exit": 1,
+    "mock_boundary": "27/27",
+    "rag_boundary": "28/28",
+    "global_entrypoint": "7/7",
+    "component": "20 scenarios/21 turns; human pending21; final_quality_score null",
+    "route_connectivity": "5/24 reachable including2 identity paths;19 no route; default options only",
+    "frontend_verify": "pnpm verify; lint/typecheck and513 unit tests passed",
+    "frontend_build": "pnpm build passed; large chunk warning",
+    "frontend_runtime_browser": "NOT_RUN by R6; CI e2e observed separately",
+    "physical_phone": "NOT_RUN",
+    "field_photo_gold_count": 0
+  },
+  "rag_runtime": {
+    "validated_profile": "selected sibling oneload-rag main f99704d; local MemorySearch0.25/k3/relative0.5; official14 docs; no embeddings",
+    "backend_dependency_pin": "v0.3.0",
+    "backend_pin_commit": "ec27e094f224f69a2e2d49f63b109cbdf7d4e0ca",
+    "difference": "Main has six knowledge metadata edits beyond release. This run does not validate the release wheel, pgvector quality or deployed runtime.",
+    "source_fingerprints": "reports/production-api-probe.json#rag"
+  },
+  "issues": {
+    "Backend#2": "GitHub closed; API26 passed; upstream71 tests include conversation update, PATCH protection and completed-refund preservation",
+    "Data#2": "GitHub open;19/24 directed pairs remain unreachable",
+    "Agent#7": "GitHub open; Backend intent/slots pass; App generated schema has six old intents and no plan/steps API",
+    "Agent#5": "GitHub open; answer support/citation issue remains; verify_v4 tests relevance only",
+    "RAG#3": "GitHub open; exposed regression top3 17/20, out-of-scope empty15/20 (5false positives); provisional gate failed",
+    "QA#3": "GitHub open; local entrypoint official memory now checked; threshold decision, deployed/release profile and human review remain"
+  },
+  "unmerged_work": {
+    "app_pr39": {
+      "url": "https://github.com/team-onetruck/oneload-app/pull/39",
+      "state": "open",
+      "draft": true,
+      "head": "d17f353613932ba42f851b4ea6e691ac05a31458",
+      "scope": "Unity marker spike; author reports only; not merged, built or device-validated by R6; outside current 2D/streetview acceptance"
+    }
+  },
+  "limitations": [
+    "Initial local run used no remote mutation; later account-corrected publication is recorded separately. No deployment or production DB use.",
+    "No latest deployment success: App verify/e2e succeeded but deploy cancelled; Backend test/image succeeded but deploy queued; Agent test/backend succeeded but deploy queued",
+    "No true phone UI, physical compass/AR alignment, field photo accuracy or actual AI answer-quality acceptance",
+    "Linked education Notion page could not be accessed; all three versioned local design references were read"
+  ],
+  "intermediate_attempts": [
+    "001: original QA missing RAG import reproduced; Agent standalone failure due QA PYTHONPATH pollution corrected without changing Agent",
+    "002: initial new fallback-source test asked for unsupported fare; RuleAgent correctly refused with no sources. Probe fixed to cite supported destination and separately assert fare refusal; no product fix or gold change",
+    "003: contracts/API passed before route gate added; final004 is authoritative and exits1 for route-connectivity"
+  ],
+  "next_actions": [
+    "Data#2 real passage direction/gate constraints and return/exit paths",
+    "App generated OpenAPI types and plan/steps UI, then repeated same SHA API checks",
+    "Agent#5 answerability/cited-only sources with separate answer support evaluation; do not lower retrieval gates automatically",
+    "Pin and validate actual deployment release combination; rerun default entrypoint without paid provider when deployment available",
+    "Physical phone2D/streetview/camera recovery and field photo gold; real paid model only on separate user request"
+  ],
+  "final_remote_observation": {
+    "at_kst": "2026-10-25T11:35:04.610335+09:00",
+    "repositories": [
+      {
+        "directory": "oneload-app",
+        "exit": 0,
+        "head": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+        "remote_main": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc"
+      },
+      {
+        "directory": "oneload-backend",
+        "exit": 0,
+        "head": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+        "remote_main": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87"
+      },
+      {
+        "directory": "oneload-data",
+        "exit": 0,
+        "head": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+        "remote_main": "89ec570da39d7d64278805d3f5e7536b18c41a4f"
+      },
+      {
+        "directory": "oneload-infra",
+        "exit": 0,
+        "head": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "remote_main": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107"
+      },
+      {
+        "directory": "oneload-rag",
+        "exit": 0,
+        "head": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+        "remote_main": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+      },
+      {
+        "directory": "oneload_agent",
+        "exit": 0,
+        "head": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+        "remote_main": "a732577eee46e918f05eac41a5ebc5833489b1c1"
+      },
+      {
+        "directory": "qa",
+        "exit": 0,
+        "head": "52883be4b7bf3450435083b86318ab1499229e61",
+        "remote_main": "52883be4b7bf3450435083b86318ab1499229e61"
+      }
+    ]
+  },
+  "qa_work_branch": "qa/mootwo-takeover-20261025",
+  "publication_status": "Published to team repository as mootwo0202; current PR6 and issue/comment links in reports/publication-20261025.json",
+  "sensitive_content_review": "No secrets in public evidence. URL pattern hits in code are a runtime-generated disposable credential template and an invalid x:x test fixture; no actual DB credentials recorded.",
+  "same_validated_tree_republished_commit": "6f0f815caedf32f986939e62a298c044fa1cb4e0"
+}
