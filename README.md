@@ -1,5 +1,11 @@
 # 한길 R6 QA/Eval
 
+## 열린 이슈 재검증 — 2026-10-25
+
+[이슈별 판정과 다음 작업](docs/open-issue-review-20261025.md) · [새 로컬 실행 증거](reports/open-issue-review-20261025.json). Infra#1은 수정 완료로 종료했다. Agent#7은 Backend 해결·App 잔여, Data#2·RAG#3·App#41은 미완료 조건이 남아 open이다. QA#3은 로컬 공식 검색 재검사 완료·임계값 미확정으로 open 유지한다. 개인 연습용 이슈1건도 확인했다.
+
+새 실행에서 QA48·Agent47·Backend71·모의API27/27·공식검색API28/28·기본조립API7/7 통과, 전체 exit1은 경로19/24 실패다. 실제 AI·실기기·현장 인수는 미검증이다. 현재 내용은 main에 반영하며 아래 계정 교체·병합 대기 설명은 과거 기록이다.
+
 ## main 반영 완료 — 2026-10-25
 
 [QA PR #6](https://github.com/team-onetruck/oneload-qa/pull/6)을 main에 병합했고(`0bb40cb`), 원격·로컬 작업 브랜치를 삭제했다. 현재 QA checkout은 main이다. [병합 검토와 새 로컬 검증](reports/merge-review-20261025.json)에서 QA48·Agent47·Backend71·모의API27/27·기본조립API7/7을 확인했다. 전체 exit1은 기존 Data#2 경로19건 실패로 유지하며 실제 AI·실기기·현장 인수 합격을 뜻하지 않는다. 배포는 실행하지 않았다. 아래 병합 대기 설명은 이전 공유 기록이다.

@@ -33,7 +33,7 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider test
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_checks.py --project-root .. --with-backend --output results/full-run-새이름
 ```
 
-공개 보고서 갱신은 같은 전체 검사에 `--reports reports`를 추가한다. 기존 출력 폴더를 덮어쓰지 않는다. 알려진 INT-06/07 실패와 환경·실행기 오류를 구분한다.
+공개 보고서 갱신은 같은 전체 검사에 `--reports reports`를 추가한다. 기존 출력 폴더를 덮어쓰지 않는다. 최신 handoff의 알려진 제품 실패와 환경·실행기 오류를 구분한다. 과거 INT-06/07 판정을 현재 예상 실패로 고정하지 않는다.
 문서만 수정했다면 링크·버전·기록의 일관성을 확인하고, 실행하지 않은 테스트를 새 통과 결과로 적지 않는다.
 
 ## 인수인계 갱신은 작업 완료 조건

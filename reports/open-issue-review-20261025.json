@@ -1,0 +1,1703 @@
+{
+  "recorded_at_kst": "2026-10-25T17:04:51.639673+09:00",
+  "account": "mootwo0202",
+  "final_state_checked_at_utc": "2026-10-25 08:09:05 UTC",
+  "final_issue_states": [
+    {
+      "repository": "team-onetruck/oneload-infra",
+      "number": 1,
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-25T08:03:43Z",
+      "url": "https://github.com/team-onetruck/oneload-infra/issues/1"
+    },
+    {
+      "repository": "team-onetruck/oneload_agent",
+      "number": 7,
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-25T03:01:44Z",
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/7"
+    },
+    {
+      "repository": "team-onetruck/oneload-data",
+      "number": 2,
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-25T03:01:42Z",
+      "url": "https://github.com/team-onetruck/oneload-data/issues/2"
+    },
+    {
+      "repository": "team-onetruck/oneload-rag",
+      "number": 3,
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-25T03:01:43Z",
+      "url": "https://github.com/team-onetruck/oneload-rag/issues/3"
+    },
+    {
+      "repository": "team-onetruck/oneload-app",
+      "number": 41,
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-25T08:03:47Z",
+      "url": "https://github.com/team-onetruck/oneload-app/issues/41"
+    },
+    {
+      "repository": "team-onetruck/oneload-qa",
+      "number": 3,
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-25T08:03:46Z",
+      "url": "https://github.com/team-onetruck/oneload-qa/issues/3"
+    },
+    {
+      "repository": "mootwo0202/skala_git_example",
+      "number": 1,
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-07-14T07:32:05Z",
+      "url": "https://github.com/mootwo0202/skala_git_example/issues/1"
+    }
+  ],
+  "scope": {
+    "queries": [
+      "is:issue is:open author:mootwo0202",
+      "repo:team-onetruck/oneload-qa is:issue is:open",
+      "user:mootwo0202 is:issue is:open"
+    ],
+    "authored_open_at_start": 6,
+    "qa_open_at_start": 1,
+    "personal_owned_open_at_start": 1,
+    "unique_issues_reviewed": 7,
+    "note": "QA#3 was authored by R3; personal Issue example overlaps the authored and owned searches."
+  },
+  "qa_execution_commit": "f23d5f38a6eb649c42a9d725df7f43d51816db07",
+  "repository_observations": {
+    "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
+    "repositories": [
+      {
+        "repository": "oneload-app",
+        "before": {
+          "commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+          "branch": "main",
+          "status": ""
+        },
+        "observed_main_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+        "checkout_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+        "checkout_clean": true,
+        "fast_forwarded": false,
+        "new_commits": ""
+      },
+      {
+        "repository": "oneload-backend",
+        "before": {
+          "commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+          "branch": "main",
+          "status": ""
+        },
+        "observed_main_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+        "checkout_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+        "checkout_clean": true,
+        "fast_forwarded": false,
+        "new_commits": ""
+      },
+      {
+        "repository": "oneload-data",
+        "before": {
+          "commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+          "branch": "main",
+          "status": ""
+        },
+        "observed_main_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+        "checkout_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+        "checkout_clean": true,
+        "fast_forwarded": false,
+        "new_commits": ""
+      },
+      {
+        "repository": "oneload-infra",
+        "before": {
+          "commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+          "branch": "main",
+          "status": ""
+        },
+        "observed_main_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "checkout_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "checkout_clean": true,
+        "fast_forwarded": false,
+        "new_commits": ""
+      },
+      {
+        "repository": "oneload-rag",
+        "before": {
+          "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+          "branch": "main",
+          "status": ""
+        },
+        "observed_main_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+        "checkout_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+        "checkout_clean": true,
+        "fast_forwarded": false,
+        "new_commits": ""
+      },
+      {
+        "repository": "oneload_agent",
+        "before": {
+          "commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+          "branch": "main",
+          "status": ""
+        },
+        "observed_main_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+        "checkout_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+        "checkout_clean": true,
+        "fast_forwarded": false,
+        "new_commits": ""
+      },
+      {
+        "repository": "qa",
+        "before": {
+          "commit": "f23d5f38a6eb649c42a9d725df7f43d51816db07",
+          "branch": "main",
+          "status": ""
+        },
+        "observed_main_commit": "f23d5f38a6eb649c42a9d725df7f43d51816db07",
+        "checkout_commit": "f23d5f38a6eb649c42a9d725df7f43d51816db07",
+        "checkout_clean": true,
+        "fast_forwarded": false,
+        "new_commits": ""
+      }
+    ]
+  },
+  "fresh_verification": {
+    "executed_at_kst": "2026-10-25T16:59:09.865294+09:00",
+    "steps": [
+      {
+        "name": "qa-tests",
+        "exit_code": 0,
+        "elapsed_s": 1.891
+      },
+      {
+        "name": "data-validation",
+        "exit_code": 0,
+        "elapsed_s": 0.105
+      },
+      {
+        "name": "route-connectivity",
+        "exit_code": 1,
+        "elapsed_s": 0.164
+      },
+      {
+        "name": "agent-tests",
+        "exit_code": 0,
+        "elapsed_s": 0.818
+      },
+      {
+        "name": "contract-audit",
+        "exit_code": 0,
+        "elapsed_s": 0.707
+      },
+      {
+        "name": "component-eval",
+        "exit_code": 0,
+        "elapsed_s": 0.4
+      },
+      {
+        "name": "backend-and-integration",
+        "exit_code": 0,
+        "elapsed_s": 6.15
+      }
+    ],
+    "commits": {
+      "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+      "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+      "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+      "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+      "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+      "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+    },
+    "map": {
+      "source_repository": "oneload-data",
+      "path": "maps/seoul-station.json",
+      "map_id": "seoul-station",
+      "version": "2026-10-25.1",
+      "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
+    },
+    "overall_exit_code": 1,
+    "live_model_calls": 0,
+    "with_backend": true,
+    "qa": {
+      "tests": 48,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "agent": {
+      "tests": 47,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "backend": {
+      "tests": 71,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "data_validation": {
+      "checks": [
+        {
+          "id": "DATA-schema",
+          "passed": true,
+          "description": "Data schema equals the current Backend MapData schema"
+        },
+        {
+          "id": "DATA-map-seoul-station",
+          "passed": true,
+          "description": "Backend schema and cross-reference validation"
+        },
+        {
+          "id": "DATA-photos-seoul-station",
+          "passed": true,
+          "missing_panorama_ids": []
+        }
+      ],
+      "maps": [
+        {
+          "source_repository": "oneload-data",
+          "path": "maps/seoul-station.json",
+          "map_id": "seoul-station",
+          "version": "2026-10-25.1",
+          "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42",
+          "nodes": 12,
+          "edges": 12,
+          "pois": 6,
+          "panoramas": 6,
+          "example_panoramas": 6
+        }
+      ],
+      "asset_sha256": {
+        "panos/hamburg_hbf.webp": "2ed638fdf4df85b3c3cc4308eae21c64723380b567d95dadab0a8b706995e008",
+        "panos/subway_entrance.webp": "86208e5b4f42b3c06d967f4baa5561bcc7b9a8aa04032c1a028a9da72bb37379",
+        "panos/metro_noord.webp": "b7ae8f4e51d3b1d114cf32e84f18a6deaa05ca83a00d48181f78bd52b88a4c6c",
+        "panos/metro_vijzelgracht.webp": "ed5f398eb4b7637f4d97fdf372dfb55746c9d013447531db4b82e2ec82825433"
+      },
+      "passed": 3,
+      "total": 3,
+      "validation_scope": "Backend MapData and reference validation; schema copy equality; local photo files",
+      "field_photo_accuracy_measured": false,
+      "commits": {
+        "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+        "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+        "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+        "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+        "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+      },
+      "checked_at_kst": "2026-10-25T16:59:01.616830+09:00"
+    },
+    "component": {
+      "dataset_version": "r6-component-v2",
+      "dataset_sha256": "1daa313834008bf7c26dec28d9cb302e92ddddd9b28d8c5e15cc28d5f6a13da3",
+      "scenario_count": 20,
+      "turn_count": 21,
+      "auto_scenarios_passed": 20,
+      "auto_turns_passed": 21,
+      "human_review_pending": 21,
+      "final_quality_score": null
+    },
+    "mock_api": {
+      "probe_version": "r6-boundary-v2",
+      "executed_at_utc": "2026-10-25T07:59:08.536592+00:00",
+      "passed": 27,
+      "total": 27
+    },
+    "rag_api": {
+      "probe_version": "r6-boundary-v2",
+      "executed_at_utc": "2026-10-25T07:59:36.303720+00:00",
+      "passed": 28,
+      "total": 28,
+      "rag": {
+        "repository": "oneload-rag",
+        "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+        "working_tree_clean": true,
+        "backend": "MemorySearch",
+        "min_score": 0.25,
+        "k": 3,
+        "relative_cutoff": 0.5,
+        "scope_gate_min_coverage": 0.25,
+        "community": false,
+        "document_ids": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types",
+          "doc-climate-card-short-term",
+          "doc-deposit-refund",
+          "doc-express-ticket",
+          "doc-fare-arex-allstop",
+          "doc-fare-arex-express",
+          "doc-fare-passes-cards",
+          "doc-foreigner-transit-cards",
+          "doc-seoul-arex-transfer",
+          "doc-seoul-help-desks",
+          "doc-seoul-transit-basics",
+          "doc-tmoney-card",
+          "doc-wowpass"
+        ],
+        "knowledge_sha256": {
+          "README.md": "69b16ad3992eda254ad1c170b92f01b66366c95ccbae6ceb1829c3d5df4d26d4",
+          "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+          "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+          "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+          "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+          "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+          "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+          "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+          "doc-fare-arex-allstop.md": "8c4a751bb15521eaa4be205f1d9c055fffca51d699c5830775557b62e4c8db33",
+          "doc-fare-arex-express.md": "6dc1ca6cc6c7d1e3cf8b9cfc192ca11cabb55effdc2e3107bdd00dc86a651ca7",
+          "doc-fare-passes-cards.md": "f05c5533036ade4159f7c373f377b5bab59809d0b6c72f4925322d19210ca699",
+          "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+          "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+          "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+          "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+          "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+          "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+        },
+        "code_sha256": {
+          "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+          "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+          "src/hangil_rag/loader.py": "8b67ebe687d7ace619cbe7d874821c715e5bacf8c6c621a659a5b6b178575066",
+          "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+          "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+          "src/hangil_rag/search_memory.py": "5c13065a5c351b6a3786680baa133899b3aeae89feff04254da6abe245e53e8f",
+          "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+        },
+        "live_model_calls": 0,
+        "live_embedding_calls": 0
+      }
+    },
+    "new_flow_mock_checks": [
+      {
+        "id": "API-20-purchase-intent",
+        "passed": true,
+        "expected": {
+          "status": "needs_clarification",
+          "intent": "purchase_arex_ticket"
+        },
+        "actual": {
+          "status": "needs_clarification",
+          "intent": "purchase_arex_ticket"
+        }
+      },
+      {
+        "id": "API-21-purchase-followup",
+        "passed": true,
+        "expected": {
+          "intent": "purchase_arex_ticket",
+          "poi": "poi-express-tickets"
+        },
+        "actual": {
+          "intent": "purchase_arex_ticket",
+          "poi": "poi-express-tickets"
+        }
+      },
+      {
+        "id": "API-22-exit-persisted-slots",
+        "passed": true,
+        "expected": {
+          "intent": "navigate_to_exit",
+          "exit_number": "1",
+          "has_single_use_card": "yes",
+          "single_use_card_returned": "no",
+          "poi": "poi-single-use-card-refund"
+        },
+        "actual": {
+          "intent": "navigate_to_exit",
+          "exit_number": "1",
+          "has_single_use_card": "yes",
+          "single_use_card_returned": "no",
+          "poi": "poi-single-use-card-refund"
+        }
+      },
+      {
+        "id": "API-23-exit-after-return",
+        "passed": true,
+        "expected": {
+          "exit_number": "1",
+          "returned": "yes",
+          "poi": "poi-exit-1"
+        },
+        "actual": {
+          "exit_number": "1",
+          "returned": "yes",
+          "poi": "poi-exit-1"
+        }
+      },
+      {
+        "id": "API-24-boarding-without-ticket",
+        "passed": true,
+        "expected": {
+          "intent": "board_arex",
+          "ticket": "no",
+          "poi": "poi-express-tickets"
+        },
+        "actual": {
+          "intent": "board_arex",
+          "ticket": "no",
+          "poi": "poi-express-tickets"
+        }
+      },
+      {
+        "id": "API-25-boarding-ticket-persisted",
+        "passed": true,
+        "expected": {
+          "intent": "board_arex",
+          "ticket": "yes",
+          "poi": "poi-express-platform"
+        },
+        "actual": {
+          "intent": "board_arex",
+          "ticket": "yes",
+          "poi": "poi-express-platform"
+        }
+      },
+      {
+        "id": "API-26-plan-follows-reported-refund",
+        "passed": true,
+        "expected": {
+          "http": 200,
+          "refund_status": "REFUNDED",
+          "unfinished_refund_steps": 0
+        },
+        "actual": {
+          "http": 200,
+          "refund_status": "REFUNDED",
+          "unfinished_refund_steps": 0
+        }
+      }
+    ],
+    "new_flow_rag_checks": [
+      {
+        "id": "API-20-purchase-intent",
+        "passed": true,
+        "expected": {
+          "status": "needs_clarification",
+          "intent": "purchase_arex_ticket"
+        },
+        "actual": {
+          "status": "needs_clarification",
+          "intent": "purchase_arex_ticket"
+        }
+      },
+      {
+        "id": "API-21-purchase-followup",
+        "passed": true,
+        "expected": {
+          "intent": "purchase_arex_ticket",
+          "poi": "poi-express-tickets"
+        },
+        "actual": {
+          "intent": "purchase_arex_ticket",
+          "poi": "poi-express-tickets"
+        }
+      },
+      {
+        "id": "API-22-exit-persisted-slots",
+        "passed": true,
+        "expected": {
+          "intent": "navigate_to_exit",
+          "exit_number": "1",
+          "has_single_use_card": "yes",
+          "single_use_card_returned": "no",
+          "poi": "poi-single-use-card-refund"
+        },
+        "actual": {
+          "intent": "navigate_to_exit",
+          "exit_number": "1",
+          "has_single_use_card": "yes",
+          "single_use_card_returned": "no",
+          "poi": "poi-single-use-card-refund"
+        }
+      },
+      {
+        "id": "API-23-exit-after-return",
+        "passed": true,
+        "expected": {
+          "exit_number": "1",
+          "returned": "yes",
+          "poi": "poi-exit-1"
+        },
+        "actual": {
+          "exit_number": "1",
+          "returned": "yes",
+          "poi": "poi-exit-1"
+        }
+      },
+      {
+        "id": "API-24-boarding-without-ticket",
+        "passed": true,
+        "expected": {
+          "intent": "board_arex",
+          "ticket": "no",
+          "poi": "poi-express-tickets"
+        },
+        "actual": {
+          "intent": "board_arex",
+          "ticket": "no",
+          "poi": "poi-express-tickets"
+        }
+      },
+      {
+        "id": "API-25-boarding-ticket-persisted",
+        "passed": true,
+        "expected": {
+          "intent": "board_arex",
+          "ticket": "yes",
+          "poi": "poi-express-platform"
+        },
+        "actual": {
+          "intent": "board_arex",
+          "ticket": "yes",
+          "poi": "poi-express-platform"
+        }
+      },
+      {
+        "id": "API-26-plan-follows-reported-refund",
+        "passed": true,
+        "expected": {
+          "http": 200,
+          "refund_status": "REFUNDED",
+          "unfinished_refund_steps": 0
+        },
+        "actual": {
+          "http": 200,
+          "refund_status": "REFUNDED",
+          "unfinished_refund_steps": 0
+        }
+      }
+    ],
+    "production_entrypoint": {
+      "probe_version": "r6-production-entrypoint-v1",
+      "executed_at_kst": "2026-10-25T16:59:09.453420+09:00",
+      "commits": {
+        "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+        "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+        "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+        "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+        "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+      },
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.1",
+        "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
+      },
+      "rag": {
+        "repository": "oneload-rag",
+        "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+        "working_tree_clean": true,
+        "backend": "MemorySearch",
+        "min_score": 0.25,
+        "k": 3,
+        "relative_cutoff": 0.5,
+        "scope_gate_min_coverage": 0.25,
+        "community": false,
+        "document_ids": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types",
+          "doc-climate-card-short-term",
+          "doc-deposit-refund",
+          "doc-express-ticket",
+          "doc-fare-arex-allstop",
+          "doc-fare-arex-express",
+          "doc-fare-passes-cards",
+          "doc-foreigner-transit-cards",
+          "doc-seoul-arex-transfer",
+          "doc-seoul-help-desks",
+          "doc-seoul-transit-basics",
+          "doc-tmoney-card",
+          "doc-wowpass"
+        ],
+        "knowledge_sha256": {
+          "README.md": "69b16ad3992eda254ad1c170b92f01b66366c95ccbae6ceb1829c3d5df4d26d4",
+          "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+          "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+          "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+          "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+          "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+          "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+          "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+          "doc-fare-arex-allstop.md": "8c4a751bb15521eaa4be205f1d9c055fffca51d699c5830775557b62e4c8db33",
+          "doc-fare-arex-express.md": "6dc1ca6cc6c7d1e3cf8b9cfc192ca11cabb55effdc2e3107bdd00dc86a651ca7",
+          "doc-fare-passes-cards.md": "f05c5533036ade4159f7c373f377b5bab59809d0b6c72f4925322d19210ca699",
+          "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+          "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+          "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+          "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+          "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+          "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+        },
+        "code_sha256": {
+          "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+          "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+          "src/hangil_rag/loader.py": "8b67ebe687d7ace619cbe7d874821c715e5bacf8c6c621a659a5b6b178575066",
+          "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+          "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+          "src/hangil_rag/search_memory.py": "5c13065a5c351b6a3786680baa133899b3aeae89feff04254da6abe245e53e8f",
+          "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+        },
+        "live_model_calls": 0,
+        "live_embedding_calls": 0
+      },
+      "entrypoint_sha256": "75b12b65ff3b4c522d08e22ffa261e1b6728b6e858530102e5d7928c71c0c8a7",
+      "scope": "Actual global app; FakeLLM provider; forced local official MemorySearch; disposable DB. Not deployed runtime or AI quality.",
+      "checks": [
+        {
+          "id": "PROD-01-default-assembly",
+          "expected": [
+            true,
+            true,
+            true
+          ],
+          "actual": [
+            true,
+            true,
+            true
+          ],
+          "passed": true
+        },
+        {
+          "id": "PROD-02-official-fare",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "id": "PROD-03-shared-vision",
+          "expected": [
+            200,
+            "needs_confirmation",
+            true
+          ],
+          "actual": [
+            200,
+            "needs_confirmation",
+            true
+          ],
+          "passed": true
+        },
+        {
+          "id": "PROD-04-empty-search-control",
+          "expected": [
+            "cannot_answer",
+            []
+          ],
+          "actual": [
+            "cannot_answer",
+            []
+          ],
+          "passed": true
+        },
+        {
+          "id": "PROD-05-no-key-fallback",
+          "expected": [
+            "RuleAgent",
+            "NoVision"
+          ],
+          "actual": [
+            "RuleAgent",
+            "NoVision"
+          ],
+          "passed": true
+        },
+        {
+          "id": "PROD-06-fallback-official-sources",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "id": "PROD-07-fallback-refuses-unverified-fare",
+          "expected": [
+            "cannot_answer",
+            []
+          ],
+          "actual": [
+            "cannot_answer",
+            []
+          ],
+          "passed": true
+        }
+      ],
+      "passed": 7,
+      "total": 7,
+      "real_model_calls": 0,
+      "real_embedding_calls": 0,
+      "deployed_runtime_verified": false,
+      "runner_sha256": "44eee1eb3c669b50c659466ed10e8277040783c59c3a42fe4d90f2ad8396948e"
+    },
+    "route_connectivity": {
+      "executed_at_kst": "2026-10-25T16:59:01.774839+09:00",
+      "commits": {
+        "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+        "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+        "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+        "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+        "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+      },
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.1",
+        "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
+      },
+      "runner_sha256": "a387f0569e58899fdd92c6d4ec0d7d0b514c870a85d9f215fd215da7da4aa4e5",
+      "scope": "Registered directed graph with default RouteOptions. No field validation; identity paths included.",
+      "routes": [
+        {
+          "start": "ktx-hall",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "line1-gates",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "line4-gates",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "single-use-card-refund",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-1",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "arex-concourse",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "express-tickets",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "express-gates",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "allstop-tickets",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "allstop-gates",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "express-platform",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "allstop-platform",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "ktx-hall",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "line1-gates",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "line1-gates",
+            "single-use-card-refund",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "line4-gates",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "single-use-card-refund",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "single-use-card-refund",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-1",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-1"
+          ]
+        },
+        {
+          "start": "arex-concourse",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "express-tickets",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "express-gates",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "allstop-tickets",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "allstop-gates",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "express-platform",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": false,
+          "path": null
+        },
+        {
+          "start": "allstop-platform",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": false,
+          "path": null
+        }
+      ],
+      "reachable": 5,
+      "total": 24,
+      "field_verified": false,
+      "real_model_calls": 0
+    },
+    "known_failure": "route-connectivity exits1 with19 unreachable pairs; no environment/runner error. Backend#2 remains resolved."
+  },
+  "frontend_contract": {
+    "app_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+    "backend_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+    "schema_sha256": "d149702d69f8f9410463e9441250e5c131e9a705c030a7cba221a08b8af13a16",
+    "backend_intents": [
+      "navigate_to_poi",
+      "navigate_to_exit",
+      "purchase_arex_ticket",
+      "board_arex",
+      "ticket_purchase_and_navigation",
+      "payment_question",
+      "usage_question",
+      "report_off_route",
+      "out_of_scope"
+    ],
+    "app_intents": [
+      "navigate_to_poi",
+      "out_of_scope",
+      "payment_question",
+      "report_off_route",
+      "ticket_purchase_and_navigation",
+      "usage_question"
+    ],
+    "missing_intents": [
+      "board_arex",
+      "navigate_to_exit",
+      "purchase_arex_ticket"
+    ],
+    "backend_slots": [
+      "train_type",
+      "has_transit_card",
+      "exit_number",
+      "has_single_use_card",
+      "single_use_card_returned",
+      "has_ticket"
+    ],
+    "app_slots": [
+      "train_type",
+      "has_transit_card"
+    ],
+    "missing_slots": [
+      "exit_number",
+      "has_single_use_card",
+      "has_ticket",
+      "single_use_card_returned"
+    ],
+    "backend_message_out_has_plan": true,
+    "app_message_out_has_plan": false,
+    "app_plan_paths": [],
+    "method": "Pydantic public response schema versus generated TypeScript source; no DB or model calls"
+  },
+  "retrieval_regression": {
+    "executed_at_kst": "2026-10-25T17:03:37.318665+09:00",
+    "dataset_version": "r6-retrieval-holdout-v2",
+    "dataset_sha256": "278f16fc787acffe36a4ccbc903d422cbd03d9a1ccf8e4f21c43f6c8e56fc168",
+    "exposure": "Already public and observed; regression only, not a fresh holdout",
+    "rag": {
+      "repository": "oneload-rag",
+      "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+      "working_tree_clean": true,
+      "backend": "MemorySearch",
+      "min_score": 0.25,
+      "k": 3,
+      "relative_cutoff": 0.5,
+      "scope_gate_min_coverage": 0.25,
+      "community": false,
+      "document_ids": [
+        "doc-allstop-ticket",
+        "doc-arex-train-types",
+        "doc-climate-card-short-term",
+        "doc-deposit-refund",
+        "doc-express-ticket",
+        "doc-fare-arex-allstop",
+        "doc-fare-arex-express",
+        "doc-fare-passes-cards",
+        "doc-foreigner-transit-cards",
+        "doc-seoul-arex-transfer",
+        "doc-seoul-help-desks",
+        "doc-seoul-transit-basics",
+        "doc-tmoney-card",
+        "doc-wowpass"
+      ],
+      "knowledge_sha256": {
+        "README.md": "69b16ad3992eda254ad1c170b92f01b66366c95ccbae6ceb1829c3d5df4d26d4",
+        "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+        "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+        "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+        "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+        "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+        "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+        "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+        "doc-fare-arex-allstop.md": "8c4a751bb15521eaa4be205f1d9c055fffca51d699c5830775557b62e4c8db33",
+        "doc-fare-arex-express.md": "6dc1ca6cc6c7d1e3cf8b9cfc192ca11cabb55effdc2e3107bdd00dc86a651ca7",
+        "doc-fare-passes-cards.md": "f05c5533036ade4159f7c373f377b5bab59809d0b6c72f4925322d19210ca699",
+        "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+        "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+        "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+        "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+        "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+        "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+      },
+      "code_sha256": {
+        "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+        "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+        "src/hangil_rag/loader.py": "8b67ebe687d7ace619cbe7d874821c715e5bacf8c6c621a659a5b6b178575066",
+        "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+        "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+        "src/hangil_rag/search_memory.py": "5c13065a5c351b6a3786680baa133899b3aeae89feff04254da6abe245e53e8f",
+        "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+      },
+      "live_model_calls": 0,
+      "live_embedding_calls": 0
+    },
+    "result": {
+      "positive_total": 20,
+      "top1": 14,
+      "top3": 17,
+      "out_of_scope_total": 20,
+      "out_of_scope_empty": 15,
+      "false_positives": 5,
+      "objective": 0.723404255319149,
+      "rows": [
+        {
+          "id": "H2-01",
+          "question": "서울역 공항철도 직통열차 어린이 운임 안내가 있나요?",
+          "gold": [
+            "doc-fare-arex-express"
+          ],
+          "retrieved": [
+            "doc-fare-arex-express",
+            "doc-arex-train-types",
+            "doc-seoul-help-desks"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-02",
+          "question": "Is there a child fare for the AREX Express from Seoul Station?",
+          "gold": [
+            "doc-fare-arex-express"
+          ],
+          "retrieved": [
+            "doc-fare-arex-express",
+            "doc-climate-card-short-term",
+            "doc-seoul-arex-transfer"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-03",
+          "question": "일반열차 1회용 교통카드의 보증금은 운임과 별도인가요?",
+          "gold": [
+            "doc-fare-arex-allstop",
+            "doc-deposit-refund"
+          ],
+          "retrieved": [
+            "doc-allstop-ticket",
+            "doc-deposit-refund",
+            "doc-fare-arex-allstop"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-04",
+          "question": "For an all-stop single-journey card, is the deposit separate from the fare?",
+          "gold": [
+            "doc-fare-arex-allstop",
+            "doc-deposit-refund"
+          ],
+          "retrieved": [
+            "doc-allstop-ticket",
+            "doc-fare-arex-allstop",
+            "doc-arex-train-types"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-05",
+          "question": "기후동행카드 7일 단기권 가격을 확인하고 싶어요.",
+          "gold": [
+            "doc-fare-passes-cards"
+          ],
+          "retrieved": [
+            "doc-fare-passes-cards",
+            "doc-climate-card-short-term",
+            "doc-seoul-transit-basics"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-06",
+          "question": "What is the price of the seven-day Climate Card pass?",
+          "gold": [
+            "doc-fare-passes-cards"
+          ],
+          "retrieved": [
+            "doc-fare-passes-cards",
+            "doc-climate-card-short-term",
+            "doc-foreigner-transit-cards"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-07",
+          "question": "서울역 직통열차 표는 매표창구 말고 발매기로도 살 수 있나요?",
+          "gold": [
+            "doc-express-ticket"
+          ],
+          "retrieved": [],
+          "passed": false
+        },
+        {
+          "id": "H2-08",
+          "question": "At Seoul Station, can I purchase Express tickets from a machine instead of the counter?",
+          "gold": [
+            "doc-express-ticket"
+          ],
+          "retrieved": [],
+          "passed": false
+        },
+        {
+          "id": "H2-09",
+          "question": "티머니가 이미 있으면 일반열차 탈 때 일회용 승차권도 사야 하나요?",
+          "gold": [
+            "doc-allstop-ticket",
+            "doc-tmoney-card"
+          ],
+          "retrieved": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types",
+            "doc-seoul-transit-basics"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-10",
+          "question": "With a T-money card, do I still need a single-use ticket to enter the all-stop train?",
+          "gold": [
+            "doc-allstop-ticket",
+            "doc-tmoney-card"
+          ],
+          "retrieved": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types",
+            "doc-fare-arex-allstop"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-11",
+          "question": "티머니 충전은 신용카드로도 가능한지 알려주세요.",
+          "gold": [
+            "doc-tmoney-card"
+          ],
+          "retrieved": [
+            "doc-tmoney-card",
+            "doc-fare-passes-cards",
+            "doc-wowpass"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-12",
+          "question": "Can a credit card be used to top up a T-money balance?",
+          "gold": [
+            "doc-tmoney-card"
+          ],
+          "retrieved": [
+            "doc-tmoney-card",
+            "doc-wowpass",
+            "doc-fare-passes-cards"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-13",
+          "question": "와우패스에 쇼핑용 잔액이 있는데 지하철용 잔액도 따로 충전해야 하나요?",
+          "gold": [
+            "doc-wowpass"
+          ],
+          "retrieved": [
+            "doc-wowpass"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-14",
+          "question": "Does money in the WOWPASS shopping wallet also cover the T-money part, or must I top it up separately?",
+          "gold": [
+            "doc-wowpass"
+          ],
+          "retrieved": [
+            "doc-wowpass",
+            "doc-fare-passes-cards",
+            "doc-tmoney-card"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-15",
+          "question": "버스에서 지하철로 갈아탈 때 같은 교통카드를 계속 써야 하나요?",
+          "gold": [
+            "doc-seoul-transit-basics"
+          ],
+          "retrieved": [
+            "doc-seoul-transit-basics",
+            "doc-climate-card-short-term",
+            "doc-foreigner-transit-cards"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-16",
+          "question": "For a bus-to-subway transfer discount, should I keep using the same transit card?",
+          "gold": [
+            "doc-seoul-transit-basics"
+          ],
+          "retrieved": [
+            "doc-seoul-transit-basics",
+            "doc-climate-card-short-term",
+            "doc-foreigner-transit-cards"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-17",
+          "question": "서울역에서 교통카드 문제가 생기면 고객안내센터에 도움을 요청할 수 있나요?",
+          "gold": [
+            "doc-seoul-help-desks"
+          ],
+          "retrieved": [
+            "doc-seoul-help-desks",
+            "doc-allstop-ticket",
+            "doc-tmoney-card"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-18",
+          "question": "Where can I ask for help at Seoul Station if my transit card is not working?",
+          "gold": [
+            "doc-seoul-help-desks"
+          ],
+          "retrieved": [
+            "doc-climate-card-short-term",
+            "doc-seoul-help-desks",
+            "doc-seoul-transit-basics"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-19",
+          "question": "공항철도 직통열차와 일반열차는 중간역 정차 방식이 어떻게 달라요?",
+          "gold": [
+            "doc-arex-train-types"
+          ],
+          "retrieved": [
+            "doc-arex-train-types",
+            "doc-fare-arex-express",
+            "doc-fare-arex-allstop"
+          ],
+          "passed": true
+        },
+        {
+          "id": "H2-20",
+          "question": "Do the AREX Express and all-stop services make the same intermediate stops?",
+          "gold": [
+            "doc-arex-train-types"
+          ],
+          "retrieved": [],
+          "passed": false
+        },
+        {
+          "id": "H2-21",
+          "question": "서울역 물품보관함을 네 시간 쓰면 요금이 얼마인가요?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-22",
+          "question": "What is the four-hour price of a luggage locker at Seoul Station?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-23",
+          "question": "서울역에서 부산까지 KTX 승차권 가격을 알려주세요.",
+          "gold": [],
+          "retrieved": [
+            "doc-seoul-arex-transfer",
+            "doc-express-ticket",
+            "doc-fare-arex-allstop"
+          ],
+          "passed": false
+        },
+        {
+          "id": "H2-24",
+          "question": "What does a KTX ticket from Seoul Station to Busan cost?",
+          "gold": [],
+          "retrieved": [
+            "doc-fare-arex-allstop",
+            "doc-fare-arex-express",
+            "doc-seoul-arex-transfer"
+          ],
+          "passed": false
+        },
+        {
+          "id": "H2-25",
+          "question": "서울역에서 인천공항 가는 리무진버스 승차권은 얼마인가요?",
+          "gold": [],
+          "retrieved": [
+            "doc-seoul-arex-transfer",
+            "doc-seoul-help-desks",
+            "doc-fare-arex-express"
+          ],
+          "passed": false
+        },
+        {
+          "id": "H2-26",
+          "question": "How much is the airport limousine bus ticket from Seoul Station to Incheon?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-27",
+          "question": "서울역 주차장에 하루 주차하는 요금을 계산해 주세요.",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-28",
+          "question": "Please calculate the daily car parking charge at Seoul Station.",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-29",
+          "question": "인천공항에서 항공사 위탁수하물 추가 요금을 조회해 주세요.",
+          "gold": [],
+          "retrieved": [
+            "doc-seoul-help-desks",
+            "doc-fare-arex-allstop"
+          ],
+          "passed": false
+        },
+        {
+          "id": "H2-30",
+          "question": "What is my airline extra checked-baggage fee at Incheon Airport?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-31",
+          "question": "서울역에서 살 수 있는 5일 데이터 유심 가격은 얼마인가요?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-32",
+          "question": "What is the price of a five-day mobile data SIM sold at Seoul Station?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-33",
+          "question": "국립중앙박물관 특별전 입장권 환불 규정을 알려주세요.",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-34",
+          "question": "What is the refund policy for a special exhibition admission ticket at the National Museum?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-35",
+          "question": "서울역 근처에서 여권 재발급 수수료를 얼마 내야 하나요?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-36",
+          "question": "What is the passport replacement fee near Seoul Station?",
+          "gold": [],
+          "retrieved": [
+            "doc-climate-card-short-term",
+            "doc-express-ticket",
+            "doc-seoul-arex-transfer"
+          ],
+          "passed": false
+        },
+        {
+          "id": "H2-37",
+          "question": "서울역 옆 호텔의 세탁 서비스 요금을 알려주세요.",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-38",
+          "question": "What are the laundry service charges at the hotel beside Seoul Station?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-39",
+          "question": "내일 인천공항 출발 항공권의 날짜 변경 수수료가 얼마인가요?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        },
+        {
+          "id": "H2-40",
+          "question": "What is the date-change fee for a flight departing Incheon Airport tomorrow?",
+          "gold": [],
+          "retrieved": [],
+          "passed": true
+        }
+      ]
+    },
+    "threshold_approved": false,
+    "policy": "No tuning, threshold sweep, gold edits or new acceptance policy",
+    "original_issue_examples_at_0_35": [
+      {
+        "question": "서울역 근처 호텔 객실 가격 알려줘",
+        "retrieved": []
+      },
+      {
+        "question": "지금 서울역 직통열차 빈 좌석이 몇 개 남았나요?",
+        "retrieved": []
+      }
+    ]
+  },
+  "qa_service_expectations": {
+    "dataset_sha256": "a6bbdac1c97859cab9d35cef2d7ce276fe3817fac09089d9c88749744eeada0e",
+    "rows": 20,
+    "q10": {
+      "id": "Q10",
+      "type": "답가능",
+      "expected_behavior": "열차·구간·터미널·카드 조건을 확인하거나 조건별로 구분해 요금 문서와 확인일(verified_at)을 함께 제시한다. 실시간 가격이라고 보증하지 않고 근거가 없으면 금액을 생성하지 않는다.",
+      "source_doc": "oneload-rag/knowledge/doc-fare-arex-express.md; oneload-rag/knowledge/doc-fare-arex-allstop.md",
+      "source_locator": "knowledge/doc-fare-arex-express.md ## en; https://www.airportrailroad.com/train/express/introduce; verified_at=2026-10-22; verified_by=R3 | knowledge/doc-fare-arex-allstop.md ## en; https://www.airportrailroad.com/train/normal/fare; verified_at=2026-10-22; verified_by=claude-draft",
+      "ground_truth_status": "mapped_pending_human_review"
+    },
+    "source_columns_present": 20,
+    "human_review_pending": 20,
+    "all_actual_output_and_scores_blank": true
+  },
+  "infra_docs_and_visibility": {
+    "visibility_observation": {
+      "checked_on_kst": "2026-10-25",
+      "method": "GitHub connector get_repo",
+      "repositories": [
+        {
+          "repository": "team-onetruck/oneload-app",
+          "visibility": "public"
+        },
+        {
+          "repository": "team-onetruck/oneload-backend",
+          "visibility": "public"
+        }
+      ]
+    },
+    "infra_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+    "backend_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+    "infra_readme_sha256": "cdf75236791a3a8ecc1098c6067e83f00e1e731003ffda1c07dba5f0ceadc554",
+    "backend_ci_sha256": "47f4a133e90f7ede5d6d9e7ca8706bda32f3050d64cc21a76306afe755e3d3ed",
+    "repository_table_lines": [
+      "| [oneload-backend](https://github.com/team-onetruck/oneload-backend) | public | API code + `Dockerfile`, tests, CI |",
+      "| [oneload-app](https://github.com/team-onetruck/oneload-app) | public | web client, built into the `hangil-web` image |"
+    ],
+    "public_runner_explanation": [
+      "**All team repos are public, and three of them have a runner on macserver.** The only guard is that fork PR workflows wait for a maintainer's approval: **never** approve a fork PR run that touches `.github/`."
+    ],
+    "backend_ci_comment": [
+      "# Runs on this repo's self-hosted runner on macserver. The repo is public: fork PR workflows wait",
+      "# for a maintainer's approval (all outside contributors), so never approve one that touches .github/."
+    ],
+    "infra_table_change_commit": "8f03327db463f09f7a26439280771002c7cf9fcc",
+    "backend_ci_comment_change_commit": "f9d790f50682386372c7a25ca93f6699cce2ac7f",
+    "scope": "Document/metadata agreement; live runner settings and server availability were not audited"
+  },
+  "issues": [
+    {
+      "repository_issue": "team-onetruck/oneload-infra#1",
+      "url": "https://github.com/team-onetruck/oneload-infra/issues/1",
+      "title": "[docs] Backend·App의 private 표기가 실제 public 설정과 불일치",
+      "author": "mootwo0202",
+      "state_before": "open",
+      "state_after": "closed",
+      "verdict": "RESOLVED",
+      "conclusion": "README의 Backend·App public 표기, 공개 runner 설명과 Backend CI 주석이 실제 visibility와 일치. 문서 조건 완료로 종료.",
+      "verified": [
+        "Infra 문서 수정8f03327/4143c87 및 Backend CI 주석 수정f9d790f 확인",
+        "GitHub App·Backend visibility=public 재확인"
+      ],
+      "pending": []
+    },
+    {
+      "repository_issue": "team-onetruck/oneload_agent#7",
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/7",
+      "title": "[R6 QA][P0] 새 intent·슬롯 계약 불일치로 Backend messages 500 및 다음 턴 슬롯 소실",
+      "author": "mootwo0202",
+      "state_before": "open",
+      "state_after": "open",
+      "verdict": "PARTIAL",
+      "conclusion": "Backend500·새 intent/슬롯 유실은 해결 확인. App 계약 동기화 조건은 미완료.",
+      "verified": [
+        "FakeLLM 실제 다중 턴 API-20~25 모두 통과",
+        "Backend71·모의API27/27·공식검색API28/28"
+      ],
+      "pending": [
+        "App#41의 intent3개·슬롯4개·계획 타입 반영과 소비 경계 확인",
+        "휴대폰 UI·실제 AI 품질은 별도 인수"
+      ]
+    },
+    {
+      "repository_issue": "team-onetruck/oneload-data#2",
+      "url": "https://github.com/team-onetruck/oneload-data/issues/2",
+      "title": "[R6 QA] 새 반납기·1번 출구가 주요 출발점과 단방향 그래프에서 연결되지 않음",
+      "author": "mootwo0202",
+      "state_before": "open",
+      "state_after": "open",
+      "verdict": "UNRESOLVED",
+      "conclusion": "실제 plan_route의 출발12×목적지2에서19건 경로 없음.",
+      "verified": [
+        "연결5/24에 동일 위치2건 포함",
+        "KTX·4호선·공항철도 대합실/승강장에서 출구·반납기 단절 유지",
+        "표준 전체 QA exit1은 이 경로 gate 실패"
+      ],
+      "pending": [
+        "실제 통행 방향·개찰구·유료구역 제약에 맞는 연결 보완 또는 지원 범위/실패 안내 명시",
+        "현장 동선·거리·사진은 별도 검증"
+      ]
+    },
+    {
+      "repository_issue": "team-onetruck/oneload-rag#3",
+      "url": "https://github.com/team-onetruck/oneload-rag/issues/3",
+      "title": "[R6 QA] MemorySearch가 호텔 가격·실시간 잔여석 질문에 무관한 문서를 반환함",
+      "author": "mootwo0202",
+      "state_before": "open",
+      "state_after": "open",
+      "verdict": "PARTIAL",
+      "conclusion": "최초 호텔 가격·실시간 좌석 예시는 차단됨. 기존 노출v2의 정상 누락3·범위밖 오탐5가 남음.",
+      "verified": [
+        "원문 두 예시 min_score0.35에서 빈 결과",
+        "고정0.25/k3/상대0.5: top1 14/20·top3 17/20·차단15/20",
+        "H2-07·08·20 누락, H2-23·24·25·29·36 오탐"
+      ],
+      "pending": [
+        "정상 질의 보존과 범위밖 처리 보완",
+        "이미 노출된 v2는 회귀용으로만 사용하고 별도 미관찰 평가로 검증",
+        "검색 기준과 Agent#5 답변 근거/인용 평가를 구분"
+      ]
+    },
+    {
+      "repository_issue": "team-onetruck/oneload-app#41",
+      "url": "https://github.com/team-onetruck/oneload-app/issues/41",
+      "title": "[R6 QA] 생성 OpenAPI 타입에 최신 intent 3개·슬롯 4개와 계획 계약이 누락됨",
+      "author": "mootwo0202",
+      "state_before": "open",
+      "state_after": "open",
+      "verdict": "UNRESOLVED",
+      "conclusion": "생성 타입에 intent3개·슬롯4개·MessageOut.plan·계획 API가 여전히 누락됨.",
+      "verified": [
+        "App intent6개 대 Backend9개, Slots2개 대6개",
+        "생성 schema SHA d149702d... 동일, App main 변경 없음"
+      ],
+      "pending": [
+        "현재 Backend OpenAPI에서 타입 재생성",
+        "새 계약 소비 경계·lint/타입·단위/빌드 확인",
+        "계획 UI 적용 범위와 휴대폰 인수는 별도 결정"
+      ]
+    },
+    {
+      "repository_issue": "team-onetruck/oneload-qa#3",
+      "url": "https://github.com/team-onetruck/oneload-qa/issues/3",
+      "title": "[R3 요청] R3 근거 매핑 · 검색 평가셋 반영과 Q10 기대 변경",
+      "author": "Junyeop-Shin",
+      "state_before": "open",
+      "state_after": "open",
+      "verdict": "PARTIAL",
+      "conclusion": "Q10·근거 열·로컬 공식 검색 재검사 완료. 임계값은 기준 미달로 확정 보류.",
+      "verified": [
+        "Q10 답가능+verified_at 기대, 근거 열20/20",
+        "service_gold20건 사람 검토 대기와 출력/채점 공란 유지",
+        "공식검색 주입28/28·실제 전역 app의 모의API7/7 재실행"
+      ],
+      "pending": [
+        "RAG 검색 보완 후 잠정 기준 충족 및 새 미관찰 평가",
+        "release v0.3.0 설치 조합·pgvector·실제 AI/휴대폰/현장 인수는 미검증"
+      ]
+    },
+    {
+      "repository_issue": "mootwo0202/skala_git_example#1",
+      "url": "https://github.com/mootwo0202/skala_git_example/issues/1",
+      "title": "Issue example",
+      "author": "mootwo0202",
+      "state_before": "open",
+      "state_after": "open",
+      "verdict": "NO_PRODUCT_ACCEPTANCE_CRITERIA",
+      "conclusion": "본문이 This is a issue test.인 연습용 이슈. 제품 결함·완료 기준이 없어 임의 종료하지 않음.",
+      "verified": [
+        "개인 소유 저장소의 열린 이슈 검색 결과1건",
+        "기능 재현·수정·완료 조건 없음"
+      ],
+      "pending": [
+        "필요할 때 사용자가 연습 완료 여부를 결정"
+      ]
+    }
+  ],
+  "github_actions": {
+    "recorded_at_kst": "2026-10-25T17:03:48.045204+09:00",
+    "actions": [
+      {
+        "issue": "https://github.com/team-onetruck/oneload-infra/issues/1",
+        "action": "closed_as_completed; all three acceptance checkboxes checked",
+        "comment_url": "https://github.com/team-onetruck/oneload-infra/issues/1#issuecomment-6395183721",
+        "state_after": "closed",
+        "state_reason": "completed",
+        "actor": "mootwo0202"
+      },
+      {
+        "issue": "https://github.com/team-onetruck/oneload-qa/issues/3",
+        "action": "checked local official search revalidation; threshold left unchecked; kept open",
+        "comment_url": "https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6395184334",
+        "state_after": "open",
+        "actor": "mootwo0202"
+      },
+      {
+        "issue": "https://github.com/team-onetruck/oneload-app/issues/41",
+        "action": "posted fresh contract comparison; kept open",
+        "comment_url": "https://github.com/team-onetruck/oneload-app/issues/41#issuecomment-6395184541",
+        "state_after": "open",
+        "actor": "mootwo0202"
+      }
+    ]
+  },
+  "unchanged_issue_comments": "Data#2, RAG#3 and Agent#7 retain their existing same-version evidence comments; no duplicate report spam.",
+  "baseline": {
+    "path": "reports/baseline.json",
+    "sha256": "3e62256b04eadf0802be91b8f3e1b5acf30b8ef33f235a90afee017e2e4b9a99",
+    "handling": "Existing complete baseline retained; this new same-source execution is supplemental issue evidence."
+  },
+  "not_reexecuted": [
+    "App513 unit/lint/typecheck/build; prior same-source evidence retained, not counted as fresh",
+    "Release-pinned RAG v0.3.0 installed profile and pgvector",
+    "Actual model answer quality, physical phone UI, field-photo acceptance and deployment"
+  ],
+  "safety": {
+    "real_model_calls": 0,
+    "real_embedding_calls": 0,
+    "db_profile": "new disposable loopback PostgreSQL17, removed by runners",
+    "production_database_used": false,
+    "deployment_executed": false,
+    "application_code_changed": false,
+    "frozen_evaluation_datasets_changed": false,
+    "startup_prompt_stored": false
+  },
+  "reproduction": [
+    "PYTHONDONTWRITEBYTECODE=1 OPENAI_API_KEY= .venv/bin/python scripts/run_checks.py --project-root .. --with-backend --output results/next-issue-check-001",
+    "PYTHONDONTWRITEBYTECODE=1 OPENAI_API_KEY= .venv/bin/python scripts/run_backend_tests.py --project-root .. --with-rag --rag-min-score 0.25 --output results/next-issue-rag-001",
+    "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/check_routes.py --project-root .. --output results/next-issue-routes-001.json"
+  ]
+}

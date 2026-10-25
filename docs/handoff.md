@@ -1,5 +1,19 @@
 # 한길 R6 인수인계
 
+## 열린 이슈 재검증 — 2026-10-25 17:05 KST
+
+mootwo0202 작성 열린 이슈6건과 QA 열린 이슈1건, 개인 소유 저장소 검색을 대조해 중복 제외7건을 확인했다. 여섯 개발 저장소 main은 이전 QA와 동일하다. [이슈별 판정·다음 작업](open-issue-review-20261025.md)과 [새 실행·버전·처리 증거](../reports/open-issue-review-20261025.json)를 현재 상태로 따른다.
+
+**Infra#1은 수정 완료를 확인해 completed로 종료**했다. README의 Backend·App public 표기, 공개 runner 설명과 Backend CI 주석이 현재 GitHub visibility=public과 일치한다. Agent#7은 Backend500/슬롯 해결·App 동기화 잔여로 부분 완료, Data#2는 경로19/24 실패, RAG#3은 최초 두 예시 개선 후에도 노출v2 정상 누락3·오탐5, App#41은 intent3개·슬롯4개·계획 타입 누락으로 open이다. 개인 skala_git_example#1은 완료 기준 없는 연습용 이슈여서 유지했다.
+
+**QA#3은 Q10·근거20건·로컬 R3 검색 재검사 완료, 임계값 확정 미완료**다. 본문의 로컬 검색 재검사 체크를 갱신하고 open을 유지했다. 기존 문서의 “R3 검색 재검사 대기”는 로컬 주입28/28·실제 전역app모의API7/7 완료와 구분한다. release v0.3.0 설치·pgvector·실제 AI/배포 인수는 별도 미검증이다.
+
+QA 실행 커밋 f23d5f3에서 새 일회용 DB·FakeLLM으로 QA48·Agent47·Backend71·Data구조3·component20/21·모의API27/27·공식검색API28/28·기본조립API7/7을 확인했다. **전체 exit1은 Data#2 경로19건 실패**이며 Backend#2 반납 facts는 통과한다. 검색은 고정0.25/k3/상대0.5에서 top3 17/20·차단15/20으로 기준 미달이다. baseline·동결 데이터는 보존했다. App513/빌드는 이번에 재실행하지 않았다.
+
+다음 작업은 Data#2의 실제 통행 제약 보완과 App#41 계약 동기화 후 같은 SHA 묶음의 경로/API 재검증이다. RAG#3·Agent#5의 검색/답변 근거는 분리 평가한다. 사람 검토21턴·실기기2D/거리뷰·현장 사진은 미완료이며 모델/임베딩0회, 운영 DB·배포 사용 없음이다. 다른 역할의 코드는 수정하지 않았다. QA main의 문서·증거만 갱신하며 시작 프롬프트는 저장하지 않는다.
+
+---
+
 ## main 병합·브랜치 정리 — 2026-10-25 12:13 KST
 
 [QA PR #6](https://github.com/team-onetruck/oneload-qa/pull/6)을 mootwo0202로 **main에 병합 완료**했다. 병합 커밋은 [`0bb40cb`](https://github.com/team-onetruck/oneload-qa/commit/0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c)이며, 병합한 파일 트리는 검토한 PR head `e8dd0a1`와 같다. 원격 `qa/mootwo-takeover-20261025`와 이번 작업의 로컬 브랜치를 삭제하고 이 QA checkout을 main으로 맞췄다. 이전 작업 이력은 로컬의 검증된 bundle에 보존했고, 사용자가 남기기로 한 이전 포크 저장소는 유지했다.

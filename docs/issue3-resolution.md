@@ -1,6 +1,15 @@
 # QA #3 근거·검색 평가 보완 — 2026-10-23
 
-2026-10-25: [최신 인수인계](handoff.md)에서 로컬 공식 MemorySearch의 실제 전역 app API7/7을 확인했다. 운영 임계값 승인·배포/release 프로필·사람 답변 검토는 남아 QA #3은 open이다. 새 코퍼스의 노출 v2 회귀는 top3 17/20·차단15/20으로 기준 미달이다. 아래 과거 수치와 구분한다.
+2026-10-25 17:05 KST: [열린 이슈 재검증](open-issue-review-20261025.md)에서 Q10 기대·근거 열20건·공식 검색 주입API28/28·실제 전역app모의API7/7을 다시 확인했다. **QA#3의 로컬 R3 검색 재검사는 완료 체크했다.** 임계값 승인·배포/release 프로필·사람 답변 검토는 남아 QA#3은 open이다. 노출v2 top3 17/20·차단15/20으로 기준 미달이다. 아래10월23일 수치·운영 연결 대기는 당시 기록이다.
+
+| 현재 완료 조건 | 2026-10-25 판정 |
+|---|---|
+| Q10 유형·기대 변경 | 완료, verified_at 표시 기대 유지 |
+| service_gold 근거 열 반영 | 20건 완료, 사람 검토20건 대기 |
+| 보강 평가셋으로 검색 임계값 확정 | 미완료, 노출v2 기준 미달·승인 보류 |
+| INT-07 이후 R3 검색 재검사 | 로컬 완료, FakeLLM·공식 MemorySearch28/28·전역app7/7 |
+
+[새 실행·이슈 처리 증거](../reports/open-issue-review-20261025.json). 실제 모델·임베딩0회, 운영 DB·배포 사용 없음이다. 아래는 과거 경과다.
 
 대상: [QA #3](https://github.com/team-onetruck/oneload-qa/issues/3). R3 요청의 자료를 검토해 QA 범위에서 수정했다. 운영 설정이나 다른 역할의 패치는 적용하지 않았다.
 
@@ -37,7 +46,7 @@ holdout에서 호텔 객실 가격 질문에 express-ticket/help-desks, 실시�
 
 이번 holdout은 이미 관찰·공개됐다. 다음 개선 때 이 결과로 최적화한 뒤 같은 holdout을 미관찰 검증이라고 소개하지 않는다. 별도 새 holdout과 기존 회귀셋을 함께 사용한다. top3 중 정답 하나라도 있으면 적중이므로 인용 정밀도·답변 사실성·여행객 품질은 이 점수로 판단할 수 없다. pgvector·실제 임베딩은 이번에 실행하지 않았다.
 
-## 최신 실제 RAG 주입 API 검사
+## 2026-10-23 당시 실제 RAG 주입 API 검사
 
 [API 21/21 증거](../reports/rag-integration-probe.json). Backend c9b8d8a, Agent54c321f, Data606f648, RAGe6c03f2에서 13:33 KST 재검증했다. FakeLLM·합성 JPEG·일회용 PostgreSQL·공식 문서 MemorySearch(k=3,min_score=0.25,scope gate0.25)다. 과거0.35 주입 증거를 새 값의 결과로 재라벨하지 않고 새 DB에서 실행했다.
 
@@ -48,7 +57,7 @@ holdout에서 호텔 객실 가격 질문에 express-ticket/help-desks, 실시�
 
 이것은 QA의 명시적 주입 경로 검사다. Backend 기본 entrypoint는 여전히 RuleAgent/NoVision(INT-07)이며, 운영 연결 이후의 재검사를 대체하지 않는다. 실제 모델·임베딩 호출0회, 현장 사진 정답0건, 사실성 사람 검토 미완료다.
 
-## 완료 조건 상태와 다음 작업
+## 2026-10-23 당시 완료 조건 상태와 다음 작업
 
 | 이슈 조건 | 상태 |
 |---|---|

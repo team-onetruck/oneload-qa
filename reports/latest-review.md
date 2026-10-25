@@ -1,5 +1,13 @@
 # 최신 QA 검토
 
+## 열린 이슈 재검증 — 2026-10-25 17:05 KST
+
+[이슈별 판정](../docs/open-issue-review-20261025.md) · [새 실행·버전·이슈 처리 증거](open-issue-review-20261025.json).
+
+중복 제외7건을 확인해 **Infra#1은 수정 완료로 종료**했다. Agent#7은 Backend500/슬롯 해결·App 잔여, Data#2는 경로19/24 실패, RAG#3은 정상 누락3·오탐5, App#41은 생성 타입 누락으로 open이다. **QA#3의 로컬 공식 검색 재검사는 완료 체크**, 임계값 확정은 미완료로 유지했다. 개인 연습용 이슈1건은 유지했다.
+
+같은 개발 소스 SHA에서 QA48·Agent47·Backend71·Data3·component20/21·모의API27/27·공식검색API28/28·전역app모의API7/7을 새로 실행했다. 전체 exit1은 Data#2 경로 gate다. baseline·동결 데이터는 보존했다. 검색 노출v2는 top3 17/20·차단15/20으로 미달이며 App513/빌드는 재실행하지 않았다. 실제 AI·휴대폰·현장 사진·배포 인수는 미검증이다.
+
 ## main 반영 완료 — 2026-10-25
 
 [QA PR #6](https://github.com/team-onetruck/oneload-qa/pull/6)을 main에 병합했고(`0bb40cb`), 원격·로컬 작업 브랜치를 삭제했다. 현재 QA checkout은 main이다. [병합 검토와 새 로컬 검증](merge-review-20261025.json)에서 QA48·Agent47·Backend71·모의API27/27·기본조립API7/7을 확인했다. 전체 exit1은 기존 Data#2 경로19건 실패로 유지하며 실제 AI·실기기·현장 인수 합격을 뜻하지 않는다. 배포는 실행하지 않았다. 아래 병합 대기 설명은 이전 공유 기록이다.

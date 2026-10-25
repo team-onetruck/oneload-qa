@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+  "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
   "purpose": "2026-10-25 takeover: latest main observations and actual fresh-clone FakeLLM/disposable-DB baseline; route failures and quality limitations preserved.",
   "qa": {
     "repository": "team-onetruck/oneload-qa",
@@ -10,7 +10,9 @@
     "code_base_commit": "52883be4b7bf3450435083b86318ab1499229e61",
     "note": "This local review commit includes runtime dependency repair, selected RAG source support, global entrypoint API and route gate. Frozen datasets unchanged.",
     "reviewed_head_commit": "e8dd0a12078a8d60d84e844430924dce8d5f0e33",
-    "merged_commit": "0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c"
+    "merged_commit": "0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c",
+    "latest_observed_main_commit": "f23d5f38a6eb649c42a9d725df7f43d51816db07",
+    "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
   },
   "qa_baseline": "reports/baseline.json",
   "rag_issue_review_evidence": [
@@ -25,9 +27,10 @@
       "observed_main_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
       "qa_baseline_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
       "rag_issue_review_commit": null,
-      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
       "review_evidence": "reports/takeover-review-20261025.json",
-      "historical_review_evidence": "reports/data-backend-review-20261023.json"
+      "historical_review_evidence": "reports/data-backend-review-20261023.json",
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
     },
     {
       "repository": "team-onetruck/oneload-backend",
@@ -36,9 +39,10 @@
       "observed_main_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
       "qa_baseline_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
       "rag_issue_review_commit": "a82b7befa6509c28c843a0dc84af46d75143a047",
-      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
       "review_evidence": "reports/takeover-review-20261025.json",
-      "historical_review_evidence": "reports/data-backend-review-20261023.json"
+      "historical_review_evidence": "reports/data-backend-review-20261023.json",
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
     },
     {
       "repository": "team-onetruck/oneload_agent",
@@ -47,9 +51,10 @@
       "observed_main_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
       "qa_baseline_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
       "rag_issue_review_commit": "250271edb6c50e8cc71cd1443143e94cb9191a74",
-      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
       "review_evidence": "reports/takeover-review-20261025.json",
-      "historical_review_evidence": "reports/data-backend-review-20261023.json"
+      "historical_review_evidence": "reports/data-backend-review-20261023.json",
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
     },
     {
       "repository": "team-onetruck/oneload-data",
@@ -58,9 +63,10 @@
       "observed_main_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
       "qa_baseline_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
       "rag_issue_review_commit": "606f6485e4e83cdf673e61b29fbd5458bb998bce",
-      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
       "review_evidence": "reports/takeover-review-20261025.json",
-      "historical_review_evidence": "reports/data-backend-review-20261023.json"
+      "historical_review_evidence": "reports/data-backend-review-20261023.json",
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
     },
     {
       "repository": "team-onetruck/oneload-infra",
@@ -69,9 +75,10 @@
       "observed_main_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
       "qa_baseline_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
       "rag_issue_review_commit": null,
-      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
       "review_evidence": "reports/takeover-review-20261025.json",
-      "historical_review_evidence": "reports/data-backend-review-20261023.json"
+      "historical_review_evidence": "reports/data-backend-review-20261023.json",
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
     },
     {
       "repository": "team-onetruck/oneload-rag",
@@ -80,14 +87,15 @@
       "observed_main_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
       "qa_baseline_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
       "rag_issue_review_commit": "f1ec584634cdbc2eca5da0e1aa8eeff13e13cfc0",
-      "observed_at_kst": "2026-10-25T11:35:04.610335+09:00",
+      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
       "rag_profile_review_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
       "review_evidence": "reports/takeover-review-20261025.json",
       "retrieval_review_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
-      "historical_review_evidence": "reports/data-backend-review-20261023.json"
+      "historical_review_evidence": "reports/data-backend-review-20261023.json",
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
     }
   ],
-  "updated_at_kst": "2026-10-25T12:13:59.230701+09:00",
+  "updated_at_kst": "2026-10-25T17:04:51.639673+09:00",
   "rag_profile_evidence": [
     "reports/rag-integration-probe.json",
     "reports/production-api-probe.json",
@@ -136,5 +144,14 @@
     "merged_at_kst": "2026-10-25T12:12:05+09:00",
     "head_branch_deleted": true,
     "merge_evidence": "reports/merge-review-20261025.json"
+  },
+  "open_issue_review": {
+    "evidence": "reports/open-issue-review-20261025.json",
+    "document": "docs/open-issue-review-20261025.md",
+    "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
+    "verified_execution_commit": "f23d5f38a6eb649c42a9d725df7f43d51816db07",
+    "source_versions_unchanged": true,
+    "infra_issue1_state": "closed_completed",
+    "qa_issue3_state": "open; local RAG check completed, threshold pending"
   }
 }
