@@ -1,5 +1,13 @@
 # 한길 R6 QA/Eval
 
+## Git 현재 main 전체 검증 — 2026-10-25
+
+[전체 검토](docs/git-main-review-20261025.md) · [최신 기준선](reports/baseline.json) · [구조화 증거](reports/git-main-review-20261025.json) · [미등록 이슈 초안](docs/git-main-issue-drafts-20261025.md). Backend main이2ebd94d로 갱신됐으며 나머지 개발 저장소 main은 이전과 같다.
+
+QA48·Agent47·Backend72·모의API27/27·공식검색28/28·전역app7/7·App513/자동화면24/빌드 통과다. **main 경로19/24 실패로 전체exit1**, 추가 RAG 검사도99/101(지도 버전 메타데이터2건 실패)이라 전체 인수는 미승인이다. App 타입·인용 출처·검색 품질 잔여도 유지한다.
+
+Data PR#3+최신 main은 별도로 경로78/78·무료 구역870쌍의 불필요한 개찰구0건을 확인했다. Agent PR#10은72통과·2xfail이다. 두 PR은 미병합이며 main 결과로 옮기지 않았다. 원본/미커밋 변경은 보존했고 QA 문서·증거만 공유한다.
+
 ## 로컬 지도 후보 검증 — 2026-10-25
 
 [미커밋 후보 테스트](docs/local-map-candidate-20261025.md) · [구조화 증거](reports/local-map-candidate-20261025.json) · [미등록 이슈 초안](docs/local-map-candidate-issue-drafts-20261025.md). Data 로컬2026-10-25.2/e89bc42c…를 수정 없이 검사했다. 기본 QA와 모의API27/27·공식검색API28/28·경로78/78은 통과하지만 Agent 사본 불일치·합성 위치/9-1 출구·안내 의미 검토가 남아 후보 전체 인수는 보류한다.

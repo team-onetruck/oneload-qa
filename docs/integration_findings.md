@@ -1,5 +1,13 @@
 # 최신 통합 점검 — 2026-10-25
 
+## 현재 Git main 전체 검사
+
+[전체 검토](git-main-review-20261025.md)와 [새 근거](../reports/git-main-review-20261025.json)를 따른다. Backend2ebd94d의 개찰구 비용 변경을 확인했으며 기존 Backend500/슬롯·환급 facts는 API에서 통과한다. main Data#2 경로19건, App#41 생성 계약, Agent#5 인용 출처, RAG#3 검색 기준 미달은 유지한다.
+
+추가로 RAG 전체99/101에서 사전·위치 카드의2026-10-23.1과 main 지도2026-10-25.1 불일치2건을 재현했다. MCP6·FakeEmbedder pgvector7은 통과한다. App의 현재513단위·24모의화면·빌드는 통과하지만 실제 Backend 연결 휴대폰 인수는 미실행이다. 새 결함은 [QA 이슈 초안](git-main-issue-drafts-20261025.md)으로만 남겼다.
+
+Data PR#3와 최신 Backend의 별도 조합에서 경로78/78·무료 구역870쌍 개찰구 경유0건, L24 차단 복구를 확인했다. Agent PR#10은 후보 중복3사례→0을 확인했으나2xfail과 미병합 상태를 유지한다. 로컬e89bc42c·Git PR6c30e61e·main e91194c5 지도는 서로 다른 입력이다. 어느 PR도 적용/병합하지 않았고 다른 저장소는 수정하지 않았다.
+
 ## 로컬 미커밋 지도 후보 — 읽기 전용 검증
 
 [2026-10-25.2 후보 검토](local-map-candidate-20261025.md)와 [별도 증거](../reports/local-map-candidate-20261025.json)를 추가했다. 후보는 지도e89bc42c…/Data HEAD89ec570의 dirty 작업 트리로, main 기준선과 구분한다. 새 지도 API27/27·공식검색28/28·전역app7/7·경로78/78은 통과한다.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
+  "observed_at_kst": "2026-10-25T23:12:37.616470+09:00",
   "purpose": "2026-10-25 takeover: latest main observations and actual fresh-clone FakeLLM/disposable-DB baseline; route failures and quality limitations preserved.",
   "qa": {
     "repository": "team-onetruck/oneload-qa",
@@ -11,8 +11,9 @@
     "note": "This local review commit includes runtime dependency repair, selected RAG source support, global entrypoint API and route gate. Frozen datasets unchanged.",
     "reviewed_head_commit": "e8dd0a12078a8d60d84e844430924dce8d5f0e33",
     "merged_commit": "0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c",
-    "latest_observed_main_commit": "f23d5f38a6eb649c42a9d725df7f43d51816db07",
-    "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
+    "latest_observed_main_commit": "5c082f83efb564c4f5ebbe574c759699cbd6c1da",
+    "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
+    "current_main_review_execution_commit": "5c082f83efb564c4f5ebbe574c759699cbd6c1da"
   },
   "qa_baseline": "reports/baseline.json",
   "rag_issue_review_evidence": [
@@ -27,22 +28,24 @@
       "observed_main_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
       "qa_baseline_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
       "rag_issue_review_commit": null,
-      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
-      "review_evidence": "reports/takeover-review-20261025.json",
+      "observed_at_kst": "2026-10-25T23:12:37.616470+09:00",
+      "review_evidence": "reports/git-main-review-20261025.json",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
-      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
+      "historical_previous_review_evidence": "reports/takeover-review-20261025.json"
     },
     {
       "repository": "team-onetruck/oneload-backend",
       "directory": "oneload-backend",
       "url": "https://github.com/team-onetruck/oneload-backend.git",
-      "observed_main_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
-      "qa_baseline_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+      "observed_main_commit": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+      "qa_baseline_commit": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
       "rag_issue_review_commit": "a82b7befa6509c28c843a0dc84af46d75143a047",
-      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
-      "review_evidence": "reports/takeover-review-20261025.json",
+      "observed_at_kst": "2026-10-25T23:12:37.616470+09:00",
+      "review_evidence": "reports/git-main-review-20261025.json",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
-      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
+      "historical_previous_review_evidence": "reports/takeover-review-20261025.json"
     },
     {
       "repository": "team-onetruck/oneload_agent",
@@ -51,10 +54,11 @@
       "observed_main_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
       "qa_baseline_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
       "rag_issue_review_commit": "250271edb6c50e8cc71cd1443143e94cb9191a74",
-      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
-      "review_evidence": "reports/takeover-review-20261025.json",
+      "observed_at_kst": "2026-10-25T23:12:37.616470+09:00",
+      "review_evidence": "reports/git-main-review-20261025.json",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
-      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
+      "historical_previous_review_evidence": "reports/takeover-review-20261025.json"
     },
     {
       "repository": "team-onetruck/oneload-data",
@@ -63,10 +67,11 @@
       "observed_main_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
       "qa_baseline_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
       "rag_issue_review_commit": "606f6485e4e83cdf673e61b29fbd5458bb998bce",
-      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
-      "review_evidence": "reports/takeover-review-20261025.json",
+      "observed_at_kst": "2026-10-25T23:12:37.616470+09:00",
+      "review_evidence": "reports/git-main-review-20261025.json",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
-      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
+      "historical_previous_review_evidence": "reports/takeover-review-20261025.json"
     },
     {
       "repository": "team-onetruck/oneload-infra",
@@ -75,10 +80,11 @@
       "observed_main_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
       "qa_baseline_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
       "rag_issue_review_commit": null,
-      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
-      "review_evidence": "reports/takeover-review-20261025.json",
+      "observed_at_kst": "2026-10-25T23:12:37.616470+09:00",
+      "review_evidence": "reports/git-main-review-20261025.json",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
-      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
+      "historical_previous_review_evidence": "reports/takeover-review-20261025.json"
     },
     {
       "repository": "team-onetruck/oneload-rag",
@@ -87,15 +93,16 @@
       "observed_main_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
       "qa_baseline_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
       "rag_issue_review_commit": "f1ec584634cdbc2eca5da0e1aa8eeff13e13cfc0",
-      "observed_at_kst": "2026-10-25T16:55:52.078458+09:00",
+      "observed_at_kst": "2026-10-25T23:12:37.616470+09:00",
       "rag_profile_review_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
-      "review_evidence": "reports/takeover-review-20261025.json",
+      "review_evidence": "reports/git-main-review-20261025.json",
       "retrieval_review_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
-      "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
+      "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
+      "historical_previous_review_evidence": "reports/takeover-review-20261025.json"
     }
   ],
-  "updated_at_kst": "2026-10-25T18:34:44.513703+09:00",
+  "updated_at_kst": "2026-10-25T23:18:12.387861+09:00",
   "rag_profile_evidence": [
     "reports/rag-integration-probe.json",
     "reports/production-api-probe.json",
@@ -111,7 +118,7 @@
     "protocol": "official-only MemorySearch min_score0.25 k3 relative0.5; no sweep",
     "historical_pre_post_evidence": "reports/rag-issue3-revalidation.json"
   },
-  "current_update_review": "reports/takeover-review-20261025.json",
+  "current_update_review": "reports/git-main-review-20261025.json",
   "backend_development_agent_source": {
     "path": "../oneload_agent",
     "editable": true
@@ -125,9 +132,9 @@
   },
   "backend_deployed_agent_commit_historical": "eca420e9321272333db5c5499a2af752e1cb7b69",
   "deployment_observation": {
-    "evidence": "reports/remote-ci-20261025.json",
+    "evidence": "reports/git-main-review-20261025.json",
     "latest_deployment_success_verified": false,
-    "note": "App deploy cancelled; Backend/Agent deploy queued. Historical20261023 deployed SHAs are not re-labeled as current runtime."
+    "note": "Head-specific CI test/image/verify/e2e successes are distinct from queued Backend/Agent deploy and cancelled App deploy."
   },
   "current_architecture_note": "Historical20261023 architecture; latest differences and verified scope in docs/handoff.md and reports/takeover-review-20261025.json",
   "publication": {
@@ -167,5 +174,29 @@
     "baseline_updated": false,
     "remote_main_updated": false,
     "note": "Read-only candidate test. Main observation and qa_baseline_commit remain unchanged. Standard checks pass, additional compatibility/semantic checks require review."
+  },
+  "current_git_review": {
+    "document": "docs/git-main-review-20261025.md",
+    "evidence": "reports/git-main-review-20261025.json",
+    "main_sources_unchanged_after_tests": true,
+    "standard_overall_exit_code": 1,
+    "additional_RAG_failures": 2,
+    "pending_PRs_counted_as_main": false,
+    "candidate_local_worktree_preserved": true
+  },
+  "pending_pr_verification": {
+    "data3": {
+      "commit": "be91a04ee38d0a8b7e614b0d160480d9ac798c18",
+      "map_sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18",
+      "merged": false,
+      "evidence": "reports/git-main-review-20261025.json"
+    },
+    "agent10": {
+      "commit": "6f10806975215a9c248e4471f1a5bba6f4ffa00f",
+      "passed": 72,
+      "xfail": 2,
+      "merged": false,
+      "evidence": "reports/git-main-review-20261025.json"
+    }
   }
 }

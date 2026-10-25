@@ -1,5 +1,11 @@
 # R6 테스트 계획 v0.10
 
+## 최신 실행 프로필 — 2026-10-25
+
+[Git main 전체 검증](git-main-review-20261025.md)에서 현재 main·Data PR#3·Agent PR#10을 분리했다. main은 QA48/Agent47/Backend72·API27/28/7·App513/모의화면24 통과, 경로19건·RAG 메타데이터2건 실패다. RAG MCP6·FakeEmbedder pgvector7을 추가 확인했다. 기존 질문·정답·검색 임계값·인수조건은 바꾸지 않았다.
+
+단위 fixture 지도, 실제 선택한 main 지도, 미병합 PR 지도 SHA를 각각 기록한다. App 자동 화면은 모의 API·카메라/센서여서 실제 Backend 연결/휴대폰 인수와 구분한다. PR#10의2xfail과 사람 검토21턴은 통과로 세지 않는다. 실제 모델·현장 사진·Unity/AR 실기기 평가는 이번 범위에 포함하지 않는다.
+
 ## 담당 결과물
 
 1. 설계서 STEP 04 인수조건과 같은 TC ID를 사용하는 기능 테스트 기록

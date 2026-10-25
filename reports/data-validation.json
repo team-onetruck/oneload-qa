@@ -42,11 +42,11 @@
   "field_photo_accuracy_measured": false,
   "commits": {
     "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
-    "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+    "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
     "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
     "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
     "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
     "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
   },
-  "checked_at_kst": "2026-10-25T11:30:31.219194+09:00"
+  "checked_at_kst": "2026-10-25T22:47:48.768885+09:00"
 }

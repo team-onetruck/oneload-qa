@@ -1,9 +1,9 @@
 {
   "date": "2026-10-25",
-  "executed_at_kst": "2026-10-25T11:30:39.959173+09:00",
+  "executed_at_kst": "2026-10-25T22:47:57.073237+09:00",
   "commits": {
     "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
-    "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+    "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
     "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
     "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
     "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
@@ -14,37 +14,37 @@
     {
       "name": "qa-tests",
       "exit_code": 0,
-      "elapsed_s": 1.628
+      "elapsed_s": 1.644
     },
     {
       "name": "data-validation",
       "exit_code": 0,
-      "elapsed_s": 0.127
+      "elapsed_s": 0.106
     },
     {
       "name": "route-connectivity",
       "exit_code": 1,
-      "elapsed_s": 0.213
+      "elapsed_s": 0.168
     },
     {
       "name": "agent-tests",
       "exit_code": 0,
-      "elapsed_s": 1.006
+      "elapsed_s": 0.804
     },
     {
       "name": "contract-audit",
       "exit_code": 0,
-      "elapsed_s": 0.887
+      "elapsed_s": 0.739
     },
     {
       "name": "component-eval",
       "exit_code": 0,
-      "elapsed_s": 0.423
+      "elapsed_s": 0.402
     },
     {
       "name": "backend-and-integration",
       "exit_code": 0,
-      "elapsed_s": 6.2
+      "elapsed_s": 6.182
     }
   ],
   "map": {
@@ -217,19 +217,19 @@
       "skipped": 0
     },
     "model": "FakeLLM",
-    "checkout": "Local synchronized main"
+    "checkout": "Pinned clean GitHub main snapshot, detached HEAD, inside QA results"
   },
   "backend": {
     "suite": {
-      "tests": 71,
+      "tests": 72,
       "failures": 0,
       "errors": 0,
       "skipped": 0
     },
     "run": {
-      "started_at_kst": "2026-10-25T11:30:33.831980+09:00",
+      "started_at_kst": "2026-10-25T22:47:50.960288+09:00",
       "repository": "oneload-backend",
-      "commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+      "commit": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
       "python": "3.12.9",
       "exit_code": 0,
       "unit_fixture": {
@@ -265,15 +265,30 @@
   },
   "frontend": {
     "commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
-    "status": "not_run",
-    "browser_e2e_executed": false,
+    "status": "automated_mock_checks_passed",
+    "browser_e2e_executed": true,
     "source_wiring": {
       "status": "wired",
       "validation_level": "reviewed_source_only",
       "registry_sha256": "527b2dd0b0ed4ed555e40f7e8930df2951f2348c29c37a4a16fdf1d8579535ba",
-      "runtime_browser_e2e": "NOT_RUN"
+      "runtime_browser_e2e": "MOCK_API_ONLY_24_PASSED; ACTUAL_BACKEND_UI_NOT_RUN"
     },
-    "scope": "retained results from the same unchanged commit"
+    "scope": "Fresh same-commit lint/type/unit/build and intercepted-API browser tests; actual Backend UI and phone acceptance not run.",
+    "local_automated_verification": {
+      "unit_tests_passed": 513,
+      "lint": "passed",
+      "typecheck": "passed",
+      "build": "passed",
+      "evidence": "reports/git-main-review-20261025.json"
+    },
+    "mock_browser_e2e": {
+      "passed": 24,
+      "failed": 0,
+      "skipped": 0,
+      "profile": "Pixel7 + DesktopChrome, intercepted API",
+      "actual_backend_ui_integration": false
+    },
+    "physical_phone": "NOT_RUN"
   },
   "real_llm_calls": 0,
   "real_embedding_calls": 0,
@@ -294,5 +309,19 @@
     "run_backend_tests.py": "b77292319db36f1781bef51931e4914eaca7d8e0357c99400e23a8af12c67a1f",
     "run_checks.py": "c9ab2be62b13fc4863f13f9e7e77b07d27dced7b682620d44587113caad3b46e",
     "validate_data.py": "7d648fef59d9361abf691c49a5ad35d3da553dce695df6dbcc881707a7feecd9"
+  },
+  "supplemental_upstream_checks": {
+    "evidence": "reports/git-main-review-20261025.json",
+    "rag_tests": {
+      "tests": 101,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 99
+    },
+    "agent_backend_compat": "passed",
+    "agent_backend_e2e": "passed",
+    "RAG_MCP_tests": "6passed",
+    "RAG_pgvector_tests": "7passed, FakeEmbedder; one ingestion/search DB integration case"
   }
 }

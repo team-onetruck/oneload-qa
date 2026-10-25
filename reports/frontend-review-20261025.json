@@ -2,7 +2,7 @@
   "reviewed_at_kst": "2026-10-25T11:29:28.981618+09:00",
   "commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
   "validation_level": "reviewed_source_only",
-  "runtime_browser_e2e": "NOT_RUN",
+  "runtime_browser_e2e": "passed_mock_api24; actual Backend UI not run",
   "physical_phone": "NOT_RUN",
   "call_path_review": [
     "src/screens.tsx user actions -> store.tsx sendText/sendSuggested/pickDestination -> askServer -> sendChat -> api/index.ts -> HTTP adapter /messages",
@@ -81,7 +81,10 @@
     "build": "passed",
     "node": "v25.2.1",
     "pnpm": "11.13.0",
-    "runtime_browser_e2e": "NOT_RUN",
-    "build_note": "large streetview chunk warning; no performance acceptance claimed"
-  }
+    "runtime_browser_e2e": "passed_mock_api24",
+    "build_note": "large streetview chunk warning; no performance acceptance claimed",
+    "executed_at_kst": "2026-10-25T22:56:37.671623+09:00"
+  },
+  "revalidated_at_kst": "2026-10-25T22:56:37.671623+09:00",
+  "current_execution_evidence": "reports/git-main-review-20261025.json"
 }

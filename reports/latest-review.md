@@ -1,5 +1,13 @@
 # 최신 QA 검토
 
+## 현재 Git main 전체 확인 — 2026-10-25
+
+[전체 판정](../docs/git-main-review-20261025.md) · [구조화 새 실행](git-main-review-20261025.json) · [main 기준선](baseline.json) · [미등록 이슈 초안](../docs/git-main-issue-drafts-20261025.md).
+
+App12ba6c6·Backend2ebd94d·Agenta732577·Data89ec570·Infra6cf4a65·RAGf99704d를 고정했다. QA48·Agent47·Backend72·API27/27·공식검색28/28·전역app7/7·App단위513/자동화면24/빌드 통과다. **main은 경로19/24 실패로 표준exit1**, 별도 RAG전체는99통과·메타데이터2실패·skip0이다. MCP6·FakeEmbedder pgvector7은 통과했다. 검색v2 top3 17/20·차단15/20, App 생성 타입 누락, Agent 인용1/출처2 제어 실패가 남는다.
+
+Data PR#3/be91a04는 별도 main코드 조합에서78/78 연결·무료 구역870쌍 불필요한 개찰구0건을 확인했다. Agent PR#10은72통과·2xfail, 중복 후보3→0이다. 미병합 변경을 main 해결로 기록하지 않는다. 원본7개 저장소와 로컬 미커밋 후보는 보존했다. 실제 AI·실기기·현장 인수·배포는 미검증이며 실제 GitHub 이슈는 변경하지 않았다.
+
 ## 미커밋 지도 후보 테스트 — 2026-10-25
 
 [검토·다음 작업](../docs/local-map-candidate-20261025.md) · [새 실행·작업 트리 SHA](local-map-candidate-20261025.json) · [미등록 이슈 초안](../docs/local-map-candidate-issue-drafts-20261025.md).

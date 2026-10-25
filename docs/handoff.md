@@ -1,5 +1,21 @@
 # 한길 R6 인수인계
 
+## Git 현재 main 전체 검증 — 2026-10-25
+
+GitHub main을 조회·고정한 QA 내부 복사본으로 전체 검사했고, 종료 시 원격 main이 같음을 다시 확인했다. 현재 조합은 QA5c082f8에서 실행, App12ba6c6·**Backend2ebd94d**·Agenta732577·Data89ec570·Infra6cf4a65·RAGf99704d다. 사용자 원본7개 checkout의 파일/HEAD/브랜치/상태는 보존했다. [전체 검토](git-main-review-20261025.md) · [최신 기준선](../reports/baseline.json) · [구조화 증거](../reports/git-main-review-20261025.json) · [이슈 초안](git-main-issue-drafts-20261025.md).
+
+main에서 QA48·Agent47·Backend72·Data구조3·component20/21·모의API27/27·공식검색API28/28·전역app7/7 통과다. Agent 자체 호환/E2E도 통과했다. **표준 전체 exit1은 main 지도 경로19/24 실패**다. 별도 RAG 전체101건은 **99통과·2실패·skip0**, 사전/위치 카드2026-10-23.1과 Data main2026-10-25.1의 메타데이터 불일치다. MCP6/6·FakeEmbedder pgvector7/7·App lint/타입/513단위/빌드·모의화면24/24는 통과했다.
+
+검색 노출v2는 top3 17/20·차단15/20으로 기준 미달, App#41 타입 누락과 Agent#5의 인용1개/출처2개 제어 실패도 유지한다. Backend#2·Infra#1은 해결 확인/closed다. 열린 이슈10건과 미병합 PR 상태를 읽었으며 **실제 이슈·댓글·PR 상태는 변경하지 않았다.** 새 RAG 메타데이터 결함은 QA 초안으로만 남겼다.
+
+**미병합 검증은 main과 분리:** Data PR#3/be91a04(지도2026-10-25.2/SHA6c30e61e,간선106)+최신 main 코드는 표준exit0·경로78/78·API27/28/7 통과다. 무료 구역870쌍에서 불필요한 개찰구 경유가 Backend9067553의60건→2ebd94d의0건으로 개선됐고, L24 음성 차단도 복구됐다. 전체노드쌍1,521/1,521·지정휠체어81/81 연결이다. Agent PR#10/6f10806은 단위72통과·2xfail이며 중복 후보3사례→0, 점수는유지다. 두 PR은 open이며 결합 인수/병합으로 집계하지 않는다. Unity#39/#42는draft·현재 모바일웹 인수 범위 밖이다.
+
+Data 로컬e89bc42c/간선102와 Git PR의6c30e61e/간선106은 같은2026-10-25.2라도 다른 입력이다. 로컬 미커밋 변경은 보존했다. Data#2의 main 실패와 PR 개선을 구분하고, 다음에는 Data/Agent 사본·R3 매핑·App 계약 동기화 뒤 SHA를 고정해 재검증한다. 사람 검토21턴·실제 AI·실기기·현장 인수는 미완료다. UI24건은 모의 API/센서이며 실제 Backend 화면 인수가 아니다.
+
+CI에서 App verify/e2e·Backend test/image·Agent test/backend·Data/RAG test 성공을 관찰했지만 App deploy취소·Backend/Agent deploy대기로 배포 완료는 미검증이다. 실제 모델/임베딩0회, 새 일회용DB만 사용·정리했고 운영 DB·배포·다른 저장소 수정/commit/push는 없었다. QA 문서·main 기준선·별도 PR 증거만 갱신했다. RAG v0.3.0 설치 이미지 검증은 형제 main 검증과 별도다.
+
+---
+
 ## 미커밋 지도 후보 테스트 — 2026-10-25
 
 사용자가 보존 요청한 Data `map/line14-expansion-20261025`의 로컬 변경을 읽기만 하여 검사했다. 기반 HEAD는89ec570이며 **지도2026-10-25.2/e89bc42c…는 미커밋 작업 트리**다. 이 HEAD를 변경 지도 커밋으로 표시하지 않는다. [테스트 범위·결과](local-map-candidate-20261025.md) · [구조화 증거·파일별 SHA](../reports/local-map-candidate-20261025.json) · [다른 역할 이슈 초안](local-map-candidate-issue-drafts-20261025.md).
