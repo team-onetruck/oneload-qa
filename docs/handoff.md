@@ -1,5 +1,22 @@
 # 한길 R6 인수인계
 
+## 현재 버전 재검증 — 2026-10-26
+
+받아둔 QA `5461c97`과 개발 저장소 6개의 원격 main을 대조하고 고정한 복사본에서 검사했다. 개발 main은 10월 25일 검토와 같으며, 새 Agent PR #11은 별도 프로필로 추가 검증했다.
+[전체 검토](current-review-20261026.md) · [새 증거](../reports/current-review-20261026.json) · [main 기준선](../reports/baseline.json) · [미등록 초안](current-issue-drafts-20261026.md).
+
+**main 결과:** QA49·Agent47·Backend72·Data 구조3·component20시나리오/21턴·모의API27/27·공식RAG28/28·전역app7/7 통과다. App lint·타입·단위513·빌드·모의 화면24건도 통과했다. **표준 전체 exit1은 경로19/24 실패**이며, RAG 전체도99/101(skip0)로 지도 버전 메타데이터2건이 실패한다. MCP6·FakeEmbedder pgvector7은 통과했다. 이미 노출된 검색v2는 top3 17/20·범위밖 차단15/20으로 기준 미달이다.
+
+**PR 결과는 main과 분리했다.** Data PR3/be91a04는 표준exit0·경로78/78·노드쌍1521/1521이며, 무료구역870쌍에서 불필요한 개찰구 통과가0건이다. Agent PR10/6f10806은72통과·2xfail이다. 새 Agent PR11/e7c8b88은 프롬프트v5·단위52·Backend72·component20/21·API27/28/7 통과다. PR11의 표준exit1은 기존 main 지도 경로 때문이다. 근거/인용 제어는 main1/6→PR11 5/6으로 개선됐지만, 600자 이후 잘린 인용의 출처가 남는1건을 초안에 기록했다. 병합·PR 간 결합·실제 모델 품질 합격으로 집계하지 않는다.
+
+QA는 symlink로 선택한 저장소에서 component21턴 판정 후 메타데이터 기록이 실패하던 경로 처리를 수정하고 CLI 회귀1건을 추가했다. 초기 실행기 오류는 제품 실패가 아니다. 새 Python3.12.14 환경과81패키지의 pip check를 확인했으며, 확장 검사 재현용 `requirements-validation.lock.txt`를 추가했다. 기존 core lock과 동결 평가 질문·정답은 그대로다.
+
+원본7개 checkout은 테스트 전후 동일했으며 이후 QA만 반영한다. 실제 이슈·댓글·PR 상태와 다른 역할의 코드는 변경하지 않았다. 배포·운영DB·실제 모델/임베딩 호출은0회다. QA가 만든 DB와 서버만 정리했다. CI 배포 대기/취소, 실제 모바일·현장 인수, 사람 검토21턴은 미완료다. 과거10월23일의 demo 검색·환급 오류를 현재 실패로 재사용하지 않는다.
+
+다음 순서: Data PR3 검토와 Agent 사본/R3 매핑 동기화 → PR11 인용 잘림 → App 생성 계약 → 동일 SHA 묶음의 전체 검사 → 사람 근거 검토와 실제 모바일 인수. 시작 프롬프트는 채팅에만 작성한다.
+
+---
+
 ## Git 현재 main 전체 검증 — 2026-10-25
 
 GitHub main을 조회·고정한 QA 내부 복사본으로 전체 검사했고, 종료 시 원격 main이 같음을 다시 확인했다. 현재 조합은 QA5c082f8에서 실행, App12ba6c6·**Backend2ebd94d**·Agenta732577·Data89ec570·Infra6cf4a65·RAGf99704d다. 사용자 원본7개 checkout의 파일/HEAD/브랜치/상태는 보존했다. [전체 검토](git-main-review-20261025.md) · [최신 기준선](../reports/baseline.json) · [구조화 증거](../reports/git-main-review-20261025.json) · [이슈 초안](git-main-issue-drafts-20261025.md).

@@ -1,5 +1,5 @@
 {
-  "checked_at_kst": "2026-10-25T22:47:50.355954+09:00",
+  "checked_at_kst": "2026-10-26T08:37:39.808302+09:00",
   "scope": "Real Backend context/map/guard + FakeLLM; actual Vision failure, schemas and static wiring; no live models",
   "commits": {
     "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",

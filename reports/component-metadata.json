@@ -1,8 +1,8 @@
 {
-  "executed_at_kst": "2026-10-25T22:47:50.849230+09:00",
+  "executed_at_kst": "2026-10-26T08:37:40.729618+09:00",
   "dataset_version": "r6-component-v2",
   "dataset_sha256": "1daa313834008bf7c26dec28d9cb302e92ddddd9b28d8c5e15cc28d5f6a13da3",
-  "runner_sha256": "3c5dc6282972ebed5ad0891da37a5e051bb890333ace1f1401fee147946c1150",
+  "runner_sha256": "a9e7e9f2279ef8f3d91c4f3e5d651ba1225c9298f77b864a40d46d04afb7853f",
   "commits": {
     "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
     "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
@@ -18,7 +18,7 @@
     "version": "2026-10-25.1",
     "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
   },
-  "python": "3.12.9",
+  "python": "3.12.14",
   "model_mode": "fake",
   "model_name": "FakeLLM",
   "prompt_version": "v4",
@@ -41,6 +41,6 @@
   "auto_turns_passed": 21,
   "human_review_pending": 21,
   "final_quality_score": null,
-  "p95_latency_ms_nearest_rank": 1.31,
+  "p95_latency_ms_nearest_rank": 0.78,
   "latency_scope": "component and selected model mode; not browser/API latency"
 }

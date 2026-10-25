@@ -53,7 +53,9 @@ def main() -> int:
     ap.add_argument("--prompt-version", help="Default: selected Agent's code default")
     args = ap.parse_args()
     root = args.project_root.resolve()
-    repo, backend = root / "oneload_agent", root / "oneload-backend"
+    repo, backend = (
+        (root / name).resolve() for name in ("oneload_agent", "oneload-backend")
+    )
     sys.path[:0] = [str(backend), str(repo)]
     try:
         map_, map_info = load_live_map(root, args.map_dir)

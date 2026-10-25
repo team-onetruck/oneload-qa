@@ -1,0 +1,137 @@
+{
+  "profile": "main",
+  "scope": "Controlled FakeLLM with two official document hits; source structure and NO_ANSWER handling, not real AI quality",
+  "map": {
+    "source_repository": "oneload-data",
+    "path": "maps/seoul-station.json",
+    "map_id": "seoul-station",
+    "version": "2026-10-25.1",
+    "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
+  },
+  "injected_documents": [
+    "doc-allstop-ticket",
+    "doc-arex-train-types"
+  ],
+  "checks": [
+    {
+      "id": "one-citation",
+      "passed": false,
+      "expected": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket"
+        ]
+      },
+      "actual": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types"
+        ]
+      },
+      "visible_citation_numbers": [
+        "1"
+      ],
+      "answer_length": 18
+    },
+    {
+      "id": "no-answer",
+      "passed": false,
+      "expected": {
+        "status": "cannot_answer",
+        "sources": []
+      },
+      "actual": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types"
+        ]
+      },
+      "visible_citation_numbers": [],
+      "answer_length": 18
+    },
+    {
+      "id": "invalid-citation",
+      "passed": false,
+      "expected": {
+        "status": "cannot_answer",
+        "sources": []
+      },
+      "actual": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types"
+        ]
+      },
+      "visible_citation_numbers": [],
+      "answer_length": 18
+    },
+    {
+      "id": "missing-citation",
+      "passed": false,
+      "expected": {
+        "status": "cannot_answer",
+        "sources": []
+      },
+      "actual": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types"
+        ]
+      },
+      "visible_citation_numbers": [],
+      "answer_length": 18
+    },
+    {
+      "id": "both-citations",
+      "passed": true,
+      "expected": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types"
+        ]
+      },
+      "actual": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types"
+        ]
+      },
+      "visible_citation_numbers": [
+        "1",
+        "2"
+      ],
+      "answer_length": 28
+    },
+    {
+      "id": "citation-after-truncation",
+      "passed": false,
+      "expected": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket"
+        ]
+      },
+      "actual": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types"
+        ]
+      },
+      "visible_citation_numbers": [
+        "1"
+      ],
+      "answer_length": 600
+    }
+  ],
+  "passed": 1,
+  "total": 6,
+  "model_calls": 0,
+  "embedding_calls": 0
+}

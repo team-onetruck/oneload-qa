@@ -1,5 +1,22 @@
 # 한길 R6 QA/Eval
 
+## 현재 버전 재검증 — 2026-10-26
+
+받아둔 QA `5461c97`과 개발 저장소 6개의 원격 main을 대조하고 고정한 복사본에서 검사했다. 개발 main은 10월 25일 검토와 같으며, 새 Agent PR #11은 별도 프로필로 추가 검증했다.
+[전체 검토](docs/current-review-20261026.md) · [새 증거](reports/current-review-20261026.json) · [main 기준선](reports/baseline.json) · [미등록 초안](docs/current-issue-drafts-20261026.md).
+
+**main 결과:** QA49·Agent47·Backend72·Data 구조3·component20시나리오/21턴·모의API27/27·공식RAG28/28·전역app7/7 통과다. App lint·타입·단위513·빌드·모의 화면24건도 통과했다. **표준 전체 exit1은 경로19/24 실패**이며, RAG 전체도99/101(skip0)로 지도 버전 메타데이터2건이 실패한다. MCP6·FakeEmbedder pgvector7은 통과했다. 이미 노출된 검색v2는 top3 17/20·범위밖 차단15/20으로 기준 미달이다.
+
+**PR 결과는 main과 분리했다.** Data PR3/be91a04는 표준exit0·경로78/78·노드쌍1521/1521이며, 무료구역870쌍에서 불필요한 개찰구 통과가0건이다. Agent PR10/6f10806은72통과·2xfail이다. 새 Agent PR11/e7c8b88은 프롬프트v5·단위52·Backend72·component20/21·API27/28/7 통과다. PR11의 표준exit1은 기존 main 지도 경로 때문이다. 근거/인용 제어는 main1/6→PR11 5/6으로 개선됐지만, 600자 이후 잘린 인용의 출처가 남는1건을 초안에 기록했다. 병합·PR 간 결합·실제 모델 품질 합격으로 집계하지 않는다.
+
+QA는 symlink로 선택한 저장소에서 component21턴 판정 후 메타데이터 기록이 실패하던 경로 처리를 수정하고 CLI 회귀1건을 추가했다. 초기 실행기 오류는 제품 실패가 아니다. 새 Python3.12.14 환경과81패키지의 pip check를 확인했으며, 확장 검사 재현용 `requirements-validation.lock.txt`를 추가했다. 기존 core lock과 동결 평가 질문·정답은 그대로다.
+
+원본7개 checkout은 테스트 전후 동일했으며 이후 QA만 반영한다. 실제 이슈·댓글·PR 상태와 다른 역할의 코드는 변경하지 않았다. 배포·운영DB·실제 모델/임베딩 호출은0회다. QA가 만든 DB와 서버만 정리했다. CI 배포 대기/취소, 실제 모바일·현장 인수, 사람 검토21턴은 미완료다. 과거10월23일의 demo 검색·환급 오류를 현재 실패로 재사용하지 않는다.
+
+다음 순서: Data PR3 검토와 Agent 사본/R3 매핑 동기화 → PR11 인용 잘림 → App 생성 계약 → 동일 SHA 묶음의 전체 검사 → 사람 근거 검토와 실제 모바일 인수. 시작 프롬프트는 채팅에만 작성한다.
+
+---
+
 ## Git 현재 main 전체 검증 — 2026-10-25
 
 [전체 검토](docs/git-main-review-20261025.md) · [최신 기준선](reports/baseline.json) · [구조화 증거](reports/git-main-review-20261025.json) · [미등록 이슈 초안](docs/git-main-issue-drafts-20261025.md). Backend main이2ebd94d로 갱신됐으며 나머지 개발 저장소 main은 이전과 같다.
@@ -150,7 +167,18 @@ uv pip install --python .venv/bin/python -r requirements-runtime.lock.txt
 ~~~
 
 가상환경은 컴퓨터마다 새로 만듭니다. 다른 컴퓨터의 .venv나 절대 경로 링크를 복사하지 않습니다. uv가 없으면 `python3 -m venv .venv` 후 `.venv/bin/python -m pip install -r requirements-runtime.lock.txt`로 준비할 수 있습니다.
-이번 재현 환경은 Python 3.12.9입니다(과거 기준선은 3.12.14). 의존성 목록은 QA 환경 기록이며 팀의 배포 의존성을 대체하지 않습니다.
+10월25일 재현은 Python3.12.9, 이번10월26일 재검증은 Python3.12.14입니다. 실행별 환경은 보고서에 기록하며 팀의 배포 의존성과 구분합니다.
+
+## 확장 검사 환경 재현
+
+Data 자체 JSON Schema 검사와 RAG MCP·FakeEmbedder pgvector까지 실행할 때는 확장 의존성을 사용합니다. 기존 core lock은 유지했습니다.
+
+```sh
+uv pip install --python .venv/bin/python -r requirements-validation.lock.txt
+uv pip check --python .venv/bin/python
+```
+
+10월26일 검증에서는81패키지가 호환됐습니다. 설치만으로 실제 모델을 호출하지 않으며 검사는 FakeLLM/FakeEmbedder와 QA가 만든 일회용 DB로 제한합니다. 자세한 실행 프로필과 main/PR 구분은 [최신 검토](docs/current-review-20261026.md)를 따릅니다.
 
 ## 지도 선택과 기록
 

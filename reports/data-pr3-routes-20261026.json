@@ -1,0 +1,22 @@
+{
+  "commits": {
+    "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+    "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+    "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+    "oneload-data": "be91a04ee38d0a8b7e614b0d160480d9ac798c18",
+    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+    "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+  },
+  "map": {
+    "source_repository": "oneload-data",
+    "path": "maps/seoul-station.json",
+    "map_id": "seoul-station",
+    "version": "2026-10-25.2",
+    "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+  },
+  "node_pairs": 1521,
+  "unreachable": [],
+  "free_area_pairs": 870,
+  "free_area_paths_with_gate": [],
+  "scope": "default Backend graph; gate/distance policy; not field walking or accessibility acceptance"
+}
