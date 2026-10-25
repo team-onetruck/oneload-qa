@@ -1,5 +1,24 @@
 # 한길 R6 인수인계
 
+## 현재 등록 계정과 인수인계 — 2026-10-25 12:04 KST
+
+현재 로컬 GitHub 로그인, QA 커밋 작성자·커미터, PR·이슈·검증 댓글의 작성자는 모두 **mootwo0202**다. 검증한 내용과 동일한 Git 트리를 새 커밋 [`6f0f815`](https://github.com/team-onetruck/oneload-qa/commit/6f0f815caedf32f986939e62a298c044fa1cb4e0)으로 원본 QA 저장소의 `qa/mootwo-takeover-20261025`에 올리고 [QA PR #6](https://github.com/team-onetruck/oneload-qa/pull/6)을 등록했다. 원본 main 병합은 대기다. 코드 내용·평가셋은 동일하며 이 계정 교체를 새 QA 실행으로 집계하지 않았다.
+
+현재 근거는 [공유·교체 증거](../reports/publication-20261025.json), [로컬 기준선](../reports/baseline.json), [App 계약 비교](../reports/frontend-contract-drift-20261025.json)다. 배포 서버는 꺼진 상태이며 로컬 일회용 DB·FakeLLM·공식 MemorySearch 검증 범위를 유지한다.
+
+- [App #41](https://github.com/team-onetruck/oneload-app/issues/41): intent3개·슬롯4개·계획 계약의 생성 타입 누락. 이전 계정의 #40은 삭제했다.
+- [Data #2](https://github.com/team-onetruck/oneload-data/issues/2#issuecomment-6392730471): 경로19/24 실패와 실제 제약에 맞는 연결 보완.
+- [RAG #3](https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6392730705): 노출v2 top3 17/20·차단15/20, 정상 누락3·오탐5 유지.
+- [Agent #7](https://github.com/team-onetruck/oneload_agent/issues/7#issuecomment-6392730954): Backend500/슬롯 해결 확인과 App#41 잔여 조건은 구분한다. [Agent #5](https://github.com/team-onetruck/oneload_agent/issues/5#issuecomment-6392731236)의 근거/인용 미반영도 새 계정으로 기록했다.
+- [QA #3](https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6392731581): 공식 로컬 검색/기본 조립 통과와 임계값 승인 보류.
+- [Backend #2](https://github.com/team-onetruck/oneload-backend/issues/2#issuecomment-6392731850): 환급 상태 해결 재확인, closed 유지.
+
+이전 계정의 PR#5는 종료했고 이슈#40·댓글6개는 삭제를 확인했다. 이전 포크의 QA 브랜치도 삭제했다. **포크 저장소 자체는 이전 계정의 delete_repo 권한 부족으로 삭제되지 않아 사용자 정리 대기**다. 새 QA 자료는 원본 저장소에 보존돼 있다. 이전 로컬 커밋·사용자 checkout은 유지한다.
+
+아래의 최초 로컬 검증 기록에 있는 “push하지 않았다”는 당시 기록이다. 현재 공유는 이 섹션을 따른다. 실제 AI 품질·휴대폰·현장 사진 인수는 미검증이며 유료 모델·운영 DB·배포는 사용하지 않았다.
+
+---
+
 마지막 정리: 2026-10-25 11:35 KST — 인수·새 환경 재현, Backend #2 및 공식 RAG 로컬 조립 재검증. 담당 이현무(R6).
 
 ## 현재 판정과 다음 행동
@@ -22,7 +41,7 @@
 
 `repos.lock.json`의 최신 관찰과 baseline 실제 실행은 이번 묶음이다. 각 행의 검증 범위는 서로 다르다. Backend가 배포용으로 pin한 RAG v0.3.0/ec27e09는 이번 형제 main과 지식 메타데이터6파일이 달라 **release 설치·배포 검증으로 전용하지 않는다.** 과거 배포 커밋은 lock의 historical 항목에 보존했다.
 
-작업 브랜치는 `qa/takeover-20261025`이며 QA 수정·문서·증거를 로컬 커밋으로 보존했다. 원격에는 push하지 않았다. 원래 Desktop/mp_project의7개 checkout은 모두 clean main으로 확인하고 변경하지 않았다. 작업은 별도 `hangil/` 아래 `qa`와6개 형제 Git 복사본에서 수행했다. 새 Python3.12.9 `.venv`를 만들었고 고정 의존성 충돌을 websockets16.1.1로 수정해 설치·pip check 통과를 확인했다. uv가 없으면 README의 Python venv/pip 방법을 사용한다. Docker를 켜고 QA 일회용 PostgreSQL17만 생성·정리했다. 기존 DB URL·키·.env는 사용하지 않았다.
+현재 작업 브랜치는 `qa/mootwo-takeover-20261025`다. 검증 내용과 원격 공유 상태는 문서 맨 위의 최신 등록 기록을 따른다. 원래 Desktop/mp_project의7개 checkout은 모두 clean main으로 확인하고 변경하지 않았다. 작업은 별도 `hangil/` 아래 `qa`와6개 형제 Git 복사본에서 수행했다. 새 Python3.12.9 `.venv`를 만들었고 고정 의존성 충돌을 websockets16.1.1로 수정해 설치·pip check 통과를 확인했다. uv가 없으면 README의 Python venv/pip 방법을 사용한다. Docker를 켜고 QA 일회용 PostgreSQL17만 생성·정리했다. 기존 DB URL·키·.env는 사용하지 않았다.
 
 최종 실행은 `results/takeover-20261025-004`다. **QA48·Agent47·Backend71·Data구조3·component20/21·모의 API27/27·공식 RAG API28/28·전역 entrypoint API7/7 통과. 전체 exit1은 경로19건 실패**다. component 사람 검토21턴·최종 품질점수null, 실제 모델/임베딩 호출0회, 현장 사진 gold0건, 휴대폰·실제 서버 브라우저 인수NOT_RUN을 유지한다. App 로컬513건은 자동 단위 검사이며 실기기 센서·AI·현장 검증이 아니다.
 

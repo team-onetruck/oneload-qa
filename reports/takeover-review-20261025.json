@@ -112,7 +112,7 @@
     }
   },
   "limitations": [
-    "No remote issue comments/state changes, push, merge, deployment or production DB use",
+    "Initial local run used no remote mutation; later account-corrected publication is recorded separately. No deployment or production DB use.",
     "No latest deployment success: App verify/e2e succeeded but deploy cancelled; Backend test/image succeeded but deploy queued; Agent test/backend succeeded but deploy queued",
     "No true phone UI, physical compass/AR alignment, field photo accuracy or actual AI answer-quality acceptance",
     "Linked education Notion page could not be accessed; all three versioned local design references were read"
@@ -176,7 +176,8 @@
       }
     ]
   },
-  "qa_work_branch": "qa/takeover-20261025",
-  "publication_status": "local commit only; not pushed; no GitHub issues or PRs modified",
-  "sensitive_content_review": "No secrets in public evidence. URL pattern hits in code are a runtime-generated disposable credential template and an invalid x:x test fixture; no actual DB credentials recorded."
+  "qa_work_branch": "qa/mootwo-takeover-20261025",
+  "publication_status": "Published to team repository as mootwo0202; current PR6 and issue/comment links in reports/publication-20261025.json",
+  "sensitive_content_review": "No secrets in public evidence. URL pattern hits in code are a runtime-generated disposable credential template and an invalid x:x test fixture; no actual DB credentials recorded.",
+  "same_validated_tree_republished_commit": "6f0f815caedf32f986939e62a298c044fa1cb4e0"
 }

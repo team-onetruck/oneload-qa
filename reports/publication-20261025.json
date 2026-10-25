@@ -1,0 +1,242 @@
+{
+  "recorded_at_kst": "2026-10-25T12:04:11.371645+09:00",
+  "account": "mootwo0202",
+  "user_context": "User requested replacement of posts made by2021147538; local CLI login changed and verified. Deployment server remains off; no deployment attempted.",
+  "qa_validated_commit": "6f0f815caedf32f986939e62a298c044fa1cb4e0",
+  "qa_validated_tree": "885224fe7fc55699b52fa60ffba42c713943d094",
+  "original_local_validation_commit": "a37c83b7adccfbc51f5542d6f81e9246db22929c",
+  "baseline": "reports/baseline.json",
+  "validation_note": "Recreated the exact validated Git tree with mootwo0202 author/committer. This account/publication update does not create a new test run or change frozen data.",
+  "publication": {
+    "repository": "team-onetruck/oneload-qa",
+    "branch": "qa/mootwo-takeover-20261025",
+    "pull_request": {
+      "url": "https://github.com/team-onetruck/oneload-qa/pull/6",
+      "number": 6,
+      "state": "open",
+      "author": "mootwo0202",
+      "head_commit": "6f0f815caedf32f986939e62a298c044fa1cb4e0",
+      "head_repository": "team-onetruck/oneload-qa",
+      "head_branch": "qa/mootwo-takeover-20261025",
+      "base_branch": "main"
+    },
+    "upstream_main_updated": false,
+    "note": "Published directly to the team repository under mootwo0202. PR6 awaits review; superseded PR5 is closed."
+  },
+  "new_issues": [
+    {
+      "repo": "team-onetruck/oneload-app",
+      "number": 41,
+      "url": "https://github.com/team-onetruck/oneload-app/issues/41",
+      "state": "open",
+      "author": "mootwo0202",
+      "replaces_deleted_issue": 40
+    }
+  ],
+  "issue_updates": [
+    {
+      "repo": "team-onetruck/oneload-data",
+      "issue": 2,
+      "id": 6392730471,
+      "url": "https://github.com/team-onetruck/oneload-data/issues/2#issuecomment-6392730471",
+      "author": "mootwo0202"
+    },
+    {
+      "repo": "team-onetruck/oneload-rag",
+      "issue": 3,
+      "id": 6392730705,
+      "url": "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6392730705",
+      "author": "mootwo0202"
+    },
+    {
+      "repo": "team-onetruck/oneload_agent",
+      "issue": 7,
+      "id": 6392730954,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/7#issuecomment-6392730954",
+      "author": "mootwo0202"
+    },
+    {
+      "repo": "team-onetruck/oneload_agent",
+      "issue": 5,
+      "id": 6392731236,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/5#issuecomment-6392731236",
+      "author": "mootwo0202"
+    },
+    {
+      "repo": "team-onetruck/oneload-qa",
+      "issue": 3,
+      "id": 6392731581,
+      "url": "https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6392731581",
+      "author": "mootwo0202"
+    },
+    {
+      "repo": "team-onetruck/oneload-backend",
+      "issue": 2,
+      "id": 6392731850,
+      "url": "https://github.com/team-onetruck/oneload-backend/issues/2#issuecomment-6392731850",
+      "author": "mootwo0202"
+    }
+  ],
+  "previous_post_cleanup": [
+    {
+      "type": "pull_request",
+      "number": 5,
+      "action": "closed_replaced_by_6"
+    },
+    {
+      "type": "comment",
+      "repo": "team-onetruck/oneload-data",
+      "id": 6392629139,
+      "action": "deleted",
+      "replacement_id": 6392730471
+    },
+    {
+      "type": "comment",
+      "repo": "team-onetruck/oneload-rag",
+      "id": 6392629320,
+      "action": "deleted",
+      "replacement_id": 6392730705
+    },
+    {
+      "type": "comment",
+      "repo": "team-onetruck/oneload_agent",
+      "id": 6392629479,
+      "action": "deleted",
+      "replacement_id": 6392730954
+    },
+    {
+      "type": "comment",
+      "repo": "team-onetruck/oneload_agent",
+      "id": 6392629634,
+      "action": "deleted",
+      "replacement_id": 6392731236
+    },
+    {
+      "type": "comment",
+      "repo": "team-onetruck/oneload-qa",
+      "id": 6392629777,
+      "action": "deleted",
+      "replacement_id": 6392731581
+    },
+    {
+      "type": "comment",
+      "repo": "team-onetruck/oneload-backend",
+      "id": 6392629957,
+      "action": "deleted",
+      "replacement_id": 6392731850
+    },
+    {
+      "type": "issue",
+      "repo": "team-onetruck/oneload-app",
+      "number": 40,
+      "action": "deleted",
+      "replacement": 41,
+      "exit_code": 0,
+      "error": null
+    }
+  ],
+  "previous_fork_cleanup": {
+    "repository": "2021147538/oneload-qa",
+    "delete_exit_code": 1,
+    "deleted": false,
+    "message": "HTTP 403: Must have admin rights to Repository. (https://api.github.com/repos/2021147538/oneload-qa)\nThis API operation needs the \"delete_repo\" scope. To request it, run:  gh auth refresh -h github.com -s delete_repo",
+    "uploaded_branch_deleted": true,
+    "branch_delete_exit_code": 0,
+    "branch_message": null
+  },
+  "remaining_user_action": "Old fork repository deletion requires delete_repo permission absent on previous account. User asked to delete this fork in its settings or explicitly keep it. Uploaded QA branch is already deleted.",
+  "scope_unchanged": {
+    "real_model_calls": 0,
+    "real_embedding_calls": 0,
+    "production_database_used": false,
+    "deploy_executed": false,
+    "phone_ui_acceptance": "NOT_RUN",
+    "field_photo_gold_count": 0,
+    "ar_scope_added": false
+  },
+  "publication_notes_revision": "self; documentation/evidence only after validated source commit 6f0f815caedf32f986939e62a298c044fa1cb4e0",
+  "cleanup_verification": {
+    "deleted_comments": [
+      {
+        "repo": "team-onetruck/oneload-data",
+        "id": 6392629139,
+        "http_status": 404
+      },
+      {
+        "repo": "team-onetruck/oneload-rag",
+        "id": 6392629320,
+        "http_status": 404
+      },
+      {
+        "repo": "team-onetruck/oneload_agent",
+        "id": 6392629479,
+        "http_status": 404
+      },
+      {
+        "repo": "team-onetruck/oneload_agent",
+        "id": 6392629634,
+        "http_status": 404
+      },
+      {
+        "repo": "team-onetruck/oneload-qa",
+        "id": 6392629777,
+        "http_status": 404
+      },
+      {
+        "repo": "team-onetruck/oneload-backend",
+        "id": 6392629957,
+        "http_status": 404
+      }
+    ],
+    "deleted_issue": {
+      "repository": "team-onetruck/oneload-app",
+      "number": 40,
+      "http_status": 410,
+      "message": "This issue was deleted"
+    },
+    "old_pr": {
+      "repository": "team-onetruck/oneload-qa",
+      "number": 5,
+      "state": "closed",
+      "merged": false
+    },
+    "new_comments": [
+      {
+        "repo": "team-onetruck/oneload-data",
+        "issue": 2,
+        "id": 6392730471,
+        "author": "mootwo0202"
+      },
+      {
+        "repo": "team-onetruck/oneload-rag",
+        "issue": 3,
+        "id": 6392730705,
+        "author": "mootwo0202"
+      },
+      {
+        "repo": "team-onetruck/oneload_agent",
+        "issue": 7,
+        "id": 6392730954,
+        "author": "mootwo0202"
+      },
+      {
+        "repo": "team-onetruck/oneload_agent",
+        "issue": 5,
+        "id": 6392731236,
+        "author": "mootwo0202"
+      },
+      {
+        "repo": "team-onetruck/oneload-qa",
+        "issue": 3,
+        "id": 6392731581,
+        "author": "mootwo0202"
+      },
+      {
+        "repo": "team-onetruck/oneload-backend",
+        "issue": 2,
+        "id": 6392731850,
+        "author": "mootwo0202"
+      }
+    ]
+  }
+}
