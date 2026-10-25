@@ -8,7 +8,9 @@
     "url": "https://github.com/team-onetruck/oneload-qa.git",
     "revision": "self",
     "code_base_commit": "52883be4b7bf3450435083b86318ab1499229e61",
-    "note": "This local review commit includes runtime dependency repair, selected RAG source support, global entrypoint API and route gate. Frozen datasets unchanged."
+    "note": "This local review commit includes runtime dependency repair, selected RAG source support, global entrypoint API and route gate. Frozen datasets unchanged.",
+    "reviewed_head_commit": "e8dd0a12078a8d60d84e844430924dce8d5f0e33",
+    "merged_commit": "0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c"
   },
   "qa_baseline": "reports/baseline.json",
   "rag_issue_review_evidence": [
@@ -85,7 +87,7 @@
       "historical_review_evidence": "reports/data-backend-review-20261023.json"
     }
   ],
-  "updated_at_kst": "2026-10-25T12:04:11.371645+09:00",
+  "updated_at_kst": "2026-10-25T12:13:59.230701+09:00",
   "rag_profile_evidence": [
     "reports/rag-integration-probe.json",
     "reports/production-api-probe.json",
@@ -126,9 +128,13 @@
     "validated_qa_commit": "6f0f815caedf32f986939e62a298c044fa1cb4e0",
     "validated_tree": "885224fe7fc55699b52fa60ffba42c713943d094",
     "repository": "team-onetruck/oneload-qa",
-    "branch": "qa/mootwo-takeover-20261025",
+    "branch": "main",
     "pull_request": "https://github.com/team-onetruck/oneload-qa/pull/6",
-    "upstream_main_updated": false,
-    "server_context": "deployment server switched off; local verification only"
+    "upstream_main_updated": true,
+    "server_context": "deployment server switched off; local verification only",
+    "merge_commit": "0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c",
+    "merged_at_kst": "2026-10-25T12:12:05+09:00",
+    "head_branch_deleted": true,
+    "merge_evidence": "reports/merge-review-20261025.json"
   }
 }

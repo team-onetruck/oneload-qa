@@ -9,19 +9,24 @@
   "validation_note": "Recreated the exact validated Git tree with mootwo0202 author/committer. This account/publication update does not create a new test run or change frozen data.",
   "publication": {
     "repository": "team-onetruck/oneload-qa",
-    "branch": "qa/mootwo-takeover-20261025",
+    "branch": "main",
     "pull_request": {
       "url": "https://github.com/team-onetruck/oneload-qa/pull/6",
       "number": 6,
-      "state": "open",
+      "state": "merged",
       "author": "mootwo0202",
-      "head_commit": "6f0f815caedf32f986939e62a298c044fa1cb4e0",
+      "head_commit": "e8dd0a12078a8d60d84e844430924dce8d5f0e33",
       "head_repository": "team-onetruck/oneload-qa",
       "head_branch": "qa/mootwo-takeover-20261025",
-      "base_branch": "main"
+      "base_branch": "main",
+      "merge_commit": "0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c",
+      "merged_at_kst": "2026-10-25T12:12:05+09:00"
     },
-    "upstream_main_updated": false,
-    "note": "Published directly to the team repository under mootwo0202. PR6 awaits review; superseded PR5 is closed."
+    "upstream_main_updated": true,
+    "note": "PR6 merged as mootwo0202; remote/local task branches removed; current checkout main.",
+    "head_branch_deleted": true,
+    "merge_commit": "0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c",
+    "merged_at_kst": "2026-10-25T12:12:05+09:00"
   },
   "new_issues": [
     {
@@ -157,7 +162,7 @@
     "field_photo_gold_count": 0,
     "ar_scope_added": false
   },
-  "publication_notes_revision": "self; documentation/evidence only after validated source commit 6f0f815caedf32f986939e62a298c044fa1cb4e0",
+  "publication_notes_revision": "self; current merge/branch-cleanup state, with fresh verification in reports/merge-review-20261025.json",
   "cleanup_verification": {
     "deleted_comments": [
       {
@@ -241,5 +246,7 @@
         "author": "mootwo0202"
       }
     ]
-  }
+  },
+  "merge_evidence": "reports/merge-review-20261025.json",
+  "updated_at_kst": "2026-10-25T12:13:59.230701+09:00"
 }

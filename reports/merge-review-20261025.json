@@ -1,0 +1,141 @@
+{
+  "recorded_at_kst": "2026-10-25T12:13:59.230701+09:00",
+  "reviewed_qa_head": "e8dd0a12078a8d60d84e844430924dce8d5f0e33",
+  "pr_url": "https://github.com/team-onetruck/oneload-qa/pull/6",
+  "merge_commit": "0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c",
+  "merged_at_kst": "2026-10-25T12:12:05+09:00",
+  "merged_by": "mootwo0202",
+  "review_decision": "No blocking QA implementation findings; known product/data failures remain tracked.",
+  "github_review": {
+    "mergeable_before_merge": true,
+    "unresolved_review_threads": 0,
+    "reviews": 0,
+    "status_checks": [],
+    "ci_note": "No GitHub checks were configured for this QA PR; local evidence is explicit, not a CI pass.",
+    "admin_bypass_used": false
+  },
+  "fresh_local_verification": {
+    "executed_at_kst": "2026-10-25T12:10:35.917891+09:00",
+    "commits": {
+      "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+      "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+      "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+      "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+      "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+      "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+    },
+    "map": {
+      "source_repository": "oneload-data",
+      "path": "maps/seoul-station.json",
+      "map_id": "seoul-station",
+      "version": "2026-10-25.1",
+      "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
+    },
+    "steps": [
+      {
+        "name": "qa-tests",
+        "exit_code": 0,
+        "elapsed_s": 1.736
+      },
+      {
+        "name": "data-validation",
+        "exit_code": 0,
+        "elapsed_s": 0.105
+      },
+      {
+        "name": "route-connectivity",
+        "exit_code": 1,
+        "elapsed_s": 0.168
+      },
+      {
+        "name": "agent-tests",
+        "exit_code": 0,
+        "elapsed_s": 0.826
+      },
+      {
+        "name": "contract-audit",
+        "exit_code": 0,
+        "elapsed_s": 0.734
+      },
+      {
+        "name": "component-eval",
+        "exit_code": 0,
+        "elapsed_s": 0.416
+      },
+      {
+        "name": "backend-and-integration",
+        "exit_code": 0,
+        "elapsed_s": 6.338
+      }
+    ],
+    "overall_exit_code": 1,
+    "qa": {
+      "tests": 48,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "agent": {
+      "tests": 47,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "backend": {
+      "tests": 71,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "data": {
+      "passed": 3,
+      "total": 3
+    },
+    "component": {
+      "dataset_version": "r6-component-v2",
+      "dataset_sha256": "1daa313834008bf7c26dec28d9cb302e92ddddd9b28d8c5e15cc28d5f6a13da3",
+      "auto_scenarios_passed": 20,
+      "scenario_count": 20,
+      "auto_turns_passed": 21,
+      "turn_count": 21,
+      "human_review_pending": 21,
+      "final_quality_score": null
+    },
+    "mock_api": {
+      "passed": 27,
+      "total": 27
+    },
+    "production_entrypoint_api": {
+      "passed": 7,
+      "total": 7
+    },
+    "route_connectivity": {
+      "reachable": 5,
+      "total": 24,
+      "failed": 19
+    },
+    "known_failure": "Only route-connectivity exits1: Data#2 has19 unreachable pairs. This is intentionally retained as a failing product/data gate.",
+    "ai": "FakeLLM + explicit official local MemorySearch; disposable PostgreSQL17; no paid model/embedding or production DB."
+  },
+  "baseline_handling": "Existing published baseline remains a historical complete run; this independent premerge repeat used unchanged code/data and did not overwrite it.",
+  "not_reexecuted": [
+    "RAG-injected API28/28 from prior same-source evidence",
+    "App513 unit/build from prior same-source evidence",
+    "Physical phone UI, field photos, actual model quality, production deployment"
+  ],
+  "branch_cleanup": {
+    "remote_branch": "qa/mootwo-takeover-20261025",
+    "remote_deleted": true,
+    "local_deleted": [
+      "qa/mootwo-takeover-20261025",
+      "qa/takeover-20261025"
+    ],
+    "local_checkout": "main",
+    "local_recovery_bundle": "results/premerge-branch-backup-20261025.bundle; ignored, local only",
+    "previous_fork": "retained at user request; its uploaded QA branch was already removed"
+  },
+  "no_deployment": true,
+  "real_model_calls": 0,
+  "real_embedding_calls": 0,
+  "merge_tree_equals_reviewed_head": true
+}

@@ -176,8 +176,9 @@
       }
     ]
   },
-  "qa_work_branch": "qa/mootwo-takeover-20261025",
-  "publication_status": "Published to team repository as mootwo0202; current PR6 and issue/comment links in reports/publication-20261025.json",
+  "qa_work_branch": "main",
+  "publication_status": "PR6 merged into main as mootwo0202; remote/local task branches removed; see reports/merge-review-20261025.json",
   "sensitive_content_review": "No secrets in public evidence. URL pattern hits in code are a runtime-generated disposable credential template and an invalid x:x test fixture; no actual DB credentials recorded.",
-  "same_validated_tree_republished_commit": "6f0f815caedf32f986939e62a298c044fa1cb4e0"
+  "same_validated_tree_republished_commit": "6f0f815caedf32f986939e62a298c044fa1cb4e0",
+  "merge_evidence": "reports/merge-review-20261025.json"
 }
