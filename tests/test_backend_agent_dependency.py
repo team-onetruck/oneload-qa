@@ -29,3 +29,27 @@ def test_backend_missing_agent_fails_before_docker(tmp_path):
     assert result.returncode == 2
     assert "requires sibling oneload_agent" in result.stderr
     assert not output.exists()
+
+
+def test_backend_missing_rag_fails_before_docker(tmp_path):
+    repo = tmp_path / "oneload-backend"
+    (repo / "tests").mkdir(parents=True)
+    (repo / "tests/conftest.py").write_text("")
+    (repo / "pyproject.toml").write_text('[project]\ndependencies = ["hangil-rag"]\n')
+    output = tmp_path / "not-created"
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(Path(__file__).resolve().parents[1] / "scripts/run_backend_tests.py"),
+            "--project-root",
+            str(tmp_path),
+            "--output",
+            str(output),
+        ],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    assert result.returncode == 2
+    assert "requires sibling oneload-rag" in result.stderr
+    assert not output.exists()

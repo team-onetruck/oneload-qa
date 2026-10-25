@@ -1,19 +1,20 @@
 {
-  "checked_at_kst": "2026-10-23T16:56:53.446562+09:00",
+  "checked_at_kst": "2026-10-25T11:30:33.190185+09:00",
   "scope": "Real Backend context/map/guard + FakeLLM; actual Vision failure, schemas and static wiring; no live models",
   "commits": {
-    "oneload-app": "42455dc8e08cc34a596b58fc70431bd25c8dd5e5",
-    "oneload-backend": "b1aa5f58a3fe6045797e715f0e246439903fc319",
-    "oneload_agent": "eca420e9321272333db5c5499a2af752e1cb7b69",
-    "oneload-data": "9fc786eeb92fd3b79d5df0a56a2738f820e8a858",
-    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107"
+    "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+    "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+    "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+    "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+    "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
   },
   "map": {
     "source_repository": "oneload-data",
     "path": "maps/seoul-station.json",
     "map_id": "seoul-station",
-    "version": "2026-10-23.1",
-    "sha256": "13202e24774dbcaaa86c09962863be641758f8ef2d9767fd9bb6a81305296526"
+    "version": "2026-10-25.1",
+    "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
   },
   "contract_checks": [
     {
@@ -111,10 +112,10 @@
         "method": "reviewed_runtime_source_fingerprints",
         "runtime_browser_e2e": "NOT_RUN",
         "functional_acceptance": "pending_independent_runtime_checks",
-        "snapshot_sha256": "443a4f82bb0873e67d236d13e59131de07d32427a4be6ef3221228336144dfd2",
+        "snapshot_sha256": "c3cddb92bb8c8ee861266d65c051b13b838755d1f9032ed400d024db57a6679a",
         "status": "wired",
-        "profile": "app-42455dc",
-        "reviewed_commit": "42455dc8e08cc34a596b58fc70431bd25c8dd5e5",
+        "profile": "app-12ba6c6",
+        "reviewed_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
         "connected_features": [
           "chat",
           "confirmation",
@@ -124,27 +125,24 @@
         ],
         "missing_features": [],
         "evidence": [
-          "store.tsx startSession/askServer/sendChat -> api/index.ts adapter -> createHttpAdapter(createApiClient()) by default; mock explicitly selected only for VITE_API_MODE=mock",
-          "store.tsx locateOnServer -> sendPhoto -> postLocalization; confirmOnServer -> sendConfirmation -> confirmLocation; photo candidates never auto-confirm; 503 stays manual",
-          "routeOnServer -> graphCache + sendRoute -> adapter.createRoute; serverGuide reads actual route steps/map; destination selection passes server poi_id",
-          "createEventOutbox -> deliverEvents -> postNavigationEvents; serializes navigation_started before later arrived; failed batches reuse event ids; reset discards old generation",
-          "HTTP chat/language/photo/manual/registered route/reroute calls preserve existing recovery modules; session state/revision use response values",
-          "Mock rules moved behind ApiAdapter; store/screens share one flow. CI429 unit/11 UI (mock7, intercepted HTTP4) does not verify a real Backend browser or live AI quality",
-          "Line screen is a schematic list of registered nodes with floors and steps; street view uses per-leg panorama; no geographic floor-plan/real station destination-photo acceptance inferred",
-          "SideMenu routes language changes through existing changeLang/PATCH with revision recovery; initial language detection uses supported ko/en or English fallback; home confirms progress then calls existing reset, closes menu and clears session/route",
-          "Shared reusable infra deployment replaces cross-repo GH_TOKEN dispatch; latest App/Agent deployment CI succeeded; source wiring remains separate from actual browser acceptance"
+          "src/screens.tsx user actions -> store.tsx sendText/sendSuggested/pickDestination -> askServer -> sendChat -> api/index.ts -> HTTP adapter /messages",
+          "analyzePhoto -> locateOnServer -> compressImage -> sendPhoto -> /localizations; candidates remain unconfirmed until confirmLocation user action -> sendConfirmation -> /location-confirmations",
+          "routeOnServer -> sendRoute -> createRoute /routes; returned route/session drive guide, 2D and streetview; navigation_started/arrived/cancelled go through event outbox -> postNavigationEvents",
+          "api/index.ts constructs only createHttpAdapter(createApiClient()); mock adapter has no application entry path. Removed demo controls do not remove HTTP wiring.",
+          "Current camera compass overlay, sensor survey and AR math foundation are separate from 2D/streetview acceptance; native engine is not connected and App PR39 is unmerged draft.",
+          "Generated schema retains six intents and lacks plan/steps API. Agent #7 residual frontend contract task remains. Source review does not assert mobile runtime acceptance."
         ],
-        "registry_sha256": "074d32112c4d3332a54c25940cbaff65788b52cf3ec534fd5ea42b7f22c6d15e"
+        "registry_sha256": "527b2dd0b0ed4ed555e40f7e8930df2951f2348c29c37a4a16fdf1d8579535ba"
       }
     },
     {
       "id": "INT-07",
-      "passed": false,
-      "status": "partial",
+      "passed": true,
+      "status": "wired_local_memory_profile",
       "validation_level": "actual_entrypoint_with_fake_provider",
       "evidence": {
         "method": "execute_actual_entrypoint_with_OpenAILLM_replaced_by_FakeLLM",
-        "entrypoint_sha256": "9d4ae8600d0671335863957122df379a2d44186107d3f3175b1268570b220df0",
+        "entrypoint_sha256": "75b12b65ff3b4c522d08e22ffa261e1b6728b6e858530102e5d7928c71c0c8a7",
         "branches": {
           "missing_key": {
             "agent": "RuleAgent",
@@ -153,6 +151,12 @@
             "same_llm": false,
             "llm": "NoneType",
             "knowledge": "NoneType",
+            "knowledge_module": null,
+            "uses_selected_rag_checkout": false,
+            "search_backend": "NoneType",
+            "official_documents_only": false,
+            "returned_document_ids": [],
+            "returned_sources_have_url_and_date": false,
             "fallback": "NoneType"
           },
           "key_present": {
@@ -161,13 +165,26 @@
             "same_vision": true,
             "same_llm": true,
             "llm": "FakeLLM",
-            "knowledge": "MockKnowledgeSearch",
+            "knowledge": "function",
+            "knowledge_module": "hangil_rag",
+            "uses_selected_rag_checkout": true,
+            "search_backend": "MemorySearch",
+            "official_documents_only": true,
+            "returned_document_ids": [
+              "doc-fare-arex-express",
+              "doc-arex-train-types",
+              "doc-express-ticket"
+            ],
+            "returned_sources_have_url_and_date": true,
             "fallback": "RuleAgent"
           }
         },
         "agent_vision_conditionally_wired": true,
-        "production_knowledge_is_demo": true,
+        "production_knowledge_is_demo": false,
+        "official_memory_search_wired": true,
+        "configuration": "explicit local memory/official corpus; no production environment or DB",
         "real_model_calls": 0,
+        "real_embedding_calls": 0,
         "deployed_runtime_verified": false
       }
     },
@@ -185,39 +202,6 @@
     }
   ],
   "findings": [
-    {
-      "id": "INT-07",
-      "severity": "P0",
-      "description": "R2 Agent/Vision selection is wired; production knowledge still uses MockKnowledgeSearch",
-      "evidence": {
-        "method": "execute_actual_entrypoint_with_OpenAILLM_replaced_by_FakeLLM",
-        "entrypoint_sha256": "9d4ae8600d0671335863957122df379a2d44186107d3f3175b1268570b220df0",
-        "branches": {
-          "missing_key": {
-            "agent": "RuleAgent",
-            "vision": "NoVision",
-            "same_vision": false,
-            "same_llm": false,
-            "llm": "NoneType",
-            "knowledge": "NoneType",
-            "fallback": "NoneType"
-          },
-          "key_present": {
-            "agent": "LLMAgent",
-            "vision": "LLMVision",
-            "same_vision": true,
-            "same_llm": true,
-            "llm": "FakeLLM",
-            "knowledge": "MockKnowledgeSearch",
-            "fallback": "RuleAgent"
-          }
-        },
-        "agent_vision_conditionally_wired": true,
-        "production_knowledge_is_demo": true,
-        "real_model_calls": 0,
-        "deployed_runtime_verified": false
-      }
-    },
     {
       "id": "DATA-01",
       "severity": "release_gate",

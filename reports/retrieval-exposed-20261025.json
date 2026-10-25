@@ -1,0 +1,484 @@
+{
+  "scope": "Exposed R6 v2 regression at fixed 0.25/k3/relative0.5; not fresh holdout or live embeddings/AI quality",
+  "dataset_version": "r6-retrieval-holdout-v2",
+  "dataset_sha256": "278f16fc787acffe36a4ccbc903d422cbd03d9a1ccf8e4f21c43f6c8e56fc168",
+  "rag": {
+    "repository": "oneload-rag",
+    "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+    "working_tree_clean": true,
+    "backend": "MemorySearch",
+    "min_score": 0.25,
+    "k": 3,
+    "relative_cutoff": 0.5,
+    "scope_gate_min_coverage": 0.25,
+    "community": false,
+    "document_ids": [
+      "doc-allstop-ticket",
+      "doc-arex-train-types",
+      "doc-climate-card-short-term",
+      "doc-deposit-refund",
+      "doc-express-ticket",
+      "doc-fare-arex-allstop",
+      "doc-fare-arex-express",
+      "doc-fare-passes-cards",
+      "doc-foreigner-transit-cards",
+      "doc-seoul-arex-transfer",
+      "doc-seoul-help-desks",
+      "doc-seoul-transit-basics",
+      "doc-tmoney-card",
+      "doc-wowpass"
+    ],
+    "knowledge_sha256": {
+      "README.md": "69b16ad3992eda254ad1c170b92f01b66366c95ccbae6ceb1829c3d5df4d26d4",
+      "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+      "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+      "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+      "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+      "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+      "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+      "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+      "doc-fare-arex-allstop.md": "8c4a751bb15521eaa4be205f1d9c055fffca51d699c5830775557b62e4c8db33",
+      "doc-fare-arex-express.md": "6dc1ca6cc6c7d1e3cf8b9cfc192ca11cabb55effdc2e3107bdd00dc86a651ca7",
+      "doc-fare-passes-cards.md": "f05c5533036ade4159f7c373f377b5bab59809d0b6c72f4925322d19210ca699",
+      "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+      "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+      "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+      "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+      "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+      "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+    },
+    "code_sha256": {
+      "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+      "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+      "src/hangil_rag/loader.py": "8b67ebe687d7ace619cbe7d874821c715e5bacf8c6c621a659a5b6b178575066",
+      "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+      "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+      "src/hangil_rag/search_memory.py": "5c13065a5c351b6a3786680baa133899b3aeae89feff04254da6abe245e53e8f",
+      "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+    },
+    "live_model_calls": 0,
+    "live_embedding_calls": 0
+  },
+  "result": {
+    "positive_total": 20,
+    "top1": 14,
+    "top3": 17,
+    "out_of_scope_total": 20,
+    "out_of_scope_empty": 15,
+    "false_positives": 5,
+    "objective": 0.723404255319149,
+    "rows": [
+      {
+        "id": "H2-01",
+        "question": "서울역 공항철도 직통열차 어린이 운임 안내가 있나요?",
+        "gold": [
+          "doc-fare-arex-express"
+        ],
+        "retrieved": [
+          "doc-fare-arex-express",
+          "doc-arex-train-types",
+          "doc-seoul-help-desks"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-02",
+        "question": "Is there a child fare for the AREX Express from Seoul Station?",
+        "gold": [
+          "doc-fare-arex-express"
+        ],
+        "retrieved": [
+          "doc-fare-arex-express",
+          "doc-climate-card-short-term",
+          "doc-seoul-arex-transfer"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-03",
+        "question": "일반열차 1회용 교통카드의 보증금은 운임과 별도인가요?",
+        "gold": [
+          "doc-fare-arex-allstop",
+          "doc-deposit-refund"
+        ],
+        "retrieved": [
+          "doc-allstop-ticket",
+          "doc-deposit-refund",
+          "doc-fare-arex-allstop"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-04",
+        "question": "For an all-stop single-journey card, is the deposit separate from the fare?",
+        "gold": [
+          "doc-fare-arex-allstop",
+          "doc-deposit-refund"
+        ],
+        "retrieved": [
+          "doc-allstop-ticket",
+          "doc-fare-arex-allstop",
+          "doc-arex-train-types"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-05",
+        "question": "기후동행카드 7일 단기권 가격을 확인하고 싶어요.",
+        "gold": [
+          "doc-fare-passes-cards"
+        ],
+        "retrieved": [
+          "doc-fare-passes-cards",
+          "doc-climate-card-short-term",
+          "doc-seoul-transit-basics"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-06",
+        "question": "What is the price of the seven-day Climate Card pass?",
+        "gold": [
+          "doc-fare-passes-cards"
+        ],
+        "retrieved": [
+          "doc-fare-passes-cards",
+          "doc-climate-card-short-term",
+          "doc-foreigner-transit-cards"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-07",
+        "question": "서울역 직통열차 표는 매표창구 말고 발매기로도 살 수 있나요?",
+        "gold": [
+          "doc-express-ticket"
+        ],
+        "retrieved": [],
+        "passed": false
+      },
+      {
+        "id": "H2-08",
+        "question": "At Seoul Station, can I purchase Express tickets from a machine instead of the counter?",
+        "gold": [
+          "doc-express-ticket"
+        ],
+        "retrieved": [],
+        "passed": false
+      },
+      {
+        "id": "H2-09",
+        "question": "티머니가 이미 있으면 일반열차 탈 때 일회용 승차권도 사야 하나요?",
+        "gold": [
+          "doc-allstop-ticket",
+          "doc-tmoney-card"
+        ],
+        "retrieved": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types",
+          "doc-seoul-transit-basics"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-10",
+        "question": "With a T-money card, do I still need a single-use ticket to enter the all-stop train?",
+        "gold": [
+          "doc-allstop-ticket",
+          "doc-tmoney-card"
+        ],
+        "retrieved": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types",
+          "doc-fare-arex-allstop"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-11",
+        "question": "티머니 충전은 신용카드로도 가능한지 알려주세요.",
+        "gold": [
+          "doc-tmoney-card"
+        ],
+        "retrieved": [
+          "doc-tmoney-card",
+          "doc-fare-passes-cards",
+          "doc-wowpass"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-12",
+        "question": "Can a credit card be used to top up a T-money balance?",
+        "gold": [
+          "doc-tmoney-card"
+        ],
+        "retrieved": [
+          "doc-tmoney-card",
+          "doc-wowpass",
+          "doc-fare-passes-cards"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-13",
+        "question": "와우패스에 쇼핑용 잔액이 있는데 지하철용 잔액도 따로 충전해야 하나요?",
+        "gold": [
+          "doc-wowpass"
+        ],
+        "retrieved": [
+          "doc-wowpass"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-14",
+        "question": "Does money in the WOWPASS shopping wallet also cover the T-money part, or must I top it up separately?",
+        "gold": [
+          "doc-wowpass"
+        ],
+        "retrieved": [
+          "doc-wowpass",
+          "doc-fare-passes-cards",
+          "doc-tmoney-card"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-15",
+        "question": "버스에서 지하철로 갈아탈 때 같은 교통카드를 계속 써야 하나요?",
+        "gold": [
+          "doc-seoul-transit-basics"
+        ],
+        "retrieved": [
+          "doc-seoul-transit-basics",
+          "doc-climate-card-short-term",
+          "doc-foreigner-transit-cards"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-16",
+        "question": "For a bus-to-subway transfer discount, should I keep using the same transit card?",
+        "gold": [
+          "doc-seoul-transit-basics"
+        ],
+        "retrieved": [
+          "doc-seoul-transit-basics",
+          "doc-climate-card-short-term",
+          "doc-foreigner-transit-cards"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-17",
+        "question": "서울역에서 교통카드 문제가 생기면 고객안내센터에 도움을 요청할 수 있나요?",
+        "gold": [
+          "doc-seoul-help-desks"
+        ],
+        "retrieved": [
+          "doc-seoul-help-desks",
+          "doc-allstop-ticket",
+          "doc-tmoney-card"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-18",
+        "question": "Where can I ask for help at Seoul Station if my transit card is not working?",
+        "gold": [
+          "doc-seoul-help-desks"
+        ],
+        "retrieved": [
+          "doc-climate-card-short-term",
+          "doc-seoul-help-desks",
+          "doc-seoul-transit-basics"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-19",
+        "question": "공항철도 직통열차와 일반열차는 중간역 정차 방식이 어떻게 달라요?",
+        "gold": [
+          "doc-arex-train-types"
+        ],
+        "retrieved": [
+          "doc-arex-train-types",
+          "doc-fare-arex-express",
+          "doc-fare-arex-allstop"
+        ],
+        "passed": true
+      },
+      {
+        "id": "H2-20",
+        "question": "Do the AREX Express and all-stop services make the same intermediate stops?",
+        "gold": [
+          "doc-arex-train-types"
+        ],
+        "retrieved": [],
+        "passed": false
+      },
+      {
+        "id": "H2-21",
+        "question": "서울역 물품보관함을 네 시간 쓰면 요금이 얼마인가요?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-22",
+        "question": "What is the four-hour price of a luggage locker at Seoul Station?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-23",
+        "question": "서울역에서 부산까지 KTX 승차권 가격을 알려주세요.",
+        "gold": [],
+        "retrieved": [
+          "doc-seoul-arex-transfer",
+          "doc-express-ticket",
+          "doc-fare-arex-allstop"
+        ],
+        "passed": false
+      },
+      {
+        "id": "H2-24",
+        "question": "What does a KTX ticket from Seoul Station to Busan cost?",
+        "gold": [],
+        "retrieved": [
+          "doc-fare-arex-allstop",
+          "doc-fare-arex-express",
+          "doc-seoul-arex-transfer"
+        ],
+        "passed": false
+      },
+      {
+        "id": "H2-25",
+        "question": "서울역에서 인천공항 가는 리무진버스 승차권은 얼마인가요?",
+        "gold": [],
+        "retrieved": [
+          "doc-seoul-arex-transfer",
+          "doc-seoul-help-desks",
+          "doc-fare-arex-express"
+        ],
+        "passed": false
+      },
+      {
+        "id": "H2-26",
+        "question": "How much is the airport limousine bus ticket from Seoul Station to Incheon?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-27",
+        "question": "서울역 주차장에 하루 주차하는 요금을 계산해 주세요.",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-28",
+        "question": "Please calculate the daily car parking charge at Seoul Station.",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-29",
+        "question": "인천공항에서 항공사 위탁수하물 추가 요금을 조회해 주세요.",
+        "gold": [],
+        "retrieved": [
+          "doc-seoul-help-desks",
+          "doc-fare-arex-allstop"
+        ],
+        "passed": false
+      },
+      {
+        "id": "H2-30",
+        "question": "What is my airline extra checked-baggage fee at Incheon Airport?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-31",
+        "question": "서울역에서 살 수 있는 5일 데이터 유심 가격은 얼마인가요?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-32",
+        "question": "What is the price of a five-day mobile data SIM sold at Seoul Station?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-33",
+        "question": "국립중앙박물관 특별전 입장권 환불 규정을 알려주세요.",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-34",
+        "question": "What is the refund policy for a special exhibition admission ticket at the National Museum?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-35",
+        "question": "서울역 근처에서 여권 재발급 수수료를 얼마 내야 하나요?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-36",
+        "question": "What is the passport replacement fee near Seoul Station?",
+        "gold": [],
+        "retrieved": [
+          "doc-climate-card-short-term",
+          "doc-express-ticket",
+          "doc-seoul-arex-transfer"
+        ],
+        "passed": false
+      },
+      {
+        "id": "H2-37",
+        "question": "서울역 옆 호텔의 세탁 서비스 요금을 알려주세요.",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-38",
+        "question": "What are the laundry service charges at the hotel beside Seoul Station?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-39",
+        "question": "내일 인천공항 출발 항공권의 날짜 변경 수수료가 얼마인가요?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      },
+      {
+        "id": "H2-40",
+        "question": "What is the date-change fee for a flight departing Incheon Airport tomorrow?",
+        "gold": [],
+        "retrieved": [],
+        "passed": true
+      }
+    ]
+  },
+  "recorded_at_kst": "2026-10-25T11:31:58.360989+09:00",
+  "provisional_gate_passed": false
+}

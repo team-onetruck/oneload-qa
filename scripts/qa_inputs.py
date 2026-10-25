@@ -13,6 +13,7 @@ SOURCE_REPOS = (
     "oneload_agent",
     "oneload-data",
     "oneload-infra",
+    "oneload-rag",
 )
 
 

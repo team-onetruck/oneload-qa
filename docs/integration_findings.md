@@ -1,3 +1,23 @@
+# 최신 통합 점검 — 2026-10-25
+
+[현재 기준선](../reports/baseline.json) · [상세 검토](../reports/takeover-review-20261025.json) · [인수인계](handoff.md).
+
+Backend9067553·Agenta732577·Data89ec570(지도2026-10-25.1)에서 기존71/47·모의 API27/27·공식 RAG주입28/28을 확인했다. **Backend #2 closed의 반납 상태 갱신을 API-26에서 해결 재확인**했다. PATCH 우선 보호와 환급 완료 보존도 기존 Backend 회귀에서 통과했다.
+
+INT-07은 실제 전역 app+FakeLLM+명시적 공식 로컬 MemorySearch의 API7/7을 통과했다. 운영 DB·배포 환경·pgvector·실제 AI 품질까지 확인한 것은 아니다. Backend가 pin한 RAG v0.3.0 설치본과 최신 형제 main의 지식 메타데이터가 달라 release 조합 재검증이 남는다.
+
+App12ba6c6은 HTTP 단일 어댑터의 채팅/사진/확정/경로/이벤트 경로를 검토해 INT-06 source wired로 새 해시를 기록했다. 단위513·타입·lint·빌드도통과. App schema는 구 intent6개이며 plan/steps 호출이 없어 Agent #7의 잔여 작업은 유지한다. 실제 휴대폰/브라우저 인수는 NOT_RUN이다.
+
+**Data #2는 open:** 실제 경로 함수의 출구/반납기24조합에서19개 경로 없음(5개연결 중2개는동일위치)이다. 새 gate를 표준 전체 실행에 포함해 exit1을 유지했다. 데이터 구조3/3은 현장 통로·거리·방향 합격이 아니다.
+
+Agent #5·RAG #3·QA #3은open이다. 공식14문서의 노출 검색v2 회귀는top3 17/20·범위밖차단15/20, 오탐5·정상누락3으로 기준 미달이다. 임계값·gold를 바꾸지 않았고 새 독립 검증으로 표시하지 않았다.
+
+App CI의verify/e2e는성공하나deploy는취소, Backend·Agent배포는대기다. 최신 배포 완료나 현장/AI 합격으로 기록하지 않는다. 실제 모델·임베딩 호출0회, 현장사진gold0건이다. 현재2D·거리뷰범위는유지하며draftUnity PR#39는적용하지 않았다.
+
+아래는 과거 버전의 관찰이다.
+
+---
+
 # 최신 통합 점검 — 2026-10-23 17:00 KST
 
 Backendb1aa5f5·Data9fc786e·Agenteca420e에서 **INT-02 계약 및 여러 턴 슬롯 유실은 해결 확인**했다. Frontend 생성 타입은 구계약이라 Agent #7은 잔여 동기화 작업으로 유지한다.

@@ -93,6 +93,10 @@ def main() -> int:
         LANGSMITH_TRACING="false",
         LANGCHAIN_TRACING_V2="false",
         OPENAI_API_KEY="",
+        RAG_BACKEND="memory",
+        RAG_KNOWLEDGE_DIR=str(root / "oneload-rag/knowledge"),
+        RAG_INCLUDE_COMMUNITY="0",
+        PYTHONPATH=str(root / "oneload-rag/src"),
     )
     steps = []
 
@@ -151,6 +155,20 @@ def main() -> int:
             str(directory),
             "--output",
             str(out / "data-validation.json"),
+        ],
+        qa,
+    )
+    run(
+        "route-connectivity",
+        [
+            py,
+            str(scripts / "check_routes.py"),
+            "--project-root",
+            str(root),
+            "--map-dir",
+            str(directory),
+            "--output",
+            str(out / "route-connectivity.json"),
         ],
         qa,
     )
@@ -235,10 +253,12 @@ def main() -> int:
     # A known upstream failure is publishable. Missing or malformed evidence is not.
     try:
         data_validation = load_json(out / "data-validation.json")
+        connectivity = load_json(out / "route-connectivity.json")
         audit = load_json(out / "contract-audit.json")
         component = load_json(out / "component/metadata.json")
         probe = load_json(out / "backend/integration-probe.json")
         backend_run = load_json(out / "backend/backend-run.json")
+        production_probe = load_json(out / "backend/production-api-probe.json")
         qa_suite = suite(out / "qa-junit.xml")
         agent_suite, backend_suite = (
             suite(out / "agent-junit.xml"),
@@ -247,7 +267,14 @@ def main() -> int:
         commits = source_commits(root)
         if commits != initial_commits or any(
             report["commits"] != commits
-            for report in (audit, component, probe, data_validation)
+            for report in (
+                audit,
+                component,
+                probe,
+                data_validation,
+                production_probe,
+                connectivity,
+            )
         ):
             raise ValueError("Source commits changed during checks")
         if any(
@@ -259,7 +286,8 @@ def main() -> int:
             raise ValueError("Source working tree changed during checks")
         _, current_map = load_live_map(root, directory)
         if current_map != initial_map or any(
-            report["map"] != current_map for report in (audit, component, probe)
+            report["map"] != current_map
+            for report in (audit, component, probe, production_probe, connectivity)
         ):
             raise ValueError("Mixed live-map evidence")
         frontend_check = next(
@@ -327,6 +355,13 @@ def main() -> int:
             "asset_sha256": data_validation["asset_sha256"],
             "validation_scope": data_validation["validation_scope"],
         },
+        "route_connectivity": {
+            "reachable": connectivity["reachable"],
+            "total": connectivity["total"],
+            "failed": [r for r in connectivity["routes"] if not r["reachable"]],
+            "scope": connectivity["scope"],
+            "field_verified": False,
+        },
         "agent": {
             "suite": agent_suite,
             "model": "FakeLLM",
@@ -356,6 +391,12 @@ def main() -> int:
             "failed": [c["id"] for c in probe["checks"] if not c["passed"]],
             "fixture": "FakeLLM, MockKnowledgeSearch, synthetic JPEG; explicit R2 injection",
         },
+        "production_entrypoint": {
+            "passed": production_probe["passed"],
+            "total": production_probe["total"],
+            "profile": "FakeLLM + explicit official local MemorySearch; actual global app",
+            "deployed_runtime_verified": False,
+        },
         "frontend": {
             **frontend,
             "source_wiring": {
@@ -366,6 +407,7 @@ def main() -> int:
             },
         },
         "real_llm_calls": 0,
+        "real_embedding_calls": 0,
         "field_photo_count": 0,
         "production_ai_quality_measured": False,
         "runner_hashes": {
@@ -381,9 +423,11 @@ def main() -> int:
         (out / "baseline.json", "baseline.json"),
         (out / "contract-audit.json", "contract-audit.json"),
         (out / "data-validation.json", "data-validation.json"),
+        (out / "route-connectivity.json", "route-connectivity.json"),
         (out / "component/metadata.json", "component-metadata.json"),
         (out / "component/results.csv", "component-results.csv"),
         (out / "backend/integration-probe.json", "integration-probe.json"),
+        (out / "backend/production-api-probe.json", "production-api-probe.json"),
     ):
         temporary = report_dir / ("." + name + ".tmp")
         shutil.copyfile(source, temporary)

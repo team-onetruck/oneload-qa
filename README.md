@@ -10,7 +10,33 @@
 작업자는 [AGENTS.md](AGENTS.md)의 인수인계 갱신 절차를 따릅니다. 설계 사본은 [참고 자료](docs/reference/README.md)에 있습니다.
 [repos.lock.json](repos.lock.json)은 최근 관찰 버전과 마지막 검증 버전을 구분합니다. 표준 QA와 별도 RAG 검사의 커밋·범위를 구분합니다. 소스 커밋 기록은 Frontend UI·Infra 배포 검증을 뜻하지 않습니다.
 
-## 최신 Data·Backend 확인 (2026-10-23 17:00 KST)
+## 인수 후 최신 QA — 2026-10-25 11:30 KST
+
+[검토·환경·다음 작업](reports/takeover-review-20261025.json) · [기준선](reports/baseline.json) · [인수인계](docs/handoff.md).
+
+현재 검증 묶음은 App `12ba6c6` / Backend `9067553` / Agent `a732577` / Data `89ec570` / Infra `6cf4a65` / RAG `f99704d`다. GitHub main과 대조한 새 복사본에서 실행했으며 원래 사용자 checkout은 보존했다. QA는 로컬 `qa/` 폴더, 새 Python **3.12.9** 가상환경이다.
+
+| 검사 | 실제 결과와 범위 |
+|---|---|
+| QA / Agent / Backend / 데이터 구조 | 48/48 · 47/47 · 71/71 · 3/3 |
+| component v2 | 20/20 시나리오·21/21 턴, 사람 검토 21턴 대기 |
+| 모의 검색 주입 API / 공식 RAG 주입 API | 27/27 · 28/28, 별도 프로필 |
+| 실제 전역 app 조립의 모의 API | 7/7, FakeLLM·공식 로컬 MemorySearch 강제 설정 |
+| 출구·반납기 경로 | **5/24 연결(자기 위치 2건 포함), 19건 경로 없음 → 전체 exit1** |
+| App 로컬 검사 | lint·타입·단위 513/513·빌드 통과; 브라우저·실기기 인수 NOT_RUN |
+| 노출된 검색 v2 회귀 | top3 17/20·범위밖 빈 결과 15/20, 새 독립 검증 아님·기준 미달 |
+
+Backend #2의 반납 완료 갱신은 API-26과 기존 회귀에서 해결 확인했다. Data #2는 계속 open이다. App HTTP 연결을 새 소스 해시에 묶어 wired로 검토했지만 생성 타입은 구 intent 6개이며 plan/steps 화면 연결은 남아 있다. Agent #7은 open이다.
+
+INT-07은 **로컬 강제 MemorySearch 프로필에서 실제 전역 entrypoint→공식 검색→API 연결 확인**으로 갱신했다. 배포 환경·pgvector·실제 모델의 인수는 아니다. Backend 의존성은 RAG `v0.3.0`(`ec27e09`)을 pin하지만 이번에는 형제 최신 main을 사용했다. 두 버전의 지식 메타데이터가 달라 release 설치/배포 조합은 별도로 검증해야 한다.
+
+App CI의 verify/e2e는 성공했지만 deploy는 취소됐고 Backend·Agent deploy는 대기다. 과거 배포 성공을 최신 배포 완료로 표시하지 않는다. 실제 모델·임베딩 호출 **0회**, 현장 사진 정답 **0건**, 휴대폰·카메라/센서 정확도·거리뷰 현장 인수 **NOT_RUN**이다. Camera 오버레이·AR 기반 코드와 draft Unity PR #39로 현재 2D·거리뷰 QA 범위를 확대하지 않았다.
+
+설치 충돌(`langgraph-sdk0.4.8`의 websockets<17)을 해결해 `websockets16.1.1`로 고정하고 새 설치·pip check를 확인했다. QA 실행기는 형제 RAG를 명시적으로 선택하고 커밋을 기록한다. Agent 단독 시험에는 Backend 경로를 섞지 않는다. 추가한 경로 검사와 운영 조립 API 검사는 기존 동결 평가셋을 바꾸지 않는다.
+
+아래 10월 23일 기록은 각 당시 버전의 이력이며 현재 판정은 위 기록과 최신 기준선을 따른다.
+
+## 과거 Data·Backend 확인 (2026-10-23 17:00 KST)
 
 [새 검토 증거](reports/data-backend-review-20261023.json) · [현재 아키텍처](docs/architecture-current-20261023.md).
 Backendb1aa5f5는 행동 계획·규칙 엔진·경유지 경로·단계 API와 Agent 계약 수정을 추가했다. Data9fc786e는 구역/폐쇄 스키마를 추가했지만 실제 지도 통로는 동일하다. 기존500·슬롯 유실은 해결 확인, Data #2 경로 단절은 유지한다.
@@ -63,7 +89,7 @@ Backend 운영 Agent·Vision은 연결됐고 키가 없으면 RuleAgent/NoVision
 
 ## 실행 준비
 
-표준 QA 대상 5개와 QA를 같은 부모 폴더에 둡니다. 인수인계에는 별도 RAG 검사용 oneload-rag도 함께 준비합니다. QA의 로컬 폴더 이름은 qa입니다.
+표준 QA 대상 6개와 QA를 같은 부모 폴더에 둡니다. Backend가 R3를 import하므로 oneload-rag는 기본 검사에도 필요합니다. QA의 로컬 폴더 이름은 qa입니다.
 
 ~~~text
 project/
@@ -91,8 +117,8 @@ uv venv --python 3.12 .venv
 uv pip install --python .venv/bin/python -r requirements-runtime.lock.txt
 ~~~
 
-가상환경은 컴퓨터마다 새로 만듭니다. 다른 컴퓨터의 .venv나 절대 경로 링크를 복사하지 않습니다.
-검증 환경은 Python 3.12.14입니다. 의존성 목록은 QA 환경 기록이며 팀의 배포 의존성을 대체하지 않습니다.
+가상환경은 컴퓨터마다 새로 만듭니다. 다른 컴퓨터의 .venv나 절대 경로 링크를 복사하지 않습니다. uv가 없으면 `python3 -m venv .venv` 후 `.venv/bin/python -m pip install -r requirements-runtime.lock.txt`로 준비할 수 있습니다.
+이번 재현 환경은 Python 3.12.9입니다(과거 기준선은 3.12.14). 의존성 목록은 QA 환경 기록이며 팀의 배포 의존성을 대체하지 않습니다.
 
 ## 지도 선택과 기록
 
@@ -103,7 +129,7 @@ uv pip install --python .venv/bin/python -r requirements-runtime.lock.txt
 - 지도 폴더·선택 파일이 없으면 모델 호출이나 Docker 시작 전에 명시적인 오류로 중단합니다.
 - 필요하면 각 지도 관련 명령에 --map-dir 경로를 전달할 수 있습니다. 명시한 지도는 실제 API 앱의 MAP_DIR에도 적용됩니다.
 
-공개 증거에는 관련 저장소 5개의 커밋, 실제 지도의 map_id·version·SHA256,
+공개 증거에는 관련 저장소 6개의 커밋, 실제 지도의 map_id·version·SHA256,
 Backend 시험 fixture의 SHA256, 파노라마 파일 해시를 기록합니다.
 실행 전후 커밋·작업 트리·지도·데이터 스키마·사진 해시를 대조합니다.
 
@@ -115,13 +141,13 @@ Docker가 실행 중이어야 합니다.
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_checks.py --project-root .. --with-backend --output results/full-run-001 --reports reports
 ~~~
 
-QA 회귀 테스트 → 데이터 검사 → Agent 시험 → 계약 감사 → 컴포넌트 평가 →
+QA 회귀 테스트 → 데이터 구조·출구/반납기 경로 검사 → Agent 시험 → 계약 감사 → 컴포넌트 평가 →
 일회용 DB의 Backend·R2 API 검사를 실행합니다.
 개별 실패도 기록하고 전체 실패 종료 코드를 유지합니다.
 누락되거나 다른 버전의 증거가 섞이면 공개 보고서를 갱신하지 않습니다.
 --reports는 --with-backend와 함께 사용하며, 매 실행 새 출력 폴더를 지정합니다.
 
-INT-06은 검토된 소스 연결로 확인했고 INT-08은 통과했습니다. 운영 R3 검색이 아직 데모인 INT-07 때문에 전체 종료 코드는1입니다. 재검토되지 않은 App 코드도 review_required로 nonzero를 유지합니다.
+INT-06은 현재 App 소스 연결로 확인했고 INT-08과 INT-07의 로컬 공식 MemorySearch 조립/API 검사는 통과했습니다. Data #2 경로 단절 때문에 전체 종료 코드는1입니다. 실제 배포·검색 품질·휴대폰 인수는 별도이며 재검토되지 않은 App 코드도 review_required로 nonzero를 유지합니다.
 자세한 단계별 종료 코드와 실제 실패 항목은 reports/baseline.json에 있습니다.
 실행 원본은 results/, 공개용 구조화 증거는 reports/에 기록합니다.
 
