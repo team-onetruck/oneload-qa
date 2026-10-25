@@ -1,5 +1,13 @@
 # 최신 QA 검토
 
+## 미커밋 지도 후보 테스트 — 2026-10-25
+
+[검토·다음 작업](../docs/local-map-candidate-20261025.md) · [새 실행·작업 트리 SHA](local-map-candidate-20261025.json) · [미등록 이슈 초안](../docs/local-map-candidate-issue-drafts-20261025.md).
+
+Data2026-10-25.2/e89bc42c…는 로컬 미커밋 후보이며 main89ec570의 내용으로 표시하지 않는다. 후보에서 QA48·Agent47·Backend71·모의API27/27·공식검색API28/28·전역app7/7·경로78/78 통과, 표준 전체 exit0이다. 실제 노드쌍1,521/1,521·지정 휠체어81/81도 연결된다.
+
+Agent CI지도사본 불일치 exit1, 합성 위치L24 음성 회귀, FakeLLM9-1출구2건 실패, 무료 구역 간 유료 개찰구 경유·환승 중 구매 문구·R3 POI32/40 기준 검토가 남아 **후보 전체 인수는 보류**다. 브라우저 목록/경로는 확인했고 거리뷰 렌더 완료는PARTIAL이다. 실제 AI·실기기·현장 인수는 별도다. 다른 저장소·이슈는 변경하지 않았고 main baseline을 보존했다.
+
 ## 열린 이슈 재검증 — 2026-10-25 17:05 KST
 
 [이슈별 판정](../docs/open-issue-review-20261025.md) · [새 실행·버전·이슈 처리 증거](open-issue-review-20261025.json).

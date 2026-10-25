@@ -1,5 +1,11 @@
 # 한길 R6 QA/Eval
 
+## 로컬 지도 후보 검증 — 2026-10-25
+
+[미커밋 후보 테스트](docs/local-map-candidate-20261025.md) · [구조화 증거](reports/local-map-candidate-20261025.json) · [미등록 이슈 초안](docs/local-map-candidate-issue-drafts-20261025.md). Data 로컬2026-10-25.2/e89bc42c…를 수정 없이 검사했다. 기본 QA와 모의API27/27·공식검색API28/28·경로78/78은 통과하지만 Agent 사본 불일치·합성 위치/9-1 출구·안내 의미 검토가 남아 후보 전체 인수는 보류한다.
+
+다른 저장소와 기존 서버/DB는 보존했다. **공유 대상은 QA 문서·증거뿐**이며 Data 커밋·push와 실제 이슈 등록은 하지 않는다. main baseline은 기존2026-10-25.1로 보존하고 이 후보를 별도 기록한다.
+
 ## 열린 이슈 재검증 — 2026-10-25
 
 [이슈별 판정과 다음 작업](docs/open-issue-review-20261025.md) · [새 로컬 실행 증거](reports/open-issue-review-20261025.json). Infra#1은 수정 완료로 종료했다. Agent#7은 Backend 해결·App 잔여, Data#2·RAG#3·App#41은 미완료 조건이 남아 open이다. QA#3은 로컬 공식 검색 재검사 완료·임계값 미확정으로 open 유지한다. 개인 연습용 이슈1건도 확인했다.

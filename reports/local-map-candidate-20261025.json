@@ -1,0 +1,2417 @@
+{
+  "recorded_at_kst": "2026-10-25T18:34:44.513703+09:00",
+  "qa_execution_commit": "c8f450dbd8dc133e15254a4806541540aa2bddc1",
+  "task_scope": "Read-only test of an existing uncommitted Data candidate. No product implementation edits, source commits/pushes, GitHub issue writes, OSM refresh or deployment.",
+  "candidate": {
+    "base_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "branch": "map/line14-expansion-20261025",
+    "committed": false,
+    "map_version": "2026-10-25.2",
+    "map_sha256": "e89bc42c287f9db1e9d61a968ac3b9dc567688d68cfe05e92e3185de54d6aedc",
+    "source_status": " M .github/workflows/validate.yml\n M README.md\n M maps/seoul-station.json\n M tools/validate.py\n?? previews/\n?? source/\n?? tools/build_map.py\n?? tools/import_osm.py\n?? tools/render_preview.py\n",
+    "source_file_sha256": {
+      ".github/workflows/validate.yml": "bcdcbcbe3bfea00f023acef07730b1ec4e9b21bc5f929fba58b49904f1e3c588",
+      ".gitignore": "9addeec56619685bab330ff2184db9f205a1b4628f551ededcb97800b269ca3e",
+      "README.md": "cb4ce09759f44f9ff10ff29e28163576d893fa3942466782551f10abda2dbf3d",
+      "maps/seoul-station.json": "e89bc42c287f9db1e9d61a968ac3b9dc567688d68cfe05e92e3185de54d6aedc",
+      "panos/hamburg_hbf.webp": "2ed638fdf4df85b3c3cc4308eae21c64723380b567d95dadab0a8b706995e008",
+      "panos/metro_noord.webp": "b7ae8f4e51d3b1d114cf32e84f18a6deaa05ca83a00d48181f78bd52b88a4c6c",
+      "panos/metro_vijzelgracht.webp": "ed5f398eb4b7637f4d97fdf372dfb55746c9d013447531db4b82e2ec82825433",
+      "panos/subway_entrance.webp": "86208e5b4f42b3c06d967f4baa5561bcc7b9a8aa04032c1a028a9da72bb37379",
+      "previews/seoul-station.svg": "8d2e2558af09ecf698705ff187af2fb2f521a916609b0eb43ecff017993da64f",
+      "schema/map.schema.json": "4641de4f53ba5c0ecf102898bbefb10a2569cf30e70dc217a90ada760c353a7a",
+      "source/seoul-station/imports/osm.json": "513df3c678d4c26ffa9dc6e8989c89e45cdb91f73affd58d5ffb7912933e12ea",
+      "source/seoul-station/landmarks.yaml": "421cfc4af4ade3b365f6a305c5b0bf32a842f931fd7a1e82438a611bde39d1d8",
+      "source/seoul-station/links.yaml": "e54a48bf23fbef2762da647b86105ae0c57c79d6fbf62aec971138430f523dad",
+      "source/seoul-station/map.yaml": "3d3d61106e0f9565d3bf2f9b84e498dd081cae354c43c5fdbe021e4790e68821",
+      "source/seoul-station/nodes.yaml": "ae80251ecd7428363c8d95411dd796b2b0f215be0b491e714ab9e560f49d3b49",
+      "source/seoul-station/panoramas.yaml": "2f0dc4a4ddce916640073f63ca95337a4ae5ab50d3fb1b68f8a292cee3ba5b6a",
+      "source/seoul-station/pois.yaml": "f05cc34c8a8493254f9693b5c1e08f65640fbfeaab0b023b67a72da8409404f9",
+      "tools/build_map.py": "9b5edbed241a945410e5b7e0a6b5106504bb08976835c436b668de5ccfe8d386",
+      "tools/import_osm.py": "53aa883d70a3db51c870acd1559b1c0811d2e628be56e28f2a2f398be300a93a",
+      "tools/render_preview.py": "e2c06006d22be68f6f766948cec8aff25de24d6217a4e3b2ed7b19c790a36384",
+      "tools/validate.py": "f1f685eafce4cb28dc02e4c8582e0645a593fcd4739c8e8c685127040e735008"
+    },
+    "warning": "base_commit is HEAD of the unchanged base; it does not contain this candidate. Content hash + dirty branch identify the tested version."
+  },
+  "main_reference": {
+    "data_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "map_version": "2026-10-25.1",
+    "map_sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42",
+    "baseline": "reports/baseline.json",
+    "status": "Unchanged historical main baseline; Data#2 remains open. Candidate results do not imply merge or deployment."
+  },
+  "counts": {
+    "nodes": {
+      "main": 12,
+      "candidate": 39
+    },
+    "edges": {
+      "main": 12,
+      "candidate": 102
+    },
+    "pois": {
+      "main": 6,
+      "candidate": 40
+    },
+    "landmarks": {
+      "main": 20,
+      "candidate": 40
+    },
+    "panoramas": {
+      "main": 6,
+      "candidate": 6
+    },
+    "floors": {
+      "main": 6,
+      "candidate": 6
+    }
+  },
+  "preserved_ids": {
+    "nodes": {
+      "removed": [],
+      "added": 27
+    },
+    "pois": {
+      "removed": [],
+      "added": 34
+    },
+    "landmarks": {
+      "removed": [],
+      "added": 20
+    },
+    "panoramas": {
+      "removed": [],
+      "added": 0
+    }
+  },
+  "panoramas_unchanged": true,
+  "all_nodes_have_area": true,
+  "data_tool_checks": [
+    {
+      "name": "data-build-check",
+      "exit_code": 0,
+      "output": "seoul-station 2026-10-25.2: 39 nodes, 102 edges, 40 POIs, 40 landmarks: OK\n"
+    },
+    {
+      "name": "data-validate",
+      "exit_code": 0,
+      "output": "seoul-station.json: OK\n"
+    },
+    {
+      "name": "agent-backend-compat",
+      "exit_code": 1,
+      "output": "지도 폴더: $PROJECT/oneload-data/maps\n참고: 백엔드 시험용 지도($PROJECT/oneload-backend/tests/fixtures/maps/seoul-station.json)는 R2 사본과 다름 (시험 전용이라 실패로 보지 않음)\n규격 비교: [\"지도 파일 다름: $PROJECT/oneload-data/maps/seoul-station.json → mocks/maps/ 로 다시 복사\"]\n"
+    }
+  ],
+  "build_reproducible": true,
+  "builder_negative_controls": [
+    {
+      "id": "duplicate-node",
+      "passed": true,
+      "diagnostics": [
+        "duplicate node id ktx-hall"
+      ]
+    },
+    {
+      "id": "duplicate-non-elevator-edge",
+      "passed": true,
+      "diagnostics": [
+        "two non-elevator edges station-plaza->exit-1: the backend keeps only one"
+      ]
+    },
+    {
+      "id": "disconnect-node",
+      "passed": true,
+      "diagnostics": [
+        "from ktx-hall no route to ['exit-1']",
+        "from station-plaza no route to ['exit-1']"
+      ]
+    },
+    {
+      "id": "remove-step-free-elevators",
+      "passed": true,
+      "diagnostics": [
+        "wheelchair: from ktx-hall no step-free route to ['allstop-platform', 'exit-10', 'exit-12', 'exit-2', 'exit-4', 'express-platform', 'line1-platform', 'line4-platform']",
+        "wheelchair: from express-platform no step-free route to ['allstop-platform', 'exit-10', 'exit-12', 'exit-2', 'exit-4', 'ktx-hall', 'line1-platform', 'line4-platform']"
+      ]
+    },
+    {
+      "id": "stale-generated-json",
+      "passed": true
+    }
+  ],
+  "preview": {
+    "xml_valid": true,
+    "checked_by": "XML parser; not a rendered phone UI or physical-route review",
+    "route": [
+      "express-platform",
+      "express-gates",
+      "express-tickets",
+      "arex-concourse",
+      "allstop-tickets",
+      "arex-transfer-passage",
+      "line4-gates",
+      "line4-concourse",
+      "line4-platform"
+    ],
+    "existing_preview_matches_generator": true
+  },
+  "fresh_standard_checks": {
+    "executed_at_kst": "2026-10-25T18:19:03.298321+09:00",
+    "steps": [
+      {
+        "name": "qa-tests",
+        "exit_code": 0,
+        "elapsed_s": 1.699
+      },
+      {
+        "name": "data-validation",
+        "exit_code": 0,
+        "elapsed_s": 0.105
+      },
+      {
+        "name": "route-connectivity",
+        "exit_code": 0,
+        "elapsed_s": 0.175
+      },
+      {
+        "name": "agent-tests",
+        "exit_code": 0,
+        "elapsed_s": 0.833
+      },
+      {
+        "name": "contract-audit",
+        "exit_code": 0,
+        "elapsed_s": 0.71
+      },
+      {
+        "name": "component-eval",
+        "exit_code": 0,
+        "elapsed_s": 0.406
+      },
+      {
+        "name": "backend-and-integration",
+        "exit_code": 0,
+        "elapsed_s": 6.112
+      }
+    ],
+    "commits": {
+      "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+      "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+      "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+      "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+      "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+      "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+    },
+    "map": {
+      "source_repository": "oneload-data",
+      "path": "maps/seoul-station.json",
+      "map_id": "seoul-station",
+      "version": "2026-10-25.2",
+      "sha256": "e89bc42c287f9db1e9d61a968ac3b9dc567688d68cfe05e92e3185de54d6aedc"
+    },
+    "overall_exit_code": 0,
+    "live_model_calls": 0,
+    "with_backend": true,
+    "qa": {
+      "tests": 48,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "agent": {
+      "tests": 47,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "backend": {
+      "tests": 71,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "unit_fixture_scope": "Agent and Backend unit suites retain frozen test maps; current candidate is exercised by separate live-map/API probes.",
+    "data_structure": {
+      "passed": 3,
+      "total": 3,
+      "checks": [
+        {
+          "id": "DATA-schema",
+          "passed": true,
+          "description": "Data schema equals the current Backend MapData schema"
+        },
+        {
+          "id": "DATA-map-seoul-station",
+          "passed": true,
+          "description": "Backend schema and cross-reference validation"
+        },
+        {
+          "id": "DATA-photos-seoul-station",
+          "passed": true,
+          "missing_panorama_ids": []
+        }
+      ],
+      "maps": [
+        {
+          "source_repository": "oneload-data",
+          "path": "maps/seoul-station.json",
+          "map_id": "seoul-station",
+          "version": "2026-10-25.2",
+          "sha256": "e89bc42c287f9db1e9d61a968ac3b9dc567688d68cfe05e92e3185de54d6aedc",
+          "nodes": 39,
+          "edges": 102,
+          "pois": 40,
+          "panoramas": 6,
+          "example_panoramas": 6
+        }
+      ]
+    },
+    "component": {
+      "dataset_version": "r6-component-v2",
+      "dataset_sha256": "1daa313834008bf7c26dec28d9cb302e92ddddd9b28d8c5e15cc28d5f6a13da3",
+      "scenario_count": 20,
+      "turn_count": 21,
+      "auto_scenarios_passed": 20,
+      "auto_turns_passed": 21,
+      "human_review_pending": 21,
+      "final_quality_score": null
+    },
+    "mock_api": {
+      "passed": 27,
+      "total": 27,
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "e89bc42c287f9db1e9d61a968ac3b9dc567688d68cfe05e92e3185de54d6aedc"
+      },
+      "runner_sha256": "7c7c5ac06a2a97f5d3dcb2ce446b24b396f1f00092ca226c5c38e116640a5aa2"
+    },
+    "rag_api": {
+      "passed": 28,
+      "total": 28,
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "e89bc42c287f9db1e9d61a968ac3b9dc567688d68cfe05e92e3185de54d6aedc"
+      },
+      "rag": {
+        "repository": "oneload-rag",
+        "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+        "working_tree_clean": true,
+        "backend": "MemorySearch",
+        "min_score": 0.25,
+        "k": 3,
+        "relative_cutoff": 0.5,
+        "scope_gate_min_coverage": 0.25,
+        "community": false,
+        "document_ids": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types",
+          "doc-climate-card-short-term",
+          "doc-deposit-refund",
+          "doc-express-ticket",
+          "doc-fare-arex-allstop",
+          "doc-fare-arex-express",
+          "doc-fare-passes-cards",
+          "doc-foreigner-transit-cards",
+          "doc-seoul-arex-transfer",
+          "doc-seoul-help-desks",
+          "doc-seoul-transit-basics",
+          "doc-tmoney-card",
+          "doc-wowpass"
+        ],
+        "knowledge_sha256": {
+          "README.md": "69b16ad3992eda254ad1c170b92f01b66366c95ccbae6ceb1829c3d5df4d26d4",
+          "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+          "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+          "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+          "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+          "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+          "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+          "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+          "doc-fare-arex-allstop.md": "8c4a751bb15521eaa4be205f1d9c055fffca51d699c5830775557b62e4c8db33",
+          "doc-fare-arex-express.md": "6dc1ca6cc6c7d1e3cf8b9cfc192ca11cabb55effdc2e3107bdd00dc86a651ca7",
+          "doc-fare-passes-cards.md": "f05c5533036ade4159f7c373f377b5bab59809d0b6c72f4925322d19210ca699",
+          "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+          "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+          "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+          "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+          "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+          "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+        },
+        "code_sha256": {
+          "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+          "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+          "src/hangil_rag/loader.py": "8b67ebe687d7ace619cbe7d874821c715e5bacf8c6c621a659a5b6b178575066",
+          "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+          "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+          "src/hangil_rag/search_memory.py": "5c13065a5c351b6a3786680baa133899b3aeae89feff04254da6abe245e53e8f",
+          "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+        },
+        "live_model_calls": 0,
+        "live_embedding_calls": 0
+      },
+      "runner_sha256": "7c7c5ac06a2a97f5d3dcb2ce446b24b396f1f00092ca226c5c38e116640a5aa2"
+    },
+    "production_entrypoint_api": {
+      "passed": 7,
+      "total": 7,
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "e89bc42c287f9db1e9d61a968ac3b9dc567688d68cfe05e92e3185de54d6aedc"
+      },
+      "scope": "Actual global app; FakeLLM provider; forced local official MemorySearch; disposable DB. Not deployed runtime or AI quality.",
+      "checks": [
+        {
+          "id": "PROD-01-default-assembly",
+          "expected": [
+            true,
+            true,
+            true
+          ],
+          "actual": [
+            true,
+            true,
+            true
+          ],
+          "passed": true
+        },
+        {
+          "id": "PROD-02-official-fare",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "id": "PROD-03-shared-vision",
+          "expected": [
+            200,
+            "needs_confirmation",
+            true
+          ],
+          "actual": [
+            200,
+            "needs_confirmation",
+            true
+          ],
+          "passed": true
+        },
+        {
+          "id": "PROD-04-empty-search-control",
+          "expected": [
+            "cannot_answer",
+            []
+          ],
+          "actual": [
+            "cannot_answer",
+            []
+          ],
+          "passed": true
+        },
+        {
+          "id": "PROD-05-no-key-fallback",
+          "expected": [
+            "RuleAgent",
+            "NoVision"
+          ],
+          "actual": [
+            "RuleAgent",
+            "NoVision"
+          ],
+          "passed": true
+        },
+        {
+          "id": "PROD-06-fallback-official-sources",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "id": "PROD-07-fallback-refuses-unverified-fare",
+          "expected": [
+            "cannot_answer",
+            []
+          ],
+          "actual": [
+            "cannot_answer",
+            []
+          ],
+          "passed": true
+        }
+      ],
+      "entrypoint_sha256": "75b12b65ff3b4c522d08e22ffa261e1b6728b6e858530102e5d7928c71c0c8a7",
+      "deployed_runtime_verified": false
+    },
+    "refund_exit_routes": {
+      "reachable": 78,
+      "total": 78,
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "e89bc42c287f9db1e9d61a968ac3b9dc567688d68cfe05e92e3185de54d6aedc"
+      },
+      "field_verified": false,
+      "runner_sha256": "a387f0569e58899fdd92c6d4ec0d7d0b514c870a85d9f215fd215da7da4aa4e5"
+    }
+  },
+  "backend_graph_matrix": {
+    "default_reachable": 1521,
+    "total": 1521,
+    "wheelchair_reachable_all_nodes": 641,
+    "wheelchair_all_nodes_total": 1521,
+    "wheelchair_selected_reachable": 81,
+    "wheelchair_selected_total": 81,
+    "invalid_wheelchair_steps": [],
+    "selected_step_free_pairs": [
+      {
+        "start": "ktx-hall",
+        "goal": "ktx-hall",
+        "reachable": true
+      },
+      {
+        "start": "ktx-hall",
+        "goal": "express-platform",
+        "reachable": true
+      },
+      {
+        "start": "ktx-hall",
+        "goal": "allstop-platform",
+        "reachable": true
+      },
+      {
+        "start": "ktx-hall",
+        "goal": "line1-platform",
+        "reachable": true
+      },
+      {
+        "start": "ktx-hall",
+        "goal": "line4-platform",
+        "reachable": true
+      },
+      {
+        "start": "ktx-hall",
+        "goal": "exit-2",
+        "reachable": true
+      },
+      {
+        "start": "ktx-hall",
+        "goal": "exit-4",
+        "reachable": true
+      },
+      {
+        "start": "ktx-hall",
+        "goal": "exit-10",
+        "reachable": true
+      },
+      {
+        "start": "ktx-hall",
+        "goal": "exit-12",
+        "reachable": true
+      },
+      {
+        "start": "express-platform",
+        "goal": "ktx-hall",
+        "reachable": true
+      },
+      {
+        "start": "express-platform",
+        "goal": "express-platform",
+        "reachable": true
+      },
+      {
+        "start": "express-platform",
+        "goal": "allstop-platform",
+        "reachable": true
+      },
+      {
+        "start": "express-platform",
+        "goal": "line1-platform",
+        "reachable": true
+      },
+      {
+        "start": "express-platform",
+        "goal": "line4-platform",
+        "reachable": true
+      },
+      {
+        "start": "express-platform",
+        "goal": "exit-2",
+        "reachable": true
+      },
+      {
+        "start": "express-platform",
+        "goal": "exit-4",
+        "reachable": true
+      },
+      {
+        "start": "express-platform",
+        "goal": "exit-10",
+        "reachable": true
+      },
+      {
+        "start": "express-platform",
+        "goal": "exit-12",
+        "reachable": true
+      },
+      {
+        "start": "allstop-platform",
+        "goal": "ktx-hall",
+        "reachable": true
+      },
+      {
+        "start": "allstop-platform",
+        "goal": "express-platform",
+        "reachable": true
+      },
+      {
+        "start": "allstop-platform",
+        "goal": "allstop-platform",
+        "reachable": true
+      },
+      {
+        "start": "allstop-platform",
+        "goal": "line1-platform",
+        "reachable": true
+      },
+      {
+        "start": "allstop-platform",
+        "goal": "line4-platform",
+        "reachable": true
+      },
+      {
+        "start": "allstop-platform",
+        "goal": "exit-2",
+        "reachable": true
+      },
+      {
+        "start": "allstop-platform",
+        "goal": "exit-4",
+        "reachable": true
+      },
+      {
+        "start": "allstop-platform",
+        "goal": "exit-10",
+        "reachable": true
+      },
+      {
+        "start": "allstop-platform",
+        "goal": "exit-12",
+        "reachable": true
+      },
+      {
+        "start": "line1-platform",
+        "goal": "ktx-hall",
+        "reachable": true
+      },
+      {
+        "start": "line1-platform",
+        "goal": "express-platform",
+        "reachable": true
+      },
+      {
+        "start": "line1-platform",
+        "goal": "allstop-platform",
+        "reachable": true
+      },
+      {
+        "start": "line1-platform",
+        "goal": "line1-platform",
+        "reachable": true
+      },
+      {
+        "start": "line1-platform",
+        "goal": "line4-platform",
+        "reachable": true
+      },
+      {
+        "start": "line1-platform",
+        "goal": "exit-2",
+        "reachable": true
+      },
+      {
+        "start": "line1-platform",
+        "goal": "exit-4",
+        "reachable": true
+      },
+      {
+        "start": "line1-platform",
+        "goal": "exit-10",
+        "reachable": true
+      },
+      {
+        "start": "line1-platform",
+        "goal": "exit-12",
+        "reachable": true
+      },
+      {
+        "start": "line4-platform",
+        "goal": "ktx-hall",
+        "reachable": true
+      },
+      {
+        "start": "line4-platform",
+        "goal": "express-platform",
+        "reachable": true
+      },
+      {
+        "start": "line4-platform",
+        "goal": "allstop-platform",
+        "reachable": true
+      },
+      {
+        "start": "line4-platform",
+        "goal": "line1-platform",
+        "reachable": true
+      },
+      {
+        "start": "line4-platform",
+        "goal": "line4-platform",
+        "reachable": true
+      },
+      {
+        "start": "line4-platform",
+        "goal": "exit-2",
+        "reachable": true
+      },
+      {
+        "start": "line4-platform",
+        "goal": "exit-4",
+        "reachable": true
+      },
+      {
+        "start": "line4-platform",
+        "goal": "exit-10",
+        "reachable": true
+      },
+      {
+        "start": "line4-platform",
+        "goal": "exit-12",
+        "reachable": true
+      },
+      {
+        "start": "exit-2",
+        "goal": "ktx-hall",
+        "reachable": true
+      },
+      {
+        "start": "exit-2",
+        "goal": "express-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-2",
+        "goal": "allstop-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-2",
+        "goal": "line1-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-2",
+        "goal": "line4-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-2",
+        "goal": "exit-2",
+        "reachable": true
+      },
+      {
+        "start": "exit-2",
+        "goal": "exit-4",
+        "reachable": true
+      },
+      {
+        "start": "exit-2",
+        "goal": "exit-10",
+        "reachable": true
+      },
+      {
+        "start": "exit-2",
+        "goal": "exit-12",
+        "reachable": true
+      },
+      {
+        "start": "exit-4",
+        "goal": "ktx-hall",
+        "reachable": true
+      },
+      {
+        "start": "exit-4",
+        "goal": "express-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-4",
+        "goal": "allstop-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-4",
+        "goal": "line1-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-4",
+        "goal": "line4-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-4",
+        "goal": "exit-2",
+        "reachable": true
+      },
+      {
+        "start": "exit-4",
+        "goal": "exit-4",
+        "reachable": true
+      },
+      {
+        "start": "exit-4",
+        "goal": "exit-10",
+        "reachable": true
+      },
+      {
+        "start": "exit-4",
+        "goal": "exit-12",
+        "reachable": true
+      },
+      {
+        "start": "exit-10",
+        "goal": "ktx-hall",
+        "reachable": true
+      },
+      {
+        "start": "exit-10",
+        "goal": "express-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-10",
+        "goal": "allstop-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-10",
+        "goal": "line1-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-10",
+        "goal": "line4-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-10",
+        "goal": "exit-2",
+        "reachable": true
+      },
+      {
+        "start": "exit-10",
+        "goal": "exit-4",
+        "reachable": true
+      },
+      {
+        "start": "exit-10",
+        "goal": "exit-10",
+        "reachable": true
+      },
+      {
+        "start": "exit-10",
+        "goal": "exit-12",
+        "reachable": true
+      },
+      {
+        "start": "exit-12",
+        "goal": "ktx-hall",
+        "reachable": true
+      },
+      {
+        "start": "exit-12",
+        "goal": "express-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-12",
+        "goal": "allstop-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-12",
+        "goal": "line1-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-12",
+        "goal": "line4-platform",
+        "reachable": true
+      },
+      {
+        "start": "exit-12",
+        "goal": "exit-2",
+        "reachable": true
+      },
+      {
+        "start": "exit-12",
+        "goal": "exit-4",
+        "reachable": true
+      },
+      {
+        "start": "exit-12",
+        "goal": "exit-10",
+        "reachable": true
+      },
+      {
+        "start": "exit-12",
+        "goal": "exit-12",
+        "reachable": true
+      }
+    ],
+    "identity_paths_included": true
+  },
+  "selected_route_semantics": [
+    {
+      "start": "ktx-hall",
+      "goal": "single-use-card-refund",
+      "start_area": "free",
+      "goal_area": "free",
+      "path": [
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-concourse",
+        "line1-gates",
+        "single-use-card-refund"
+      ],
+      "distance_m": 298.0,
+      "areas": [
+        "free",
+        "free",
+        "free",
+        "free",
+        "paid",
+        "free",
+        "free"
+      ],
+      "steps": [
+        {
+          "from": "ktx-hall",
+          "to": "station-plaza",
+          "kind": "escalator_down",
+          "instruction_ko": "에스컬레이터를 타고 1F까지 내려가 서울역 광장으로 가세요.",
+          "instruction_en": "Take the escalator down to 1F and go to the Seoul Station plaza."
+        },
+        {
+          "from": "station-plaza",
+          "to": "exit-1",
+          "kind": "walk",
+          "instruction_ko": "1번 출구로 걸어가세요.",
+          "instruction_en": "Walk to Exit 1."
+        },
+        {
+          "from": "exit-1",
+          "to": "line1-gates-east",
+          "kind": "stairs_down",
+          "instruction_ko": "계단으로 B1까지 내려가 1호선 개찰구(동쪽)로 가세요.",
+          "instruction_en": "Take the stairs down to B1 and go to Line 1 gates (east)."
+        },
+        {
+          "from": "line1-gates-east",
+          "to": "line1-concourse",
+          "kind": "gate",
+          "instruction_ko": "교통카드를 찍고 개찰구를 통과하세요.",
+          "instruction_en": "Tap your card and go through the gates."
+        },
+        {
+          "from": "line1-concourse",
+          "to": "line1-gates",
+          "kind": "gate",
+          "instruction_ko": "개찰구를 통과해 나가세요.",
+          "instruction_en": "Go out through the gates."
+        },
+        {
+          "from": "line1-gates",
+          "to": "single-use-card-refund",
+          "kind": "walk",
+          "instruction_ko": "개찰구 옆 1회용 교통카드 반납기를 이용하세요.",
+          "instruction_en": "Use the single-use transit card refund machine beside the gates."
+        }
+      ]
+    },
+    {
+      "start": "express-platform",
+      "goal": "line4-platform",
+      "start_area": "paid",
+      "goal_area": "paid",
+      "path": [
+        "express-platform",
+        "express-gates",
+        "express-tickets",
+        "arex-concourse",
+        "allstop-tickets",
+        "arex-transfer-passage",
+        "line4-gates",
+        "line4-concourse",
+        "line4-platform"
+      ],
+      "distance_m": 468.0,
+      "areas": [
+        "paid",
+        "paid",
+        "free",
+        "free",
+        "free",
+        "free",
+        "free",
+        "paid",
+        "paid"
+      ],
+      "steps": [
+        {
+          "from": "express-platform",
+          "to": "express-gates",
+          "kind": "escalator_up",
+          "instruction_ko": "에스컬레이터를 타고 B2까지 올라가 직통열차 개찰구로 가세요.",
+          "instruction_en": "Take the escalator up to B2 and go to the Express train gates."
+        },
+        {
+          "from": "express-gates",
+          "to": "express-tickets",
+          "kind": "gate",
+          "instruction_ko": "개찰구를 통과해 나가세요.",
+          "instruction_en": "Go out through the gates."
+        },
+        {
+          "from": "express-tickets",
+          "to": "arex-concourse",
+          "kind": "walk",
+          "instruction_ko": "공항철도 서울역 대합실로 걸어가세요.",
+          "instruction_en": "Walk to the AREX Seoul Station concourse."
+        },
+        {
+          "from": "arex-concourse",
+          "to": "allstop-tickets",
+          "kind": "escalator_down",
+          "instruction_ko": "일반열차 표는 한 층 더 내려가 B3에서 사요.",
+          "instruction_en": "Go down one more floor to B3 for all-stop tickets."
+        },
+        {
+          "from": "allstop-tickets",
+          "to": "arex-transfer-passage",
+          "kind": "escalator_up",
+          "instruction_ko": "“1,4호선 갈아타는 곳” 표지를 따라 환승통로로 올라가세요.",
+          "instruction_en": "Follow the “Transfer to Line 1, Line 4” signs up into the transfer passage."
+        },
+        {
+          "from": "arex-transfer-passage",
+          "to": "line4-gates",
+          "kind": "walk",
+          "instruction_ko": "“1·4호선” 표지를 따라 4호선 개찰구까지 가세요.",
+          "instruction_en": "Follow the “Line 1, Line 4” signs to the Line 4 gates."
+        },
+        {
+          "from": "line4-gates",
+          "to": "line4-concourse",
+          "kind": "gate",
+          "instruction_ko": "교통카드를 찍고 개찰구를 통과하세요.",
+          "instruction_en": "Tap your card and go through the gates."
+        },
+        {
+          "from": "line4-concourse",
+          "to": "line4-platform",
+          "kind": "escalator_down",
+          "instruction_ko": "에스컬레이터를 타고 B2까지 내려가 4호선 승강장으로 가세요.",
+          "instruction_en": "Take the escalator down to B2 and go to Line 4 platform."
+        }
+      ]
+    },
+    {
+      "start": "express-platform",
+      "goal": "line1-platform",
+      "start_area": "paid",
+      "goal_area": "paid",
+      "path": [
+        "express-platform",
+        "express-gates",
+        "express-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-concourse",
+        "line1-platform"
+      ],
+      "distance_m": 455.0,
+      "areas": [
+        "paid",
+        "paid",
+        "free",
+        "free",
+        "free",
+        "free",
+        "free",
+        "free",
+        "paid",
+        "paid"
+      ],
+      "steps": [
+        {
+          "from": "express-platform",
+          "to": "express-gates",
+          "kind": "escalator_up",
+          "instruction_ko": "에스컬레이터를 타고 B2까지 올라가 직통열차 개찰구로 가세요.",
+          "instruction_en": "Take the escalator up to B2 and go to the Express train gates."
+        },
+        {
+          "from": "express-gates",
+          "to": "express-tickets",
+          "kind": "gate",
+          "instruction_ko": "개찰구를 통과해 나가세요.",
+          "instruction_en": "Go out through the gates."
+        },
+        {
+          "from": "express-tickets",
+          "to": "arex-concourse",
+          "kind": "walk",
+          "instruction_ko": "공항철도 서울역 대합실로 걸어가세요.",
+          "instruction_en": "Walk to the AREX Seoul Station concourse."
+        },
+        {
+          "from": "arex-concourse",
+          "to": "ktx-hall",
+          "kind": "escalator_up",
+          "instruction_ko": "에스컬레이터를 타고 2F까지 올라가 서울역 KTX 맞이방으로 가세요.",
+          "instruction_en": "Take the escalator up to 2F and go to the KTX hall (Seoul Station)."
+        },
+        {
+          "from": "ktx-hall",
+          "to": "station-plaza",
+          "kind": "escalator_down",
+          "instruction_ko": "에스컬레이터를 타고 1F까지 내려가 서울역 광장으로 가세요.",
+          "instruction_en": "Take the escalator down to 1F and go to the Seoul Station plaza."
+        },
+        {
+          "from": "station-plaza",
+          "to": "exit-1",
+          "kind": "walk",
+          "instruction_ko": "1번 출구로 걸어가세요.",
+          "instruction_en": "Walk to Exit 1."
+        },
+        {
+          "from": "exit-1",
+          "to": "line1-gates-east",
+          "kind": "stairs_down",
+          "instruction_ko": "계단으로 B1까지 내려가 1호선 개찰구(동쪽)로 가세요.",
+          "instruction_en": "Take the stairs down to B1 and go to Line 1 gates (east)."
+        },
+        {
+          "from": "line1-gates-east",
+          "to": "line1-concourse",
+          "kind": "gate",
+          "instruction_ko": "교통카드를 찍고 개찰구를 통과하세요.",
+          "instruction_en": "Tap your card and go through the gates."
+        },
+        {
+          "from": "line1-concourse",
+          "to": "line1-platform",
+          "kind": "escalator_down",
+          "instruction_ko": "에스컬레이터를 타고 B2까지 내려가 1호선 승강장으로 가세요.",
+          "instruction_en": "Take the escalator down to B2 and go to Line 1 platform."
+        }
+      ]
+    },
+    {
+      "start": "ktx-hall",
+      "goal": "line4-platform",
+      "start_area": "free",
+      "goal_area": "paid",
+      "path": [
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "metro-center",
+        "line4-gates",
+        "line4-concourse",
+        "line4-platform"
+      ],
+      "distance_m": 404.0,
+      "areas": [
+        "free",
+        "free",
+        "free",
+        "free",
+        "free",
+        "free",
+        "paid",
+        "paid"
+      ],
+      "steps": [
+        {
+          "from": "ktx-hall",
+          "to": "station-plaza",
+          "kind": "escalator_down",
+          "instruction_ko": "에스컬레이터를 타고 1F까지 내려가 서울역 광장으로 가세요.",
+          "instruction_en": "Take the escalator down to 1F and go to the Seoul Station plaza."
+        },
+        {
+          "from": "station-plaza",
+          "to": "exit-1",
+          "kind": "walk",
+          "instruction_ko": "1번 출구로 걸어가세요.",
+          "instruction_en": "Walk to Exit 1."
+        },
+        {
+          "from": "exit-1",
+          "to": "line1-gates-east",
+          "kind": "stairs_down",
+          "instruction_ko": "계단으로 B1까지 내려가 1호선 개찰구(동쪽)로 가세요.",
+          "instruction_en": "Take the stairs down to B1 and go to Line 1 gates (east)."
+        },
+        {
+          "from": "line1-gates-east",
+          "to": "metro-center",
+          "kind": "walk",
+          "instruction_ko": "1·4호선 연결 대합실로 걸어가세요.",
+          "instruction_en": "Walk to Line 1/4 connecting concourse."
+        },
+        {
+          "from": "metro-center",
+          "to": "line4-gates",
+          "kind": "walk",
+          "instruction_ko": "4호선 개찰구(서쪽)로 걸어가세요.",
+          "instruction_en": "Walk to Line 4 gates (west)."
+        },
+        {
+          "from": "line4-gates",
+          "to": "line4-concourse",
+          "kind": "gate",
+          "instruction_ko": "교통카드를 찍고 개찰구를 통과하세요.",
+          "instruction_en": "Tap your card and go through the gates."
+        },
+        {
+          "from": "line4-concourse",
+          "to": "line4-platform",
+          "kind": "escalator_down",
+          "instruction_ko": "에스컬레이터를 타고 B2까지 내려가 4호선 승강장으로 가세요.",
+          "instruction_en": "Take the escalator down to B2 and go to Line 4 platform."
+        }
+      ]
+    },
+    {
+      "start": "line4-platform",
+      "goal": "exit-1",
+      "start_area": "paid",
+      "goal_area": "free",
+      "path": [
+        "line4-platform",
+        "line4-concourse",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ],
+      "distance_m": 310.0,
+      "areas": [
+        "paid",
+        "paid",
+        "free",
+        "free",
+        "free",
+        "free"
+      ],
+      "steps": [
+        {
+          "from": "line4-platform",
+          "to": "line4-concourse",
+          "kind": "escalator_up",
+          "instruction_ko": "에스컬레이터를 타고 B1까지 올라가 4호선 개찰구 안으로 가세요.",
+          "instruction_en": "Take the escalator up to B1 and go to Line 4 concourse (inside the gates)."
+        },
+        {
+          "from": "line4-concourse",
+          "to": "line4-gates",
+          "kind": "gate",
+          "instruction_ko": "개찰구를 통과해 나가세요.",
+          "instruction_en": "Go out through the gates."
+        },
+        {
+          "from": "line4-gates",
+          "to": "metro-center",
+          "kind": "walk",
+          "instruction_ko": "1·4호선 연결 대합실로 걸어가세요.",
+          "instruction_en": "Walk to Line 1/4 connecting concourse."
+        },
+        {
+          "from": "metro-center",
+          "to": "line1-gates-east",
+          "kind": "walk",
+          "instruction_ko": "1호선 개찰구(동쪽)로 걸어가세요.",
+          "instruction_en": "Walk to Line 1 gates (east)."
+        },
+        {
+          "from": "line1-gates-east",
+          "to": "exit-1",
+          "kind": "stairs_up",
+          "instruction_ko": "계단으로 1F까지 올라가 1번 출구로 나가세요.",
+          "instruction_en": "Take the stairs up to 1F and leave by Exit 1."
+        }
+      ]
+    }
+  ],
+  "free_area_control": {
+    "start": "ktx-hall",
+    "goal": "single-use-card-refund",
+    "free_only_path_exists": false
+  },
+  "new_destination_api": {
+    "executed_at_kst": "2026-10-25T18:28:52.798773+09:00",
+    "profile": "own new disposable DB, FakeLLM + official local MemorySearch; existing user services untouched",
+    "direct_selection": {
+      "passed": 40,
+      "total": 40,
+      "rows": [
+        {
+          "poi_id": "poi-express-tickets",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-express-tickets",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-allstop-tickets",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-allstop-tickets",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-express-platform",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-express-platform",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-allstop-platform",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-allstop-platform",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-single-use-card-refund",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-single-use-card-refund",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-arex-deposit-refund",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-arex-deposit-refund",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-arex-info",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-arex-info",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-arex-travel-center",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-arex-travel-center",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-city-airport-terminal",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-city-airport-terminal",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-line14-transfer",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-line14-transfer",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-arex-transfer",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-arex-transfer",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-ktx-hall",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-ktx-hall",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-line1-platform",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-line1-platform",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-line4-platform",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-line4-platform",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-gtx-a-transfer",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-gtx-a-transfer",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-korail-platform-3-4",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-korail-platform-3-4",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-metro-info-line1",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-metro-info-line1",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-metro-info-line4",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-metro-info-line4",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-metro-tickets-line1-west",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-metro-tickets-line1-west",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-metro-tickets-line1-east",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-metro-tickets-line1-east",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-metro-tickets-line4-west",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-metro-tickets-line4-west",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-toilet-line1-west",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-toilet-line1-west",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-toilet-metro-center",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-toilet-metro-center",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-toilet-line4-west",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-toilet-line4-west",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-1",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-1",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-2",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-2",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-3",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-3",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-4",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-4",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-5",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-5",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-6",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-6",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-7",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-7",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-8",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-8",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-9",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-9",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-9-1",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-9-1",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-10",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-10",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-11",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-11",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-12",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-12",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-13",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-13",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-14",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-14",
+          "passed": true
+        },
+        {
+          "poi_id": "poi-exit-15",
+          "verified": true,
+          "status": "destination_set",
+          "selected": "poi-exit-15",
+          "passed": true
+        }
+      ]
+    },
+    "natural_language_exit_requests": {
+      "passed": 30,
+      "total": 32,
+      "rows": [
+        {
+          "question": "1번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-1",
+          "first_exit_number": "1",
+          "status": "destination_set",
+          "selected": "poi-exit-1",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 1",
+          "language": "en",
+          "expected": "poi-exit-1",
+          "first_exit_number": "1",
+          "status": "destination_set",
+          "selected": "poi-exit-1",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "2번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-2",
+          "first_exit_number": "2",
+          "status": "destination_set",
+          "selected": "poi-exit-2",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 2",
+          "language": "en",
+          "expected": "poi-exit-2",
+          "first_exit_number": "2",
+          "status": "destination_set",
+          "selected": "poi-exit-2",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "3번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-3",
+          "first_exit_number": "3",
+          "status": "destination_set",
+          "selected": "poi-exit-3",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 3",
+          "language": "en",
+          "expected": "poi-exit-3",
+          "first_exit_number": "3",
+          "status": "destination_set",
+          "selected": "poi-exit-3",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "4번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-4",
+          "first_exit_number": "4",
+          "status": "destination_set",
+          "selected": "poi-exit-4",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 4",
+          "language": "en",
+          "expected": "poi-exit-4",
+          "first_exit_number": "4",
+          "status": "destination_set",
+          "selected": "poi-exit-4",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "5번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-5",
+          "first_exit_number": "5",
+          "status": "destination_set",
+          "selected": "poi-exit-5",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 5",
+          "language": "en",
+          "expected": "poi-exit-5",
+          "first_exit_number": "5",
+          "status": "destination_set",
+          "selected": "poi-exit-5",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "6번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-6",
+          "first_exit_number": "6",
+          "status": "destination_set",
+          "selected": "poi-exit-6",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 6",
+          "language": "en",
+          "expected": "poi-exit-6",
+          "first_exit_number": "6",
+          "status": "destination_set",
+          "selected": "poi-exit-6",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "7번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-7",
+          "first_exit_number": "7",
+          "status": "destination_set",
+          "selected": "poi-exit-7",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 7",
+          "language": "en",
+          "expected": "poi-exit-7",
+          "first_exit_number": "7",
+          "status": "destination_set",
+          "selected": "poi-exit-7",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "8번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-8",
+          "first_exit_number": "8",
+          "status": "destination_set",
+          "selected": "poi-exit-8",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 8",
+          "language": "en",
+          "expected": "poi-exit-8",
+          "first_exit_number": "8",
+          "status": "destination_set",
+          "selected": "poi-exit-8",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "9번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-9",
+          "first_exit_number": "9",
+          "status": "destination_set",
+          "selected": "poi-exit-9",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 9",
+          "language": "en",
+          "expected": "poi-exit-9",
+          "first_exit_number": "9",
+          "status": "destination_set",
+          "selected": "poi-exit-9",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "9-1번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-9-1",
+          "first_exit_number": "1",
+          "status": "destination_set",
+          "selected": "poi-exit-1",
+          "passed": false,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 9-1",
+          "language": "en",
+          "expected": "poi-exit-9-1",
+          "first_exit_number": "9",
+          "status": "destination_set",
+          "selected": "poi-exit-9",
+          "passed": false,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "10번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-10",
+          "first_exit_number": "10",
+          "status": "destination_set",
+          "selected": "poi-exit-10",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 10",
+          "language": "en",
+          "expected": "poi-exit-10",
+          "first_exit_number": "10",
+          "status": "destination_set",
+          "selected": "poi-exit-10",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "11번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-11",
+          "first_exit_number": "11",
+          "status": "destination_set",
+          "selected": "poi-exit-11",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 11",
+          "language": "en",
+          "expected": "poi-exit-11",
+          "first_exit_number": "11",
+          "status": "destination_set",
+          "selected": "poi-exit-11",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "12번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-12",
+          "first_exit_number": "12",
+          "status": "destination_set",
+          "selected": "poi-exit-12",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 12",
+          "language": "en",
+          "expected": "poi-exit-12",
+          "first_exit_number": "12",
+          "status": "destination_set",
+          "selected": "poi-exit-12",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "13번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-13",
+          "first_exit_number": "13",
+          "status": "destination_set",
+          "selected": "poi-exit-13",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 13",
+          "language": "en",
+          "expected": "poi-exit-13",
+          "first_exit_number": "13",
+          "status": "destination_set",
+          "selected": "poi-exit-13",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "14번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-14",
+          "first_exit_number": "14",
+          "status": "destination_set",
+          "selected": "poi-exit-14",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 14",
+          "language": "en",
+          "expected": "poi-exit-14",
+          "first_exit_number": "14",
+          "status": "destination_set",
+          "selected": "poi-exit-14",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "15번 출구로 가고 싶어요",
+          "language": "ko",
+          "expected": "poi-exit-15",
+          "first_exit_number": "15",
+          "status": "destination_set",
+          "selected": "poi-exit-15",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        },
+        {
+          "question": "I want to go to Exit 15",
+          "language": "en",
+          "expected": "poi-exit-15",
+          "first_exit_number": "15",
+          "status": "destination_set",
+          "selected": "poi-exit-15",
+          "passed": true,
+          "scope": "Real HTTP Backend boundary with FakeLLM, not actual model quality"
+        }
+      ]
+    }
+  },
+  "poi_regression": {
+    "dataset_sha256": "25a3c9986f7ea8a2ba96346ef29b521d9f5868c181171609817200c11bf015fa",
+    "gold_modified": false,
+    "main": {
+      "problems": [
+        "지도 버전 다름: 사전 2026-10-23.1 / 지도 2026-10-25.1"
+      ],
+      "dataset_sha256": "25a3c9986f7ea8a2ba96346ef29b521d9f5868c181171609817200c11bf015fa",
+      "current_exact": 22,
+      "with_aliases_exact": 40,
+      "total": 40
+    },
+    "candidate": {
+      "problems": [
+        "지도 버전 다름: 사전 2026-10-23.1 / 지도 2026-10-25.2"
+      ],
+      "dataset_sha256": "25a3c9986f7ea8a2ba96346ef29b521d9f5868c181171609817200c11bf015fa",
+      "current_exact": 32,
+      "with_aliases_exact": 32,
+      "total": 40
+    },
+    "mismatches": [
+      {
+        "question": {
+          "q": "보증금 환급기",
+          "expect": [
+            "poi-single-use-card-refund"
+          ]
+        },
+        "main_with_aliases": [
+          [
+            "poi-single-use-card-refund"
+          ],
+          true
+        ],
+        "candidate_current": [
+          [
+            "poi-single-use-card-refund",
+            "poi-arex-deposit-refund"
+          ],
+          false
+        ],
+        "candidate_with_aliases": [
+          [
+            "poi-single-use-card-refund",
+            "poi-arex-deposit-refund"
+          ],
+          false
+        ]
+      },
+      {
+        "question": {
+          "q": "deposit refund",
+          "expect": [
+            "poi-single-use-card-refund"
+          ]
+        },
+        "main_with_aliases": [
+          [
+            "poi-single-use-card-refund"
+          ],
+          true
+        ],
+        "candidate_current": [
+          [
+            "poi-single-use-card-refund",
+            "poi-arex-deposit-refund"
+          ],
+          false
+        ],
+        "candidate_with_aliases": [
+          [
+            "poi-single-use-card-refund",
+            "poi-arex-deposit-refund"
+          ],
+          false
+        ]
+      },
+      {
+        "question": {
+          "q": "ticket machine",
+          "expect": [
+            "poi-allstop-tickets"
+          ]
+        },
+        "main_with_aliases": [
+          [
+            "poi-allstop-tickets"
+          ],
+          true
+        ],
+        "candidate_current": [
+          [
+            "poi-allstop-tickets",
+            "poi-metro-tickets-line1-west",
+            "poi-metro-tickets-line1-east",
+            "poi-metro-tickets-line4-west"
+          ],
+          false
+        ],
+        "candidate_with_aliases": [
+          [
+            "poi-allstop-tickets",
+            "poi-metro-tickets-line1-west",
+            "poi-metro-tickets-line1-east",
+            "poi-metro-tickets-line4-west"
+          ],
+          false
+        ]
+      },
+      {
+        "question": {
+          "q": "고객안내센터",
+          "expect": [],
+          "proposed": true
+        },
+        "main_with_aliases": [
+          [],
+          true
+        ],
+        "candidate_current": [
+          [
+            "poi-arex-info",
+            "poi-metro-info-line1",
+            "poi-metro-info-line4"
+          ],
+          false
+        ],
+        "candidate_with_aliases": [
+          [
+            "poi-arex-info",
+            "poi-metro-info-line1",
+            "poi-metro-info-line4"
+          ],
+          false
+        ]
+      },
+      {
+        "question": {
+          "q": "information center",
+          "expect": [],
+          "proposed": true
+        },
+        "main_with_aliases": [
+          [],
+          true
+        ],
+        "candidate_current": [
+          [
+            "poi-arex-info",
+            "poi-metro-info-line1",
+            "poi-metro-info-line4"
+          ],
+          false
+        ],
+        "candidate_with_aliases": [
+          [
+            "poi-arex-info",
+            "poi-metro-info-line1",
+            "poi-metro-info-line4"
+          ],
+          false
+        ]
+      },
+      {
+        "question": {
+          "q": "도심공항터미널",
+          "expect": [],
+          "proposed": true
+        },
+        "main_with_aliases": [
+          [],
+          true
+        ],
+        "candidate_current": [
+          [
+            "poi-city-airport-terminal"
+          ],
+          false
+        ],
+        "candidate_with_aliases": [
+          [
+            "poi-city-airport-terminal"
+          ],
+          false
+        ]
+      },
+      {
+        "question": {
+          "q": "4호선 갈아타는 곳",
+          "expect": [],
+          "proposed": true
+        },
+        "main_with_aliases": [
+          [],
+          true
+        ],
+        "candidate_current": [
+          [
+            "poi-line14-transfer"
+          ],
+          false
+        ],
+        "candidate_with_aliases": [
+          [
+            "poi-line14-transfer"
+          ],
+          false
+        ]
+      },
+      {
+        "question": {
+          "q": "화장실",
+          "expect": []
+        },
+        "main_with_aliases": [
+          [],
+          true
+        ],
+        "candidate_current": [
+          [
+            "poi-toilet-line1-west",
+            "poi-toilet-metro-center",
+            "poi-toilet-line4-west"
+          ],
+          false
+        ],
+        "candidate_with_aliases": [
+          [
+            "poi-toilet-line1-west",
+            "poi-toilet-metro-center",
+            "poi-toilet-line4-west"
+          ],
+          false
+        ]
+      }
+    ],
+    "interpretation": "Five formerly empty expectations now return newly supported POIs; three single-target expectations return multiple valid-looking candidates. Review scope/ambiguity with R3, do not automatically replace gold. Version mismatch already existed on main."
+  },
+  "synthetic_localization": {
+    "dataset_sha256": "cc2e6bc98bfeb8b59b3b493c351eb361715ff8fdf3f0e9e112bb93b8921c4b75",
+    "gold_modified": false,
+    "main": {
+      "problems": [
+        "지도 버전 다름: 카드 2026-10-23.1 / 지도 2026-10-25.1"
+      ],
+      "dataset_sha256": "cc2e6bc98bfeb8b59b3b493c351eb361715ff8fdf3f0e9e112bb93b8921c4b75",
+      "summary": {
+        "backend·현재지도": {
+          "top1": 13,
+          "top3": 13,
+          "positive_total": 20,
+          "no_match": 4,
+          "negative_total": 4
+        },
+        "backend·카드": {
+          "top1": 15,
+          "top3": 15,
+          "positive_total": 20,
+          "no_match": 4,
+          "negative_total": 4
+        },
+        "agent·카드": {
+          "top1": 18,
+          "top3": 20,
+          "positive_total": 20,
+          "no_match": 4,
+          "negative_total": 4
+        }
+      }
+    },
+    "candidate": {
+      "problems": [
+        "지도 버전 다름: 카드 2026-10-23.1 / 지도 2026-10-25.2"
+      ],
+      "dataset_sha256": "cc2e6bc98bfeb8b59b3b493c351eb361715ff8fdf3f0e9e112bb93b8921c4b75",
+      "summary": {
+        "backend·현재지도": {
+          "top1": 13,
+          "top3": 13,
+          "positive_total": 20,
+          "no_match": 3,
+          "negative_total": 4
+        },
+        "backend·카드": {
+          "top1": 15,
+          "top3": 15,
+          "positive_total": 20,
+          "no_match": 4,
+          "negative_total": 4
+        },
+        "agent·카드": {
+          "top1": 18,
+          "top3": 20,
+          "positive_total": 20,
+          "no_match": 4,
+          "negative_total": 4
+        }
+      }
+    },
+    "changed_current_map_cases": [
+      {
+        "case": {
+          "id": "L24",
+          "kind": "no_match",
+          "expect": "NO_MATCH",
+          "texts": [
+            "시청역",
+            "City Hall"
+          ]
+        },
+        "main": [
+          [],
+          true,
+          true
+        ],
+        "candidate": [
+          [
+            "line1-platform"
+          ],
+          false,
+          false
+        ]
+      }
+    ],
+    "actual_photo_accuracy_measured": false
+  },
+  "browser_smoke": {
+    "observed_at_utc": "2026-10-25T09:29:49.803Z",
+    "browser": "Codex in-app browser, desktop window with app phone frame",
+    "profile": "FakeLLM + official local MemorySearch, own disposable DB",
+    "map_version": "2026-10-25.2",
+    "checks": [
+      {
+        "id": "UI-01",
+        "result": "PASS",
+        "observation": "Destination picker displayed all40 POIs including Line1/4 platforms and Exit9-1"
+      },
+      {
+        "id": "UI-02",
+        "result": "PASS",
+        "observation": "Manual location picker displayed39 nodes"
+      },
+      {
+        "id": "UI-03",
+        "result": "PASS",
+        "observation": "Selected Line4 platform, confirmed Express platform manually, route8steps/468m rendered"
+      },
+      {
+        "id": "UI-04",
+        "result": "PASS",
+        "observation": "Next advanced step1→4 and remaining distance468→381m"
+      },
+      {
+        "id": "UI-05",
+        "result": "PASS",
+        "observation": "No-photo step displayed explicit missing-photo fallback"
+      },
+      {
+        "id": "UI-06",
+        "result": "OBSERVED_FINDING",
+        "observation": "Transfer route displayed all-stop ticket-purchase instruction without a ticket-purchase request"
+      },
+      {
+        "id": "UI-07",
+        "result": "OBSERVED_FINDING",
+        "observation": "Destination list exposed raw category keys such as metro_platform, metro_tickets, help and transfer"
+      },
+      {
+        "id": "UI-08",
+        "result": "PARTIAL",
+        "observation": "Existing example panorama requestedHTTP200 and example-photo notice shown, but viewer remainedLoading; completed panorama render unverified, no console errors reported"
+      }
+    ],
+    "physical_phone_verified": false,
+    "actual_camera_or_sensors_tested": false,
+    "real_model_calls": 0,
+    "real_embedding_calls": 0,
+    "screenshots": [
+      {
+        "path": "reports/local-map-candidate-20261025/browser-route.png",
+        "sha256": "63efd81f554e977595b284ffb1437564a38dd48202d6f846a6e7e7a0f5867a32"
+      },
+      {
+        "path": "reports/local-map-candidate-20261025/browser-streetview.png",
+        "sha256": "37ab3547078da9f648f2355a7f4cd93bb659a52d163164dbded9b1efb51a759a"
+      },
+      {
+        "path": "reports/local-map-candidate-20261025/browser-example-pano.png",
+        "sha256": "46f05c5254c938662e73cfe1e8a66701fdd9554a33007177b75f1d564948c256"
+      }
+    ],
+    "panorama_http_status": 200,
+    "render_completion": "PARTIAL: viewer remainedLoading; cannot confirm finished panorama rendering in this browser."
+  },
+  "source_preservation": {
+    "checked_at_kst": "2026-10-25T18:32:07.684492+09:00",
+    "repositories": [
+      {
+        "repository": "oneload-app",
+        "head": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+        "branch": "main",
+        "git_status": "",
+        "file_count": 153,
+        "manifest_sha256": "ad8d7eff3d5188dfbc5dbf3687bd0dfa44fa413df9726a312e4dad5f627fceba",
+        "unchanged": true
+      },
+      {
+        "repository": "oneload-backend",
+        "head": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+        "branch": "main",
+        "git_status": "",
+        "file_count": 59,
+        "manifest_sha256": "8c8ad95c82afd29a4566dc620eecafe20382457be28eda85b201d890ee530fea",
+        "unchanged": true
+      },
+      {
+        "repository": "oneload-data",
+        "head": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+        "branch": "map/line14-expansion-20261025",
+        "git_status": " M .github/workflows/validate.yml\n M README.md\n M maps/seoul-station.json\n M tools/validate.py\n?? previews/\n?? source/\n?? tools/build_map.py\n?? tools/import_osm.py\n?? tools/render_preview.py\n",
+        "file_count": 21,
+        "manifest_sha256": "a27621b8f63609cf100ddd8147bc59ab04ce19f8e414d19fd6c7b2aa70abadb0",
+        "unchanged": true
+      },
+      {
+        "repository": "oneload-infra",
+        "head": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "branch": "main",
+        "git_status": "",
+        "file_count": 8,
+        "manifest_sha256": "f2c680176df9e086fee9c986b428430aefa8e306da77cd27439a609225e146cc",
+        "unchanged": true
+      },
+      {
+        "repository": "oneload-qa",
+        "head": "52883be4b7bf3450435083b86318ab1499229e61",
+        "branch": "main",
+        "git_status": "",
+        "file_count": 86,
+        "manifest_sha256": "aa5367ed2dbdcf2f4f0533d28f8b1bac8cd005d27f15e0aea975784cd5b8b9f0",
+        "unchanged": true
+      },
+      {
+        "repository": "oneload-rag",
+        "head": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+        "branch": "main",
+        "git_status": "",
+        "file_count": 70,
+        "manifest_sha256": "e9d016a42f6a3f6acffed2114bfbb8aa9eaeac502f1f221a568c46d8c757fc76",
+        "unchanged": true
+      },
+      {
+        "repository": "oneload_agent",
+        "head": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+        "branch": "main",
+        "git_status": "",
+        "file_count": 42,
+        "manifest_sha256": "62af3b0c6636b17ae3d19036832bdd405f2328e001083b521cf7a8a2569e3acc",
+        "unchanged": true
+      }
+    ],
+    "all_original_sources_unchanged": true
+  },
+  "runtime_cleanup": {
+    "api_url": "http://127.0.0.1:18961",
+    "app_url": "http://127.0.0.1:18962",
+    "database_container": "hangil-r6-mapui-54573dac",
+    "models": "FakeLLM+official local MemorySearch",
+    "existing_user_servers_used": false,
+    "db_removed_after_exit": true,
+    "cleanup_method": "Stopped the two QA test servers and explicitly removed their disposable DB; user services left running.",
+    "qa_test_servers_stopped": true,
+    "all_qa_disposable_containers_removed": true,
+    "existing_user_api_8000_retained": true,
+    "existing_user_app_5173_retained": true,
+    "existing_user_db_hangil_newmap_pg_retained": true
+  },
+  "review_decision": {
+    "standard_runner_exit": 0,
+    "candidate_release_approved": false,
+    "agent_compatibility_exit": 1,
+    "blocking_or_review_items": [
+      "Agent mock map differs from the candidate; compatibility check exits1",
+      "Natural-language Exit9-1 resolves to Exit1/9 with FakeLLM; real model untested",
+      "Synthetic localization L24 regresses: wrong-station text matches Line1 platform",
+      "Refund route between free-area nodes enters and leaves a paid gate; free-only graph is disconnected for that pair",
+      "Ticket-purchase wording is shown on a Line4 transfer route",
+      "Frozen R3 POI exact-set score and version metadata require scope review",
+      "UI exposes raw category labels; panorama render completion remains unverified"
+    ],
+    "issue_drafts": "docs/local-map-candidate-issue-drafts-20261025.md",
+    "github_issues_changed": false
+  },
+  "environment": {
+    "python": "Python 3.12.9",
+    "jsonschema": "4.26.0",
+    "PyYAML": "6.0.3",
+    "note": "jsonschema was added only to the ignored QA virtualenv for Data CI read-only checks. No dependency manifests changed."
+  },
+  "baseline_and_dataset_preservation": {
+    "baseline_sha256": "3e62256b04eadf0802be91b8f3e1b5acf30b8ef33f235a90afee017e2e4b9a99",
+    "retrieval_holdout_v2_sha256": "278f16fc787acffe36a4ccbc903d422cbd03d9a1ccf8e4f21c43f6c8e56fc168",
+    "service_gold_sha256": "a6bbdac1c97859cab9d35cef2d7ce276fe3817fac09089d9c88749744eeada0e",
+    "files_modified": false
+  },
+  "limitations": [
+    "Actual model/embedding calls0; no production DB, deployment, phone camera/sensors or field photo verification",
+    "OSM snapshot, estimated geometry, paid/free areas, wheelchair access and two-way links are not field-certified by graph reachability",
+    "Already running user servers/DB were not used for destructive tests; all new DBs were created and removed by QA",
+    "No uncommitted Data source files/map snapshots are included in published QA evidence; only metadata, hashes and reviewed test observations",
+    "Complete main baseline is preserved. Dirty candidate is supplemental evidence and must not be promoted by HEAD SHA alone"
+  ],
+  "reproduction": [
+    "PYTHONDONTWRITEBYTECODE=1 OPENAI_API_KEY= .venv/bin/python scripts/run_checks.py --project-root \"$PROJECT\" --with-backend --output results/next-candidate-full-001",
+    "PYTHONDONTWRITEBYTECODE=1 OPENAI_API_KEY= .venv/bin/python scripts/run_backend_tests.py --project-root \"$PROJECT\" --with-rag --rag-min-score 0.25 --output results/next-candidate-rag-001",
+    "PYTHONDONTWRITEBYTECODE=1 \"$QA_PYTHON\" \"$PROJECT/oneload-data/tools/build_map.py\" --check",
+    "PYTHONDONTWRITEBYTECODE=1 \"$QA_PYTHON\" \"$PROJECT/oneload-data/tools/validate.py\""
+  ]
+}

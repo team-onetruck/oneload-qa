@@ -95,7 +95,7 @@
       "open_issue_review_evidence": "reports/open-issue-review-20261025.json"
     }
   ],
-  "updated_at_kst": "2026-10-25T17:04:51.639673+09:00",
+  "updated_at_kst": "2026-10-25T18:34:44.513703+09:00",
   "rag_profile_evidence": [
     "reports/rag-integration-probe.json",
     "reports/production-api-probe.json",
@@ -153,5 +153,19 @@
     "source_versions_unchanged": true,
     "infra_issue1_state": "closed_completed",
     "qa_issue3_state": "open; local RAG check completed, threshold pending"
+  },
+  "local_uncommitted_data_candidate_review": {
+    "evidence": "reports/local-map-candidate-20261025.json",
+    "document": "docs/local-map-candidate-20261025.md",
+    "observed_at_kst": "2026-10-25T18:18:53.095613+09:00",
+    "base_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "branch": "map/line14-expansion-20261025",
+    "working_tree_dirty": true,
+    "candidate_committed": false,
+    "map_version": "2026-10-25.2",
+    "map_sha256": "e89bc42c287f9db1e9d61a968ac3b9dc567688d68cfe05e92e3185de54d6aedc",
+    "baseline_updated": false,
+    "remote_main_updated": false,
+    "note": "Read-only candidate test. Main observation and qa_baseline_commit remain unchanged. Standard checks pass, additional compatibility/semantic checks require review."
   }
 }
