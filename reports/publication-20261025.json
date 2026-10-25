@@ -142,9 +142,12 @@
     "message": "HTTP 403: Must have admin rights to Repository. (https://api.github.com/repos/2021147538/oneload-qa)\nThis API operation needs the \"delete_repo\" scope. To request it, run:  gh auth refresh -h github.com -s delete_repo",
     "uploaded_branch_deleted": true,
     "branch_delete_exit_code": 0,
-    "branch_message": null
+    "branch_message": null,
+    "kept_by_user_request": true,
+    "user_decision_at_kst": "2026-10-25T12:06:23.744010+09:00",
+    "current_status": "repository retained at user request; old uploaded QA branch deleted"
   },
-  "remaining_user_action": "Old fork repository deletion requires delete_repo permission absent on previous account. User asked to delete this fork in its settings or explicitly keep it. Uploaded QA branch is already deleted.",
+  "remaining_user_action": null,
   "scope_unchanged": {
     "real_model_calls": 0,
     "real_embedding_calls": 0,
