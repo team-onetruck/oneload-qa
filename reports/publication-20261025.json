@@ -1,0 +1,139 @@
+{
+  "recorded_at_kst": "2026-10-25T11:49:24.489503+09:00",
+  "user_context": "User confirmed the deployment server is switched off; validate locally. No deployment attempted.",
+  "qa_validated_commit": "a37c83b7adccfbc51f5542d6f81e9246db22929c",
+  "qa_validated_tree": "885224fe7fc55699b52fa60ffba42c713943d094",
+  "baseline": "reports/baseline.json",
+  "validation_note": "Source SHAs unchanged since the full local run. No new test run is claimed by this publication-only update.",
+  "publication": {
+    "fork": "https://github.com/2021147538/oneload-qa",
+    "branch": "qa/takeover-20261025",
+    "pull_request": {
+      "baseRefName": "main",
+      "headRefName": "qa/takeover-20261025",
+      "headRefOid": "a37c83b7adccfbc51f5542d6f81e9246db22929c",
+      "headRepositoryOwner": {
+        "id": "U_kgDODEG5vg",
+        "login": "2021147538"
+      },
+      "state": "OPEN",
+      "url": "https://github.com/team-onetruck/oneload-qa/pull/5"
+    },
+    "upstream_main_updated": false,
+    "note": "Direct upstream push rejected403 for local GitHub account. Connected integration also rejected repository/issue writes403. Existing authenticated CLI can push to owned fork and create public issues/PRs; this successful route preserves original main for maintainer review."
+  },
+  "new_issues": [
+    {
+      "number": 40,
+      "state": "open",
+      "title": "[R6 QA] 생성 OpenAPI 타입에 최신 intent 3개·슬롯 4개와 계획 계약이 누락됨",
+      "updated_at": "2026-10-25T02:46:38Z",
+      "url": "https://github.com/team-onetruck/oneload-app/issues/40"
+    }
+  ],
+  "issue_updates": [
+    {
+      "repo": "team-onetruck/oneload-data",
+      "number": 2,
+      "exit_code": 0,
+      "url": "https://github.com/team-onetruck/oneload-data/issues/2#issuecomment-6392629139",
+      "error": null
+    },
+    {
+      "repo": "team-onetruck/oneload-rag",
+      "number": 3,
+      "exit_code": 0,
+      "url": "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6392629320",
+      "error": null
+    },
+    {
+      "repo": "team-onetruck/oneload_agent",
+      "number": 7,
+      "exit_code": 0,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/7#issuecomment-6392629479",
+      "error": null
+    },
+    {
+      "repo": "team-onetruck/oneload_agent",
+      "number": 5,
+      "exit_code": 0,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/5#issuecomment-6392629634",
+      "error": null
+    },
+    {
+      "repo": "team-onetruck/oneload-qa",
+      "number": 3,
+      "exit_code": 0,
+      "url": "https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6392629777",
+      "error": null
+    },
+    {
+      "repo": "team-onetruck/oneload-backend",
+      "number": 2,
+      "exit_code": 0,
+      "url": "https://github.com/team-onetruck/oneload-backend/issues/2#issuecomment-6392629957",
+      "error": null
+    }
+  ],
+  "issue_snapshots": [
+    {
+      "number": 40,
+      "state": "open",
+      "title": "[R6 QA] 생성 OpenAPI 타입에 최신 intent 3개·슬롯 4개와 계획 계약이 누락됨",
+      "updated_at": "2026-10-25T02:46:38Z",
+      "url": "https://github.com/team-onetruck/oneload-app/issues/40"
+    },
+    {
+      "number": 2,
+      "state": "open",
+      "title": "[R6 QA] 새 반납기·1번 출구가 주요 출발점과 단방향 그래프에서 연결되지 않음",
+      "updated_at": "2026-10-25T02:48:28Z",
+      "url": "https://github.com/team-onetruck/oneload-data/issues/2"
+    },
+    {
+      "number": 3,
+      "state": "open",
+      "title": "[R6 QA] MemorySearch가 호텔 가격·실시간 잔여석 질문에 무관한 문서를 반환함",
+      "updated_at": "2026-10-25T02:48:29Z",
+      "url": "https://github.com/team-onetruck/oneload-rag/issues/3"
+    },
+    {
+      "number": 7,
+      "state": "open",
+      "title": "[R6 QA][P0] 새 intent·슬롯 계약 불일치로 Backend messages 500 및 다음 턴 슬롯 소실",
+      "updated_at": "2026-10-25T02:48:30Z",
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/7"
+    },
+    {
+      "number": 5,
+      "state": "open",
+      "title": "[R3 요청] 검색 문서가 질문에 답하는지 Agent가 판단하고, 인용한 자료만 출처로 붙이기 (RAG #3 후속)",
+      "updated_at": "2026-10-25T02:48:32Z",
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/5"
+    },
+    {
+      "number": 3,
+      "state": "open",
+      "title": "[R3 요청] R3 근거 매핑 · 검색 평가셋 반영과 Q10 기대 변경",
+      "updated_at": "2026-10-25T02:48:33Z",
+      "url": "https://github.com/team-onetruck/oneload-qa/issues/3"
+    },
+    {
+      "number": 2,
+      "state": "closed",
+      "title": "[R6 QA] 대화에서 환급 완료로 갱신해도 행동 계획의 NOT_REFUNDED가 유지됨",
+      "updated_at": "2026-10-25T02:48:34Z",
+      "url": "https://github.com/team-onetruck/oneload-backend/issues/2"
+    }
+  ],
+  "scope_unchanged": {
+    "real_model_calls": 0,
+    "real_embedding_calls": 0,
+    "production_database_used": false,
+    "deploy_executed": false,
+    "phone_ui_acceptance": "NOT_RUN",
+    "field_photo_gold_count": 0,
+    "ar_scope_added": false
+  },
+  "publication_notes_revision": "self; documentation/evidence only after validated source commit a37c83b"
+}

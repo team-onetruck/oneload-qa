@@ -1,0 +1,42 @@
+{
+  "recorded_at_kst": "2026-10-25T11:49:24.489503+09:00",
+  "scope": "Local public response schema versus generated TypeScript source; no DB/model/network calls in this comparison.",
+  "app_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+  "backend_commit": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+  "backend_intents": [
+    "navigate_to_poi",
+    "navigate_to_exit",
+    "purchase_arex_ticket",
+    "board_arex",
+    "ticket_purchase_and_navigation",
+    "payment_question",
+    "usage_question",
+    "report_off_route",
+    "out_of_scope"
+  ],
+  "app_intents": [
+    "navigate_to_poi",
+    "out_of_scope",
+    "payment_question",
+    "report_off_route",
+    "ticket_purchase_and_navigation",
+    "usage_question"
+  ],
+  "missing_intents": [
+    "board_arex",
+    "navigate_to_exit",
+    "purchase_arex_ticket"
+  ],
+  "missing_slots": [
+    "exit_number",
+    "has_single_use_card",
+    "single_use_card_returned",
+    "has_ticket"
+  ],
+  "backend_message_out_has_plan": true,
+  "app_schema_has_plan_api": false,
+  "app_schema_has_step_api": false,
+  "app_generated_schema_sha256": "d149702d69f8f9410463e9441250e5c131e9a705c030a7cba221a08b8af13a16",
+  "issue": "https://github.com/team-onetruck/oneload-app/issues/40",
+  "limitation": "This does not demonstrate a runtime phone crash; synchronize the contract and evaluate UI separately."
+}

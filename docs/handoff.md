@@ -1,5 +1,21 @@
 # 한길 R6 인수인계
 
+## 원격 공유·이슈 반영 — 2026-10-25 11:49 KST
+
+사용자가 배포 서버가 꺼져 있음을 확인했다. 현재 검증은 로컬 일회용 DB·FakeLLM·공식 MemorySearch 결과다. 소스 커밋은 직전 검증과 같아 이 문서 갱신으로 테스트 수치·검증 시각을 새로 만들지 않았다.
+
+QA 검증 커밋 [`a37c83b`](https://github.com/2021147538/oneload-qa/commit/a37c83b7adccfbc51f5542d6f81e9246db22929c)를 포크의 `qa/takeover-20261025`에 push했고, 원본 저장소에 [QA PR #5](https://github.com/team-onetruck/oneload-qa/pull/5)를 생성했다. 원본 main 직접 쓰기는403으로 거절돼 **포크 push·PR 공유 완료, 원본 main 병합 대기** 상태다. 기존 로컬 커밋·원본 checkout은 보존했다. [공유 증거](../reports/publication-20261025.json).
+
+- 새 [App #40](https://github.com/team-onetruck/oneload-app/issues/40): 최신 intent3개·슬롯4개·plan 계약이 생성 타입에 없다. [로컬 계약 비교](../reports/frontend-contract-drift-20261025.json). 타입 수정과 행동 계획 UI 범위/인수는 구분한다.
+- [Data #2 최신 재현](https://github.com/team-onetruck/oneload-data/issues/2#issuecomment-6392629139): 경로19/24 실패·안전한 연결 보완 요청.
+- [RAG #3 최신 회귀](https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6392629320): 노출v2 top3 17/20·차단15/20, 정상 누락3·오탐5 유지.
+- [Agent #7](https://github.com/team-onetruck/oneload_agent/issues/7#issuecomment-6392629479)은 Backend500/슬롯 해결과 App#40 잔여 조건을 구분해 갱신했다. [Agent #5](https://github.com/team-onetruck/oneload_agent/issues/5#issuecomment-6392629634)에는 현재 코드의 답변 가능 여부·인용 출처 미반영을 기록했다.
+- [QA #3](https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6392629777)에 로컬 공식 검색/기본 조립 통과와 임계값 보류를 남겼다. [Backend #2](https://github.com/team-onetruck/oneload-backend/issues/2#issuecomment-6392629957)는 해결 재확인을 남기고 closed를 유지했다.
+
+아래 “push하지 않았다/이슈 댓글 변경 없음”은 최초 검증 작업 때의 역사 기록이다. 현재 공유 상태는 이 섹션을 따른다. 실제 AI 품질·현장 사진·휴대폰 UI는 미검증이며 운영 DB·배포·유료 모델은 사용하지 않았다.
+
+---
+
 마지막 정리: 2026-10-25 11:35 KST — 인수·새 환경 재현, Backend #2 및 공식 RAG 로컬 조립 재검증. 담당 이현무(R6).
 
 ## 현재 판정과 다음 행동

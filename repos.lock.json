@@ -85,7 +85,7 @@
       "historical_review_evidence": "reports/data-backend-review-20261023.json"
     }
   ],
-  "updated_at_kst": "2026-10-25T11:35:04.610335+09:00",
+  "updated_at_kst": "2026-10-25T11:49:24.489503+09:00",
   "rag_profile_evidence": [
     "reports/rag-integration-probe.json",
     "reports/production-api-probe.json",
@@ -119,5 +119,14 @@
     "latest_deployment_success_verified": false,
     "note": "App deploy cancelled; Backend/Agent deploy queued. Historical20261023 deployed SHAs are not re-labeled as current runtime."
   },
-  "current_architecture_note": "Historical20261023 architecture; latest differences and verified scope in docs/handoff.md and reports/takeover-review-20261025.json"
+  "current_architecture_note": "Historical20261023 architecture; latest differences and verified scope in docs/handoff.md and reports/takeover-review-20261025.json",
+  "publication": {
+    "evidence": "reports/publication-20261025.json",
+    "validated_qa_commit": "a37c83b7adccfbc51f5542d6f81e9246db22929c",
+    "fork": "2021147538/oneload-qa",
+    "branch": "qa/takeover-20261025",
+    "pull_request": "https://github.com/team-onetruck/oneload-qa/pull/5",
+    "upstream_main_updated": false,
+    "server_context": "deployment server switched off (user confirmed); local verification only"
+  }
 }

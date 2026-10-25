@@ -1,5 +1,12 @@
 # 최신 통합 점검 — 2026-10-25
 
+## 원격 공유와 수정 이슈 — 2026-10-25
+
+배포 서버는 꺼진 상태로 로컬 검증했다. 검증 코드·보고서는 포크에 push했고 [QA PR #5](https://github.com/team-onetruck/oneload-qa/pull/5)로 원본 main 반영을 요청했다. 원본 직접 쓰기는403으로 거절돼 병합 대기이며, 현재 공유/이슈 증거는 [publication](../reports/publication-20261025.json)를 따른다. 소스가 같아 새 테스트 통과로 재집계하지 않았다.
+
+수정 항목은 [App #40: 생성 계약 누락](https://github.com/team-onetruck/oneload-app/issues/40), [Data #2: 경로19/24 단절](https://github.com/team-onetruck/oneload-data/issues/2#issuecomment-6392629139), [RAG #3: 검색 누락3·오탐5](https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6392629320)에 남겼다. Agent #5/#7·QA #3도 최신 근거를 추가했고 Backend #2는 해결 재확인/closed를 유지했다.
+
+
 [현재 기준선](../reports/baseline.json) · [상세 검토](../reports/takeover-review-20261025.json) · [인수인계](handoff.md).
 
 Backend9067553·Agenta732577·Data89ec570(지도2026-10-25.1)에서 기존71/47·모의 API27/27·공식 RAG주입28/28을 확인했다. **Backend #2 closed의 반납 상태 갱신을 API-26에서 해결 재확인**했다. PATCH 우선 보호와 환급 완료 보존도 기존 Backend 회귀에서 통과했다.
