@@ -13,6 +13,7 @@ sys.path[:0] = [
     str(QA_ROOT / "scripts"),
     str(PROJECT_ROOT / "oneload-backend"),
     str(PROJECT_ROOT / "oneload_agent"),
+    str(PROJECT_ROOT / "oneload-rag/src"),
 ]
 
 

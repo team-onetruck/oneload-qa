@@ -33,7 +33,11 @@ def main() -> int:
             "Use run_backend_tests.py --with-r2; a disposable loopback DB is required"
         )
     root = args.project_root.resolve()
-    sys.path[:0] = [str(root / "oneload-backend"), str(root / "oneload_agent")]
+    sys.path[:0] = [
+        str(root / "oneload-backend"),
+        str(root / "oneload_agent"),
+        str(root / "oneload-rag/src"),
+    ]
     try:
         directory = resolve_map_dir(root, args.map_dir)
         _, map_info = load_live_map(root, directory)

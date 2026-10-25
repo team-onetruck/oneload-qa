@@ -1,0 +1,184 @@
+{
+  "executed_at_kst": "2026-10-25T11:30:31.423659+09:00",
+  "commits": {
+    "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+    "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+    "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+    "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+    "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+  },
+  "map": {
+    "source_repository": "oneload-data",
+    "path": "maps/seoul-station.json",
+    "map_id": "seoul-station",
+    "version": "2026-10-25.1",
+    "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
+  },
+  "runner_sha256": "a387f0569e58899fdd92c6d4ec0d7d0b514c870a85d9f215fd215da7da4aa4e5",
+  "scope": "Registered directed graph with default RouteOptions. No field validation; identity paths included.",
+  "routes": [
+    {
+      "start": "ktx-hall",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "line1-gates",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "line4-gates",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "single-use-card-refund",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "exit-1",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "arex-concourse",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "express-tickets",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "express-gates",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "allstop-tickets",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "allstop-gates",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "express-platform",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "allstop-platform",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "ktx-hall",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "line1-gates",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "line1-gates",
+        "single-use-card-refund",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "line4-gates",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "single-use-card-refund",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "single-use-card-refund",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "exit-1",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "exit-1"
+      ]
+    },
+    {
+      "start": "arex-concourse",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "express-tickets",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "express-gates",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "allstop-tickets",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "allstop-gates",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "express-platform",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": false,
+      "path": null
+    },
+    {
+      "start": "allstop-platform",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": false,
+      "path": null
+    }
+  ],
+  "reachable": 5,
+  "total": 24,
+  "field_verified": false,
+  "real_model_calls": 0
+}

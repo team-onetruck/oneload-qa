@@ -1,24 +1,25 @@
 {
   "probe_version": "r6-boundary-v2",
-  "executed_at_utc": "2026-10-23T07:57:01.283999+00:00",
+  "executed_at_utc": "2026-10-25T02:30:38.563756+00:00",
   "commits": {
-    "oneload-app": "42455dc8e08cc34a596b58fc70431bd25c8dd5e5",
-    "oneload-backend": "b1aa5f58a3fe6045797e715f0e246439903fc319",
-    "oneload_agent": "eca420e9321272333db5c5499a2af752e1cb7b69",
-    "oneload-data": "9fc786eeb92fd3b79d5df0a56a2738f820e8a858",
-    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107"
+    "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+    "oneload-backend": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+    "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+    "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+    "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
   },
   "map": {
     "source_repository": "oneload-data",
     "path": "maps/seoul-station.json",
     "map_id": "seoul-station",
-    "version": "2026-10-23.1",
-    "sha256": "13202e24774dbcaaa86c09962863be641758f8ef2d9767fd9bb6a81305296526"
+    "version": "2026-10-25.1",
+    "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
   },
   "scope": "Real Backend API + R2 modules; FakeLLM, mock knowledge, synthetic JPEG; disposable DB; explicit injection, not production defaults",
   "knowledge_profile": "mock",
   "rag": null,
-  "runner_sha256": "3d0b3dca41bfb364289ebbc0e71a5f7e4f4016efdf62317827085f7b59ed8246",
+  "runner_sha256": "7c7c5ac06a2a97f5d3dcb2ce446b24b396f1f00092ca226c5c38e116640a5aa2",
   "rag_inputs_sha256": null,
   "checks": [
     {
@@ -347,7 +348,7 @@
     },
     {
       "id": "API-26-plan-follows-reported-refund",
-      "passed": false,
+      "passed": true,
       "expected": {
         "http": 200,
         "refund_status": "REFUNDED",
@@ -355,12 +356,12 @@
       },
       "actual": {
         "http": 200,
-        "refund_status": "NOT_REFUNDED",
-        "unfinished_refund_steps": 1
+        "refund_status": "REFUNDED",
+        "unfinished_refund_steps": 0
       }
     }
   ],
-  "passed": 26,
+  "passed": 27,
   "total": 27,
   "production_ai_quality_measured": false
 }

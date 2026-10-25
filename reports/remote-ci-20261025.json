@@ -1,0 +1,148 @@
+{
+  "observed_at_kst": "2026-10-25T11:30:39.931984+09:00",
+  "scope": "Read-only GitHub Actions API; no rerun/deploy/log collection",
+  "repositories": [
+    {
+      "repository": "oneload-app",
+      "run": {
+        "conclusion": "cancelled",
+        "head_sha": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+        "html_url": "https://github.com/team-onetruck/oneload-app/actions/runs/40140979029",
+        "id": 40140979029,
+        "status": "completed",
+        "updated_at": "2026-10-24T23:02:12Z"
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "html_url": "https://github.com/team-onetruck/oneload-app/actions/runs/40140979029/job/121012468005",
+          "id": 121012468005,
+          "name": "verify",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "html_url": "https://github.com/team-onetruck/oneload-app/actions/runs/40140979029/job/121012468319",
+          "id": 121012468319,
+          "name": "e2e",
+          "status": "completed"
+        },
+        {
+          "conclusion": "cancelled",
+          "html_url": "https://github.com/team-onetruck/oneload-app/actions/runs/40140979029/job/121012678404",
+          "id": 121012678404,
+          "name": "deploy / deploy",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "repository": "oneload-backend",
+      "run": {
+        "conclusion": null,
+        "head_sha": "9067553a3706a182bbc5d5737cdcd46ee7b8fe87",
+        "html_url": "https://github.com/team-onetruck/oneload-backend/actions/runs/40111092062",
+        "id": 40111092062,
+        "status": "queued",
+        "updated_at": "2026-10-24T16:22:00Z"
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "html_url": "https://github.com/team-onetruck/oneload-backend/actions/runs/40111092062/job/120922781556",
+          "id": 120922781556,
+          "name": "test",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "html_url": "https://github.com/team-onetruck/oneload-backend/actions/runs/40111092062/job/120922781720",
+          "id": 120922781720,
+          "name": "image",
+          "status": "completed"
+        },
+        {
+          "conclusion": null,
+          "html_url": "https://github.com/team-onetruck/oneload-backend/actions/runs/40111092062/job/120922900235",
+          "id": 120922900235,
+          "name": "deploy / deploy",
+          "status": "queued"
+        }
+      ]
+    },
+    {
+      "repository": "oneload_agent",
+      "run": {
+        "conclusion": null,
+        "head_sha": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+        "html_url": "https://github.com/team-onetruck/oneload_agent/actions/runs/40112918388",
+        "id": 40112918388,
+        "status": "queued",
+        "updated_at": "2026-10-24T16:53:00Z"
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "html_url": "https://github.com/team-onetruck/oneload_agent/actions/runs/40112918388/job/120928209549",
+          "id": 120928209549,
+          "name": "test",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "html_url": "https://github.com/team-onetruck/oneload_agent/actions/runs/40112918388/job/120928209714",
+          "id": 120928209714,
+          "name": "backend",
+          "status": "completed"
+        },
+        {
+          "conclusion": null,
+          "html_url": "https://github.com/team-onetruck/oneload_agent/actions/runs/40112918388/job/120930182561",
+          "id": 120930182561,
+          "name": "deploy / deploy",
+          "status": "queued"
+        }
+      ]
+    },
+    {
+      "repository": "oneload-data",
+      "run": {
+        "conclusion": "success",
+        "head_sha": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+        "html_url": "https://github.com/team-onetruck/oneload-data/actions/runs/40111070127",
+        "id": 40111070127,
+        "status": "completed",
+        "updated_at": "2026-10-24T16:20:17Z"
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "html_url": "https://github.com/team-onetruck/oneload-data/actions/runs/40111070127/job/120922718775",
+          "id": 120922718775,
+          "name": "validate",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "repository": "oneload-rag",
+      "run": {
+        "conclusion": "success",
+        "head_sha": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+        "html_url": "https://github.com/team-onetruck/oneload-rag/actions/runs/39946394694",
+        "id": 39946394694,
+        "status": "completed",
+        "updated_at": "2026-10-23T11:29:45Z"
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "html_url": "https://github.com/team-onetruck/oneload-rag/actions/runs/39946394694/job/120390001822",
+          "id": 120390001822,
+          "name": "test",
+          "status": "completed"
+        }
+      ]
+    }
+  ]
+}
