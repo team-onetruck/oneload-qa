@@ -1,0 +1,4675 @@
+{
+  "executed_at_utc": "2026-10-26T02:57:08.516711+00:00",
+  "mode": "live",
+  "freeze_commit": "a4aa8495c5db4bfaf19a1149e09789fdd1e242f3",
+  "dataset_sha256": "a9ecdf632bfaf110dc12d1615974023a52d4a48b135e03b554975650e5365dd7",
+  "runner_sha256": "f510be1d6d4512897117770198d4db939460890f9902dcd59495d2673ce58b0a",
+  "commits": {
+    "oneload-app": "1d0fc11a81b3ea9c316d14621d8dd57361bb18de",
+    "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+    "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+    "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+    "oneload-rag": "024f3076574d02aa2347c9a9bc486629355c42c4"
+  },
+  "rag": {
+    "repository": "oneload-rag",
+    "commit": "024f3076574d02aa2347c9a9bc486629355c42c4",
+    "working_tree_clean": true,
+    "backend": "MemorySearch",
+    "min_score": 0.25,
+    "k": 3,
+    "relative_cutoff": 0.5,
+    "scope_gate_min_coverage": 0.25,
+    "community": false,
+    "document_ids": [
+      "doc-allstop-ticket",
+      "doc-arex-train-types",
+      "doc-climate-card-short-term",
+      "doc-deposit-refund",
+      "doc-express-ticket",
+      "doc-fare-arex-allstop",
+      "doc-fare-arex-express",
+      "doc-fare-passes-cards",
+      "doc-foreigner-transit-cards",
+      "doc-seoul-arex-transfer",
+      "doc-seoul-help-desks",
+      "doc-seoul-transit-basics",
+      "doc-tmoney-card",
+      "doc-wowpass"
+    ],
+    "knowledge_sha256": {
+      "README.md": "27bb59aa3979dd6531cb023d1e9536ede4cbec4bcc82a20d68e403f1d7e03e1d",
+      "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+      "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+      "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+      "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+      "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+      "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+      "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+      "doc-fare-arex-allstop.md": "2de23bdfee1f497a0bda7a3fdb5611a953d0d93f52e6a7230b7305f1c30e3c13",
+      "doc-fare-arex-express.md": "0642a0c52dc3ed9e6ea0198b4e65ae0b845f22f1d01f9c5865a12ac4ea839b07",
+      "doc-fare-passes-cards.md": "aad2ac353b2a0f7c872ca56e04149e1e7b95149cc8801667bda762b0153a9f58",
+      "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+      "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+      "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+      "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+      "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+      "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+    },
+    "code_sha256": {
+      "src/hangil_rag/__init__.py": "d3cff4a2132e7dbbbd753dcd61dae1bb4e6c4f420782557086f7f31e010ef542",
+      "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+      "src/hangil_rag/loader.py": "a23d86b92e2a14a13f3bf9ae16ccaaf1beda3d6115cb59926b211349465aa217",
+      "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+      "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+      "src/hangil_rag/search_memory.py": "f89e6407221ce2366b4501283b693575b732012a72364b5f8abf2d6cb9fc5910",
+      "src/hangil_rag/search_pgvector.py": "ee53a40d7e8a1c1f70636878880171481c47457291d3e708d793ac5f628be7c7"
+    },
+    "live_model_calls": 0,
+    "live_embedding_calls": 0
+  },
+  "protocol": {
+    "version": "split-gates-v1",
+    "authorization": "User authorized split evaluation and actual model48 questions once, maximum USD1.",
+    "retrieval": {
+      "backend": "official-only MemorySearch",
+      "min_score": 0.25,
+      "k": 3,
+      "relative_cutoff": 0.5,
+      "positive_top3_min": 0.9,
+      "oos_empty": "diagnostic only under new contract; previous search-only gates/results remain historical"
+    },
+    "final_answer": {
+      "engine": "Actual LLMAgent21378b5 handle_message + candidate RAG; stateless text AgentContext using selected Backend map. Not HTTP/deployed runtime.",
+      "model": "gpt-4o-mini",
+      "prompt_version": "v5",
+      "positive_utility_min": 0.9,
+      "positive_utility": "answered, all required facts correct, supported by relevant visible citations and source metadata; abstain-all cannot pass",
+      "negative_contract": "cannot_answer AND sources empty AND no unsupported substantive claim; safe explanatory non-answer with another status is recorded separately, not automatically passed",
+      "unsupported_claims_max": 0,
+      "irrelevant_sources_max": 0,
+      "citation_errors_max": 0,
+      "semantic_review": "R6 evidence-based AI review recorded separately from pending human review; regex checks are diagnostics, not semantic proof.",
+      "refusal_wording": "Explanation of inability is permitted; no guessed amount, deadline, live state or exact location.",
+      "source_date": "Returned source verified_at must match frozen corpus; text need not repeat it when API sources provide it."
+    },
+    "budget": {
+      "max_usd": 1.0,
+      "max_questions": 48,
+      "repetitions": 1,
+      "max_api_attempts": 192,
+      "max_prompt_utf8_bytes": 32000,
+      "input_token_safety_overhead": 1024,
+      "max_output_tokens": 800,
+      "temperature": 0,
+      "sdk_retries": 0,
+      "timeout_s": 20,
+      "rate_input_usd_per_million": 0.15,
+      "rate_output_usd_per_million": 0.6,
+      "cached_input_discount_used": false,
+      "rate_source": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+      "reserve_before_call": "Reserve worst input token count bounded by UTF8 bytes plus1024, and full output token limit; stop before budget would exceed1. Unknown/failed usage keeps its full reservation."
+    },
+    "comparison": "Raw-question retrieval on main and candidate once each; live48-question final-answer evaluation on candidate only. No live main baseline claim.",
+    "publication": "Precommit dataset/gold/protocol before reading candidate implementation or search outputs. No tuning, relabel or primary repetition after results. Only QA code/docs modified."
+  },
+  "previous_auth_failure_sha256": "ec6e920a69edeffd85ced5eb0e226ae18e5d78e24bf72448fa488984c150b899",
+  "map": {
+    "source_repository": "oneload-data",
+    "path": "maps/seoul-station.json",
+    "map_id": "seoul-station",
+    "version": "2026-10-25.2",
+    "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+  },
+  "rows": [
+    {
+      "id": "V4-01-ko",
+      "question": "만 12세 아이와 성인이 공항철도 직통열차를 탈 때 안내된 실제 판매 운임은 각각 얼마인가요? 정상운임표와 구별해 주세요.",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "만 12세 아이와 성인이 공항철도 직통열차를 탈 때 안내된 실제 판매 운임은 각각 9,500원(어린이)과 13,000원(어른)입니다. 정상운임과 구별된 할인 요금입니다[1].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "express",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-fare-arex-express",
+            "title": "공항철도 직통열차 요금",
+            "source_url": "https://www.airportrailroad.com/train/express/introduce",
+            "verified_at": "2026-10-22"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "만 12세 아이와 성인이 공항철도 직통열차의 실제 판매 운임",
+          "language": "ko",
+          "slots": {
+            "train_type": "express",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-arex-express",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "bc7f3320c8c6f9146bfe249e4920777ce25d44c6473a29aa8a46dbff70c83ea9",
+              "excerpt_characters": 393
+            },
+            {
+              "document_id": "doc-arex-train-types",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f4cf1b11487df3b491dd3fd18b61ed2fc1c208f75a0cca0fefeaed80a4af79ee",
+              "excerpt_characters": 398
+            },
+            {
+              "document_id": "doc-climate-card-short-term",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f24c48bc689db4b4906b29f849f350302d166dfd98dadf51258be40ac2163c23",
+              "excerpt_characters": 472
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-arex-express"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-fare-arex-express"
+        ],
+        "visible_source_ids": [
+          "doc-fare-arex-express"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        true,
+        true
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-01-en",
+      "question": "For a twelve-year-old child and an adult taking AREX Express, what are the listed selling fares, rather than the regular-fare table?",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "The listed selling fares for a twelve-year-old child and an adult taking the AREX Express are KRW 9,500 for the child and KRW 13,000 for the adult. [1]",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "express",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-fare-arex-express",
+            "title": "AREX Express train fares",
+            "source_url": "https://www.airportrailroad.com/train/express/introduce",
+            "verified_at": "2026-10-22"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "Express train listed selling fares for a twelve-year-old child and an adult taking AREX Express",
+          "language": "en",
+          "slots": {
+            "train_type": "express",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-arex-express",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "b39707de1678ef1458334a74e71ab39a4bc215e60e46edd6fcd06a173821349f",
+              "excerpt_characters": 749
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-arex-express"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-fare-arex-express"
+        ],
+        "visible_source_ids": [
+          "doc-fare-arex-express"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        true,
+        true
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-02-ko",
+      "question": "서울역에서 공항화물청사역까지 일반열차 어른 교통카드 운임을 알려 주세요. 1회권이면 더 내는 운임과 별도 보증금도 구분해 주세요.",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "서울역에서 공항화물청사역까지 일반열차 어른 교통카드 운임은 4,450원입니다. 1회용 교통카드를 사용할 경우 추가로 100원이 더 붙고, 보증금 500원이 별도로 필요합니다[1].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "allstop",
+          "has_transit_card": "yes",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-fare-arex-allstop",
+            "title": "공항철도 일반열차 요금 (역간 기준운임)",
+            "source_url": "https://www.airportrailroad.com/train/normal/fare",
+            "verified_at": "2026-10-23"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "서울역에서 공항화물청사역까지 일반열차 어른 교통카드 운임을 알려 주세요. 1회권이면 더 내는 운임과 별도 보증금도 구분해 주세요.",
+          "language": "ko",
+          "slots": {
+            "train_type": "allstop",
+            "has_transit_card": "yes",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-arex-allstop",
+              "source_url": "https://www.airportrailroad.com/train/normal/fare",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "5466774ff6c262bf2e3ff9e0d6800c2b5066cbb164a71dbcb56e411048fa6c14",
+              "excerpt_characters": 354
+            },
+            {
+              "document_id": "doc-allstop-ticket",
+              "source_url": "https://www.airportrailroad.com/train/normal/introduce",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "838ae28ce8e0ad84b6416125f0090fc726eddf7f18008f86635cac2a6cd513a0",
+              "excerpt_characters": 583
+            },
+            {
+              "document_id": "doc-arex-train-types",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f4cf1b11487df3b491dd3fd18b61ed2fc1c208f75a0cca0fefeaed80a4af79ee",
+              "excerpt_characters": 398
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-arex-allstop"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-fare-arex-allstop"
+        ],
+        "visible_source_ids": [
+          "doc-fare-arex-allstop"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        true,
+        true,
+        true
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-02-en",
+      "question": "Please give the adult transit-card All-stop fare from Seoul to Airport Cargo Terminal, and separate the single-journey fare surcharge from its refundable deposit.",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "The adult transit-card All-stop fare from Seoul to Airport Cargo Terminal is KRW 4,450. The single-journey fare surcharge is KRW 100, and the refundable deposit is KRW 500 [1].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "allstop",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-fare-arex-allstop",
+            "title": "AREX All-stop train fares between stations",
+            "source_url": "https://www.airportrailroad.com/train/normal/fare",
+            "verified_at": "2026-10-23"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "All-stop train adult transit-card All-stop fare from Seoul to Airport Cargo Terminal, single-journey fare surcharge, refundable deposit",
+          "language": "en",
+          "slots": {
+            "train_type": "allstop",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-arex-allstop",
+              "source_url": "https://www.airportrailroad.com/train/normal/fare",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "9ee87c07b915eaade6090bb1efd865009975413fca9cc90e375e24fa0fa086ef",
+              "excerpt_characters": 718
+            },
+            {
+              "document_id": "doc-allstop-ticket",
+              "source_url": "https://www.airportrailroad.com/train/normal/introduce",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "5ba1a54a8a1796180e2f8d2e61b64890b2555cb214c1ff929b5e19a7a31d6921",
+              "excerpt_characters": 1400
+            },
+            {
+              "document_id": "doc-arex-train-types",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "43723ce2f750325cff3d6d3dddd93f4b9b2bf3484d6ca69dbfc9bd1d1e72ef0b",
+              "excerpt_characters": 724
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-arex-allstop"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-fare-arex-allstop"
+        ],
+        "visible_source_ids": [
+          "doc-fare-arex-allstop"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        true,
+        true,
+        true
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-03-ko",
+      "question": "공항철도 일반열차를 김포공항에서 운서까지 타려는데 성인 선불카드 기준운임표의 금액이 궁금해요.",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "김포공항에서 운서까지 공항철도 일반열차의 성인 선불카드 기준운임은 3,850원입니다. 요금은 바뀔 수 있으니 확인일을 함께 안내합니다 [1].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "allstop",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-fare-arex-allstop",
+            "title": "공항철도 일반열차 요금 (역간 기준운임)",
+            "source_url": "https://www.airportrailroad.com/train/normal/fare",
+            "verified_at": "2026-10-23"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "일반열차 성인 선불카드 기준운임표의 금액",
+          "language": "ko",
+          "slots": {
+            "train_type": "allstop",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-arex-allstop",
+              "source_url": "https://www.airportrailroad.com/train/normal/fare",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "5466774ff6c262bf2e3ff9e0d6800c2b5066cbb164a71dbcb56e411048fa6c14",
+              "excerpt_characters": 354
+            },
+            {
+              "document_id": "doc-allstop-ticket",
+              "source_url": "https://www.airportrailroad.com/train/normal/introduce",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "838ae28ce8e0ad84b6416125f0090fc726eddf7f18008f86635cac2a6cd513a0",
+              "excerpt_characters": 583
+            },
+            {
+              "document_id": "doc-seoul-transit-basics",
+              "source_url": "https://news.seoul.go.kr/traffic/transfer_discount",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "88d3613c6a236d7d92aa4e66840738d7d5ed1fac4ace3c422db6c3929e556ca6",
+              "excerpt_characters": 397
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-arex-allstop"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-fare-arex-allstop"
+        ],
+        "visible_source_ids": [
+          "doc-fare-arex-allstop"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        false
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-03-en",
+      "question": "What adult prepaid-card fare does the AREX All-stop table list between Gimpo Airport and Unseo?",
+      "kind": "positive",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "allstop",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "All-stop train adult prepaid-card fare between Gimpo Airport and Unseo",
+          "language": "en",
+          "slots": {
+            "train_type": "allstop",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-arex-allstop",
+              "source_url": "https://www.airportrailroad.com/train/normal/fare",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "9ee87c07b915eaade6090bb1efd865009975413fca9cc90e375e24fa0fa086ef",
+              "excerpt_characters": 718
+            },
+            {
+              "document_id": "doc-arex-train-types",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "43723ce2f750325cff3d6d3dddd93f4b9b2bf3484d6ca69dbfc9bd1d1e72ef0b",
+              "excerpt_characters": 724
+            },
+            {
+              "document_id": "doc-allstop-ticket",
+              "source_url": "https://www.airportrailroad.com/train/normal/introduce",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "5ba1a54a8a1796180e2f8d2e61b64890b2555cb214c1ff929b5e19a7a31d6921",
+              "excerpt_characters": 1400
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-arex-allstop"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        false
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-04-ko",
+      "question": "만 16세 여행객의 기후동행카드 7일권 충전 가격은 성인과 다른가요? 할인에 필요한 등록도 알려 주세요.",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "만 16세 여행객의 기후동행카드 7일권 충전 가격은 성인과 동일하게 20,000원입니다. 청소년 할인은 기후동행카드에 적용되지 않으며, 청소년 인증이 필요한 티머니 카드에 대해서는 생년월일 등록이 필요합니다 [1][2][3].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-fare-passes-cards",
+            "title": "교통 패스·교통카드 가격과 수수료 (기후동행카드 단기권, 엠패스, 티머니, WOWPASS)",
+            "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+            "verified_at": "2026-10-23"
+          },
+          {
+            "document_id": "doc-climate-card-short-term",
+            "title": "기후동행카드 단기권 - 여행객용 서울 대중교통 무제한 카드",
+            "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+            "verified_at": "2026-10-22"
+          },
+          {
+            "document_id": "doc-tmoney-card",
+            "title": "티머니 교통카드 충전과 환불",
+            "source_url": "https://pay.tmoney.co.kr/ncs/pct/ugd/ReadFrgnGd.dev",
+            "verified_at": "2026-10-22"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "만 16세 여행객의 기후동행카드 7일권 충전 가격과 할인 등록 방법",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "48798aa9774eea6106ca57e1821b96b6482ee4fc3fc953dbd7a100fbb1acbb17",
+              "excerpt_characters": 227
+            },
+            {
+              "document_id": "doc-climate-card-short-term",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "6b86a132b7a6a126e043bfc383bc6cadd00ad9b89896077af1f1dced23e6c444",
+              "excerpt_characters": 282
+            },
+            {
+              "document_id": "doc-tmoney-card",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/ugd/ReadFrgnGd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f0609ba87170d261ecf86bfca4e08b38431c5630c2d602a9b8c6f7bd284f491d",
+              "excerpt_characters": 99
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-passes-cards",
+        "doc-climate-card-short-term",
+        "doc-tmoney-card"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1,
+          2,
+          3
+        ],
+        "returned_sources": [
+          "doc-fare-passes-cards",
+          "doc-climate-card-short-term",
+          "doc-tmoney-card"
+        ],
+        "visible_source_ids": [
+          "doc-climate-card-short-term",
+          "doc-fare-passes-cards",
+          "doc-tmoney-card"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        false,
+        true
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-04-en",
+      "question": "Does a sixteen-year-old visitor pay a different seven-day Climate Card charge from an adult, and what verification is required?",
+      "kind": "positive",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "verification required for a sixteen-year-old visitor's seven-day Climate Card charge",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-climate-card-short-term",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "352073f8847cb0c00d0f11e049b7686f8f4ba1e5e2ed5806f4fc6c19803cd212",
+              "excerpt_characters": 575
+            },
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "8150cd641ce3721091d9192b30adc41c18ac937603b0c54ff009640609714302",
+              "excerpt_characters": 395
+            },
+            {
+              "document_id": "doc-fare-arex-express",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "b39707de1678ef1458334a74e71ab39a4bc215e60e46edd6fcd06a173821349f",
+              "excerpt_characters": 749
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-climate-card-short-term",
+        "doc-fare-passes-cards",
+        "doc-fare-arex-express"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        false,
+        false
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-05-ko",
+      "question": "엠패스 7일권 안내 가격에는 보증금이 포함되나요? 반납할 때 돌려받는 금액과 환불 수수료를 나누어 설명해 주세요.",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "엠패스 7일권 안내 가격에는 보증금이 포함됩니다. 보증금은 5,000원이며, 반납할 때 4,500원을 돌려받고 환불 수수료는 500원입니다 [1].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-fare-passes-cards",
+            "title": "교통 패스·교통카드 가격과 수수료 (기후동행카드 단기권, 엠패스, 티머니, WOWPASS)",
+            "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+            "verified_at": "2026-10-23"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "엠패스 7일권 가격 보증금 포함 여부 및 환불 수수료 설명",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "f16980d77de282e16f4da1cceb2d4820775fcfd15d7ff2a075aba2c0b897549a",
+              "excerpt_characters": 266
+            },
+            {
+              "document_id": "doc-foreigner-transit-cards",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/tmnyintd/ReadFrgnKoreaTourCardIntd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "0e61efa5ab271f1db66d869cadbb47cadf01e1349cbc13de2c097d1eec440e06",
+              "excerpt_characters": 61
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-passes-cards",
+        "doc-foreigner-transit-cards"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-fare-passes-cards"
+        ],
+        "visible_source_ids": [
+          "doc-fare-passes-cards"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        true,
+        true,
+        true
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-05-en",
+      "question": "Does the listed seven-day Mpass price include its deposit? Separate the amount returned with the card from the refund fee.",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "Yes, the listed seven-day Mpass price includes its deposit. The price is KRW 64,500, which includes a KRW 5,000 card deposit, and you get KRW 4,500 back when you return the card, with a KRW 500 refund fee deducted. Therefore, the amount returned with the card is KRW 4,500 after the refund fee. [1]",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-fare-passes-cards",
+            "title": "Prices and fees of transit passes and cards: Climate Card short-term, Mpass, T-money, WOWPASS",
+            "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+            "verified_at": "2026-10-23"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "Does the listed seven-day Mpass price include its deposit? Separate the amount returned with the card from the refund fee.",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "a090f2ad5b2793312b32fe56280f7b002cc564f8f09a564a586fc6ef44f0fe0e",
+              "excerpt_characters": 389
+            },
+            {
+              "document_id": "doc-foreigner-transit-cards",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/tmnyintd/ReadFrgnKoreaTourCardIntd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "3a94728fdedba0d6e09e99610221e27062c237a6bd3228a9d0d5c80d428cbd67",
+              "excerpt_characters": 520
+            },
+            {
+              "document_id": "doc-climate-card-short-term",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "ff7cf8a589a75bb73a1e41e3203d910abbff0c5ec233ff2abceb400307725b23",
+              "excerpt_characters": 1253
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-passes-cards",
+        "doc-foreigner-transit-cards",
+        "doc-climate-card-short-term"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-fare-passes-cards"
+        ],
+        "visible_source_ids": [
+          "doc-fare-passes-cards"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        true,
+        true,
+        true
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-06-ko",
+      "question": "티머니를 한 번 충전할 수 있는 최소·최대 금액과 충전 단위, 카드에 담아둘 수 있는 잔액 상한이 각각 어떻게 되나요?",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "티머니를 한 번 충전할 수 있는 최소 금액은 1,000원이며, 최대 금액은 90,000원입니다. 충전 단위는 1,000원 단위로 가능합니다. 카드에 담아둘 수 있는 잔액 상한은 500,000원입니다 [1].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-fare-passes-cards",
+            "title": "교통 패스·교통카드 가격과 수수료 (기후동행카드 단기권, 엠패스, 티머니, WOWPASS)",
+            "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+            "verified_at": "2026-10-23"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "티머니 충전 최소·최대 금액과 충전 단위, 카드 잔액 상한",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "1efade4fad4ddb77ee2ef9533a4d3867f6b370f542476dd1db5c76796fe07c07",
+              "excerpt_characters": 326
+            },
+            {
+              "document_id": "doc-wowpass",
+              "source_url": "https://www.wowpass.io/ko/guide",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "2a8f0ea171aa7f064da4c5afd4075867fa0c2d2e61d23639cdedef9971d4c8e2",
+              "excerpt_characters": 539
+            },
+            {
+              "document_id": "doc-tmoney-card",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/ugd/ReadFrgnGd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "b8c03444941bbf34a54f81ad152dc707f6aa55f265b86f7f5494c195e2c7c891",
+              "excerpt_characters": 118
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-passes-cards",
+        "doc-wowpass",
+        "doc-tmoney-card"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-fare-passes-cards"
+        ],
+        "visible_source_ids": [
+          "doc-fare-passes-cards"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        true,
+        true,
+        true
+      ],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-06-en",
+      "question": "What are the minimum and maximum T-money top-up amounts, the increment, and the maximum stored card balance?",
+      "kind": "positive",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "What are the minimum and maximum T-money top-up amounts, the increment, and the maximum stored card balance?",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": []
+        }
+      ],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [
+        false,
+        false,
+        false
+      ],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-07-ko",
+      "question": "서울 지하철의 새 키오스크에 신용카드 결제가 보여도 일반 선불 티머니 잔액은 카드 결제로 충전할 수 있나요?",
+      "kind": "positive",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "일반 선불 티머니 잔액은 카드 결제로 충전할 수 있나요?",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-tmoney-card",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/ugd/ReadFrgnGd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "c8892adadfd280d185164122631035e66d0245d571ce176a0a8ab2c142df05c7",
+              "excerpt_characters": 256
+            },
+            {
+              "document_id": "doc-wowpass",
+              "source_url": "https://www.wowpass.io/ko/guide",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f0bbe9a59ea4efb83b7f4b1a28703ecea3dd2e1edd7d2a99e550607dcd9de65b",
+              "excerpt_characters": 236
+            },
+            {
+              "document_id": "doc-climate-card-short-term",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f24c48bc689db4b4906b29f849f350302d166dfd98dadf51258be40ac2163c23",
+              "excerpt_characters": 472
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-tmoney-card",
+        "doc-wowpass",
+        "doc-climate-card-short-term"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-07-en",
+      "question": "Even if a new Seoul subway kiosk accepts credit cards, can I use one to top up an ordinary prepaid T-money balance?",
+      "kind": "positive",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "payment_question",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "Can I use a credit card to top up an ordinary prepaid T-money balance?",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-tmoney-card",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/ugd/ReadFrgnGd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f3502bca7a491321db17fcc65b2466b37023e2a60f1947e163bf499ae98bb59b",
+              "excerpt_characters": 588
+            },
+            {
+              "document_id": "doc-wowpass",
+              "source_url": "https://www.wowpass.io/ko/guide",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "b3ffe37918b42a468593a57b79313420604fef06b0425f61244b05cc9a2969ce",
+              "excerpt_characters": 624
+            },
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "4f6bdcd500128326fbc31de988b21bb2a84f16b436d87d6c09f67e73368a32ed",
+              "excerpt_characters": 620
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-tmoney-card",
+        "doc-wowpass",
+        "doc-fare-passes-cards"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-08-ko",
+      "question": "1회용 교통카드의 보증금은 내린 날에만 돌려받나요? 제 실수로 카드가 훼손된 경우도 가능한지 궁금해요.",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "1회용 교통카드의 보증금은 내린 날에만 돌려받는 것이 아닙니다. 카드를 잃어버리거나 훼손하지 않았다면 언제든지 보증금을 돌려받을 수 있지만, 본인 부주의로 잃어버리거나 훼손한 경우에는 돌려받을 수 없습니다 [1].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-deposit-refund",
+            "title": "1회용 교통카드 보증금 환급",
+            "source_url": "https://news.seoul.go.kr/traffic/archives/1763",
+            "verified_at": "2026-10-22"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "1회용 교통카드 보증금 환급 조건",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-deposit-refund",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/1763",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "5775703af14c623fd7300684cc0f42e46f0e13f43d1aa29ce6e9433b8b5aad63",
+              "excerpt_characters": 327
+            },
+            {
+              "document_id": "doc-allstop-ticket",
+              "source_url": "https://www.airportrailroad.com/train/normal/introduce",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "838ae28ce8e0ad84b6416125f0090fc726eddf7f18008f86635cac2a6cd513a0",
+              "excerpt_characters": 583
+            },
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "f16980d77de282e16f4da1cceb2d4820775fcfd15d7ff2a075aba2c0b897549a",
+              "excerpt_characters": 266
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-deposit-refund",
+        "doc-allstop-ticket",
+        "doc-fare-passes-cards"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-deposit-refund"
+        ],
+        "visible_source_ids": [
+          "doc-deposit-refund"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-08-en",
+      "question": "Must I reclaim a single-journey card deposit on the day I travel, and what if I damage the card through my own fault?",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "You do not have to reclaim a single-journey card deposit on the day you travel; you can get the deposit back at any time as long as the ticket is not lost or damaged. If you lose or damage the ticket through your own fault, the deposit is not refunded. This information is based on the guidelines for getting the deposit back [1].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-deposit-refund",
+            "title": "Getting the single-journey ticket deposit back",
+            "source_url": "https://news.seoul.go.kr/traffic/archives/1763",
+            "verified_at": "2026-10-22"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "Must I reclaim a single-journey card deposit on the day I travel, and what if I damage the card through my own fault?",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-deposit-refund",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/1763",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "0ebfbf055cd44502478f1ae928c4f13b0a891f6e2183f415a5447a6224753611",
+              "excerpt_characters": 744
+            },
+            {
+              "document_id": "doc-allstop-ticket",
+              "source_url": "https://www.airportrailroad.com/train/normal/introduce",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "5ba1a54a8a1796180e2f8d2e61b64890b2555cb214c1ff929b5e19a7a31d6921",
+              "excerpt_characters": 1400
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-deposit-refund",
+        "doc-allstop-ticket"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-deposit-refund"
+        ],
+        "visible_source_ids": [
+          "doc-deposit-refund"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-09-ko",
+      "question": "와우패스를 분실하면 앱에서 정지한 뒤 결제 잔액과 티머니 잔액을 둘 다 되찾을 수 있는 건가요?",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "와우패스를 분실하면 앱에서 정지할 수 있지만, 결제 잔액은 되찾을 수 있으나 티머니 잔액은 되찾을 수 없습니다. [1]",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-wowpass",
+            "title": "WOWPASS(와우패스) 사용법 - 결제 잔액과 티머니 교통 잔액",
+            "source_url": "https://www.wowpass.io/ko/guide",
+            "verified_at": "2026-10-22"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "와우패스 분실 시 앱에서 결제 잔액과 티머니 잔액을 되찾을 수 있는지",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-wowpass",
+              "source_url": "https://www.wowpass.io/ko/guide",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "2a8f0ea171aa7f064da4c5afd4075867fa0c2d2e61d23639cdedef9971d4c8e2",
+              "excerpt_characters": 539
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-wowpass"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-wowpass"
+        ],
+        "visible_source_ids": [
+          "doc-wowpass"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-09-en",
+      "question": "If I freeze a lost WOWPASS in the app and reissue it, can I recover both the payment balance and the T-money balance?",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "You can recover the WOWPASS payment balance by freezing it in the app and reissuing the card, but the T-money balance cannot be recovered. Therefore, you will only be able to recover the payment balance. This information is based on the guidelines provided in the materials. [1]",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-wowpass",
+            "title": "How to use WOWPASS: payment balance and T-money transit balance",
+            "source_url": "https://www.wowpass.io/ko/guide",
+            "verified_at": "2026-10-22"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "Can I recover both the payment balance and the T-money balance after freezing and reissuing a lost WOWPASS?",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-wowpass",
+              "source_url": "https://www.wowpass.io/ko/guide",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "e2f56ffdb24ca4a87d6b8583b10e408bde35b28cf45e20cd8c603daa39f02c51",
+              "excerpt_characters": 1092
+            },
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "4f6bdcd500128326fbc31de988b21bb2a84f16b436d87d6c09f67e73368a32ed",
+              "excerpt_characters": 620
+            },
+            {
+              "document_id": "doc-tmoney-card",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/ugd/ReadFrgnGd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "900a36633e90a50b0945fdf6e12b9fa84864ac344cc9b974de929ec4cfd22dc1",
+              "excerpt_characters": 237
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-wowpass",
+        "doc-fare-passes-cards",
+        "doc-tmoney-card"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-wowpass"
+        ],
+        "visible_source_ids": [
+          "doc-wowpass"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-10-ko",
+      "question": "기후동행카드 단기권을 충전하려고 공항철도역 충전기에 왔어요. 여기서 충전 가능한가요? 아니면 어느 지하철 노선의 충전기를 써야 하나요?",
+      "kind": "positive",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "payment_question",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "기후동행카드 단기권 충전 가능 여부",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-climate-card-short-term",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "6b86a132b7a6a126e043bfc383bc6cadd00ad9b89896077af1f1dced23e6c444",
+              "excerpt_characters": 282
+            },
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "48798aa9774eea6106ca57e1821b96b6482ee4fc3fc953dbd7a100fbb1acbb17",
+              "excerpt_characters": 227
+            },
+            {
+              "document_id": "doc-tmoney-card",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/ugd/ReadFrgnGd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "c8892adadfd280d185164122631035e66d0245d571ce176a0a8ab2c142df05c7",
+              "excerpt_characters": 256
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-climate-card-short-term",
+        "doc-fare-passes-cards",
+        "doc-tmoney-card"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-10-en",
+      "question": "I am at an AREX station reload machine with a short-term Climate Card. Can I charge it here, and which subway lines have eligible reload machines instead?",
+      "kind": "positive",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "payment_question",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "yes",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "Can I charge my short-term Climate Card here, and which subway lines have eligible reload machines?",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "yes",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-climate-card-short-term",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "ff7cf8a589a75bb73a1e41e3203d910abbff0c5ec233ff2abceb400307725b23",
+              "excerpt_characters": 1253
+            },
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "4f6bdcd500128326fbc31de988b21bb2a84f16b436d87d6c09f67e73368a32ed",
+              "excerpt_characters": 620
+            },
+            {
+              "document_id": "doc-seoul-transit-basics",
+              "source_url": "https://news.seoul.go.kr/traffic/transfer_discount",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "32c33082aba4da68d083282f9542fcb78565e089f817eda5e2bfd6f2d8f055b8",
+              "excerpt_characters": 469
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-climate-card-short-term",
+        "doc-fare-passes-cards",
+        "doc-seoul-transit-basics"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-11-ko",
+      "question": "일반열차가 아니라 공항철도 직통열차 이용 규정이 궁금해요. 티머니에 잔액이 있으면 별도 표 없이 개찰구를 통과해도 되나요?",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "공항철도 직통열차는 타기 전에 승차권을 따로 사야 하므로, 티머니에 잔액이 있어도 별도 표 없이 개찰구를 통과할 수 없습니다[2].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "express",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [
+          {
+            "document_id": "doc-fare-arex-express",
+            "title": "공항철도 직통열차 요금",
+            "source_url": "https://www.airportrailroad.com/train/express/introduce",
+            "verified_at": "2026-10-22"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "공항철도 직통열차 이용 규정",
+          "language": "ko",
+          "slots": {
+            "train_type": "express",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-arex-train-types",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f4cf1b11487df3b491dd3fd18b61ed2fc1c208f75a0cca0fefeaed80a4af79ee",
+              "excerpt_characters": 398
+            },
+            {
+              "document_id": "doc-fare-arex-express",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "bc7f3320c8c6f9146bfe249e4920777ce25d44c6473a29aa8a46dbff70c83ea9",
+              "excerpt_characters": 393
+            },
+            {
+              "document_id": "doc-seoul-help-desks",
+              "source_url": "https://www.airportrailroad.com/static/file/emergency_seoul.pdf",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "1b14d83f9795df16d1810e382d1ea44baf1a1a6f5ec2b8da5fa66d12787878ea",
+              "excerpt_characters": 440
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-arex-train-types",
+        "doc-fare-arex-express",
+        "doc-seoul-help-desks"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          2
+        ],
+        "returned_sources": [
+          "doc-fare-arex-express"
+        ],
+        "visible_source_ids": [
+          "doc-fare-arex-express"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-11-en",
+      "question": "For the AREX Express rather than the All-stop, does having T-money balance let me pass the gate without buying a separate ticket?",
+      "kind": "positive",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "express",
+          "has_transit_card": "yes",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "Express train For the AREX Express rather than the All-stop, does having T-money balance let me pass the gate without buying a separate ticket?",
+          "language": "en",
+          "slots": {
+            "train_type": "express",
+            "has_transit_card": "yes",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": []
+        }
+      ],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-12-ko",
+      "question": "공항철도 일반열차 1회권은 아직도 현금만 받나요? 해외 은행 신용카드를 가져온 여행객에 대한 안내를 확인해 주세요.",
+      "kind": "positive",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "payment_question",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "allstop",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "no",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "no"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "해외 은행 신용카드로 공항철도 일반열차 1회권 구매 가능 여부",
+          "language": "ko",
+          "slots": {
+            "train_type": "allstop",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "no",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "no"
+          },
+          "hits": [
+            {
+              "document_id": "doc-allstop-ticket",
+              "source_url": "https://www.airportrailroad.com/train/normal/introduce",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "838ae28ce8e0ad84b6416125f0090fc726eddf7f18008f86635cac2a6cd513a0",
+              "excerpt_characters": 583
+            },
+            {
+              "document_id": "doc-arex-train-types",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f4cf1b11487df3b491dd3fd18b61ed2fc1c208f75a0cca0fefeaed80a4af79ee",
+              "excerpt_characters": 398
+            },
+            {
+              "document_id": "doc-fare-arex-allstop",
+              "source_url": "https://www.airportrailroad.com/train/normal/fare",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "5466774ff6c262bf2e3ff9e0d6800c2b5066cbb164a71dbcb56e411048fa6c14",
+              "excerpt_characters": 354
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-allstop-ticket",
+        "doc-arex-train-types",
+        "doc-fare-arex-allstop"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-12-en",
+      "question": "Are AREX All-stop single-journey tickets still cash-only? Please check the guide for visitors carrying a foreign-bank credit card.",
+      "kind": "positive",
+      "response": {
+        "status": "answered",
+        "intent": "usage_question",
+        "assistant_message": "AREX All-stop single-journey tickets are no longer cash-only; travelers can buy them with a credit card at every AREX station from Incheon Airport Terminal 2 to Seoul Station. This change was implemented according to the Korea Tourism Organization in February 2025. Before that, it was cash only [1].",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "allstop",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [
+          {
+            "label": "Go to the All-stop ticket machines",
+            "selected_poi_id": "poi-allstop-tickets"
+          }
+        ],
+        "sources": [
+          {
+            "document_id": "doc-allstop-ticket",
+            "title": "Riding the All-stop train: transit cards and single-journey tickets",
+            "source_url": "https://www.airportrailroad.com/train/normal/introduce",
+            "verified_at": "2026-10-23"
+          }
+        ],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "All-stop train Are AREX All-stop single-journey tickets still cash-only?",
+          "language": "en",
+          "slots": {
+            "train_type": "allstop",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-allstop-ticket",
+              "source_url": "https://www.airportrailroad.com/train/normal/introduce",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "5ba1a54a8a1796180e2f8d2e61b64890b2555cb214c1ff929b5e19a7a31d6921",
+              "excerpt_characters": 1400
+            },
+            {
+              "document_id": "doc-arex-train-types",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "43723ce2f750325cff3d6d3dddd93f4b9b2bf3484d6ca69dbfc9bd1d1e72ef0b",
+              "excerpt_characters": 724
+            },
+            {
+              "document_id": "doc-fare-arex-allstop",
+              "source_url": "https://www.airportrailroad.com/train/normal/fare",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "9ee87c07b915eaade6090bb1efd865009975413fca9cc90e375e24fa0fa086ef",
+              "excerpt_characters": 718
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-allstop-ticket",
+        "doc-arex-train-types",
+        "doc-fare-arex-allstop"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [
+          1
+        ],
+        "returned_sources": [
+          "doc-allstop-ticket"
+        ],
+        "visible_source_ids": [
+          "doc-allstop-ticket"
+        ],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-13-ko",
+      "question": "공항철도 직통열차 승차권 영수증을 재발행할 때 받는 수수료가 정확히 얼마인지 알려 주세요.",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-13-en",
+      "question": "What exact fee is charged to reissue an AREX Express ticket receipt?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "fee for reissuing AREX Express ticket receipt",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-arex-express",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "b39707de1678ef1458334a74e71ab39a4bc215e60e46edd6fcd06a173821349f",
+              "excerpt_characters": 749
+            },
+            {
+              "document_id": "doc-fare-arex-allstop",
+              "source_url": "https://www.airportrailroad.com/train/normal/fare",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "9ee87c07b915eaade6090bb1efd865009975413fca9cc90e375e24fa0fa086ef",
+              "excerpt_characters": 718
+            },
+            {
+              "document_id": "doc-arex-train-types",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "43723ce2f750325cff3d6d3dddd93f4b9b2bf3484d6ca69dbfc9bd1d1e72ef0b",
+              "excerpt_characters": 724
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-arex-express",
+        "doc-fare-arex-allstop"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-14-ko",
+      "question": "기후동행카드 실물카드를 숙소로 택배 배송받으면 배송료가 얼마인가요?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "out_of_scope",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-14-en",
+      "question": "How much is delivery of a physical Climate Card to my hotel?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "out_of_scope",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-15-ko",
+      "question": "엠패스 이용 중 열차가 지연되면 받는 보상금 산정표와 금액을 알려 주세요.",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "엠패스 이용 중 열차가 지연되면 받는 보상금 산정표와 금액",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": []
+        }
+      ],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-15-en",
+      "question": "What compensation amounts are listed for train delays while using an Mpass?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "compensation amounts for train delays with Mpass",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "8150cd641ce3721091d9192b30adc41c18ac937603b0c54ff009640609714302",
+              "excerpt_characters": 395
+            },
+            {
+              "document_id": "doc-foreigner-transit-cards",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/tmnyintd/ReadFrgnKoreaTourCardIntd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "81acd67a57ad7d82f68fac1b4add70c0b54e2191307237a15e2daec5ade97b9f",
+              "excerpt_characters": 524
+            },
+            {
+              "document_id": "doc-allstop-ticket",
+              "source_url": "https://www.airportrailroad.com/train/normal/introduce",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "5ba1a54a8a1796180e2f8d2e61b64890b2555cb214c1ff929b5e19a7a31d6921",
+              "excerpt_characters": 1400
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-passes-cards",
+        "doc-foreigner-transit-cards",
+        "doc-allstop-ticket"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-16-ko",
+      "question": "WOWPASS 앱에서 해외카드로 충전할 때 카드사 3D 인증 수수료가 별도로 얼마 붙나요?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "payment_question",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "WOWPASS 앱에서 해외카드로 충전할 때 카드사 3D 인증 수수료",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "48798aa9774eea6106ca57e1821b96b6482ee4fc3fc953dbd7a100fbb1acbb17",
+              "excerpt_characters": 227
+            },
+            {
+              "document_id": "doc-wowpass",
+              "source_url": "https://www.wowpass.io/ko/guide",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "2a8f0ea171aa7f064da4c5afd4075867fa0c2d2e61d23639cdedef9971d4c8e2",
+              "excerpt_characters": 539
+            },
+            {
+              "document_id": "doc-tmoney-card",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/ugd/ReadFrgnGd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "c8892adadfd280d185164122631035e66d0245d571ce176a0a8ab2c142df05c7",
+              "excerpt_characters": 256
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-passes-cards",
+        "doc-wowpass",
+        "doc-tmoney-card"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-16-en",
+      "question": "What separate issuer 3-D Secure fee is added when I top up WOWPASS with a foreign card in the app?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "payment_question",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "What separate issuer 3-D Secure fee is added when I top up WOWPASS with a foreign card in the app?",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "4f6bdcd500128326fbc31de988b21bb2a84f16b436d87d6c09f67e73368a32ed",
+              "excerpt_characters": 620
+            },
+            {
+              "document_id": "doc-foreigner-transit-cards",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/tmnyintd/ReadFrgnKoreaTourCardIntd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "81acd67a57ad7d82f68fac1b4add70c0b54e2191307237a15e2daec5ade97b9f",
+              "excerpt_characters": 524
+            },
+            {
+              "document_id": "doc-tmoney-card",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/ugd/ReadFrgnGd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f3502bca7a491321db17fcc65b2466b37023e2a60f1947e163bf499ae98bb59b",
+              "excerpt_characters": 588
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-passes-cards",
+        "doc-foreigner-transit-cards",
+        "doc-tmoney-card"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-17-ko",
+      "question": "어린이용 티머니를 온라인으로 분실 재발급받을 때 우편 발송 비용은 얼마인가요?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "어린이용 티머니 우편 발송 비용",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-passes-cards",
+              "source_url": "https://news.seoul.go.kr/traffic/archives/510651",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "1efade4fad4ddb77ee2ef9533a4d3867f6b370f542476dd1db5c76796fe07c07",
+              "excerpt_characters": 326
+            },
+            {
+              "document_id": "doc-tmoney-card",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/ugd/ReadFrgnGd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f0609ba87170d261ecf86bfca4e08b38431c5630c2d602a9b8c6f7bd284f491d",
+              "excerpt_characters": 99
+            },
+            {
+              "document_id": "doc-fare-arex-allstop",
+              "source_url": "https://www.airportrailroad.com/train/normal/fare",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "65324cbb71d401f87bd8ea3d06d2842a4d7ef0ae268ceb9ff45468a67055006c",
+              "excerpt_characters": 1949
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-passes-cards",
+        "doc-tmoney-card",
+        "doc-fare-arex-allstop"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-17-en",
+      "question": "What postage is charged for an online replacement of a lost child T-money card?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "out_of_scope",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-18-ko",
+      "question": "공항철도 직통열차의 반려동물 전용 좌석 추가요금표를 알려 주세요.",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "express",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "공항철도 직통열차의 반려동물 전용 좌석 추가요금",
+          "language": "ko",
+          "slots": {
+            "train_type": "express",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-fare-arex-express",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "bc7f3320c8c6f9146bfe249e4920777ce25d44c6473a29aa8a46dbff70c83ea9",
+              "excerpt_characters": 393
+            },
+            {
+              "document_id": "doc-arex-train-types",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f4cf1b11487df3b491dd3fd18b61ed2fc1c208f75a0cca0fefeaed80a4af79ee",
+              "excerpt_characters": 398
+            },
+            {
+              "document_id": "doc-foreigner-transit-cards",
+              "source_url": "https://pay.tmoney.co.kr/ncs/pct/tmnyintd/ReadFrgnKoreaTourCardIntd.dev",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "1c984a912840c47beb6e703187812e53377fdbbb1e3b482e085e10ebd78efb7d",
+              "excerpt_characters": 251
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-fare-arex-express",
+        "doc-arex-train-types",
+        "doc-foreigner-transit-cards"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-18-en",
+      "question": "Please give the AREX Express pet-only seat surcharge table.",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "out_of_scope",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-19-ko",
+      "question": "서울역 4호선 엘리베이터가 지금 고장 없이 운행 중인지 실시간으로 확인해 주세요.",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "out_of_scope",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-19-en",
+      "question": "Check live whether the Line4 elevator at Seoul Station is operating without a fault right now.",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "out_of_scope",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-20-ko",
+      "question": "지금 서울역에서 다음 공항철도 일반열차가 출발할 때까지 정확히 몇 분 남았나요?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "allstop",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "다음 공항철도 일반열차 출발 시간",
+          "language": "ko",
+          "slots": {
+            "train_type": "allstop",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": [
+            {
+              "document_id": "doc-arex-train-types",
+              "source_url": "https://www.airportrailroad.com/train/express/introduce",
+              "verified_at": "2026-10-22",
+              "excerpt_sha256": "f4cf1b11487df3b491dd3fd18b61ed2fc1c208f75a0cca0fefeaed80a4af79ee",
+              "excerpt_characters": 398
+            },
+            {
+              "document_id": "doc-fare-arex-allstop",
+              "source_url": "https://www.airportrailroad.com/train/normal/fare",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "65324cbb71d401f87bd8ea3d06d2842a4d7ef0ae268ceb9ff45468a67055006c",
+              "excerpt_characters": 1949
+            },
+            {
+              "document_id": "doc-seoul-help-desks",
+              "source_url": "https://www.airportrailroad.com/static/file/emergency_seoul.pdf",
+              "verified_at": "2026-10-23",
+              "excerpt_sha256": "5a7e5f23fab08685da51abcc6781e37b6383b56ff4f0bc1e95e05542c1a200dd",
+              "excerpt_characters": 283
+            }
+          ]
+        }
+      ],
+      "compose_document_ids": [
+        "doc-arex-train-types",
+        "doc-fare-arex-allstop",
+        "doc-seoul-help-desks"
+      ],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 3,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-20-en",
+      "question": "Exactly how many minutes remain until the next AREX All-stop departure from Seoul right now?",
+      "kind": "negative",
+      "response": {
+        "status": "needs_clarification",
+        "intent": "board_arex",
+        "assistant_message": "Before I guide you to the platform: have you already bought the ticket or travel card you need?",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "allstop",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [
+          {
+            "label": "I bought it",
+            "selected_poi_id": null
+          },
+          {
+            "label": "Not yet",
+            "selected_poi_id": null
+          }
+        ],
+        "sources": [],
+        "next_action": "reply"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-21-ko",
+      "question": "오늘 오후 6시 30분 서울역 직통열차가 현재 매진인지 조회해 주세요.",
+      "kind": "negative",
+      "response": {
+        "status": "out_of_scope",
+        "intent": "out_of_scope",
+        "assistant_message": "지금은 서울역 공항철도 구역을 도와드려요. 승차권 · 교통카드 · 가는 길을 물어보세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [
+          {
+            "label": "인천공항",
+            "selected_poi_id": null
+          },
+          {
+            "label": "돈은 어떻게 내요?",
+            "selected_poi_id": null
+          }
+        ],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-21-en",
+      "question": "Check whether the 6:30 p.m. AREX Express from Seoul today is currently sold out.",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "out_of_scope",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-22-ko",
+      "question": "보증금 환급기에 카드가 걸리면 계좌로 입금받기까지 공식 처리 기간이 며칠인가요?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "보증금 환급기 카드가 걸리면 계좌로 입금받기까지 공식 처리 기간",
+          "language": "ko",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": []
+        }
+      ],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-22-en",
+      "question": "If my card gets stuck in a deposit refund machine, what is the official processing time for a bank transfer?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "usage_question",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [
+        {
+          "query": "official processing time for a bank transfer after card gets stuck in a deposit refund machine",
+          "language": "en",
+          "slots": {
+            "train_type": "unknown",
+            "has_transit_card": "unknown",
+            "exit_number": null,
+            "has_single_use_card": "unknown",
+            "single_use_card_returned": "unknown",
+            "has_ticket": "unknown"
+          },
+          "hits": []
+        }
+      ],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-23-ko",
+      "question": "서울역 공항철도 대합실에서 가장 가까운 WOWPASS 무인환전기의 기기 번호와 정확한 위치를 알려 주세요.",
+      "kind": "negative",
+      "response": {
+        "status": "needs_clarification",
+        "intent": "navigate_to_poi",
+        "assistant_message": "확인된 지도에서 그 장소를 찾지 못했어요. 어디로 가고 싶으세요?",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "reply"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-23-en",
+      "question": "Give the machine number and exact location of the nearest WOWPASS kiosk to the AREX concourse at Seoul Station.",
+      "kind": "negative",
+      "response": {
+        "status": "needs_clarification",
+        "intent": "navigate_to_poi",
+        "assistant_message": "I couldn't find that place on the verified map. Where would you like to go?",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "reply"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-24-ko",
+      "question": "서울역 물품보관함에 50인치 대형 가방이 들어가는지 내부 가로·세로·높이를 알려 주세요.",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "out_of_scope",
+        "assistant_message": "확인된 자료가 없어서 추측하지 않을게요. 역 안내센터에 문의해 주세요.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    },
+    {
+      "id": "V4-24-en",
+      "question": "What are the internal locker dimensions at Seoul Station, and will a 50-inch suitcase fit?",
+      "kind": "negative",
+      "response": {
+        "status": "cannot_answer",
+        "intent": "out_of_scope",
+        "assistant_message": "I don't have verified information on that, so I won't guess. Please ask the information center.",
+        "items": [],
+        "tip": null,
+        "unverified_notes": [],
+        "slots": {
+          "train_type": "unknown",
+          "has_transit_card": "unknown",
+          "exit_number": null,
+          "has_single_use_card": "unknown",
+          "single_use_card_returned": "unknown",
+          "has_ticket": "unknown"
+        },
+        "destination": null,
+        "suggested_replies": [],
+        "sources": [],
+        "next_action": "none"
+      },
+      "search_traces": [],
+      "compose_document_ids": [],
+      "citation_diagnostic": {
+        "visible_numbers": [],
+        "returned_sources": [],
+        "visible_source_ids": [],
+        "number_range_valid": true,
+        "visible_citations_match_sources": true,
+        "answered_has_source": true
+      },
+      "diagnostic_patterns_present": [],
+      "api_calls": 2,
+      "semantic_review": "pending"
+    }
+  ],
+  "completion": "complete",
+  "semantic_review": "pending",
+  "budget": {
+    "charged_upper_estimate_usd": "0.01861950",
+    "budget_usd": 1.0,
+    "input_tokens": 90267,
+    "output_tokens": 6559,
+    "attempt_count": 126,
+    "attempts": [
+      {
+        "prompt_sha256": "eae47dc7541aa8bf9eeb942f2ca3ecee9c8f0f3f622e35de793e47e307c9964a",
+        "input_token_upper_bound": 4427,
+        "reserved_usd": "0.00114405",
+        "state": "usage_unknown",
+        "error_class": "AuthenticationError"
+      },
+      {
+        "prompt_sha256": "eae47dc7541aa8bf9eeb942f2ca3ecee9c8f0f3f622e35de793e47e307c9964a",
+        "input_token_upper_bound": 4427,
+        "reserved_usd": "0.00114405",
+        "state": "settled",
+        "input_tokens": 940,
+        "output_tokens": 122,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002142"
+      },
+      {
+        "prompt_sha256": "c60b03dd79767c8f0fcb434724f1469cb5a2fcd5f4c594709e643d67257ff94c",
+        "input_token_upper_bound": 2987,
+        "reserved_usd": "0.00092805",
+        "state": "settled",
+        "input_tokens": 566,
+        "output_tokens": 63,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001227"
+      },
+      {
+        "prompt_sha256": "a1b6c5153a8f00827abaf0b017253d7113c59b815497c9400001980ff3064982",
+        "input_token_upper_bound": 2740,
+        "reserved_usd": "0.000891",
+        "state": "settled",
+        "input_tokens": 478,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000753"
+      },
+      {
+        "prompt_sha256": "c9cd3d6d6072312958241aa5101f7e7f7751c322c44483f48e7510e0c6f8c03b",
+        "input_token_upper_bound": 4395,
+        "reserved_usd": "0.00113925",
+        "state": "settled",
+        "input_tokens": 928,
+        "output_tokens": 117,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002094"
+      },
+      {
+        "prompt_sha256": "a61af4fefef4ef214a04b80740658519539c51781764e4e7cd9940673509e7c5",
+        "input_token_upper_bound": 2844,
+        "reserved_usd": "0.0009066",
+        "state": "settled",
+        "input_tokens": 483,
+        "output_tokens": 42,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00009765"
+      },
+      {
+        "prompt_sha256": "dbe707e5d1f9a0fe063dd8ff61ff715bc49f2d650c07615c5904fd32c95379f6",
+        "input_token_upper_bound": 2640,
+        "reserved_usd": "0.000876",
+        "state": "settled",
+        "input_tokens": 439,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00006945"
+      },
+      {
+        "prompt_sha256": "21f13d109b12552a0eb57ad2f57423739f1629e8ee0b033eaeaf0c9020c3cc9b",
+        "input_token_upper_bound": 4443,
+        "reserved_usd": "0.00114645",
+        "state": "settled",
+        "input_tokens": 947,
+        "output_tokens": 103,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00020385"
+      },
+      {
+        "prompt_sha256": "07d25cd228fbf50d722b6f07434cb984331c480143874d2012c0e5d2b6a8923d",
+        "input_token_upper_bound": 2919,
+        "reserved_usd": "0.00091785",
+        "state": "settled",
+        "input_tokens": 570,
+        "output_tokens": 62,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001227"
+      },
+      {
+        "prompt_sha256": "fc9167be5570b7a7cb7025c4a25d3b37fceaff7b3ef39ef8a8073a7367128416",
+        "input_token_upper_bound": 2785,
+        "reserved_usd": "0.00089775",
+        "state": "settled",
+        "input_tokens": 489,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00007695"
+      },
+      {
+        "prompt_sha256": "0efdcd5126e4794a236c3afb2304237263a63fe905f01d97f39aaf5c79de1889",
+        "input_token_upper_bound": 4425,
+        "reserved_usd": "0.00114375",
+        "state": "settled",
+        "input_tokens": 929,
+        "output_tokens": 124,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021375"
+      },
+      {
+        "prompt_sha256": "13789d2cb6aaaecba6bf477956d04d0d6809c49779544dee3c27e9c6ddb3142c",
+        "input_token_upper_bound": 2861,
+        "reserved_usd": "0.00090915",
+        "state": "settled",
+        "input_tokens": 518,
+        "output_tokens": 46,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001053"
+      },
+      {
+        "prompt_sha256": "f9afc85dfdd1b189b1b76f4ef168e31cf08fab3753b81ff88a6ed340facf931f",
+        "input_token_upper_bound": 2707,
+        "reserved_usd": "0.00088605",
+        "state": "settled",
+        "input_tokens": 448,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000708"
+      },
+      {
+        "prompt_sha256": "f5e795efecc7773e71d826f16c4f8d07ec519e8438a78d927db0d1ecbfe635f3",
+        "input_token_upper_bound": 4399,
+        "reserved_usd": "0.00113985",
+        "state": "settled",
+        "input_tokens": 937,
+        "output_tokens": 85,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00019155"
+      },
+      {
+        "prompt_sha256": "00ed751367aafd3a6760f1fb194536d9b55e59a25e498b7e7241941c385254a0",
+        "input_token_upper_bound": 2875,
+        "reserved_usd": "0.00091125",
+        "state": "settled",
+        "input_tokens": 560,
+        "output_tokens": 51,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001146"
+      },
+      {
+        "prompt_sha256": "c419033ca16c5b07ed664aa65dd8d72df2bdea36a52d3caccdaef487e9292181",
+        "input_token_upper_bound": 2704,
+        "reserved_usd": "0.0008856",
+        "state": "settled",
+        "input_tokens": 468,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000738"
+      },
+      {
+        "prompt_sha256": "dd8257f569c9f9284ccbfd2180f06c9b16fedb228476be9ec388c410bb540293",
+        "input_token_upper_bound": 4358,
+        "reserved_usd": "0.0011337",
+        "state": "settled",
+        "input_tokens": 920,
+        "output_tokens": 113,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002058"
+      },
+      {
+        "prompt_sha256": "b583016ed7bc309ed3833ff142926dfff3206acf2a48ec5afb02ef20eb5e4f08",
+        "input_token_upper_bound": 2794,
+        "reserved_usd": "0.0008991",
+        "state": "settled",
+        "input_tokens": 509,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00007815"
+      },
+      {
+        "prompt_sha256": "c2c43b98b37c53365a87ff1dffc911facd7c2367d078b65ca7e4adc4e09c3357",
+        "input_token_upper_bound": 2333,
+        "reserved_usd": "0.00082995",
+        "state": "settled",
+        "input_tokens": 343,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005505"
+      },
+      {
+        "prompt_sha256": "498396cd232558c8743346a4f8efadaa5a65bcc563cf54905c934f482f729ccf",
+        "input_token_upper_bound": 4401,
+        "reserved_usd": "0.00114015",
+        "state": "settled",
+        "input_tokens": 935,
+        "output_tokens": 125,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021525"
+      },
+      {
+        "prompt_sha256": "0a63dbeb4428359a0ed4feb767e65d971e7bdd666e041c65c27a37111f9a4946",
+        "input_token_upper_bound": 3626,
+        "reserved_usd": "0.0010239",
+        "state": "settled",
+        "input_tokens": 773,
+        "output_tokens": 75,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00016095"
+      },
+      {
+        "prompt_sha256": "220c0cc63333d566738098d5e97255f1884e6eba5f8bc0bb2006e6999dd8537a",
+        "input_token_upper_bound": 3283,
+        "reserved_usd": "0.00097245",
+        "state": "settled",
+        "input_tokens": 644,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001002"
+      },
+      {
+        "prompt_sha256": "e5e5999e3e1dbc9378e2cc561addbab787c4aa82b97549dc58be8ff9e0df98dd",
+        "input_token_upper_bound": 4390,
+        "reserved_usd": "0.0011385",
+        "state": "settled",
+        "input_tokens": 923,
+        "output_tokens": 114,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00020685"
+      },
+      {
+        "prompt_sha256": "c359cd4eefd084fe7394d3fe0d6d56afb698894620e346c00f7f6de67215d0a4",
+        "input_token_upper_bound": 3994,
+        "reserved_usd": "0.0010791",
+        "state": "settled",
+        "input_tokens": 807,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00012285"
+      },
+      {
+        "prompt_sha256": "4817643af38ae520a2b2ea0241e75c148d89c082b66fb176f3538f4fabd0c820",
+        "input_token_upper_bound": 2365,
+        "reserved_usd": "0.00083475",
+        "state": "settled",
+        "input_tokens": 345,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005535"
+      },
+      {
+        "prompt_sha256": "e4784c46be803d87f1519ee26684036175718780a9576a30ad8e0271473e25c3",
+        "input_token_upper_bound": 4418,
+        "reserved_usd": "0.0011427",
+        "state": "settled",
+        "input_tokens": 942,
+        "output_tokens": 121,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002139"
+      },
+      {
+        "prompt_sha256": "22723d77781907f355cc0b8c823aeae8d61b1c4956b0361797e9e80657bbbcb7",
+        "input_token_upper_bound": 2910,
+        "reserved_usd": "0.0009165",
+        "state": "settled",
+        "input_tokens": 588,
+        "output_tokens": 55,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001212"
+      },
+      {
+        "prompt_sha256": "ba1b3b03d3a178fc1d32312f12c14e5788140f68e4a60c896c2e181fd9bec5d7",
+        "input_token_upper_bound": 2766,
+        "reserved_usd": "0.0008949",
+        "state": "settled",
+        "input_tokens": 496,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.000078"
+      },
+      {
+        "prompt_sha256": "5f5a804f33ff9df360884eee4f5893ed4a0641bb5f63ab377b9879ad64dc6d51",
+        "input_token_upper_bound": 4385,
+        "reserved_usd": "0.00113775",
+        "state": "settled",
+        "input_tokens": 923,
+        "output_tokens": 123,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021225"
+      },
+      {
+        "prompt_sha256": "948518d55d0f6b915780fd124aa5bd4fd0845c6f450f89e7122997d9a3add421",
+        "input_token_upper_bound": 4487,
+        "reserved_usd": "0.00115305",
+        "state": "settled",
+        "input_tokens": 961,
+        "output_tokens": 84,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00019455"
+      },
+      {
+        "prompt_sha256": "3f551249e2c2b15ac957c324bd5a6cadc430156c315cc4b445084ab0bd1c8836",
+        "input_token_upper_bound": 2839,
+        "reserved_usd": "0.00090585",
+        "state": "settled",
+        "input_tokens": 492,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000774"
+      },
+      {
+        "prompt_sha256": "b8a4f20df338850951c2e0d1b18a292f99036f435d139a333cfb13b1379ccc61",
+        "input_token_upper_bound": 4420,
+        "reserved_usd": "0.001143",
+        "state": "settled",
+        "input_tokens": 939,
+        "output_tokens": 123,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021465"
+      },
+      {
+        "prompt_sha256": "5d72f42e246cb565736808c88f6089994a35547cdbf38ac303ed09a1f1d20567",
+        "input_token_upper_bound": 4418,
+        "reserved_usd": "0.0011427",
+        "state": "settled",
+        "input_tokens": 993,
+        "output_tokens": 69,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00019035"
+      },
+      {
+        "prompt_sha256": "ee1690f7bc81ecd0b556794c73f1a4451c9255e07a1dbdb573dd9d37957cbb5f",
+        "input_token_upper_bound": 2829,
+        "reserved_usd": "0.00090435",
+        "state": "settled",
+        "input_tokens": 507,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00007965"
+      },
+      {
+        "prompt_sha256": "1048d8ae3f85cd931779e43ffb0deb0454167b9bc11e3a0eafe09fa27d913389",
+        "input_token_upper_bound": 4371,
+        "reserved_usd": "0.00113565",
+        "state": "settled",
+        "input_tokens": 921,
+        "output_tokens": 122,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021135"
+      },
+      {
+        "prompt_sha256": "ef2114046293e63ea19897a2afcbd7a6db777474933f620c627c57336e1a295c",
+        "input_token_upper_bound": 2346,
+        "reserved_usd": "0.0008319",
+        "state": "settled",
+        "input_tokens": 343,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005505"
+      },
+      {
+        "prompt_sha256": "2898f3105bca240c74a659b4d464fd4b1bcedf7a52b77f4f0585ace5a5f8ee70",
+        "input_token_upper_bound": 4411,
+        "reserved_usd": "0.00114165",
+        "state": "settled",
+        "input_tokens": 936,
+        "output_tokens": 120,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002124"
+      },
+      {
+        "prompt_sha256": "5617ddf7ddd1b6c4ce9555b946d342846e3843f4e583d6d0c4f7048b4b941949",
+        "input_token_upper_bound": 4453,
+        "reserved_usd": "0.00114795",
+        "state": "settled",
+        "input_tokens": 996,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001512"
+      },
+      {
+        "prompt_sha256": "ca8b0aaa541ec865da15966c0106bc8fe1da15a5d184fa4b410a7ec9f8b8fbd7",
+        "input_token_upper_bound": 2388,
+        "reserved_usd": "0.0008382",
+        "state": "settled",
+        "input_tokens": 361,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005775"
+      },
+      {
+        "prompt_sha256": "bf551db78801b947a514fa4dd42a4403826949b693c6537a1e436056f602176f",
+        "input_token_upper_bound": 4378,
+        "reserved_usd": "0.0011367",
+        "state": "settled",
+        "input_tokens": 924,
+        "output_tokens": 116,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002082"
+      },
+      {
+        "prompt_sha256": "dd18877d2a1ba03227ec8714bf4ea1ef6af5ad8d25360aa87052bdb818a0a25d",
+        "input_token_upper_bound": 4099,
+        "reserved_usd": "0.00109485",
+        "state": "settled",
+        "input_tokens": 865,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00013155"
+      },
+      {
+        "prompt_sha256": "8e8cceea3d0dbcd16802786d2e5dd8a941f7a5a92f93dcb09d0c51fd05ba963c",
+        "input_token_upper_bound": 2355,
+        "reserved_usd": "0.00083325",
+        "state": "settled",
+        "input_tokens": 346,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000555"
+      },
+      {
+        "prompt_sha256": "ba68425766803347329c9277947e960ec4e3149afff8b0e9583066546348937e",
+        "input_token_upper_bound": 4404,
+        "reserved_usd": "0.0011406",
+        "state": "settled",
+        "input_tokens": 940,
+        "output_tokens": 113,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002088"
+      },
+      {
+        "prompt_sha256": "6ec549633d637f56e966eabbcd758090ba042a0de8c73385db1d2b0df5d4e66f",
+        "input_token_upper_bound": 4922,
+        "reserved_usd": "0.0012183",
+        "state": "settled",
+        "input_tokens": 1176,
+        "output_tokens": 79,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002238"
+      },
+      {
+        "prompt_sha256": "6ef14291b6920211b046b2742ba01989b011ef3aa45def2d4ecda1ae3fd5a9aa",
+        "input_token_upper_bound": 2792,
+        "reserved_usd": "0.0008988",
+        "state": "settled",
+        "input_tokens": 493,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00007755"
+      },
+      {
+        "prompt_sha256": "1a86eb838bc240fe623e14813bc586352dc4f221a119cff5255da61dbf091002",
+        "input_token_upper_bound": 4380,
+        "reserved_usd": "0.001137",
+        "state": "settled",
+        "input_tokens": 927,
+        "output_tokens": 127,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021525"
+      },
+      {
+        "prompt_sha256": "033d007b526fd21ffcb5aebb0746915266dab63a7261cf6a5992f328053394f9",
+        "input_token_upper_bound": 4344,
+        "reserved_usd": "0.0011316",
+        "state": "settled",
+        "input_tokens": 805,
+        "output_tokens": 72,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00016395"
+      },
+      {
+        "prompt_sha256": "78634627a3726718fffb76c8a6458692fcb39725a06deb864f6f13adf2b721e3",
+        "input_token_upper_bound": 2814,
+        "reserved_usd": "0.0009021",
+        "state": "settled",
+        "input_tokens": 470,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000741"
+      },
+      {
+        "prompt_sha256": "9a3ccef1a35e0a3ccb333a2a2e716d6ac973e7146e0e52a654ab5829939af87a",
+        "input_token_upper_bound": 4392,
+        "reserved_usd": "0.0011388",
+        "state": "settled",
+        "input_tokens": 935,
+        "output_tokens": 127,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021645"
+      },
+      {
+        "prompt_sha256": "3c526c7d75783db4ea62a74ab3fa923f952d270dd4fe04ee2827f70636e675cb",
+        "input_token_upper_bound": 3260,
+        "reserved_usd": "0.000969",
+        "state": "settled",
+        "input_tokens": 655,
+        "output_tokens": 42,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00012345"
+      },
+      {
+        "prompt_sha256": "51e3e35cfc6c095828b497304fd0e378077fcee46cb37f4517328906874c1814",
+        "input_token_upper_bound": 2658,
+        "reserved_usd": "0.0008787",
+        "state": "settled",
+        "input_tokens": 457,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00007215"
+      },
+      {
+        "prompt_sha256": "58b69bb9023f7103c6628fb6206984c6ea18db9b7d408fef2edebdeebfb9736b",
+        "input_token_upper_bound": 4380,
+        "reserved_usd": "0.001137",
+        "state": "settled",
+        "input_tokens": 927,
+        "output_tokens": 122,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021225"
+      },
+      {
+        "prompt_sha256": "80d0b722099e7abcda5691247c4fca27a75c9ec1b4423a94cd2368c0b9485cc3",
+        "input_token_upper_bound": 4224,
+        "reserved_usd": "0.0011136",
+        "state": "settled",
+        "input_tokens": 856,
+        "output_tokens": 58,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001632"
+      },
+      {
+        "prompt_sha256": "a0b416eb118dd9d1aee0410d5fd923f57555eff7a5462d5e199747f36d3bdaef",
+        "input_token_upper_bound": 2757,
+        "reserved_usd": "0.00089355",
+        "state": "settled",
+        "input_tokens": 454,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000717"
+      },
+      {
+        "prompt_sha256": "320ab086402c2379e41afdaa0576ab2425abb232d9ac39b4f55fd7769bd84a5c",
+        "input_token_upper_bound": 4452,
+        "reserved_usd": "0.0011478",
+        "state": "settled",
+        "input_tokens": 951,
+        "output_tokens": 114,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021105"
+      },
+      {
+        "prompt_sha256": "b1fd56146a316331d0ae4fe4eaaa44eccf9cece83d1fbf95e29377c35f0ffb0c",
+        "input_token_upper_bound": 4036,
+        "reserved_usd": "0.0010854",
+        "state": "settled",
+        "input_tokens": 900,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001368"
+      },
+      {
+        "prompt_sha256": "b1489f0cadd9b83c654f0a612f7d2b7b8df152a68c66cb21f0f037e06f085b26",
+        "input_token_upper_bound": 2431,
+        "reserved_usd": "0.00084465",
+        "state": "settled",
+        "input_tokens": 376,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00006"
+      },
+      {
+        "prompt_sha256": "949cdf5c86709f3adf23a382b79827cdbcb3f30868fbf09c166c0d7858f674d0",
+        "input_token_upper_bound": 4417,
+        "reserved_usd": "0.00114255",
+        "state": "settled",
+        "input_tokens": 931,
+        "output_tokens": 120,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021165"
+      },
+      {
+        "prompt_sha256": "aded4303efcd6e34db315bb27afd2ec5d50700580891197e17c32d54dffa25c9",
+        "input_token_upper_bound": 4698,
+        "reserved_usd": "0.0011847",
+        "state": "settled",
+        "input_tokens": 968,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.000147"
+      },
+      {
+        "prompt_sha256": "4cf37f6f1a4515a39b1418f29b125e9ac14ba0167479adf1aa4cbbeb8dd2c3e0",
+        "input_token_upper_bound": 2390,
+        "reserved_usd": "0.0008385",
+        "state": "settled",
+        "input_tokens": 353,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005655"
+      },
+      {
+        "prompt_sha256": "ba67b46bfcc9460859b8ef557acfad7878727e5c1432545da8f02c3e5384f6f8",
+        "input_token_upper_bound": 4433,
+        "reserved_usd": "0.00114495",
+        "state": "settled",
+        "input_tokens": 946,
+        "output_tokens": 111,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002085"
+      },
+      {
+        "prompt_sha256": "a367008b5cab59ab247f30aa5efb3c4ac2d77f39a81a108e9025953fc0830619",
+        "input_token_upper_bound": 4967,
+        "reserved_usd": "0.00122505",
+        "state": "settled",
+        "input_tokens": 1174,
+        "output_tokens": 48,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002049"
+      },
+      {
+        "prompt_sha256": "249a5ae96825d0b7a41321ed75d609451351d18c8271d0c36f83dac7a0d66050",
+        "input_token_upper_bound": 2710,
+        "reserved_usd": "0.0008865",
+        "state": "settled",
+        "input_tokens": 469,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00007395"
+      },
+      {
+        "prompt_sha256": "ec873b5246dc1e51a897e7a14281d31682cfc1846ec71dc5b332128b53e4175d",
+        "input_token_upper_bound": 4392,
+        "reserved_usd": "0.0011388",
+        "state": "settled",
+        "input_tokens": 926,
+        "output_tokens": 102,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002001"
+      },
+      {
+        "prompt_sha256": "a0a36cebf84c5b6e14c6f86566e78c64a6ce8dd07a04d8f2f3810da183e334b8",
+        "input_token_upper_bound": 2363,
+        "reserved_usd": "0.00083445",
+        "state": "settled",
+        "input_tokens": 348,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000558"
+      },
+      {
+        "prompt_sha256": "d406d3e7e3ea98cdd19d40e0f8eda4db4a3c225eebdf61e8369a7a02884c2e53",
+        "input_token_upper_bound": 4421,
+        "reserved_usd": "0.00114315",
+        "state": "settled",
+        "input_tokens": 938,
+        "output_tokens": 127,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002169"
+      },
+      {
+        "prompt_sha256": "7c5fea4cf48766df3fcb2d88d73c4f8c9b259de20bb6341b7766f93afe2e7b52",
+        "input_token_upper_bound": 5325,
+        "reserved_usd": "0.00127875",
+        "state": "settled",
+        "input_tokens": 1297,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00019635"
+      },
+      {
+        "prompt_sha256": "c15f392a01052d8053e4e6cb002660924ad16623b487ef9c52a53e808ba22f94",
+        "input_token_upper_bound": 2390,
+        "reserved_usd": "0.0008385",
+        "state": "settled",
+        "input_tokens": 364,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000582"
+      },
+      {
+        "prompt_sha256": "2dd7d5b813341955a1471a3331bf3b1b76f60763b54db236274323f5002a6d6a",
+        "input_token_upper_bound": 4393,
+        "reserved_usd": "0.00113895",
+        "state": "settled",
+        "input_tokens": 926,
+        "output_tokens": 115,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002079"
+      },
+      {
+        "prompt_sha256": "15f5ba37aa00fa44b07a23cb203b2ca5fe59473dfae802bc9c5f44ff00e70dad",
+        "input_token_upper_bound": 5096,
+        "reserved_usd": "0.0012444",
+        "state": "settled",
+        "input_tokens": 1047,
+        "output_tokens": 65,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00019605"
+      },
+      {
+        "prompt_sha256": "79d464fffd31810ee7d771d62cfc3ecea360dd4e9d7fe87f6b2fe4efd8e35c4c",
+        "input_token_upper_bound": 2915,
+        "reserved_usd": "0.00091725",
+        "state": "settled",
+        "input_tokens": 493,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00007755"
+      },
+      {
+        "prompt_sha256": "7d00f507d995ae37115acef1146180047969c8a2ffd0daee8662903baaedb725",
+        "input_token_upper_bound": 4389,
+        "reserved_usd": "0.00113835",
+        "state": "settled",
+        "input_tokens": 932,
+        "output_tokens": 120,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002118"
+      },
+      {
+        "prompt_sha256": "290bd773ed0036470eff124e2e2e9442b78c29f49afb0041d49e6a48606dd779",
+        "input_token_upper_bound": 2552,
+        "reserved_usd": "0.0008628",
+        "state": "settled",
+        "input_tokens": 419,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00006645"
+      },
+      {
+        "prompt_sha256": "25dd1dc34ef18e017b18b08b51381e9f60b5d83175710a53ce19e177734d7ac8",
+        "input_token_upper_bound": 4331,
+        "reserved_usd": "0.00112965",
+        "state": "settled",
+        "input_tokens": 914,
+        "output_tokens": 110,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002031"
+      },
+      {
+        "prompt_sha256": "aaf4f083f8198d07ea50ca882ea2753da703ee751c10ffc7667643b67d99a573",
+        "input_token_upper_bound": 3547,
+        "reserved_usd": "0.00101205",
+        "state": "settled",
+        "input_tokens": 704,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001074"
+      },
+      {
+        "prompt_sha256": "c8149d3cad2a6ff277d32133c201748756ce9a9bf40b77a9793feeddb1df817a",
+        "input_token_upper_bound": 2306,
+        "reserved_usd": "0.0008259",
+        "state": "settled",
+        "input_tokens": 336,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.000054"
+      },
+      {
+        "prompt_sha256": "6ce0a782f17e454e7bdf9ba41043e39178178e8b8e40208e84df69ae3e53f88f",
+        "input_token_upper_bound": 4360,
+        "reserved_usd": "0.001134",
+        "state": "settled",
+        "input_tokens": 925,
+        "output_tokens": 112,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00020595"
+      },
+      {
+        "prompt_sha256": "ee9e26ce2b88638ec7cd894343a1c9b693d9ccdaf342f8e84684adbd56517fac",
+        "input_token_upper_bound": 2495,
+        "reserved_usd": "0.00085425",
+        "state": "settled",
+        "input_tokens": 407,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00006465"
+      },
+      {
+        "prompt_sha256": "1b6554116563d9886e2f2c05b23f42012e0a6bde870065c6342605430019015f",
+        "input_token_upper_bound": 4323,
+        "reserved_usd": "0.00112845",
+        "state": "settled",
+        "input_tokens": 912,
+        "output_tokens": 85,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001878"
+      },
+      {
+        "prompt_sha256": "97b7c7eb71ab34a652d41d0c4d10fbdb50af1be195637ac990275dbc0e90baf9",
+        "input_token_upper_bound": 2427,
+        "reserved_usd": "0.00084405",
+        "state": "settled",
+        "input_tokens": 376,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00006"
+      },
+      {
+        "prompt_sha256": "cf61970c958ed6c6eb90feb2ce7b8f22131ced24ae76f44c6e434855d8dc08a5",
+        "input_token_upper_bound": 4364,
+        "reserved_usd": "0.0011346",
+        "state": "settled",
+        "input_tokens": 927,
+        "output_tokens": 124,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021345"
+      },
+      {
+        "prompt_sha256": "d54b90bbd45b19fcfff1681a180e3c0561396386ab2c1bbcaed451593b99c64e",
+        "input_token_upper_bound": 2341,
+        "reserved_usd": "0.00083115",
+        "state": "settled",
+        "input_tokens": 352,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000564"
+      },
+      {
+        "prompt_sha256": "cf55c6910a0fa16b8265fbfb0f68bd74c508bf2bc698b3500dfe24f703005bdd",
+        "input_token_upper_bound": 4338,
+        "reserved_usd": "0.0011307",
+        "state": "settled",
+        "input_tokens": 913,
+        "output_tokens": 76,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00018255"
+      },
+      {
+        "prompt_sha256": "2271da6fbc924dc876f1c99503941992733395b90c8daa6fa8924c0b9f54c9ee",
+        "input_token_upper_bound": 4599,
+        "reserved_usd": "0.00116985",
+        "state": "settled",
+        "input_tokens": 896,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001362"
+      },
+      {
+        "prompt_sha256": "6d8f19cbd6eec7a51f54fcb171e7144d37e31107e141066f779b19ff4074f232",
+        "input_token_upper_bound": 2313,
+        "reserved_usd": "0.00082695",
+        "state": "settled",
+        "input_tokens": 335,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005385"
+      },
+      {
+        "prompt_sha256": "c433f304f5147ef05dca18de846ab5038a902590c40cb4bfb7dcdc5280d6b17e",
+        "input_token_upper_bound": 4371,
+        "reserved_usd": "0.00113565",
+        "state": "settled",
+        "input_tokens": 927,
+        "output_tokens": 122,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021225"
+      },
+      {
+        "prompt_sha256": "52687658b7276d708b39643041d93ed2e16734f5f9a8019352d48480a453988f",
+        "input_token_upper_bound": 4426,
+        "reserved_usd": "0.0011439",
+        "state": "settled",
+        "input_tokens": 1034,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001569"
+      },
+      {
+        "prompt_sha256": "925316e8565972688b94b70734856c65814a4aff42f5c80a661af03f459ee27f",
+        "input_token_upper_bound": 2350,
+        "reserved_usd": "0.0008325",
+        "state": "settled",
+        "input_tokens": 352,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000564"
+      },
+      {
+        "prompt_sha256": "f04605f33bb69f5e63cbe444026944963dd1351364cfe1a925f474f62c1a257a",
+        "input_token_upper_bound": 4361,
+        "reserved_usd": "0.00113415",
+        "state": "settled",
+        "input_tokens": 923,
+        "output_tokens": 124,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00021285"
+      },
+      {
+        "prompt_sha256": "363a7028b38bb1f9026ab19ccb81aeec436e3747acef4fa4e0c21181075bb987",
+        "input_token_upper_bound": 3999,
+        "reserved_usd": "0.00107985",
+        "state": "settled",
+        "input_tokens": 761,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00011595"
+      },
+      {
+        "prompt_sha256": "af09f30ac677b8efb310318a2f11c1ca458dd3855c17dc8626c29860daab8f7b",
+        "input_token_upper_bound": 2338,
+        "reserved_usd": "0.0008307",
+        "state": "settled",
+        "input_tokens": 345,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005535"
+      },
+      {
+        "prompt_sha256": "ed2e7419c7780453a5a4e33a3e7f6754cc234219a2a89486e8639428441031f0",
+        "input_token_upper_bound": 4372,
+        "reserved_usd": "0.0011358",
+        "state": "settled",
+        "input_tokens": 926,
+        "output_tokens": 111,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002055"
+      },
+      {
+        "prompt_sha256": "3495a65fa3ae806189b2657be40cad5d0b4e0d6978a463f2990c723f16853e4c",
+        "input_token_upper_bound": 5507,
+        "reserved_usd": "0.00130605",
+        "state": "settled",
+        "input_tokens": 1853,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00027975"
+      },
+      {
+        "prompt_sha256": "74dc09ffefdd153aad94003a8e57208f0e96725d2a06e6cdf31a2f5f3bef2c4b",
+        "input_token_upper_bound": 2349,
+        "reserved_usd": "0.00083235",
+        "state": "settled",
+        "input_tokens": 351,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005625"
+      },
+      {
+        "prompt_sha256": "8bdac065e92520aeee164c91565855e134b87c3d8fe8ff7adbbdc4204991e101",
+        "input_token_upper_bound": 4342,
+        "reserved_usd": "0.0011313",
+        "state": "settled",
+        "input_tokens": 915,
+        "output_tokens": 115,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00020625"
+      },
+      {
+        "prompt_sha256": "3ae98489d20859dc2ffd05d2a9e23cc5ce34479880a358686dc9a92e69ca721e",
+        "input_token_upper_bound": 2446,
+        "reserved_usd": "0.0008469",
+        "state": "settled",
+        "input_tokens": 379,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00006045"
+      },
+      {
+        "prompt_sha256": "e5808620b4693b3f0a0c9989ae1094653b3702bd0c2118a1a1e705f898f6254f",
+        "input_token_upper_bound": 4355,
+        "reserved_usd": "0.00113325",
+        "state": "settled",
+        "input_tokens": 924,
+        "output_tokens": 121,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002112"
+      },
+      {
+        "prompt_sha256": "b8434a89afd531da5872d2d6fff9e0d4afa6e3703fa18e95b42e03433b950997",
+        "input_token_upper_bound": 4579,
+        "reserved_usd": "0.00116685",
+        "state": "settled",
+        "input_tokens": 1069,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00016215"
+      },
+      {
+        "prompt_sha256": "a6ec1d484883eca19b19208a1fa2d097d4a42f74772d1e5ad33b23b1bef55de7",
+        "input_token_upper_bound": 2332,
+        "reserved_usd": "0.0008298",
+        "state": "settled",
+        "input_tokens": 349,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005595"
+      },
+      {
+        "prompt_sha256": "c6d8170a9251d506c805fccf722536ab1120347909ea241e3b4001e57707dfe9",
+        "input_token_upper_bound": 4322,
+        "reserved_usd": "0.0011283",
+        "state": "settled",
+        "input_tokens": 911,
+        "output_tokens": 108,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00020145"
+      },
+      {
+        "prompt_sha256": "f9df041292faa89c588777c754366df195e68ab4b4a2e8552ea8822e95620585",
+        "input_token_upper_bound": 2426,
+        "reserved_usd": "0.0008439",
+        "state": "settled",
+        "input_tokens": 375,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005985"
+      },
+      {
+        "prompt_sha256": "4b847ab1afea2d1a4dd41bb031ff6780914fa3c0312e3e7f874f13890d43d6d2",
+        "input_token_upper_bound": 4374,
+        "reserved_usd": "0.0011361",
+        "state": "settled",
+        "input_tokens": 926,
+        "output_tokens": 86,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001905"
+      },
+      {
+        "prompt_sha256": "881ba340c8628eb27cb037e786ba8ac5ad4f24cb96435f22e3be16f614e50cbf",
+        "input_token_upper_bound": 2509,
+        "reserved_usd": "0.00085635",
+        "state": "settled",
+        "input_tokens": 408,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000648"
+      },
+      {
+        "prompt_sha256": "88073156f39fe5340fdd87f5be85bb1d5862cb6188cf96c8f87b3d68f852b28a",
+        "input_token_upper_bound": 4357,
+        "reserved_usd": "0.00113355",
+        "state": "settled",
+        "input_tokens": 917,
+        "output_tokens": 87,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00018975"
+      },
+      {
+        "prompt_sha256": "7e1bd6f028b76b1ee31dfba16f09a52054eb0c0906897e28b2b237509e5fe43c",
+        "input_token_upper_bound": 2461,
+        "reserved_usd": "0.00084915",
+        "state": "settled",
+        "input_tokens": 381,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00006075"
+      },
+      {
+        "prompt_sha256": "6f68ea67502fedb564f94bfbdc12fcd3b6eaa7af8c4734ad42552d0370e5a825",
+        "input_token_upper_bound": 4373,
+        "reserved_usd": "0.00113595",
+        "state": "settled",
+        "input_tokens": 926,
+        "output_tokens": 114,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002073"
+      },
+      {
+        "prompt_sha256": "49f90b49e1e3e0293da641b969e247c473c15cf83c7141b7f97e2700ffe227b4",
+        "input_token_upper_bound": 6020,
+        "reserved_usd": "0.001383",
+        "state": "settled",
+        "input_tokens": 2007,
+        "output_tokens": 3,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00030285"
+      },
+      {
+        "prompt_sha256": "1a30bfa736bb9b0a00527caa8800b9f4a54ba9faa40ebd1a445e26dbca090e1a",
+        "input_token_upper_bound": 2350,
+        "reserved_usd": "0.0008325",
+        "state": "settled",
+        "input_tokens": 352,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000564"
+      },
+      {
+        "prompt_sha256": "493159e289a1f1b64aa2b309e0d7dc18f71f1551bdf47505245170755e1e476a",
+        "input_token_upper_bound": 4355,
+        "reserved_usd": "0.00113325",
+        "state": "settled",
+        "input_tokens": 917,
+        "output_tokens": 103,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00019935"
+      },
+      {
+        "prompt_sha256": "7b1bbbc7be68374fe9975ef0a76edc6fe7179b4208afcc51876e953b39db20e5",
+        "input_token_upper_bound": 2454,
+        "reserved_usd": "0.0008481",
+        "state": "settled",
+        "input_tokens": 381,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00006075"
+      },
+      {
+        "prompt_sha256": "b39801678fc326adf1295cd8aa0d7eac64503dae4ea06e91b2bba4f311f87ef1",
+        "input_token_upper_bound": 4354,
+        "reserved_usd": "0.0011331",
+        "state": "settled",
+        "input_tokens": 922,
+        "output_tokens": 109,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002037"
+      },
+      {
+        "prompt_sha256": "0d5119015458a9e6b276df414f74ca138ca3cdfe608c4bd35d509a3e474c5fae",
+        "input_token_upper_bound": 2489,
+        "reserved_usd": "0.00085335",
+        "state": "settled",
+        "input_tokens": 404,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000642"
+      },
+      {
+        "prompt_sha256": "a4bfbd988b1933b376cca758f7276d46585c079a6de0a5f6efa699268e44afa5",
+        "input_token_upper_bound": 4343,
+        "reserved_usd": "0.00113145",
+        "state": "settled",
+        "input_tokens": 920,
+        "output_tokens": 91,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001926"
+      },
+      {
+        "prompt_sha256": "faa3d0deaa762ab3c9a8fad4b18e04a3c8921007936476e7396b6fc89854d748",
+        "input_token_upper_bound": 2447,
+        "reserved_usd": "0.00084705",
+        "state": "settled",
+        "input_tokens": 384,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000612"
+      },
+      {
+        "prompt_sha256": "db79e9907abf319f23b14533b4963a56d37735f465bf46baa85739841f73def2",
+        "input_token_upper_bound": 4375,
+        "reserved_usd": "0.00113625",
+        "state": "settled",
+        "input_tokens": 928,
+        "output_tokens": 122,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002124"
+      },
+      {
+        "prompt_sha256": "fbe2cc69735af0976e4446d531932a2efa712db8acf8f22e512fdd4eb7ba968c",
+        "input_token_upper_bound": 2352,
+        "reserved_usd": "0.0008328",
+        "state": "settled",
+        "input_tokens": 353,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005655"
+      },
+      {
+        "prompt_sha256": "aeed11be4af0f0bd0af980a146bf90390555591ad29ea964a97ef4e1b0999b4e",
+        "input_token_upper_bound": 4371,
+        "reserved_usd": "0.00113565",
+        "state": "settled",
+        "input_tokens": 921,
+        "output_tokens": 116,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00020775"
+      },
+      {
+        "prompt_sha256": "f5cc0955b02f505e5c729c0c31caf81ca46960894e6c4321f0f3675abf276bda",
+        "input_token_upper_bound": 2346,
+        "reserved_usd": "0.0008319",
+        "state": "settled",
+        "input_tokens": 343,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005505"
+      },
+      {
+        "prompt_sha256": "d892e866d256acab41f5b546b306fbfb988758cd19a826d81688f7614942533a",
+        "input_token_upper_bound": 4400,
+        "reserved_usd": "0.00114",
+        "state": "settled",
+        "input_tokens": 930,
+        "output_tokens": 80,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001875"
+      },
+      {
+        "prompt_sha256": "808870e45849ff4ac69ab4a179304e66c37e95afe58f3bcc8b9272dd3f416ea9",
+        "input_token_upper_bound": 2376,
+        "reserved_usd": "0.0008364",
+        "state": "settled",
+        "input_tokens": 359,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00005745"
+      },
+      {
+        "prompt_sha256": "5eef6ff3a01e1d3996ebdb94a0e17733c680e1e50d7d277fbe8db177494b6a81",
+        "input_token_upper_bound": 4374,
+        "reserved_usd": "0.0011361",
+        "state": "settled",
+        "input_tokens": 922,
+        "output_tokens": 81,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0001869"
+      },
+      {
+        "prompt_sha256": "3332e3916b6e7afa8d940a8baf13a34852602028d2c38ad61bb9762b5e3d11ae",
+        "input_token_upper_bound": 2337,
+        "reserved_usd": "0.00083055",
+        "state": "settled",
+        "input_tokens": 346,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000555"
+      },
+      {
+        "prompt_sha256": "2555fe4ffb3a4130969f8b1c15f9a5ab2d1c7d65b8ccba37f07eb4f878e667d6",
+        "input_token_upper_bound": 4384,
+        "reserved_usd": "0.0011376",
+        "state": "settled",
+        "input_tokens": 931,
+        "output_tokens": 89,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00019305"
+      },
+      {
+        "prompt_sha256": "7cb8d883fbe1f15224eb319618877f125715532336e060ef802e843a5bd1bfa6",
+        "input_token_upper_bound": 2519,
+        "reserved_usd": "0.00085785",
+        "state": "settled",
+        "input_tokens": 413,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.00006555"
+      },
+      {
+        "prompt_sha256": "999a8604a7255dea027b7c24d6ed300a2bea12a562e4fc9ae2559db3ff13eb22",
+        "input_token_upper_bound": 4353,
+        "reserved_usd": "0.00113295",
+        "state": "settled",
+        "input_tokens": 918,
+        "output_tokens": 106,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0002013"
+      },
+      {
+        "prompt_sha256": "834449569d26290d1e507fd5322ad0839ebf2176b021ebb355146252cecd02d2",
+        "input_token_upper_bound": 2457,
+        "reserved_usd": "0.00084855",
+        "state": "settled",
+        "input_tokens": 382,
+        "output_tokens": 6,
+        "model": "gpt-4o-mini-2024-07-18",
+        "estimated_usd": "0.0000609"
+      }
+    ],
+    "cached_discount_applied": false
+  },
+  "not_executed": [],
+  "publication_transform": {
+    "retrieved_excerpt_bodies": "Replaced by SHA256 and character length; original known-source snippets are reviewed privately and targeted evidence is in semantic review. Model answers and source IDs unchanged.",
+    "raw_run_sha256": "0a3ffb1464799a1b8b25b1101af2c2f1d8d5636072e168b66d09d813a9b840fd",
+    "semantic_review_evidence": "reports/split-v4-live-review.json",
+    "semantic_review_field": "Measured runner pending fields preserved as captured; completed R6 AI review is separate in split-v4-live-review.json. Human review remains pending.",
+    "rag_live_call_field": "rag.live_model_calls=0 is pre-run retrieval metadata, not a count of this completed live experiment. Actual successful API requests=125 in budget/summary."
+  }
+}

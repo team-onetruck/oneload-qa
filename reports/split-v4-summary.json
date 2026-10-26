@@ -1,5 +1,5 @@
 {
-  "recorded_at_kst": "2026-10-26T11:46:10.754745+09:00",
+  "recorded_at_kst": "2026-10-26T12:41:13.531681+09:00",
   "qa_base": "846f0ecd6dfd3b9151a7ee2a4524fd88da1d46cd",
   "freeze_commit": "a4aa8495c5db4bfaf19a1149e09789fdd1e242f3",
   "dataset_sha256": "a9ecdf632bfaf110dc12d1615974023a52d4a48b135e03b554975650e5365dd7",
@@ -7,7 +7,7 @@
   "authorization": {
     "split_evaluation_requested": true,
     "initial_live_authorization": "48 questions once, maximum USD1",
-    "latest_user_steering": "Actual answer evaluation deferred after authentication failure. No further live calls without explicit resume."
+    "latest_user_steering": "User explicitly resumed once after setting local key: actual answers only. First48 live answers completed, no repetition authorized by this completion."
   },
   "criteria": {
     "version": "split-gates-v1",
@@ -93,38 +93,96 @@
     "evidence": "reports/split-v4-answer-contract.json"
   },
   "actual_answer_quality": {
-    "status": "DEFERRED_BY_USER_AFTER_AUTH_FAILURE",
-    "completed_questions": 0,
+    "status": "COMPLETE_ONE_PASS_R6_AI_REVIEW_HUMAN_PENDING",
+    "completed_questions": 48,
     "planned_questions": 48,
-    "api_requests_attempted": 1,
-    "successful_model_responses": 0,
-    "failure_class": "AuthenticationError",
-    "unsupported_facts": null,
-    "irrelevant_sources": null,
-    "positive_utility": null,
-    "negative_refusal_quality": null,
-    "human_review": "pending",
-    "evidence": "reports/split-v4-live-attempt.json",
+    "repetitions": 1,
+    "new_successful_api_requests": 125,
+    "attempts_including_prior_auth_failure": 126,
+    "model_requested": "gpt-4o-mini",
+    "model_returned": "gpt-4o-mini-2024-07-18",
+    "prompt_version": "v5",
+    "positive": {
+      "total": 24,
+      "answered": 15,
+      "cannot_answer": 9,
+      "frozen_all_required_facts_supported_pass": 10,
+      "provisional_utility_rate": 0.4166666666666667,
+      "partial_required_facts": [
+        "V4-05-ko",
+        "V4-09-ko"
+      ],
+      "definite_factual_contradictions": [
+        "V4-03-ko",
+        "V4-04-ko"
+      ],
+      "extra_date_claim_review_needed": [
+        "V4-12-en"
+      ],
+      "core_question_correct_diagnostic": 13,
+      "rubric_note": "Literal frozen all-facts rule. Core-correct omissions and extra-date uncertainty are separate from two definite errors; human review pending."
+    },
+    "negative": {
+      "total": 24,
+      "strict_contract_pass": 20,
+      "sources_empty": 24,
+      "no_unsupported_substantive_claim_observed": 24,
+      "status_counts": {
+        "cannot_answer": 20,
+        "needs_clarification": 3,
+        "out_of_scope": 1
+      },
+      "safe_other_status_not_strict_pass": [
+        "V4-20-en",
+        "V4-21-ko",
+        "V4-23-ko",
+        "V4-23-en"
+      ]
+    },
+    "mechanical_citation_error_cases": 0,
+    "source_metadata_checks": 17,
+    "source_url_or_verified_at_mismatches": 0,
+    "definite_semantic_grounding_error_cases": 2,
+    "misapplied_source_cases": [
+      "V4-04-ko"
+    ],
+    "additional_semantic_claim_review_cases": [
+      "V4-12-en"
+    ],
+    "human_review": "pending48 gold and output cases",
     "cost": {
-      "usage_returned": false,
-      "actual_billed_cost_usd": null,
-      "conservative_reservation_usd": "0.00114405",
-      "reservation_is_not_actual_charge": true,
       "authorized_total_cap_usd": 1,
-      "resume_must_carry_previous_reservation": true
-    }
+      "successful_requests_usage_estimate_usd": "0.01747545",
+      "previous_unknown_usage_reservation_usd": "0.00114405",
+      "conservative_total_estimate_and_reservation_usd": "0.01861950",
+      "actual_invoice_cost_usd": null,
+      "reservation_is_not_actual_charge": true,
+      "cached_input_discount_applied": false,
+      "input_tokens": 90267,
+      "output_tokens": 6559,
+      "rate_input_usd_per_million": "0.15",
+      "rate_output_usd_per_million": "0.60",
+      "rate_source": "https://developers.openai.com/api/docs/models/gpt-4o-mini"
+    },
+    "evidence": [
+      "reports/split-v4-live-answers.json",
+      "reports/split-v4-live-review.json"
+    ],
+    "scope": "Frozen candidate only; stateless LLMAgent.handle_message, not HTTP/deployment/main baseline. No fresh primary retrieval run, embeddings or DB.",
+    "runner_sha256": "f510be1d6d4512897117770198d4db939460890f9902dcd59495d2673ce58b0a"
   },
   "qa_tests": {
     "tests": 61,
     "failures": 0,
     "errors": 0,
-    "skipped": 0
+    "skipped": 0,
+    "execution_note": "61/61 from preceding QA code change; not rerun for this result/doc-only update."
   },
   "quality_acceptance": {
     "overall": "NOT_ACCEPTED",
     "retrieval": "FAIL:19/24 below90%",
     "mock_contract": "FAIL:visible citation truncation leaves extra source",
-    "live_semantics": "NOT_RUN/USER_DEFERRED",
+    "live_semantics": "FAIL: two definite contradictions; literal positive utility10/24; strict negative20/24; human review pending",
     "RAG_or_QA_issue_closed": false
   },
   "reproducibility": {
@@ -141,10 +199,12 @@
     "runner_hashes_at_execution": {
       "retrieval_main": "ce4b10eea5e68feee929e40a8269303df9346b335df465246b031e7196610d68",
       "retrieval_candidate": "ce4b10eea5e68feee929e40a8269303df9346b335df465246b031e7196610d68",
-      "live_attempt": "ce4b10eea5e68feee929e40a8269303df9346b335df465246b031e7196610d68"
+      "live_attempt": "ce4b10eea5e68feee929e40a8269303df9346b335df465246b031e7196610d68",
+      "live_completed": "f510be1d6d4512897117770198d4db939460890f9902dcd59495d2673ce58b0a"
     },
     "final_script_sha256": "f510be1d6d4512897117770198d4db939460890f9902dcd59495d2673ce58b0a",
-    "post_attempt_runner_change": "Added safe local key selection and carried-budget resume for zero-answer auth failure; no primary search/model rerun. Added2 resume regression tests."
+    "post_attempt_runner_change": "Added safe local key selection and carried-budget resume for zero-answer auth failure; no primary search/model rerun. Added2 resume regression tests.",
+    "current_live_code_changes": "None; existing c1c5f30 runner used with carried auth-failure reserve."
   },
   "preservation": {
     "oneload-app": {
@@ -182,12 +242,37 @@
     "gold_human_review": "48 cases pending",
     "synthetic_bilingual_pairs_correlated": true,
     "same_corpus_intent_overlap": true,
-    "now_exposed_v4": "Regression only for future revised implementations; no same-set optimization/approval. First live evaluation on same frozen code requires explicit user resume.",
+    "now_exposed_v4": "First frozen candidate live48 complete; later revised code must treat v4 as exposed regression, not a fresh holdout. No primary rerun this task.",
     "HTTP_or_deployed_runtime": "NOT_RUN in this experiment",
     "live_main_answer_baseline": "NOT_RUN",
     "real_embedding_calls": 0,
     "field_or_phone_validation": false,
     "database_or_deployment_used": false,
-    "raw_logs_or_credentials_published": false
-  }
+    "raw_logs_or_credentials_published": false,
+    "human_output_review": "48 cases pending"
+  },
+  "historical_initial_live_attempt": {
+    "status": "DEFERRED_BY_USER_AFTER_AUTH_FAILURE",
+    "completed_questions": 0,
+    "planned_questions": 48,
+    "api_requests_attempted": 1,
+    "successful_model_responses": 0,
+    "failure_class": "AuthenticationError",
+    "unsupported_facts": null,
+    "irrelevant_sources": null,
+    "positive_utility": null,
+    "negative_refusal_quality": null,
+    "human_review": "pending",
+    "evidence": "reports/split-v4-live-attempt.json",
+    "cost": {
+      "usage_returned": false,
+      "actual_billed_cost_usd": null,
+      "conservative_reservation_usd": "0.00114405",
+      "reservation_is_not_actual_charge": true,
+      "authorized_total_cap_usd": 1,
+      "resume_must_carry_previous_reservation": true
+    }
+  },
+  "live_resume_qa_base": "c1c5f30df14edfde89addfa59b0668b0c62915e9",
+  "preservation_checked_at_kst": "2026-10-26T12:41:13.531681+09:00"
 }

@@ -1,0 +1,1162 @@
+{
+  "reviewed_at_kst": "2026-10-26T12:41:13.531681+09:00",
+  "reviewer": "R6 evidence-based AI review (Codex), not human certification or a paid LLM judge",
+  "method": "Read all48 final messages, returned sources, actual search query/excerpts and frozen gold/source material. Pattern checks are diagnostic only. No new model calls for grading.",
+  "evaluation_frame": "Correctness against the frozen corpus, not independent verification of present-day fares or station operations.",
+  "evidence": "reports/split-v4-live-answers.json",
+  "freeze_commit": "a4aa8495c5db4bfaf19a1149e09789fdd1e242f3",
+  "dataset_sha256": "a9ecdf632bfaf110dc12d1615974023a52d4a48b135e03b554975650e5365dd7",
+  "counts": {
+    "supported_complete": 10,
+    "factual_contradiction": 2,
+    "abstained_on_answerable_question": 9,
+    "partial_required_facts": 2,
+    "review_needed_extra_date": 1,
+    "strict_negative_pass": 20,
+    "safe_nonanswer_status_deviation": 4
+  },
+  "human_review": "pending48 gold and output cases",
+  "rubric_caveats": [
+    "All required_facts were frozen before results; none were weakened or relabelled.",
+    "V4-05-ko andV4-09-ko correctly answer the core question but omit extra context in required_facts. Mark partial under the literal rule, not factual errors.",
+    "V4-12-en core answer is supported; its additional effective-date inference requires human review. Excluded from strict pass provisionally; not counted as a third definite contradiction.",
+    "Core-question correctness13/24 is a secondary diagnostic, not a replacement acceptance threshold.",
+    "24/24 safe negative outputs do not replace the strict cannot_answer contract20/24."
+  ],
+  "rows": [
+    {
+      "id": "V4-01-ko",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Child aged6 to under13:9500 KRW; adult selling fare13000 KRW. Do not confuse with regular T1/T2 fares18500/19100."
+      ],
+      "source_locators": [
+        "doc-fare-arex-express.md:ko/en fare bullets"
+      ],
+      "returned_source_ids": [
+        "doc-fare-arex-express"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "supported_complete",
+      "frozen_utility_pass": true,
+      "core_question_correct": true,
+      "note": "어린이9500·어른 판매운임13000을 정상운임과 혼동하지 않고 답했다."
+    },
+    {
+      "id": "V4-01-en",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Child aged6 to under13:9500 KRW; adult selling fare13000 KRW. Do not confuse with regular T1/T2 fares18500/19100."
+      ],
+      "source_locators": [
+        "doc-fare-arex-express.md:ko/en fare bullets"
+      ],
+      "returned_source_ids": [
+        "doc-fare-arex-express"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "supported_complete",
+      "frozen_utility_pass": true,
+      "core_question_correct": true,
+      "note": "어린이9500·어른 판매운임13000을 정상운임과 혼동하지 않고 답했다."
+    },
+    {
+      "id": "V4-02-ko",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Transit-card fare4450; single-journey surcharge100; deposit500. Total5050 is valid only if the components remain correctly identified."
+      ],
+      "source_locators": [
+        "doc-fare-arex-allstop.md:Seoul destination list and single-journey bullet"
+      ],
+      "returned_source_ids": [
+        "doc-fare-arex-allstop"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "supported_complete",
+      "frozen_utility_pass": true,
+      "core_question_correct": true,
+      "note": "서울역→공항화물청사4450, 1회권 추가100, 보증금500을 구분했다."
+    },
+    {
+      "id": "V4-02-en",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Transit-card fare4450; single-journey surcharge100; deposit500. Total5050 is valid only if the components remain correctly identified."
+      ],
+      "source_locators": [
+        "doc-fare-arex-allstop.md:Seoul destination list and single-journey bullet"
+      ],
+      "returned_source_ids": [
+        "doc-fare-arex-allstop"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "supported_complete",
+      "frozen_utility_pass": true,
+      "core_question_correct": true,
+      "note": "서울역→공항화물청사4450, 1회권 추가100, 보증금500을 구분했다."
+    },
+    {
+      "id": "V4-03-ko",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Gimpo Airport to Unseo:3450 KRW; same fare in either direction."
+      ],
+      "source_locators": [
+        "doc-fare-arex-allstop.md:full table Gimpo Airport row/Unseo column"
+      ],
+      "returned_source_ids": [
+        "doc-fare-arex-allstop"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": true,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "factual_contradiction",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "김포공항→운서3450원이어야 하나3850원(서울역→운서)을 답했다. 인용 문서 자체는 관련 운임표지만 해당 구간 주장을 지지하지 않는다.",
+      "evidence": {
+        "document_id": "doc-fare-arex-allstop",
+        "actual_rewritten_query": "일반열차 성인 선불카드 기준운임표의 금액",
+        "observed_query_loss": "출발역 김포공항과 도착역 운서가 검색어에서 사라졌다.",
+        "retrieved_excerpt": "서울역 출발 운임 목록의 운서3850은 포함하지만 전체 역간표의 김포공항→운서3450은 발췌에 없다.",
+        "attribution_limit": "검색어 유실·발췌 누락과 잘못된 구간 적용이 함께 관찰됐다. 하나만 고치면 해결된다는 인과 실험은 하지 않았다."
+      }
+    },
+    {
+      "id": "V4-03-en",
+      "kind": "positive",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Gimpo Airport to Unseo:3450 KRW; same fare in either direction."
+      ],
+      "source_locators": [
+        "doc-fare-arex-allstop.md:full table Gimpo Airport row/Unseo column"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "abstained_on_answerable_question",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "동결 코퍼스에 정답 근거가 있으나 cannot_answer·출처0으로 거절했다. 허위 사실 생성과 구분하며 양성 유용성은 통과하지 못한다."
+    },
+    {
+      "id": "V4-04-ko",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Youth13-18 seven-day charge13000; adult20000; youth verification on T-money Card&Pay website. Physical card3000 is separate if mentioned."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:Climate Card subsection"
+      ],
+      "returned_source_ids": [
+        "doc-fare-passes-cards",
+        "doc-climate-card-short-term",
+        "doc-tmoney-card"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": true,
+      "misapplied_source_ids": [
+        "doc-tmoney-card"
+      ],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "factual_contradiction",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "16세 기후동행7일권은청소년13000원·티머니 카드&페이 청소년 인증인데, 성인과 같은20000원·청소년할인 없음으로 답했다. 일반 티머니 생년월일 등록을 다른 상품에 섞었다.",
+      "evidence": {
+        "document_id": "doc-fare-passes-cards",
+        "retrieved_support_already_present": "청소년(만13~18세)은7일권만13000원, 티머니 카드&페이 누리집 청소년 인증이라는 명시 근거가 실제 검색 발췌에 있다.",
+        "misapplied_source": "doc-tmoney-card는 일반 티머니의 생년월일 등록 안내다. 기후동행카드 할인 자격을 부정하는 근거가 아니다.",
+        "attribution_limit": "올바른 근거가 전달됐는데도 반대 결론을 생성했다. 단순 검색 누락으로 분류하지 않는다."
+      }
+    },
+    {
+      "id": "V4-04-en",
+      "kind": "positive",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Youth13-18 seven-day charge13000; adult20000; youth verification on T-money Card&Pay website. Physical card3000 is separate if mentioned."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:Climate Card subsection"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "abstained_on_answerable_question",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "동결 코퍼스에 정답 근거가 있으나 cannot_answer·출처0으로 거절했다. 허위 사실 생성과 구분하며 양성 유용성은 통과하지 못한다."
+    },
+    {
+      "id": "V4-05-ko",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Seven-day listed price64500; included deposit5000; refund4500 and fee500. After17:00 price61500 may be mentioned only with that condition."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:Mpass subsection"
+      ],
+      "returned_source_ids": [
+        "doc-fare-passes-cards"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "partial_required_facts",
+      "frozen_utility_pass": false,
+      "core_question_correct": true,
+      "note": "질문에서 직접 묻는 보증금 포함/5000·환급4500·수수료500은 정확하다. 동결 required_facts의 총가격64500은 생략해 문자 그대로의 전체사실 gate에는 미달이다. 잘못된 금액을 답한 사례는 아니다."
+    },
+    {
+      "id": "V4-05-en",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Seven-day listed price64500; included deposit5000; refund4500 and fee500. After17:00 price61500 may be mentioned only with that condition."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:Mpass subsection"
+      ],
+      "returned_source_ids": [
+        "doc-fare-passes-cards"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "supported_complete",
+      "frozen_utility_pass": true,
+      "core_question_correct": true,
+      "note": "엠패스7일64500·포함 보증금5000·환급4500·수수료500이 근거와 일치한다."
+    },
+    {
+      "id": "V4-06-ko",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Top-up1000 to90000 in1000 increments; maximum stored balance500000 KRW."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:T-money subsection"
+      ],
+      "returned_source_ids": [
+        "doc-fare-passes-cards"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "supported_complete",
+      "frozen_utility_pass": true,
+      "core_question_correct": true,
+      "note": "충전1000~90000·1000단위·최대잔액500000이 근거와 일치한다."
+    },
+    {
+      "id": "V4-06-en",
+      "kind": "positive",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Top-up1000 to90000 in1000 increments; maximum stored balance500000 KRW."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:T-money subsection"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "abstained_on_answerable_question",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "동결 코퍼스에 정답 근거가 있으나 cannot_answer·출처0으로 거절했다. 허위 사실 생성과 구분하며 양성 유용성은 통과하지 못한다."
+    },
+    {
+      "id": "V4-07-ko",
+      "kind": "positive",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Ordinary prepaid T-money top-up is KRW cash only even at new kiosks. Credit-card availability for single-journey/commuter/Climate products does not mean prepaid T-money top-up."
+      ],
+      "source_locators": [
+        "doc-tmoney-card.md:Top-up subsection"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "abstained_on_answerable_question",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "동결 코퍼스에 정답 근거가 있으나 cannot_answer·출처0으로 거절했다. 허위 사실 생성과 구분하며 양성 유용성은 통과하지 못한다."
+    },
+    {
+      "id": "V4-07-en",
+      "kind": "positive",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Ordinary prepaid T-money top-up is KRW cash only even at new kiosks. Credit-card availability for single-journey/commuter/Climate products does not mean prepaid T-money top-up."
+      ],
+      "source_locators": [
+        "doc-tmoney-card.md:Top-up subsection"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "abstained_on_answerable_question",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "동결 코퍼스에 정답 근거가 있으나 cannot_answer·출처0으로 거절했다. 허위 사실 생성과 구분하며 양성 유용성은 통과하지 못한다."
+    },
+    {
+      "id": "V4-08-ko",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Deposit can be returned anytime if card is not lost/damaged; own-fault loss/damage means no deposit refund. No made-up deadline or penalty."
+      ],
+      "source_locators": [
+        "doc-deposit-refund.md:refund timing and lost/damaged bullet"
+      ],
+      "returned_source_ids": [
+        "doc-deposit-refund"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "supported_complete",
+      "frozen_utility_pass": true,
+      "core_question_correct": true,
+      "note": "분실·훼손이 없으면 언제든 환급, 본인 부주의의 분실·훼손은 환급 불가를 답했다."
+    },
+    {
+      "id": "V4-08-en",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Deposit can be returned anytime if card is not lost/damaged; own-fault loss/damage means no deposit refund. No made-up deadline or penalty."
+      ],
+      "source_locators": [
+        "doc-deposit-refund.md:refund timing and lost/damaged bullet"
+      ],
+      "returned_source_ids": [
+        "doc-deposit-refund"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "supported_complete",
+      "frozen_utility_pass": true,
+      "core_question_correct": true,
+      "note": "분실·훼손이 없으면 언제든 환급, 본인 부주의의 분실·훼손은 환급 불가를 답했다."
+    },
+    {
+      "id": "V4-09-ko",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Freeze WOWPASS balance and recover through reissue; T-money balance cannot be recovered. Do not invent reissue fee."
+      ],
+      "source_locators": [
+        "doc-wowpass.md:Withdrawal/refund/loss subsection"
+      ],
+      "returned_source_ids": [
+        "doc-wowpass"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "partial_required_facts",
+      "frozen_utility_pass": false,
+      "core_question_correct": true,
+      "note": "결제잔액 회복 가능/티머니잔액 불가·앱 정지는 정확하다. 동결 required_facts의 재발급을 통한 회복 절차는 생략했다. 핵심 질문을 오답으로 재분류하지 않는다."
+    },
+    {
+      "id": "V4-09-en",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Freeze WOWPASS balance and recover through reissue; T-money balance cannot be recovered. Do not invent reissue fee."
+      ],
+      "source_locators": [
+        "doc-wowpass.md:Withdrawal/refund/loss subsection"
+      ],
+      "returned_source_ids": [
+        "doc-wowpass"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "supported_complete",
+      "frozen_utility_pass": true,
+      "core_question_correct": true,
+      "note": "앱 정지와 재발급을 통한 결제잔액 회복, 티머니잔액 회복 불가를 구분했다."
+    },
+    {
+      "id": "V4-10-ko",
+      "kind": "positive",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Cannot recharge at AREX/KORAIL/Shinbundang stations. Eligible Line1 Seoul-Cheongnyangni, Lines2-9, Ui-Sinseol and Sillim reload machines."
+      ],
+      "source_locators": [
+        "doc-climate-card-short-term.md:Buying and charging subsection"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "abstained_on_answerable_question",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "동결 코퍼스에 정답 근거가 있으나 cannot_answer·출처0으로 거절했다. 허위 사실 생성과 구분하며 양성 유용성은 통과하지 못한다."
+    },
+    {
+      "id": "V4-10-en",
+      "kind": "positive",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Cannot recharge at AREX/KORAIL/Shinbundang stations. Eligible Line1 Seoul-Cheongnyangni, Lines2-9, Ui-Sinseol and Sillim reload machines."
+      ],
+      "source_locators": [
+        "doc-climate-card-short-term.md:Buying and charging subsection"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "abstained_on_answerable_question",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "동결 코퍼스에 정답 근거가 있으나 cannot_answer·출처0으로 거절했다. 허위 사실 생성과 구분하며 양성 유용성은 통과하지 못한다."
+    },
+    {
+      "id": "V4-11-ko",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Express requires a separately purchased ticket; a transit-card tap does not replace it."
+      ],
+      "source_locators": [
+        "doc-fare-arex-express.md:separate-ticket bullet",
+        "doc-arex-train-types.md:Express guidance"
+      ],
+      "returned_source_ids": [
+        "doc-fare-arex-express"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "supported_complete",
+      "frozen_utility_pass": true,
+      "core_question_correct": true,
+      "note": "직통열차는 별도 승차권이 필요하며 티머니 잔액만으로 탑승할 수 없다고 답했다."
+    },
+    {
+      "id": "V4-11-en",
+      "kind": "positive",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Express requires a separately purchased ticket; a transit-card tap does not replace it."
+      ],
+      "source_locators": [
+        "doc-fare-arex-express.md:separate-ticket bullet",
+        "doc-arex-train-types.md:Express guidance"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "abstained_on_answerable_question",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "동결 코퍼스에 정답 근거가 있으나 cannot_answer·출처0으로 거절했다. 허위 사실 생성과 구분하며 양성 유용성은 통과하지 못한다."
+    },
+    {
+      "id": "V4-12-ko",
+      "kind": "positive",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Current stored terms/tourism guide permits credit-card single-journey purchases including visitors foreign-issued cards at AREX stations T2 toSeoul. Do not extend this to ordinary T-money top-up."
+      ],
+      "source_locators": [
+        "doc-allstop-ticket.md:AREX terms Article4-1 and tourism guide bullets"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "abstained_on_answerable_question",
+      "frozen_utility_pass": false,
+      "core_question_correct": false,
+      "note": "동결 코퍼스에 정답 근거가 있으나 cannot_answer·출처0으로 거절했다. 허위 사실 생성과 구분하며 양성 유용성은 통과하지 못한다."
+    },
+    {
+      "id": "V4-12-en",
+      "kind": "positive",
+      "status": "answered",
+      "required_facts": [
+        "Current stored terms/tourism guide permits credit-card single-journey purchases including visitors foreign-issued cards at AREX stations T2 toSeoul. Do not extend this to ordinary T-money top-up."
+      ],
+      "source_locators": [
+        "doc-allstop-ticket.md:AREX terms Article4-1 and tourism guide bullets"
+      ],
+      "returned_source_ids": [
+        "doc-allstop-ticket"
+      ],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": true,
+      "human_gold_and_output_review": "pending",
+      "classification": "review_needed_extra_date",
+      "frozen_utility_pass": false,
+      "core_question_correct": true,
+      "note": "해외 여행객 신용카드의 일반열차1회권 구매 가능이라는 핵심은 맞다. 다만 “implemented ... in February2025”는 자료의 KTO 안내 시점을 시행일로 읽을 수 있어 추가 근거가 필요하다. 명백한 운임 오답2건과 별도 검토 표시한다.",
+      "evidence": {
+        "document_id": "doc-allstop-ticket",
+        "source_date_role": "KTO(February2025)는 안내 출처 시점이고, 별도 약관 개정일은27December2024다. 실제 시행일이February2025라고 명시하지 않는다.",
+        "claim_to_check": "This change was implemented according to the Korea Tourism Organization in February 2025."
+      }
+    },
+    {
+      "id": "V4-13-ko",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Receipt reissue fee not documented; do not substitute train fare."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-13-en",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Receipt reissue fee not documented; do not substitute train fare."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-14-ko",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Delivery fee not documented; do not substitute physical-card price."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-14-en",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Delivery fee not documented; do not substitute physical-card price."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-15-ko",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Delay compensation not documented; do not substitute pass prices or refund fee."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-15-en",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Delay compensation not documented; do not substitute pass prices or refund fee."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-16-ko",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Issuer authentication fee not documented; withdrawal fee is a different service."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-16-en",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Issuer authentication fee not documented; withdrawal fee is a different service."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-17-ko",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Online replacement postage not documented; child base fare is unrelated."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-17-en",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Online replacement postage not documented; child base fare is unrelated."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-18-ko",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Pet-only seat surcharge not documented; do not invent availability or fee."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-18-en",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Pet-only seat surcharge not documented; do not invent availability or fee."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-19-ko",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "No live elevator status tool or evidence."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-19-en",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "No live elevator status tool or evidence."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-20-ko",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "No live timetable/departure tool; no countdown."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-20-en",
+      "kind": "negative",
+      "status": "needs_clarification",
+      "required_facts": [
+        "No live timetable/departure tool; no countdown."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "safe_nonanswer_status_deviation",
+      "strict_negative_pass": false,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 정보 추측과 출처는 없지만 다른 status라 사전 cannot_answer 계약에는 미달이다. 안전한 비답변과 strict 통과를 나눠 기록한다."
+    },
+    {
+      "id": "V4-21-ko",
+      "kind": "negative",
+      "status": "out_of_scope",
+      "required_facts": [
+        "No live seat/sold-out tool."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "safe_nonanswer_status_deviation",
+      "strict_negative_pass": false,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 정보 추측과 출처는 없지만 다른 status라 사전 cannot_answer 계약에는 미달이다. 안전한 비답변과 strict 통과를 나눠 기록한다."
+    },
+    {
+      "id": "V4-21-en",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "No live seat/sold-out tool."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-22-ko",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Machine-error processing period not verified; ordinary refund procedure cannot establish a deadline."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-22-en",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Machine-error processing period not verified; ordinary refund procedure cannot establish a deadline."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-23-ko",
+      "kind": "negative",
+      "status": "needs_clarification",
+      "required_facts": [
+        "Exact nearest kiosk location/ID is explicitly unverified; do not fabricate a floor or machine ID."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "safe_nonanswer_status_deviation",
+      "strict_negative_pass": false,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 정보 추측과 출처는 없지만 다른 status라 사전 cannot_answer 계약에는 미달이다. 안전한 비답변과 strict 통과를 나눠 기록한다."
+    },
+    {
+      "id": "V4-23-en",
+      "kind": "negative",
+      "status": "needs_clarification",
+      "required_facts": [
+        "Exact nearest kiosk location/ID is explicitly unverified; do not fabricate a floor or machine ID."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "safe_nonanswer_status_deviation",
+      "strict_negative_pass": false,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 정보 추측과 출처는 없지만 다른 status라 사전 cannot_answer 계약에는 미달이다. 안전한 비답변과 strict 통과를 나눠 기록한다."
+    },
+    {
+      "id": "V4-24-ko",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Locker dimensions and fit are outside the corpus; no fabricated measurements."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    },
+    {
+      "id": "V4-24-en",
+      "kind": "negative",
+      "status": "cannot_answer",
+      "required_facts": [
+        "Locker dimensions and fit are outside the corpus; no fabricated measurements."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "returned_source_ids": [],
+      "citation_mechanics_pass": true,
+      "source_url_and_verified_at_match_corpus": true,
+      "definite_unsupported_or_contradictory_claim": false,
+      "misapplied_source_ids": [],
+      "extra_claim_review_flag": false,
+      "human_gold_and_output_review": "pending",
+      "classification": "strict_negative_pass",
+      "strict_negative_pass": true,
+      "no_unsupported_substantive_claim_observed": true,
+      "sources_empty": true,
+      "note": "구체적 금액·시각·실시간 상태·정밀 위치 추측과 출처가 없다. cannot_answer 계약도 충족했다."
+    }
+  ]
+}

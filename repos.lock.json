@@ -122,7 +122,7 @@
       "previous_qa_baseline_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
     }
   ],
-  "updated_at_kst": "2026-10-26T11:46:10.754745+09:00",
+  "updated_at_kst": "2026-10-26T12:41:13.531681+09:00",
   "rag_profile_evidence": [
     "reports/rag-integration-probe.json",
     "reports/production-api-probe.json",
@@ -304,10 +304,23 @@
     "retrieval_candidate_top3": "19/24",
     "new_retrieval_gate_met": false,
     "answer_contract": "FakeLLM5/6; not factuality",
-    "live_phase": "USER_DEFERRED after auth error;0/48 outputs",
+    "live_phase": "COMPLETE48/48 once; quality gates fail; R6 AI review done, human pending",
     "latest_qa_tests": 61,
     "main_baseline_replaced": false,
     "actual_answer_calls_allowed_now": false,
-    "latest_user_request": "Defer actual answer evaluation"
+    "latest_user_request": "Resume actual48 answers once after local key setup; completed. No more calls.",
+    "live_document": "docs/split-v4-live-review.md",
+    "live_evidence": [
+      "reports/split-v4-live-answers.json",
+      "reports/split-v4-live-review.json"
+    ],
+    "live_reviewed_at_kst": "2026-10-26T12:41:13.531681+09:00",
+    "live_model": "gpt-4o-mini-2024-07-18",
+    "live_qa_base": "c1c5f30df14edfde89addfa59b0668b0c62915e9",
+    "live_cost_conservative_estimate_and_reservation_usd": "0.01861950",
+    "live_positive_answered": 15,
+    "live_positive_factual_error_cases": 2,
+    "live_negative_strict_contract": "20/24",
+    "primary_retrieval_repeated": false
   }
 }

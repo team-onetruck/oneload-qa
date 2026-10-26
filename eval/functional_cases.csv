@@ -13,5 +13,5 @@ TC-11,예외,AI·Vision 장애,"오류·재시도·수동 선택, 수동 목적�
 TC-12,예외,길을 잃음·위치 재확인·재탐색,최신 위치에서 등록 경로 재생성·시작 이벤트 후 이동,서버·화면 통합 필요,,NOT_RUN,,
 TC-13,정상,거리뷰 방향·파노라마 없음,"north_yaw+heading 방향 검증, 사진 없음 대체",Data main25.2 경로78/78·모든 노드쌍1521/1521 연결 / App 모의 화면26통과 / 실기기·현장 방향 미검증,경로 단절 재현 안 됨; 거리뷰 진행 표시 모의 회귀 통과. north_yaw·현장 방향 최종 인수는 미실행,PARTIAL,reports/route-connectivity.json; reports/routes-current-20261026.json; reports/latest-main-retest-20261026.json,지도 경로 보완은 main 확인; 실기기·현장 거리뷰 방향 검증 필요
 TC-14,예외,취소 뒤 지연 응답·중복/역순 이벤트,이전 응답이 목적지·상태를 복구하지 않음,추가 보완안 채택 범위 확정 필요,,NOT_RUN,,
-TC-15,정상,출처·확인 전 정보·예시 사진,"출처 표시, unverified 분리, 타 역사 샘플 표시",공식 문서2개+FakeLLM 인용/거절 계약6건; 실제 모델 의미 품질·휴대폰 인수 미실행,기계적 인용/거절5/6; 600자 뒤 인용이 잘려도 출처가 남는1건 실패. 실제 v4 답변은 인증 실패 후 사용자 보류로0/48,PARTIAL,reports/split-v4-answer-contract.json; reports/split-v4-summary.json,R2가 최종 표시 본문 기준 출처를 정합시키고 재검사; 실제 답변 평가는 사용자 재개 후 수행
+TC-15,정상,출처·확인 전 정보·예시 사진,"출처 표시, unverified 분리, 타 역사 샘플 표시",공식 문서2개+FakeLLM 계약6건과 동결v4 실제 답변48건1회; 휴대폰 인수·사람 검토 대기,이전 모의계약5/6의 인용 잘림 실패 유지; 실제48건 인용 구조 오류0이나 명확한 사실오류2·전체사실충족 잠정10/24·음성 strict20/24,PARTIAL,reports/split-v4-answer-contract.json; reports/split-v4-live-answers.json; reports/split-v4-live-review.json; reports/split-v4-summary.json,R2/R3가 역간표·상품/연령 근거 보완; 사람 정답/출력 검토; 실제48문항1회 완료로 추가 호출하지 않음
 TC-16,예외,모바일 카메라 거부·자이로 미지원·좁은 화면,"파일 선택·노선 안내 대체, 주요 버튼 사용 가능",휴대폰 수동 검증 미실행,,NOT_RUN,,
