@@ -1,5 +1,11 @@
 # 최신 검증 — 2026-10-26
 
+## 작성 이슈 점검 — 2026-10-26 10:46 KST
+
+[한길18건별 현재 판정](../docs/authored-issue-review-20261026.md) · [관찰·댓글·CI 증거](authored-issue-review-20261026.json). 열린4건 중 Data#2는 코드상 해결/종료 후보, Agent#7은 서버 해결·App#41로 잔여 분리 후보, App#41·RAG#3은 미완료다. 닫힌14건은 원래 수정 유지이며 실제 상태 변경은 하지 않았다. Agent 최신 CI 실패는 지도 사본 내용 차이이며 기존 토큰/옛 경로 오류와 구분한다. App1d0fc11 CI 성공과 RAGb6e3ad3 정적 변경을 관찰했지만 직전 전체 테스트 SHA를 바꾸지 않았다.
+
+---
+
 ## 최신 main 재실행 — 2026-10-26 10:12 KST
 
 [현재 결과·한계](../docs/latest-main-retest-20261026.md) · [전체 증거](latest-main-retest-20261026.json) · [기준선](baseline.json).

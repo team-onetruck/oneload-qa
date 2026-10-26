@@ -1,5 +1,15 @@
 # 한길 R6 QA/Eval
 
+## 본인 작성 이슈 점검 — 2026-10-26 10:46 KST
+
+mootwo0202 작성 한길18건(열림4·닫힘14)의 본문·답글·상태를 확인했다. [이슈별 판정](docs/authored-issue-review-20261026.md) · [구조화 관찰](reports/authored-issue-review-20261026.json).
+
+**Data#2는 등록 그래프 단절 해결·종료 후보**, Agent#7은 Backend500/슬롯 해결·App#41 이관 후 정리 후보, App#41은 생성 타입 미해결, RAG#3은 최초 예시 개선 후 품질 조건 미완료다. 닫힌14건의 원래 수정은 유지되며 GitHub 이슈 상태·댓글은 변경하지 않았다.
+
+최신 Agent CI의 실패는 **지도 사본 불일치**로 Contract check가 실패한 것이며, 과거 GH_TOKEN 문제와 다르다. App1d0fc11 CI verify/e2e/deploy는 success를 관찰했고, 웹 런타임 해시는 테스트한 dace4c1과 같다. Unity 실험 추가를 R6 실기기 검증으로 집계하지 않는다. RAG PR4 최신b6e3ad3은315701a와 비교한 모듈의 실행 AST가 같지만 새 전체 검사를 실행한 커밋으로 기록하지 않는다. 기존 기준선·동결 평가셋은 보존한다.
+
+---
+
 ## 최신 main 재검증 — 2026-10-26 10:12 KST
 
 App **dace4c1**·Backend2ebd94d·Agent **21378b5**·Data72d5eb8·RAG main f99704d를 고정해 다시 검사했다. **표준 전체 exit0**, QA51·Agent77통과/2xfail·Backend72·component20시나리오/21턴·API27/28/7 통과다. 출구/반납기78/78·전체노드쌍1521/1521 연결, 무료구역870쌍의 불필요한 gate0건이다. App lint/타입·단위519·빌드·모의 화면26건도 통과했다.

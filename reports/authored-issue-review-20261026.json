@@ -1,0 +1,493 @@
+{
+  "recorded_at_kst": "2026-10-26T10:46:32.642210+09:00",
+  "author": "mootwo0202",
+  "scope": "Public Hangil repositories only;18 authored issues: open4, closed14. Other-project/private contents are not copied to this repository.",
+  "github_issue_comment_state_mutations": false,
+  "issues": [
+    {
+      "repository": "team-onetruck/oneload_agent",
+      "number": 7,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/7",
+      "title": "[R6 QA][P0] 새 intent·슬롯 계약 불일치로 Backend messages 500 및 다음 턴 슬롯 소실",
+      "author": "mootwo0202",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-25T22:46:02Z",
+      "closed_at": null,
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload_agent/issues/7#issuecomment-6360388291",
+          "author": "mootwo0202"
+        },
+        {
+          "url": "https://github.com/team-onetruck/oneload_agent/issues/7#issuecomment-6392730954",
+          "author": "mootwo0202"
+        },
+        {
+          "url": "https://github.com/team-onetruck/oneload_agent/issues/7#issuecomment-6404461143",
+          "author": "lea5063"
+        }
+      ],
+      "verdict": "server_resolved_frontend_residual",
+      "evidence": "Current Agent21378b5/Backend2ebd94d API20-25 passes new intents and persisted slots. R2 latest reply confirms server resolution and asks QA whether to move residual to App41.",
+      "next_action": "Track generated contract in App41; this server issue is a consolidation/closure candidate, not an active Backend500."
+    },
+    {
+      "repository": "team-onetruck/oneload-rag",
+      "number": 3,
+      "url": "https://github.com/team-onetruck/oneload-rag/issues/3",
+      "title": "[R6 QA] MemorySearch가 호텔 가격·실시간 잔여석 질문에 무관한 문서를 반환함",
+      "author": "mootwo0202",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-25T17:35:00Z",
+      "closed_at": null,
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6356152143",
+          "author": "Junyeop-Shin"
+        },
+        {
+          "url": "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6357527651",
+          "author": "mootwo0202"
+        },
+        {
+          "url": "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6363404853",
+          "author": "Junyeop-Shin"
+        },
+        {
+          "url": "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6392730705",
+          "author": "mootwo0202"
+        },
+        {
+          "url": "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6400838070",
+          "author": "Junyeop-Shin"
+        }
+      ],
+      "verdict": "partially_improved_not_accepted",
+      "evidence": "Original two repro queries now empty at min_score0.35. Main public v3 remains21/24 top3 and14/24 empty; tested candidate315701a22/24 and8/24 empty. New b6e3ad3 changed source comments/docstrings only in compared modules.",
+      "next_action": "Keep quality pending; agree criteria and use a new precommitted evaluation. Do not count old public v3 as fresh or change criteria based on a comment."
+    },
+    {
+      "repository": "team-onetruck/oneload-app",
+      "number": 41,
+      "url": "https://github.com/team-onetruck/oneload-app/issues/41",
+      "title": "[R6 QA] 생성 OpenAPI 타입에 최신 intent 3개·슬롯 4개와 계획 계약이 누락됨",
+      "author": "mootwo0202",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-25T08:03:47Z",
+      "closed_at": null,
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-app/issues/41#issuecomment-6395184541",
+          "author": "mootwo0202"
+        }
+      ],
+      "verdict": "unresolved",
+      "evidence": "App1d0fc11 generated schema SHA d149702d69f8f9410463e9441250e5c131e9a705c030a7cba221a08b8af13a16 is unchanged; intents3, slots4 and plan/steps missing.",
+      "next_action": "Regenerate from current Backend OpenAPI and verify consumers; unit/build success is insufficient."
+    },
+    {
+      "repository": "team-onetruck/oneload-data",
+      "number": 2,
+      "url": "https://github.com/team-onetruck/oneload-data/issues/2",
+      "title": "[R6 QA] 새 반납기·1번 출구가 주요 출발점과 단방향 그래프에서 연결되지 않음",
+      "author": "mootwo0202",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-25T03:01:42Z",
+      "closed_at": null,
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-data/issues/2#issuecomment-6360392244",
+          "author": "mootwo0202"
+        },
+        {
+          "url": "https://github.com/team-onetruck/oneload-data/issues/2#issuecomment-6392730471",
+          "author": "mootwo0202"
+        }
+      ],
+      "verdict": "resolved_in_registered_graph_close_candidate",
+      "evidence": "Current Data72d5eb8 + Backend2ebd94d: prior same-SHA execution has78/78 destination routes,1521/1521 pairs, free-area870 pairs with0 unnecessary gates. Field survey is separate.",
+      "next_action": "Original graph-disconnection scope can be completed; keep field verification distinct."
+    },
+    {
+      "repository": "team-onetruck/oneload-infra",
+      "number": 1,
+      "url": "https://github.com/team-onetruck/oneload-infra/issues/1",
+      "title": "[docs] Backend·App의 private 표기가 실제 public 설정과 불일치",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-25T08:03:43Z",
+      "closed_at": "2026-10-25T08:03:43Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-infra/issues/1#issuecomment-6395183721",
+          "author": "mootwo0202"
+        }
+      ],
+      "verdict": "resolution_retained",
+      "evidence": "Current Infra public table and current App/Backend API visibility=public match.",
+      "next_action": "No further action for original documentation mismatch."
+    },
+    {
+      "repository": "team-onetruck/oneload-backend",
+      "number": 2,
+      "url": "https://github.com/team-onetruck/oneload-backend/issues/2",
+      "title": "[R6 QA] 대화에서 환급 완료로 갱신해도 행동 계획의 NOT_REFUNDED가 유지됨",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-25T03:01:48Z",
+      "closed_at": "2026-10-24T16:20:19Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-backend/issues/2#issuecomment-6386584127",
+          "author": "HuitaePark"
+        },
+        {
+          "url": "https://github.com/team-onetruck/oneload-backend/issues/2#issuecomment-6392731850",
+          "author": "mootwo0202"
+        }
+      ],
+      "verdict": "resolution_retained",
+      "evidence": "Same-SHA API26 shows REFUNDED with0 unfinished refund steps; Backend72 pass in prior current run.",
+      "next_action": "No recurrence in latest recorded local evidence."
+    },
+    {
+      "repository": "team-onetruck/oneload_agent",
+      "number": 6,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/6",
+      "title": "[R6 QA] main CI의 Backend pin·배포 전달이 GH_TOKEN 미제공으로 실패",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-23T06:29:58Z",
+      "closed_at": "2026-10-23T06:29:58Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload_agent/issues/6#issuecomment-6358949566",
+          "author": "mootwo0202"
+        }
+      ],
+      "verdict": "original_resolution_retained_new_ci_failure",
+      "evidence": "GH_TOKEN dispatch path was replaced by reusable Infra workflow. Current CI test/backend tests succeed, Contract check fails for map snapshot mismatch, deploy is skipped.",
+      "next_action": "Treat current map synchronization as a different cause; do not reopen a missing-token incident based only on overall CI failure."
+    },
+    {
+      "repository": "team-onetruck/oneload-app",
+      "number": 32,
+      "url": "https://github.com/team-onetruck/oneload-app/issues/32",
+      "title": "[R6 QA] main CI의 Backend 배포 전달 단계가 GH_TOKEN 미제공으로 실패",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-23T06:29:54Z",
+      "closed_at": "2026-10-23T06:29:54Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-app/issues/32#issuecomment-6358948752",
+          "author": "mootwo0202"
+        }
+      ],
+      "verdict": "resolution_retained",
+      "evidence": "GH_TOKEN dispatch path removed; latest App1d0fc11 CI verify/e2e/deploy jobs success.",
+      "next_action": "CI deployment success observed; endpoint behavior not checked in this review."
+    },
+    {
+      "repository": "team-onetruck/oneload-app",
+      "number": 16,
+      "url": "https://github.com/team-onetruck/oneload-app/issues/16",
+      "title": "[docs] Demo controls의 사진 결과 선택 설명이 현재 HTTP 동작과 불일치",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-23T02:49:29Z",
+      "closed_at": "2026-10-23T02:49:29Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-app/issues/16#issuecomment-6355856800",
+          "author": "minkyu-k530"
+        }
+      ],
+      "verdict": "resolution_retained",
+      "evidence": "Demo panel and mode switch are removed; README says photos follow actual server response and demo selection is unavailable. Web runtime hashes unchanged from reviewed dace4c1.",
+      "next_action": "No remaining original Demo-controls description mismatch."
+    },
+    {
+      "repository": "team-onetruck/oneload-qa",
+      "number": 4,
+      "url": "https://github.com/team-onetruck/oneload-qa/issues/4",
+      "title": "[QA] INT-06 감사가 mock 분기 문자열로 최신 HTTP 연결을 미연결로 보고함",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-23T02:41:08Z",
+      "closed_at": "2026-10-23T02:41:08Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-qa/issues/4#issuecomment-6356090145",
+          "author": "mootwo0202"
+        }
+      ],
+      "verdict": "resolution_retained",
+      "evidence": "QA frontend_wiring classifies reviewed file fingerprints, not mock marker text. Current App web runtime matches reviewed profile; prior QA51 and INT06 passed.",
+      "next_action": "Source review and runtime acceptance remain separate."
+    },
+    {
+      "repository": "team-onetruck/oneload-app",
+      "number": 11,
+      "url": "https://github.com/team-onetruck/oneload-app/issues/11",
+      "title": "[docs] README의 HTTP 채팅 연동 설명과 현재 화면 구현이 불일치",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-23T01:41:48Z",
+      "closed_at": "2026-10-23T01:41:48Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-app/issues/11#issuecomment-6355278730",
+          "author": "minkyu-k530"
+        }
+      ],
+      "verdict": "resolution_retained",
+      "evidence": "README and architecture describe single HTTP adapter; src/api/index.ts and current store call paths remain reviewed.",
+      "next_action": "Original chat-documentation mismatch not found."
+    },
+    {
+      "repository": "team-onetruck/oneload-rag",
+      "number": 2,
+      "url": "https://github.com/team-onetruck/oneload-rag/issues/2",
+      "title": "[docs][bug] Backend 연결 예제에서 LLMAgent vision 주입이 빠져 대화 사진을 읽지 않음",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-23T00:35:56Z",
+      "closed_at": "2026-10-23T00:35:56Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-rag/issues/2#issuecomment-6354420885",
+          "author": "Junyeop-Shin"
+        },
+        {
+          "url": "https://github.com/team-onetruck/oneload-rag/issues/2#issuecomment-6354508557",
+          "author": "mootwo0202"
+        }
+      ],
+      "verdict": "resolution_retained",
+      "evidence": "RAG README passes shared LLMVision to both LLMAgent and create_app. Same-SHA photo API15 and global provider assembly pass.",
+      "next_action": "No original vision injection omission found."
+    },
+    {
+      "repository": "team-onetruck/oneload-rag",
+      "number": 1,
+      "url": "https://github.com/team-onetruck/oneload-rag/issues/1",
+      "title": "[bug][CI] RAG_REQUIRE_CONTRACT가 pytest 단계에 적용되지 않아 계약 검사 누락을 통과 처리",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-23T00:35:51Z",
+      "closed_at": "2026-10-23T00:35:51Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload-rag/issues/1#issuecomment-6354425027",
+          "author": "Junyeop-Shin"
+        },
+        {
+          "url": "https://github.com/team-onetruck/oneload-rag/issues/1#issuecomment-6354507578",
+          "author": "mootwo0202"
+        }
+      ],
+      "verdict": "resolution_retained",
+      "evidence": "RAG_REQUIRE_CONTRACT remains in CI test job env, inherited by pytest. Forced-contract local full run executed all101 tests without skip, with3 separate map failures.",
+      "next_action": "Original silent contract-skip guard remains fixed; current map test failures are not skipped."
+    },
+    {
+      "repository": "team-onetruck/oneload-qa",
+      "number": 2,
+      "url": "https://github.com/team-onetruck/oneload-qa/issues/2",
+      "title": "[bug] Agent 예외 호환 수정 후 정적 클래스 비교가 INT-08을 거짓 양성으로 보고",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-22T23:41:32Z",
+      "closed_at": "2026-10-22T23:41:02Z",
+      "comments": [],
+      "verdict": "resolution_retained",
+      "evidence": "Current audit checks thrown exception behavior; actual FakeVision-down API responds503 AI_SERVICE_UNAVAILABLE.",
+      "next_action": "No class-identity false positive in current audit."
+    },
+    {
+      "repository": "team-onetruck/oneload_agent",
+      "number": 3,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/3",
+      "title": "[bug] 지도 저장소 분리 후 check_backend_compat.py가 삭제된 경로에서 중단",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-22T08:43:22Z",
+      "closed_at": "2026-10-22T08:42:59Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload_agent/issues/3#issuecomment-6336589868",
+          "author": "lea5063"
+        }
+      ],
+      "verdict": "original_resolution_retained_new_map_mismatch",
+      "evidence": "Resolver uses sibling Data or explicit --map-dir, old missing path crash absent. Current script exits1 because Agent snapshot differs from Data, confirmed by current CI Contract check.",
+      "next_action": "Keep original path issue closed; map snapshot synchronization is separate."
+    },
+    {
+      "repository": "team-onetruck/oneload_agent",
+      "number": 2,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/2",
+      "title": "[docs][bug] 연결 예제의 LLMAgent vision 주입 누락으로 대화 첨부 사진이 무시됨",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-22T08:43:16Z",
+      "closed_at": "2026-10-22T08:42:58Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload_agent/issues/2#issuecomment-6336587878",
+          "author": "lea5063"
+        }
+      ],
+      "verdict": "resolution_retained",
+      "evidence": "README/FAQ/handoff share LLMVision in both Agent and app; photo-question API15 and global shared-Vision checks pass in same-SHA prior evidence.",
+      "next_action": "Current compatibility E2E preflight skip does not mean the old injection bug returned."
+    },
+    {
+      "repository": "team-onetruck/oneload_agent",
+      "number": 1,
+      "url": "https://github.com/team-onetruck/oneload_agent/issues/1",
+      "title": "[bug][INT-08] LLMVision 장애 예외가 Backend와 달라 사진 위치 API가 500 반환",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-22T08:43:10Z",
+      "closed_at": "2026-10-22T08:42:57Z",
+      "comments": [
+        {
+          "url": "https://github.com/team-onetruck/oneload_agent/issues/1#issuecomment-6336586173",
+          "author": "lea5063"
+        }
+      ],
+      "verdict": "resolution_retained",
+      "evidence": "Current compat chooses Backend VisionUnavailable and current recorded API returns503 AI_SERVICE_UNAVAILABLE.",
+      "next_action": "Old Vision500 not reproduced."
+    },
+    {
+      "repository": "team-onetruck/oneload-qa",
+      "number": 1,
+      "url": "https://github.com/team-onetruck/oneload-qa/issues/1",
+      "title": "[bug] oneload-data 분리 후 옛 Backend 지도 경로로 QA 점검 중단",
+      "author": "mootwo0202",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-22T08:42:17Z",
+      "closed_at": "2026-10-22T08:42:17Z",
+      "comments": [],
+      "verdict": "resolution_retained",
+      "evidence": "QA resolves selected Data map; same-current-source full standard run completes exit0 with component21turns.",
+      "next_action": "Old deleted Backend map path failure not reproduced."
+    }
+  ],
+  "sources_observed": {
+    "qa": "d52e390fb1436203e76434887a881511f2af34a7",
+    "oneload-app": "1d0fc11a81b3ea9c316d14621d8dd57361bb18de",
+    "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+    "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+    "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+    "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107"
+  },
+  "reused_test_evidence": {
+    "commit": "d52e390fb1436203e76434887a881511f2af34a7",
+    "report": "reports/latest-main-retest-20261026.json",
+    "full_suite_rerun_this_review": false,
+    "note": "Previous execution counts remain tied to their tested SHA; observed new heads are not relabeled as newly tested."
+  },
+  "new_read_only_checks": {
+    "app_observed_head": "1d0fc11a81b3ea9c316d14621d8dd57361bb18de",
+    "app_web_runtime_hashes_equal_tested_dace4c1": true,
+    "app_generated_schema_sha256": "d149702d69f8f9410463e9441250e5c131e9a705c030a7cba221a08b8af13a16",
+    "app_native_Unity_added": "Observed addition only; no R6 Unity build/phone validation or MVP scope change",
+    "rag_original_repros": {
+      "main_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+      "min_score": 0.35,
+      "k": 3,
+      "queries": [
+        {
+          "query": "서울역 근처 호텔 객실 가격 알려줘",
+          "retrieved": []
+        },
+        {
+          "query": "지금 서울역 직통열차 빈 좌석이 몇 개 남았나요?",
+          "retrieved": []
+        }
+      ],
+      "live_calls": 0
+    },
+    "rag_latest_pr": {
+      "state": "open",
+      "head": "b6e3ad39d98125080109b5e5a2111d25bcc7beaf",
+      "last_executed_head": "315701aa803ccaa50d724e53b17b683af74ae8d3",
+      "static_comparison": {
+        "before": "315701aa803ccaa50d724e53b17b683af74ae8d3",
+        "after": "b6e3ad39d98125080109b5e5a2111d25bcc7beaf",
+        "checks": [
+          {
+            "path": "src/hangil_rag/__init__.py",
+            "runtime_ast_equal_excluding_docstrings": true
+          },
+          {
+            "path": "src/hangil_rag/search_memory.py",
+            "runtime_ast_equal_excluding_docstrings": true
+          },
+          {
+            "path": "src/hangil_rag/search_pgvector.py",
+            "runtime_ast_equal_excluding_docstrings": true
+          },
+          {
+            "path": "eval/retrieval.py",
+            "runtime_ast_equal_excluding_docstrings": true
+          }
+        ],
+        "limitations": "Read-only static comparison; added latency_check.py was not executed; no new unit or quality run on this head."
+      },
+      "new_full_suite_run": false
+    }
+  },
+  "ci_observation": {
+    "app": {
+      "head": "1d0fc11a81b3ea9c316d14621d8dd57361bb18de",
+      "url": "https://github.com/team-onetruck/oneload-app/actions/runs/40253863816",
+      "verify": "success",
+      "e2e": "success",
+      "deploy": "success",
+      "endpoint_verified": false
+    },
+    "agent": {
+      "head": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+      "url": "https://github.com/team-onetruck/oneload_agent/actions/runs/40251210562",
+      "test": "success",
+      "backend_tests": "success",
+      "contract_check": "failure",
+      "diagnosis": "Agent mock map differs from selected Data map; confirmed in bounded CI-log inspection",
+      "api_e2e": "skipped",
+      "deploy": "skipped"
+    }
+  },
+  "limitations": {
+    "paid_models_embeddings": 0,
+    "new_existing_or_operating_database_access": false,
+    "deployment_triggered": false,
+    "raw_ci_log_published": false,
+    "closed_issue_states_changed": false,
+    "field_validation": false,
+    "human_gold_review_complete": false
+  }
+}

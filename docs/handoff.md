@@ -1,5 +1,21 @@
 # 한길 R6 인수인계
 
+## 본인 작성 이슈 점검 — 2026-10-26 10:46 KST
+
+[18건별 판정·최신 답글·정리 방향](authored-issue-review-20261026.md) · [구조화 관찰](../reports/authored-issue-review-20261026.json). mootwo0202 작성 한길 이슈는 **열림4·닫힘14**다. 계정의 다른 프로젝트 이슈는 채팅에서 전달하며 이 공개 저장소에는 내용을 복사하지 않았다.
+
+Data#2는 같은Data72d5eb8/Backend2ebd94d의 경로78/78·노드쌍1521/1521·무료구역 불필요 gate0 증거로 등록 그래프 단절 해결/종료 후보다. Agent#7은 Backend500/슬롯 유실 해결, 최신 R2 답글은 App#41로 잔여를 모으고 종료할지 QA 판단을 요청한다. App#41은 intent3·슬롯4·plan/steps 생성 타입 누락 유지, RAG#3은 최초 호텔/잔여석 원문이 이번에도 빈 결과지만 기존 품질 조건은 미완료다. **이번 요청은 확인이어서 실제 이슈·댓글·상태 변경은 하지 않았다.**
+
+닫힌14건은 원래 수정 유지다. 다만 현재 Agent CI40251210562는 test/Backend tests success 뒤 **지도 사본 불일치로 Contract check failure**, E2E/deploy skipped다. 과거 Agent#6의 GH_TOKEN이나 Agent#3의 삭제 경로 오류를 재발로 분류하지 않는다. 새 지도 사본 동기화가 후속이다.
+
+App 원격/로컬 main은 **1d0fc11**로 갱신됐고 CI40253863816의 verify/e2e/deploy success를 관찰했다. 웹 런타임·의존성 해시는 검사한dace4c1과 동일하므로 기존 실행을 참고하지만 **baseline 커밋을1d0fc11로 옮기지 않았다**. Unity 독립 실험과 관련 workflow가 추가됐으며 R6 Unity 빌드/실기기 검증은 하지 않았다. 운영 API 응답을 조회한 것도 아니다.
+
+RAG PR4 최신 관찰은 **b6e3ad3**이고 마지막 실행은315701a다. 두 커밋의 변경 모듈3개와 평가파일1개는 주석/docstring 제외 AST가 같음을 정적으로 확인했다. 새 latency 스크립트나 실제 모델은 실행하지 않았다. 기존 공개v3·기준 미달 판정과 v4 미실행 상태를 유지한다. 다른 개발 main과 QA 원본은 깨끗하며 이번에는 전체 테스트를 반복하지 않았다.
+
+다음은 Data#2/Agent#7 범위 정리 검토, App#41 타입 보완, R2 지도 사본 동기화, RAG 기준 합의·새 평가다. 전체 제품 인수·사람 검토21턴·현장/모바일 인수는 계속 미완료다. 실제 모델/임베딩·DB·배포 실행0회이며 원시 로그와 비밀값은 공개하지 않는다. QA 문서·관찰·인수인계만 commit/push하고 시작 프롬프트는 저장하지 않는다.
+
+---
+
 ## 최신 main 전체 재검증 — 2026-10-26 10:12 KST
 
 [현재 결과·재현 범위](latest-main-retest-20261026.md) · [전체 증거](../reports/latest-main-retest-20261026.json) · [main 기준선](../reports/baseline.json) · [공개 검색 회귀](../reports/retrieval-regression-20261026.json).
