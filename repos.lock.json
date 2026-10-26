@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "observed_at_kst": "2026-10-26T09:16:15.781605+09:00",
+  "observed_at_kst": "2026-10-26T10:12:10.646047+09:00",
   "purpose": "Latest remote observations plus separately pinned main baseline and QA issue3/RAG PR4 v3 review. Observed commits are not automatically verified baselines.",
   "qa": {
     "repository": "team-onetruck/oneload-qa",
     "directory": "qa",
     "url": "https://github.com/team-onetruck/oneload-qa.git",
     "revision": "self",
-    "code_base_commit": "5461c97f96d24fab4c7ef269605a7fc19d7db344",
-    "note": "Current main baseline rerun on2026-10-26; QA49 includes symlink evidence regression. Frozen datasets and core lock unchanged; supplemental PRs are not main.",
+    "code_base_commit": "55e0d53ed3485f42af5616959d8f1d48077454e9",
+    "note": "Latest full main standard suite exit0, QA51; supplementary upstream and quality failures remain separately recorded.",
     "reviewed_head_commit": "e8dd0a12078a8d60d84e844430924dce8d5f0e33",
     "merged_commit": "0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c",
-    "latest_observed_main_commit": "7fc51da8c80a0ced78160f9dc057cb6138b7602d",
+    "latest_observed_main_commit": "55e0d53ed3485f42af5616959d8f1d48077454e9",
     "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
-    "current_main_review_execution_commit": "5461c97 plus canonical-path QA patch; this commit is self",
+    "current_main_review_execution_commit": "55e0d53 + reviewed Frontend profile app-dace4c1; publication commit is self",
     "issue3_tested_code_base": "7fc51da + generalized dataset selector and exposed-positive guard (runner SHA in retrieval-v3-review report); final commit is self"
   },
   "qa_baseline": "reports/baseline.json",
@@ -26,16 +26,17 @@
       "repository": "team-onetruck/oneload-app",
       "directory": "oneload-app",
       "url": "https://github.com/team-onetruck/oneload-app.git",
-      "observed_main_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
-      "qa_baseline_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+      "observed_main_commit": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+      "qa_baseline_commit": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
       "rag_issue_review_commit": null,
-      "observed_at_kst": "2026-10-26T09:16:15.781605+09:00",
-      "review_evidence": "reports/current-review-20261026.json",
+      "observed_at_kst": "2026-10-26T10:12:10.646047+09:00",
+      "review_evidence": "reports/latest-main-retest-20261026.json",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
       "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
       "historical_previous_review_evidence": "reports/git-main-review-20261025.json",
       "previous_observed_main_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
-      "latest_observation_evidence": "reports/issue3-compatibility-20261026.json"
+      "latest_observation_evidence": "reports/latest-main-retest-20261026.json",
+      "previous_qa_baseline_commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc"
     },
     {
       "repository": "team-onetruck/oneload-backend",
@@ -44,45 +45,46 @@
       "observed_main_commit": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
       "qa_baseline_commit": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
       "rag_issue_review_commit": "a82b7befa6509c28c843a0dc84af46d75143a047",
-      "observed_at_kst": "2026-10-26T09:16:15.781605+09:00",
-      "review_evidence": "reports/current-review-20261026.json",
+      "observed_at_kst": "2026-10-26T10:12:10.646047+09:00",
+      "review_evidence": "reports/latest-main-retest-20261026.json",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
       "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
       "historical_previous_review_evidence": "reports/git-main-review-20261025.json",
       "previous_observed_main_commit": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
-      "latest_observation_evidence": "reports/issue3-compatibility-20261026.json"
+      "latest_observation_evidence": "reports/latest-main-retest-20261026.json",
+      "previous_qa_baseline_commit": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451"
     },
     {
       "repository": "team-onetruck/oneload_agent",
       "directory": "oneload_agent",
       "url": "https://github.com/team-onetruck/oneload_agent.git",
-      "observed_main_commit": "55b0220f81ab3754de51d62aabf376095cd2f6ea",
-      "qa_baseline_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
+      "observed_main_commit": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+      "qa_baseline_commit": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
       "rag_issue_review_commit": "250271edb6c50e8cc71cd1443143e94cb9191a74",
-      "observed_at_kst": "2026-10-26T09:16:15.781605+09:00",
-      "review_evidence": "reports/current-review-20261026.json",
+      "observed_at_kst": "2026-10-26T10:12:10.646047+09:00",
+      "review_evidence": "reports/latest-main-retest-20261026.json",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
       "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
       "historical_previous_review_evidence": "reports/git-main-review-20261025.json",
       "previous_observed_main_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1",
-      "latest_observation_evidence": "reports/issue3-compatibility-20261026.json",
-      "latest_observation_note": "New merged main observed; only issue3 supplementary compatibility checks executed. Historical full baseline retained."
+      "latest_observation_evidence": "reports/latest-main-retest-20261026.json",
+      "previous_qa_baseline_commit": "a732577eee46e918f05eac41a5ebc5833489b1c1"
     },
     {
       "repository": "team-onetruck/oneload-data",
       "directory": "oneload-data",
       "url": "https://github.com/team-onetruck/oneload-data.git",
       "observed_main_commit": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
-      "qa_baseline_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+      "qa_baseline_commit": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
       "rag_issue_review_commit": "606f6485e4e83cdf673e61b29fbd5458bb998bce",
-      "observed_at_kst": "2026-10-26T09:16:15.781605+09:00",
-      "review_evidence": "reports/current-review-20261026.json",
+      "observed_at_kst": "2026-10-26T10:12:10.646047+09:00",
+      "review_evidence": "reports/latest-main-retest-20261026.json",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
       "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
       "historical_previous_review_evidence": "reports/git-main-review-20261025.json",
       "previous_observed_main_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
-      "latest_observation_evidence": "reports/issue3-compatibility-20261026.json",
-      "latest_observation_note": "New merged main observed; only issue3 supplementary compatibility checks executed. Historical full baseline retained."
+      "latest_observation_evidence": "reports/latest-main-retest-20261026.json",
+      "previous_qa_baseline_commit": "89ec570da39d7d64278805d3f5e7536b18c41a4f"
     },
     {
       "repository": "team-onetruck/oneload-infra",
@@ -91,13 +93,14 @@
       "observed_main_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
       "qa_baseline_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
       "rag_issue_review_commit": null,
-      "observed_at_kst": "2026-10-26T09:16:15.781605+09:00",
-      "review_evidence": "reports/current-review-20261026.json",
+      "observed_at_kst": "2026-10-26T10:12:10.646047+09:00",
+      "review_evidence": "reports/latest-main-retest-20261026.json",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
       "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
       "historical_previous_review_evidence": "reports/git-main-review-20261025.json",
       "previous_observed_main_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
-      "latest_observation_evidence": "reports/issue3-compatibility-20261026.json"
+      "latest_observation_evidence": "reports/latest-main-retest-20261026.json",
+      "previous_qa_baseline_commit": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107"
     },
     {
       "repository": "team-onetruck/oneload-rag",
@@ -106,18 +109,19 @@
       "observed_main_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
       "qa_baseline_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
       "rag_issue_review_commit": "f1ec584634cdbc2eca5da0e1aa8eeff13e13cfc0",
-      "observed_at_kst": "2026-10-26T09:16:15.781605+09:00",
+      "observed_at_kst": "2026-10-26T10:12:10.646047+09:00",
       "rag_profile_review_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
-      "review_evidence": "reports/current-review-20261026.json",
+      "review_evidence": "reports/latest-main-retest-20261026.json",
       "retrieval_review_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
       "historical_review_evidence": "reports/data-backend-review-20261023.json",
       "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
       "historical_previous_review_evidence": "reports/git-main-review-20261025.json",
       "previous_observed_main_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
-      "latest_observation_evidence": "reports/issue3-compatibility-20261026.json"
+      "latest_observation_evidence": "reports/latest-main-retest-20261026.json",
+      "previous_qa_baseline_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
     }
   ],
-  "updated_at_kst": "2026-10-26T09:16:15.781605+09:00",
+  "updated_at_kst": "2026-10-26T10:13:09.881576+09:00",
   "rag_profile_evidence": [
     "reports/rag-integration-probe.json",
     "reports/production-api-probe.json",
@@ -128,12 +132,12 @@
   "rag_issue3_review": {
     "request_comment": "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6356152143",
     "freeze_commit": "7f41130e3d3bac6ebb340da31a71b0a3b45f2a4a",
-    "evidence": "reports/retrieval-exposed-20261026.json",
-    "decision": "keep_open; exposed v2 regression top3 17/20, out-of-scope empty15/20; no new holdout",
+    "evidence": "reports/retrieval-regression-20261026.json",
+    "decision": "keep_open; exposed v3 candidate22/24 top3, out-of-scope empty8/24; criterion unchanged, fresh v4 NOT_RUN",
     "protocol": "official-only MemorySearch min_score0.25 k3 relative0.5; no sweep",
     "historical_pre_post_evidence": "reports/rag-issue3-revalidation.json"
   },
-  "current_update_review": "reports/current-review-20261026.json",
+  "current_update_review": "reports/latest-main-retest-20261026.json",
   "backend_development_agent_source": {
     "path": "../oneload_agent",
     "editable": true
@@ -191,11 +195,12 @@
     "note": "Read-only candidate test. Main observation and qa_baseline_commit remain unchanged. Standard checks pass, additional compatibility/semantic checks require review."
   },
   "current_git_review": {
-    "document": "docs/current-review-20261026.md",
-    "evidence": "reports/current-review-20261026.json",
+    "document": "docs/latest-main-retest-20261026.md",
+    "evidence": "reports/latest-main-retest-20261026.json",
     "main_sources_unchanged_after_tests": true,
-    "standard_overall_exit_code": 1,
-    "additional_RAG_failures": 2,
+    "standard_overall_exit_code": 0,
+    "additional_RAG_failures": 3,
+    "full_product_accepted": false,
     "pending_PRs_counted_as_main": false
   },
   "pending_pr_verification": {
@@ -217,14 +222,17 @@
     },
     "agent11": {
       "commit": "e7c8b88959576537a2a2c29ab18fbbc103940aee",
-      "merged": false,
-      "evidence": "reports/current-review-20261026.json"
+      "merged": true,
+      "evidence": "reports/current-review-20261026.json",
+      "merge_commit": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+      "latest_compatibility_evidence": "reports/latest-main-retest-20261026.json",
+      "latest_state_observed_at_kst": "2026-10-26T10:13:09.881576+09:00"
     },
     "rag4": {
-      "commit": "d83e89fadf17c397b45103a8c0b529d6a539c38d",
+      "commit": "315701aa803ccaa50d724e53b17b683af74ae8d3",
       "merged": false,
-      "evidence": "reports/retrieval-v3-review-20261026.json",
-      "decision": "fresh_holdout_gate_not_met"
+      "evidence": "reports/latest-main-retest-20261026.json",
+      "decision": "Regression only; v3 top3 22/24 but false positives16/24. Existing gate not met; fresh v4 not run."
     }
   },
   "qa_issue3_v3_review": {
@@ -242,5 +250,21 @@
     "compatibility_evidence": "reports/issue3-compatibility-20261026.json",
     "document": "docs/issue3-v3-review-20261026.md",
     "full_main_baseline_replaced": false
+  },
+  "historical_previous_git_review": {
+    "document": "docs/current-review-20261026.md",
+    "evidence": "reports/current-review-20261026.json",
+    "main_sources_unchanged_after_tests": true,
+    "standard_overall_exit_code": 1,
+    "additional_RAG_failures": 2,
+    "pending_PRs_counted_as_main": false
+  },
+  "qa_current_retest": {
+    "document": "docs/latest-main-retest-20261026.md",
+    "evidence": "reports/latest-main-retest-20261026.json",
+    "observed_at_kst": "2026-10-26T10:12:10.646047+09:00",
+    "qa_issue3": "open; threshold pending",
+    "latest_rag_pr4_commit": "315701aa803ccaa50d724e53b17b683af74ae8d3",
+    "fresh_v4": "NOT_RUN"
   }
 }

@@ -1,0 +1,3810 @@
+{
+  "recorded_at_kst": "2026-10-26T10:13:09.881576+09:00",
+  "qa_execution": {
+    "base_commit": "55e0d53ed3485f42af5616959d8f1d48077454e9",
+    "patch": "New reviewed Frontend HTTP call-path profile for dace4c1 only; QA runner and frozen dataset/gold unchanged",
+    "frontend_registry_sha256": "7f405b858cd9164fb5de622ab13491c693b6779d33ffdb0de3ea39d8d855b997"
+  },
+  "pinned_main_commits": {
+    "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+    "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+    "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+    "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+    "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+  },
+  "original_preservation_and_remote_observation": {
+    "checked_at_kst": "2026-10-26T10:12:10.646047+09:00",
+    "repositories": {
+      "qa": {
+        "original": {
+          "local_head": "55e0d53ed3485f42af5616959d8f1d48077454e9",
+          "branch": "main",
+          "status": "",
+          "files_sha256": "54e29418b5d8e58f9c2c4bf518eaac2ae68c688d6e2ab04e7feefc394d242772"
+        },
+        "original_unchanged": true,
+        "remote_main": "55e0d53ed3485f42af5616959d8f1d48077454e9",
+        "remote_matches_tested": true,
+        "remote_commit_date": "2026-10-26T00:19:09Z"
+      },
+      "oneload-app": {
+        "original": {
+          "local_head": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+          "branch": "main",
+          "status": "",
+          "files_sha256": "793fd9a87401dc64b4017a494c5711b01dbc09e025e33d0fe94b28103df6d3f9"
+        },
+        "original_unchanged": true,
+        "remote_main": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+        "remote_matches_tested": true,
+        "remote_commit_date": "2026-10-26T00:45:40Z"
+      },
+      "oneload-backend": {
+        "original": {
+          "local_head": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+          "branch": "main",
+          "status": "",
+          "files_sha256": "bda0675523c4e2e3f1a7a2866c00677c479fc9fcf2d58c1e55dcac2d95b117d9"
+        },
+        "original_unchanged": true,
+        "remote_main": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+        "remote_matches_tested": true,
+        "remote_commit_date": "2026-10-25T11:58:32Z"
+      },
+      "oneload_agent": {
+        "original": {
+          "local_head": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+          "branch": "main",
+          "status": "",
+          "files_sha256": "f7f189d1a99f6e2631cbf95c98df6ca8e62c2a1bcb219a5bef7d3bec30d5f62f"
+        },
+        "original_unchanged": true,
+        "remote_main": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+        "remote_matches_tested": true,
+        "remote_commit_date": "2026-10-26T00:49:30Z"
+      },
+      "oneload-data": {
+        "original": {
+          "local_head": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+          "branch": "main",
+          "status": "",
+          "files_sha256": "96274deab0ce84feaa8cb1ed59d2a997cfea2f3ef33cadd4cf1542550877e91e"
+        },
+        "original_unchanged": true,
+        "remote_main": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+        "remote_matches_tested": true,
+        "remote_commit_date": "2026-10-25T23:50:12Z"
+      },
+      "oneload-rag": {
+        "original": {
+          "local_head": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+          "branch": "main",
+          "status": "",
+          "files_sha256": "67cf9af0fba00163fdaf3f2eb57efeea2cf30c38a5d8de5f839907d3d801c04c"
+        },
+        "original_unchanged": true,
+        "remote_main": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+        "remote_matches_tested": true,
+        "remote_commit_date": "2026-10-23T11:29:05Z"
+      },
+      "oneload-infra": {
+        "original": {
+          "local_head": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+          "branch": "main",
+          "status": "",
+          "files_sha256": "29b3d0caae15cea12a03394d52b02c80d6a6f962fa0592687dd7a1f11b104fa5"
+        },
+        "original_unchanged": true,
+        "remote_main": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "remote_matches_tested": true,
+        "remote_commit_date": "2026-10-23T06:32:50Z"
+      }
+    },
+    "all_original_unchanged": true,
+    "all_remote_mains_match_tested": true,
+    "rag_pr4": {
+      "head": "315701aa803ccaa50d724e53b17b683af74ae8d3",
+      "merged": false,
+      "state": "open"
+    },
+    "rag_pr4_matches_tested": true
+  },
+  "standard_main": {
+    "run": {
+      "executed_at_kst": "2026-10-26T10:07:47.770610+09:00",
+      "steps": [
+        {
+          "name": "qa-tests",
+          "exit_code": 0,
+          "elapsed_s": 3.062
+        },
+        {
+          "name": "data-validation",
+          "exit_code": 0,
+          "elapsed_s": 0.092
+        },
+        {
+          "name": "route-connectivity",
+          "exit_code": 0,
+          "elapsed_s": 0.288
+        },
+        {
+          "name": "agent-tests",
+          "exit_code": 0,
+          "elapsed_s": 1.165
+        },
+        {
+          "name": "contract-audit",
+          "exit_code": 0,
+          "elapsed_s": 1.489
+        },
+        {
+          "name": "component-eval",
+          "exit_code": 0,
+          "elapsed_s": 0.766
+        },
+        {
+          "name": "backend-and-integration",
+          "exit_code": 0,
+          "elapsed_s": 10.82
+        }
+      ],
+      "commits": {
+        "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+        "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+        "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+        "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+        "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+      },
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+      },
+      "overall_exit_code": 0,
+      "live_model_calls": 0,
+      "with_backend": true
+    },
+    "qa": {
+      "tests": 51,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfail": 0,
+      "passed": 51,
+      "failed_cases": [],
+      "expected_failures": []
+    },
+    "agent": {
+      "tests": 79,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "xfail": 2,
+      "passed": 77,
+      "failed_cases": [],
+      "expected_failures": [
+        {
+          "test": "tests.test_ranker::test_r3_synthetic_case[L05]",
+          "reason": "지도 arex-concourse 에 '트래블센터 · Travel Center' 문구 없음 (R3 카드 lm-b2-travel-center 에는 있음)"
+        },
+        {
+          "test": "tests.test_ranker::test_r3_synthetic_case[L06]",
+          "reason": "지도에서 '도심공항터미널' 은 allstop-tickets · ktx-hall 에만 있음 (R3 카드는 arex-concourse 에 추정 배치)"
+        }
+      ]
+    },
+    "backend": {
+      "tests": 72,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfail": 0,
+      "passed": 72,
+      "failed_cases": [],
+      "expected_failures": []
+    },
+    "component": {
+      "executed_at_kst": "2026-10-26T10:07:36.904100+09:00",
+      "dataset_version": "r6-component-v2",
+      "dataset_sha256": "1daa313834008bf7c26dec28d9cb302e92ddddd9b28d8c5e15cc28d5f6a13da3",
+      "runner_sha256": "a9e7e9f2279ef8f3d91c4f3e5d651ba1225c9298f77b864a40d46d04afb7853f",
+      "commits": {
+        "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+        "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+        "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+        "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+        "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+      },
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+      },
+      "python": "3.12.14",
+      "model_mode": "fake",
+      "model_name": "FakeLLM",
+      "prompt_version": "v5",
+      "prompt_hashes": {
+        "understand_v5.md": "b8d93be420aa71495c148946a5ff1dbb1d8acf550a8bd5b039a8e9d43719ceb6",
+        "compose_v5.md": "5057b08e9086b9e715ec02b5741743112ef0cf1af97537ff143c1d28cb318923",
+        "scene_v5.md": "c6ed932a243743575b3fb074e2ad89ffc6523ca1dbf8d45337a86d905a2d8e20",
+        "verify_v5.md": "7deae228f6a5874a7b41d93ac4dc379c97337e1c5b6f9195bfaf2caa107bb8d7"
+      },
+      "prompt_directory": "hangil_r2/prompts",
+      "fixture_directory": "hangil_r2/mocks",
+      "fixture_hashes": {
+        "hangil_r2/mocks/knowledge.json": "2f22d1191c2098a3d8e32d106fdd1222d99bd2889e1b7e2f528572537feed8a6",
+        "hangil_r2/mocks/timetable.json": "abe8668e3678316288237f21eaa57e5d281c297620de31bd86aaf377bc50df1a"
+      },
+      "tools": "R2 MockKnowledgeSearch; real Backend map/context/guard; no production RAG",
+      "scenario_count": 20,
+      "turn_count": 21,
+      "auto_scenarios_passed": 20,
+      "auto_turns_passed": 21,
+      "human_review_pending": 21,
+      "final_quality_score": null,
+      "p95_latency_ms_nearest_rank": 0.82,
+      "latency_scope": "component and selected model mode; not browser/API latency"
+    },
+    "mock_api": {
+      "probe_version": "r6-boundary-v2",
+      "executed_at_utc": "2026-10-26T01:07:44.739523+00:00",
+      "commits": {
+        "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+        "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+        "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+        "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+        "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+      },
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+      },
+      "scope": "Real Backend API + R2 modules; FakeLLM, mock knowledge, synthetic JPEG; disposable DB; explicit injection, not production defaults",
+      "knowledge_profile": "mock",
+      "rag": null,
+      "runner_sha256": "7c7c5ac06a2a97f5d3dcb2ce446b24b396f1f00092ca226c5c38e116640a5aa2",
+      "rag_inputs_sha256": null,
+      "checks": [
+        {
+          "id": "API-01-train-clarification",
+          "passed": true,
+          "expected": "needs_clarification",
+          "actual": "needs_clarification"
+        },
+        {
+          "id": "API-02-card-clarification",
+          "passed": true,
+          "expected": {
+            "status": "needs_clarification",
+            "train_type": "allstop"
+          },
+          "actual": {
+            "status": "needs_clarification",
+            "train_type": "allstop"
+          }
+        },
+        {
+          "id": "API-03-persisted-slots",
+          "passed": true,
+          "expected": {
+            "poi": "poi-allstop-tickets",
+            "card": "no",
+            "state": "needs_location"
+          },
+          "actual": {
+            "poi": "poi-allstop-tickets",
+            "card": "no",
+            "state": "needs_location"
+          }
+        },
+        {
+          "id": "API-04-photo-boundary",
+          "passed": true,
+          "expected": 200,
+          "actual": 200
+        },
+        {
+          "id": "API-05-location-candidate",
+          "passed": true,
+          "expected": {
+            "status": "needs_confirmation",
+            "first": "line4-gates"
+          },
+          "actual": {
+            "status": "needs_confirmation",
+            "first": "line4-gates"
+          }
+        },
+        {
+          "id": "API-06-confirmation",
+          "passed": true,
+          "expected": {
+            "http": 200,
+            "state": "ready_to_navigate"
+          },
+          "actual": {
+            "http": 200,
+            "state": "ready_to_navigate"
+          }
+        },
+        {
+          "id": "API-07-registered-route",
+          "passed": true,
+          "expected": {
+            "http": 200,
+            "start": "line4-gates",
+            "goal": "allstop-tickets"
+          },
+          "actual": {
+            "http": 200,
+            "start": "line4-gates",
+            "goal": "allstop-tickets"
+          }
+        },
+        {
+          "id": "API-08-navigation_started",
+          "passed": true,
+          "expected": {
+            "http": 200,
+            "state": "navigating"
+          },
+          "actual": {
+            "http": 200,
+            "state": "navigating"
+          }
+        },
+        {
+          "id": "API-08-arrived",
+          "passed": true,
+          "expected": {
+            "http": 200,
+            "state": "arrived"
+          },
+          "actual": {
+            "http": 200,
+            "state": "arrived"
+          }
+        },
+        {
+          "id": "API-10-card-present",
+          "passed": true,
+          "expected": {
+            "poi": "poi-allstop-platform",
+            "card": "yes"
+          },
+          "actual": {
+            "poi": "poi-allstop-platform",
+            "card": "yes"
+          }
+        },
+        {
+          "id": "API-11-express-english",
+          "passed": true,
+          "expected": "poi-express-tickets",
+          "actual": "poi-express-tickets"
+        },
+        {
+          "id": "API-12-unsure-without-timetable",
+          "passed": true,
+          "expected": {
+            "status": "needs_clarification",
+            "has_comparison_source": true,
+            "items": []
+          },
+          "actual": {
+            "status": "needs_clarification",
+            "has_comparison_source": true,
+            "items": []
+          }
+        },
+        {
+          "id": "API-13-fare-without-evidence",
+          "passed": true,
+          "expected": {
+            "status": "cannot_answer",
+            "sources": [],
+            "has_digits": false
+          },
+          "actual": {
+            "status": "cannot_answer",
+            "sources": [],
+            "has_digits": false
+          }
+        },
+        {
+          "id": "API-14-unregistered-poi",
+          "passed": true,
+          "expected": {
+            "http": 200,
+            "status": "needs_clarification",
+            "destination": null
+          },
+          "actual": {
+            "http": 200,
+            "status": "needs_clarification",
+            "destination": null
+          }
+        },
+        {
+          "id": "API-15-photo-question",
+          "passed": true,
+          "expected": {
+            "http": 200,
+            "status": "answered",
+            "has_ticket_source": true
+          },
+          "actual": {
+            "http": 200,
+            "status": "answered",
+            "has_ticket_source": true
+          }
+        },
+        {
+          "id": "API-16-comparison-without-evidence",
+          "passed": true,
+          "expected": {
+            "status": "needs_clarification",
+            "sources": [],
+            "items": [],
+            "has_unverified_note": true
+          },
+          "actual": {
+            "status": "needs_clarification",
+            "sources": [],
+            "items": [],
+            "has_unverified_note": true
+          }
+        },
+        {
+          "id": "API-17-malformed-photo",
+          "passed": true,
+          "expected": {
+            "http": 200,
+            "status": "no_match",
+            "candidates": [],
+            "action": "recapture",
+            "hint": true
+          },
+          "actual": {
+            "http": 200,
+            "status": "no_match",
+            "candidates": [],
+            "action": "recapture",
+            "hint": true
+          }
+        },
+        {
+          "id": "API-18-manual-after-no-match",
+          "passed": true,
+          "expected": {
+            "http": 200,
+            "state": "ready_to_navigate",
+            "node": "line4-gates"
+          },
+          "actual": {
+            "http": 200,
+            "state": "ready_to_navigate",
+            "node": "line4-gates"
+          }
+        },
+        {
+          "id": "API-09-llm-down-fallback",
+          "passed": true,
+          "expected": "destination_set",
+          "actual": "destination_set"
+        },
+        {
+          "id": "INT-08-vision-down",
+          "passed": true,
+          "expected": {
+            "http": 503,
+            "error_code": "AI_SERVICE_UNAVAILABLE"
+          },
+          "actual": {
+            "http": 503,
+            "error_code": "AI_SERVICE_UNAVAILABLE"
+          }
+        },
+        {
+          "id": "API-20-purchase-intent",
+          "passed": true,
+          "expected": {
+            "status": "needs_clarification",
+            "intent": "purchase_arex_ticket"
+          },
+          "actual": {
+            "status": "needs_clarification",
+            "intent": "purchase_arex_ticket"
+          }
+        },
+        {
+          "id": "API-21-purchase-followup",
+          "passed": true,
+          "expected": {
+            "intent": "purchase_arex_ticket",
+            "poi": "poi-express-tickets"
+          },
+          "actual": {
+            "intent": "purchase_arex_ticket",
+            "poi": "poi-express-tickets"
+          }
+        },
+        {
+          "id": "API-22-exit-persisted-slots",
+          "passed": true,
+          "expected": {
+            "intent": "navigate_to_exit",
+            "exit_number": "1",
+            "has_single_use_card": "yes",
+            "single_use_card_returned": "no",
+            "poi": "poi-single-use-card-refund"
+          },
+          "actual": {
+            "intent": "navigate_to_exit",
+            "exit_number": "1",
+            "has_single_use_card": "yes",
+            "single_use_card_returned": "no",
+            "poi": "poi-single-use-card-refund"
+          }
+        },
+        {
+          "id": "API-23-exit-after-return",
+          "passed": true,
+          "expected": {
+            "exit_number": "1",
+            "returned": "yes",
+            "poi": "poi-exit-1"
+          },
+          "actual": {
+            "exit_number": "1",
+            "returned": "yes",
+            "poi": "poi-exit-1"
+          }
+        },
+        {
+          "id": "API-24-boarding-without-ticket",
+          "passed": true,
+          "expected": {
+            "intent": "board_arex",
+            "ticket": "no",
+            "poi": "poi-express-tickets"
+          },
+          "actual": {
+            "intent": "board_arex",
+            "ticket": "no",
+            "poi": "poi-express-tickets"
+          }
+        },
+        {
+          "id": "API-25-boarding-ticket-persisted",
+          "passed": true,
+          "expected": {
+            "intent": "board_arex",
+            "ticket": "yes",
+            "poi": "poi-express-platform"
+          },
+          "actual": {
+            "intent": "board_arex",
+            "ticket": "yes",
+            "poi": "poi-express-platform"
+          }
+        },
+        {
+          "id": "API-26-plan-follows-reported-refund",
+          "passed": true,
+          "expected": {
+            "http": 200,
+            "refund_status": "REFUNDED",
+            "unfinished_refund_steps": 0
+          },
+          "actual": {
+            "http": 200,
+            "refund_status": "REFUNDED",
+            "unfinished_refund_steps": 0
+          }
+        }
+      ],
+      "passed": 27,
+      "total": 27,
+      "production_ai_quality_measured": false
+    },
+    "route": {
+      "executed_at_kst": "2026-10-26T10:07:33.514974+09:00",
+      "commits": {
+        "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+        "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+        "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+        "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+        "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+      },
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+      },
+      "runner_sha256": "a387f0569e58899fdd92c6d4ec0d7d0b514c870a85d9f215fd215da7da4aa4e5",
+      "scope": "Registered directed graph with default RouteOptions. No field validation; identity paths included.",
+      "routes": [
+        {
+          "start": "ktx-hall",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "ktx-hall",
+            "station-plaza",
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "station-plaza",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "station-plaza",
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "arex-concourse",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "express-tickets",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "express-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "express-gates",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "express-gates",
+            "express-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "allstop-tickets",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "allstop-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "allstop-gates",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "allstop-gates",
+            "allstop-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "express-platform",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "express-platform",
+            "express-gates",
+            "express-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "allstop-platform",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "allstop-platform",
+            "allstop-gates",
+            "allstop-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "arex-transfer-passage",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "arex-transfer-passage",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "metro-north-passage",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "metro-north-passage",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "line1-gates",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "single-use-card-refund",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "line1-concourse",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "line1-concourse",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "line1-gates-east",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "gtx-a-transfer",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "gtx-a-transfer",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "metro-center",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "metro-center",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "line4-gates",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "line4-concourse",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "line4-concourse",
+            "line1-concourse",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "line4-gates-east",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "line4-gates-east",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "line1-platform",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "line1-platform",
+            "line1-concourse",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "line4-platform",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "line4-platform",
+            "line4-concourse",
+            "line1-concourse",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "korail-platform-3-4",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "korail-platform-3-4",
+            "line1-concourse",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-1",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-2",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-2",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-3",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-3",
+            "metro-north-passage",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-4",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-4",
+            "metro-north-passage",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-5",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-5",
+            "metro-north-passage",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-6",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-6",
+            "metro-north-passage",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-7",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-7",
+            "metro-north-passage",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-8",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-8",
+            "metro-north-passage",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-9",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-9",
+            "metro-north-passage",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-9-1",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-9-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-10",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-10",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-11",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-11",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-12",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-12",
+            "line4-gates-east",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-13",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-13",
+            "line4-gates-east",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-14",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-14",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "exit-15",
+          "destination_poi_id": "poi-single-use-card-refund",
+          "reachable": true,
+          "path": [
+            "exit-15",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1",
+            "line1-gates-east",
+            "line1-gates",
+            "single-use-card-refund"
+          ]
+        },
+        {
+          "start": "ktx-hall",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "ktx-hall",
+            "station-plaza",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "station-plaza",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "station-plaza",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "arex-concourse",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "express-tickets",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "express-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "express-gates",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "express-gates",
+            "express-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "allstop-tickets",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "allstop-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "allstop-gates",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "allstop-gates",
+            "allstop-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "express-platform",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "express-platform",
+            "express-gates",
+            "express-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "allstop-platform",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "allstop-platform",
+            "allstop-gates",
+            "allstop-tickets",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "arex-transfer-passage",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "arex-transfer-passage",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "metro-north-passage",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "metro-north-passage",
+            "line1-gates",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "line1-gates",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "line1-gates",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "single-use-card-refund",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "single-use-card-refund",
+            "line1-gates",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "line1-concourse",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "line1-concourse",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "line1-gates-east",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "gtx-a-transfer",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "gtx-a-transfer",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "metro-center",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "line4-gates",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "line4-concourse",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "line4-concourse",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "line4-gates-east",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "line4-gates-east",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "line1-platform",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "line1-platform",
+            "line1-concourse",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "line4-platform",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "line4-platform",
+            "line4-concourse",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "korail-platform-3-4",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "korail-platform-3-4",
+            "line1-concourse",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-1",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-2",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-2",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-3",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-3",
+            "metro-north-passage",
+            "line1-gates",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-4",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-4",
+            "metro-north-passage",
+            "line1-gates",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-5",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-5",
+            "metro-north-passage",
+            "line1-gates",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-6",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-6",
+            "metro-north-passage",
+            "line1-gates",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-7",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-7",
+            "metro-north-passage",
+            "line1-gates",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-8",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-8",
+            "metro-north-passage",
+            "line1-gates",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-9",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-9",
+            "metro-north-passage",
+            "line1-gates",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-9-1",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-9-1",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-10",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-10",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-11",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-11",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-12",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-12",
+            "line4-gates-east",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-13",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-13",
+            "line4-gates-east",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-14",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-14",
+            "line4-gates",
+            "metro-center",
+            "line1-gates-east",
+            "exit-1"
+          ]
+        },
+        {
+          "start": "exit-15",
+          "destination_poi_id": "poi-exit-1",
+          "reachable": true,
+          "path": [
+            "exit-15",
+            "arex-concourse",
+            "ktx-hall",
+            "station-plaza",
+            "exit-1"
+          ]
+        }
+      ],
+      "reachable": 78,
+      "total": 78,
+      "field_verified": false,
+      "real_model_calls": 0
+    }
+  },
+  "frontend": {
+    "steps": [
+      {
+        "name": "verify",
+        "exit_code": 0
+      },
+      {
+        "name": "build",
+        "exit_code": 0
+      },
+      {
+        "name": "browser",
+        "exit_code": 0
+      }
+    ],
+    "node": "v26.7.0",
+    "pnpm": "11.13.0",
+    "scope": "mocked API, camera and sensors; blocked backend proxy; not real phone or backend acceptance",
+    "commit": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+    "unit_tests": 519,
+    "browser": {
+      "expected": 26,
+      "unexpected": 0,
+      "flaky": 0,
+      "skipped": 0
+    }
+  },
+  "profiles": {
+    "main": {
+      "commits": {
+        "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+        "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+        "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+        "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+        "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+      },
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+      },
+      "rag_full_suite": {
+        "tests": 101,
+        "failures": 3,
+        "errors": 0,
+        "skipped": 0,
+        "xfail": 0,
+        "passed": 98,
+        "failed_cases": [
+          {
+            "test": "tests.test_localization::test_cards_and_cases_match_the_map",
+            "reason": "AssertionError: assert ['지도 버전 다름: 카...2026-10-25.2'] == []\n  \n  Left contains one more item: '지도 버전 다름: 카드 2026-10-23.1 / 지도 2026-10-25.2'\n  Use -v to get more diff"
+          },
+          {
+            "test": "tests.test_poi::test_aliases_match_the_map",
+            "reason": "AssertionError: assert ['지도 버전 다름: 사...2026-10-25.2'] == []\n  \n  Left contains one more item: '지도 버전 다름: 사전 2026-10-23.1 / 지도 2026-10-25.2'\n  Use -v to get more diff"
+          },
+          {
+            "test": "tests.test_poi::test_every_query_finds_exactly_the_expected_pois",
+            "reason": "AssertionError: assert [('보증금 환급기', ...minal']), ...] == []\n  \n  Left contains 8 more items, first extra item: ('보증금 환급기', ['poi-single-use-card-refund', 'poi-arex-deposit-refund'])\n  Use -v to get more diff"
+          }
+        ],
+        "expected_failures": []
+      },
+      "upstream_checks": {
+        "steps": [
+          {
+            "name": "data-own-validator",
+            "exit_code": 0
+          },
+          {
+            "name": "agent-compat-e2e",
+            "exit_code": 1
+          },
+          {
+            "name": "rag-tests",
+            "exit_code": 1
+          },
+          {
+            "name": "rag-backend-e2e",
+            "exit_code": 0
+          }
+        ],
+        "database": "own disposable PostgreSQL17; removed",
+        "real_model_calls": 0,
+        "real_embedding_calls": 0
+      },
+      "backend": {
+        "tests": 72,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "xfail": 0,
+        "passed": 72,
+        "failed_cases": [],
+        "expected_failures": []
+      },
+      "official_rag_api": {
+        "probe_version": "r6-boundary-v2",
+        "executed_at_utc": "2026-10-26T01:07:54.967968+00:00",
+        "commits": {
+          "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+          "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+          "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+          "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+          "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+          "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+        },
+        "map": {
+          "source_repository": "oneload-data",
+          "path": "maps/seoul-station.json",
+          "map_id": "seoul-station",
+          "version": "2026-10-25.2",
+          "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+        },
+        "scope": "Real Backend API + R2 modules; FakeLLM, rag knowledge, synthetic JPEG; disposable DB; explicit injection, not production defaults",
+        "knowledge_profile": "rag",
+        "rag": {
+          "repository": "oneload-rag",
+          "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+          "working_tree_clean": true,
+          "backend": "MemorySearch",
+          "min_score": 0.25,
+          "k": 3,
+          "relative_cutoff": 0.5,
+          "scope_gate_min_coverage": 0.25,
+          "community": false,
+          "document_ids": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types",
+            "doc-climate-card-short-term",
+            "doc-deposit-refund",
+            "doc-express-ticket",
+            "doc-fare-arex-allstop",
+            "doc-fare-arex-express",
+            "doc-fare-passes-cards",
+            "doc-foreigner-transit-cards",
+            "doc-seoul-arex-transfer",
+            "doc-seoul-help-desks",
+            "doc-seoul-transit-basics",
+            "doc-tmoney-card",
+            "doc-wowpass"
+          ],
+          "knowledge_sha256": {
+            "README.md": "69b16ad3992eda254ad1c170b92f01b66366c95ccbae6ceb1829c3d5df4d26d4",
+            "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+            "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+            "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+            "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+            "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+            "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+            "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+            "doc-fare-arex-allstop.md": "8c4a751bb15521eaa4be205f1d9c055fffca51d699c5830775557b62e4c8db33",
+            "doc-fare-arex-express.md": "6dc1ca6cc6c7d1e3cf8b9cfc192ca11cabb55effdc2e3107bdd00dc86a651ca7",
+            "doc-fare-passes-cards.md": "f05c5533036ade4159f7c373f377b5bab59809d0b6c72f4925322d19210ca699",
+            "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+            "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+            "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+            "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+            "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+            "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+          },
+          "code_sha256": {
+            "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+            "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+            "src/hangil_rag/loader.py": "8b67ebe687d7ace619cbe7d874821c715e5bacf8c6c621a659a5b6b178575066",
+            "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+            "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+            "src/hangil_rag/search_memory.py": "5c13065a5c351b6a3786680baa133899b3aeae89feff04254da6abe245e53e8f",
+            "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+          },
+          "live_model_calls": 0,
+          "live_embedding_calls": 0
+        },
+        "runner_sha256": "7c7c5ac06a2a97f5d3dcb2ce446b24b396f1f00092ca226c5c38e116640a5aa2",
+        "rag_inputs_sha256": "e20f59ba94b507f8ce818b2ed0fd6d939d2bc39dd97b956326aa54c93a770aa1",
+        "checks": [
+          {
+            "id": "API-01-train-clarification",
+            "passed": true,
+            "expected": "needs_clarification",
+            "actual": "needs_clarification"
+          },
+          {
+            "id": "API-02-card-clarification",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "train_type": "allstop"
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "train_type": "allstop"
+            }
+          },
+          {
+            "id": "API-03-persisted-slots",
+            "passed": true,
+            "expected": {
+              "poi": "poi-allstop-tickets",
+              "card": "no",
+              "state": "needs_location"
+            },
+            "actual": {
+              "poi": "poi-allstop-tickets",
+              "card": "no",
+              "state": "needs_location"
+            }
+          },
+          {
+            "id": "API-04-photo-boundary",
+            "passed": true,
+            "expected": 200,
+            "actual": 200
+          },
+          {
+            "id": "API-05-location-candidate",
+            "passed": true,
+            "expected": {
+              "status": "needs_confirmation",
+              "first": "line4-gates"
+            },
+            "actual": {
+              "status": "needs_confirmation",
+              "first": "line4-gates"
+            }
+          },
+          {
+            "id": "API-06-confirmation",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "ready_to_navigate"
+            },
+            "actual": {
+              "http": 200,
+              "state": "ready_to_navigate"
+            }
+          },
+          {
+            "id": "API-07-registered-route",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "start": "line4-gates",
+              "goal": "allstop-tickets"
+            },
+            "actual": {
+              "http": 200,
+              "start": "line4-gates",
+              "goal": "allstop-tickets"
+            }
+          },
+          {
+            "id": "API-08-navigation_started",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "navigating"
+            },
+            "actual": {
+              "http": 200,
+              "state": "navigating"
+            }
+          },
+          {
+            "id": "API-08-arrived",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "arrived"
+            },
+            "actual": {
+              "http": 200,
+              "state": "arrived"
+            }
+          },
+          {
+            "id": "API-10-card-present",
+            "passed": true,
+            "expected": {
+              "poi": "poi-allstop-platform",
+              "card": "yes"
+            },
+            "actual": {
+              "poi": "poi-allstop-platform",
+              "card": "yes"
+            }
+          },
+          {
+            "id": "API-11-express-english",
+            "passed": true,
+            "expected": "poi-express-tickets",
+            "actual": "poi-express-tickets"
+          },
+          {
+            "id": "API-12-unsure-without-timetable",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "has_comparison_source": true,
+              "items": []
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "has_comparison_source": true,
+              "items": []
+            }
+          },
+          {
+            "id": "API-13-fare-with-rag-evidence",
+            "passed": true,
+            "expected": {
+              "status": "answered",
+              "fare_source_with_date_url": true
+            },
+            "actual": {
+              "status": "answered",
+              "fare_source_with_date_url": true
+            }
+          },
+          {
+            "id": "API-14-unregistered-poi",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "status": "needs_clarification",
+              "destination": null
+            },
+            "actual": {
+              "http": 200,
+              "status": "needs_clarification",
+              "destination": null
+            }
+          },
+          {
+            "id": "API-15-photo-question",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "status": "answered",
+              "has_ticket_source": true
+            },
+            "actual": {
+              "http": 200,
+              "status": "answered",
+              "has_ticket_source": true
+            }
+          },
+          {
+            "id": "API-16-comparison-without-evidence",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "sources": [],
+              "items": [],
+              "has_unverified_note": true
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "sources": [],
+              "items": [],
+              "has_unverified_note": true
+            }
+          },
+          {
+            "id": "API-19-fare-without-evidence-control",
+            "passed": true,
+            "expected": {
+              "status": "cannot_answer",
+              "sources": [],
+              "has_digits": false
+            },
+            "actual": {
+              "status": "cannot_answer",
+              "sources": [],
+              "has_digits": false
+            }
+          },
+          {
+            "id": "API-17-malformed-photo",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "status": "no_match",
+              "candidates": [],
+              "action": "recapture",
+              "hint": true
+            },
+            "actual": {
+              "http": 200,
+              "status": "no_match",
+              "candidates": [],
+              "action": "recapture",
+              "hint": true
+            }
+          },
+          {
+            "id": "API-18-manual-after-no-match",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "ready_to_navigate",
+              "node": "line4-gates"
+            },
+            "actual": {
+              "http": 200,
+              "state": "ready_to_navigate",
+              "node": "line4-gates"
+            }
+          },
+          {
+            "id": "API-09-llm-down-fallback",
+            "passed": true,
+            "expected": "destination_set",
+            "actual": "destination_set"
+          },
+          {
+            "id": "INT-08-vision-down",
+            "passed": true,
+            "expected": {
+              "http": 503,
+              "error_code": "AI_SERVICE_UNAVAILABLE"
+            },
+            "actual": {
+              "http": 503,
+              "error_code": "AI_SERVICE_UNAVAILABLE"
+            }
+          },
+          {
+            "id": "API-20-purchase-intent",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "intent": "purchase_arex_ticket"
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "intent": "purchase_arex_ticket"
+            }
+          },
+          {
+            "id": "API-21-purchase-followup",
+            "passed": true,
+            "expected": {
+              "intent": "purchase_arex_ticket",
+              "poi": "poi-express-tickets"
+            },
+            "actual": {
+              "intent": "purchase_arex_ticket",
+              "poi": "poi-express-tickets"
+            }
+          },
+          {
+            "id": "API-22-exit-persisted-slots",
+            "passed": true,
+            "expected": {
+              "intent": "navigate_to_exit",
+              "exit_number": "1",
+              "has_single_use_card": "yes",
+              "single_use_card_returned": "no",
+              "poi": "poi-single-use-card-refund"
+            },
+            "actual": {
+              "intent": "navigate_to_exit",
+              "exit_number": "1",
+              "has_single_use_card": "yes",
+              "single_use_card_returned": "no",
+              "poi": "poi-single-use-card-refund"
+            }
+          },
+          {
+            "id": "API-23-exit-after-return",
+            "passed": true,
+            "expected": {
+              "exit_number": "1",
+              "returned": "yes",
+              "poi": "poi-exit-1"
+            },
+            "actual": {
+              "exit_number": "1",
+              "returned": "yes",
+              "poi": "poi-exit-1"
+            }
+          },
+          {
+            "id": "API-24-boarding-without-ticket",
+            "passed": true,
+            "expected": {
+              "intent": "board_arex",
+              "ticket": "no",
+              "poi": "poi-express-tickets"
+            },
+            "actual": {
+              "intent": "board_arex",
+              "ticket": "no",
+              "poi": "poi-express-tickets"
+            }
+          },
+          {
+            "id": "API-25-boarding-ticket-persisted",
+            "passed": true,
+            "expected": {
+              "intent": "board_arex",
+              "ticket": "yes",
+              "poi": "poi-express-platform"
+            },
+            "actual": {
+              "intent": "board_arex",
+              "ticket": "yes",
+              "poi": "poi-express-platform"
+            }
+          },
+          {
+            "id": "API-26-plan-follows-reported-refund",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "refund_status": "REFUNDED",
+              "unfinished_refund_steps": 0
+            },
+            "actual": {
+              "http": 200,
+              "refund_status": "REFUNDED",
+              "unfinished_refund_steps": 0
+            }
+          }
+        ],
+        "passed": 28,
+        "total": 28,
+        "production_ai_quality_measured": false
+      },
+      "production_entrypoint": {
+        "probe_version": "r6-production-entrypoint-v1",
+        "executed_at_kst": "2026-10-26T10:07:58.347221+09:00",
+        "commits": {
+          "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+          "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+          "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+          "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+          "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+          "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
+        },
+        "map": {
+          "source_repository": "oneload-data",
+          "path": "maps/seoul-station.json",
+          "map_id": "seoul-station",
+          "version": "2026-10-25.2",
+          "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+        },
+        "rag": {
+          "repository": "oneload-rag",
+          "commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+          "working_tree_clean": true,
+          "backend": "MemorySearch",
+          "min_score": 0.25,
+          "k": 3,
+          "relative_cutoff": 0.5,
+          "scope_gate_min_coverage": 0.25,
+          "community": false,
+          "document_ids": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types",
+            "doc-climate-card-short-term",
+            "doc-deposit-refund",
+            "doc-express-ticket",
+            "doc-fare-arex-allstop",
+            "doc-fare-arex-express",
+            "doc-fare-passes-cards",
+            "doc-foreigner-transit-cards",
+            "doc-seoul-arex-transfer",
+            "doc-seoul-help-desks",
+            "doc-seoul-transit-basics",
+            "doc-tmoney-card",
+            "doc-wowpass"
+          ],
+          "knowledge_sha256": {
+            "README.md": "69b16ad3992eda254ad1c170b92f01b66366c95ccbae6ceb1829c3d5df4d26d4",
+            "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+            "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+            "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+            "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+            "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+            "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+            "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+            "doc-fare-arex-allstop.md": "8c4a751bb15521eaa4be205f1d9c055fffca51d699c5830775557b62e4c8db33",
+            "doc-fare-arex-express.md": "6dc1ca6cc6c7d1e3cf8b9cfc192ca11cabb55effdc2e3107bdd00dc86a651ca7",
+            "doc-fare-passes-cards.md": "f05c5533036ade4159f7c373f377b5bab59809d0b6c72f4925322d19210ca699",
+            "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+            "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+            "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+            "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+            "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+            "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+          },
+          "code_sha256": {
+            "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+            "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+            "src/hangil_rag/loader.py": "8b67ebe687d7ace619cbe7d874821c715e5bacf8c6c621a659a5b6b178575066",
+            "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+            "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+            "src/hangil_rag/search_memory.py": "5c13065a5c351b6a3786680baa133899b3aeae89feff04254da6abe245e53e8f",
+            "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+          },
+          "live_model_calls": 0,
+          "live_embedding_calls": 0
+        },
+        "entrypoint_sha256": "75b12b65ff3b4c522d08e22ffa261e1b6728b6e858530102e5d7928c71c0c8a7",
+        "scope": "Actual global app; FakeLLM provider; forced local official MemorySearch; disposable DB. Not deployed runtime or AI quality.",
+        "checks": [
+          {
+            "id": "PROD-01-default-assembly",
+            "expected": [
+              true,
+              true,
+              true
+            ],
+            "actual": [
+              true,
+              true,
+              true
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-02-official-fare",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "id": "PROD-03-shared-vision",
+            "expected": [
+              200,
+              "needs_confirmation",
+              true
+            ],
+            "actual": [
+              200,
+              "needs_confirmation",
+              true
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-04-empty-search-control",
+            "expected": [
+              "cannot_answer",
+              []
+            ],
+            "actual": [
+              "cannot_answer",
+              []
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-05-no-key-fallback",
+            "expected": [
+              "RuleAgent",
+              "NoVision"
+            ],
+            "actual": [
+              "RuleAgent",
+              "NoVision"
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-06-fallback-official-sources",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "id": "PROD-07-fallback-refuses-unverified-fare",
+            "expected": [
+              "cannot_answer",
+              []
+            ],
+            "actual": [
+              "cannot_answer",
+              []
+            ],
+            "passed": true
+          }
+        ],
+        "passed": 7,
+        "total": 7,
+        "real_model_calls": 0,
+        "real_embedding_calls": 0,
+        "deployed_runtime_verified": false,
+        "runner_sha256": "44eee1eb3c669b50c659466ed10e8277040783c59c3a42fe4d90f2ad8396948e"
+      },
+      "agent_compatibility": {
+        "exit_code": 1,
+        "reason": "Selected Data map differs from Agent mocks/maps snapshot; no automatic source copying or patching",
+        "e2e_status": "NOT_RUN"
+      }
+    },
+    "intermediate_pr4_fd84f9b": {
+      "commits": {
+        "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+        "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+        "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+        "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+        "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "oneload-rag": "fd84f9b9c1da00369b1a76094006494cb8bf7abb"
+      },
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+      },
+      "rag_full_suite": {
+        "tests": 126,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "xfail": 0,
+        "passed": 126,
+        "failed_cases": [],
+        "expected_failures": []
+      },
+      "upstream_checks": {
+        "steps": [
+          {
+            "name": "data-own-validator",
+            "exit_code": 0
+          },
+          {
+            "name": "agent-compat-e2e",
+            "exit_code": 1
+          },
+          {
+            "name": "rag-tests",
+            "exit_code": 0
+          },
+          {
+            "name": "rag-backend-e2e",
+            "exit_code": 0
+          }
+        ],
+        "database": "own disposable PostgreSQL17; removed",
+        "real_model_calls": 0,
+        "real_embedding_calls": 0
+      },
+      "backend": {
+        "tests": 72,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "xfail": 0,
+        "passed": 72,
+        "failed_cases": [],
+        "expected_failures": []
+      },
+      "official_rag_api": {
+        "probe_version": "r6-boundary-v2",
+        "executed_at_utc": "2026-10-26T01:07:54.961840+00:00",
+        "commits": {
+          "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+          "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+          "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+          "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+          "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+          "oneload-rag": "fd84f9b9c1da00369b1a76094006494cb8bf7abb"
+        },
+        "map": {
+          "source_repository": "oneload-data",
+          "path": "maps/seoul-station.json",
+          "map_id": "seoul-station",
+          "version": "2026-10-25.2",
+          "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+        },
+        "scope": "Real Backend API + R2 modules; FakeLLM, rag knowledge, synthetic JPEG; disposable DB; explicit injection, not production defaults",
+        "knowledge_profile": "rag",
+        "rag": {
+          "repository": "oneload-rag",
+          "commit": "fd84f9b9c1da00369b1a76094006494cb8bf7abb",
+          "working_tree_clean": true,
+          "backend": "MemorySearch",
+          "min_score": 0.25,
+          "k": 3,
+          "relative_cutoff": 0.5,
+          "scope_gate_min_coverage": 0.25,
+          "community": false,
+          "document_ids": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types",
+            "doc-climate-card-short-term",
+            "doc-deposit-refund",
+            "doc-express-ticket",
+            "doc-fare-arex-allstop",
+            "doc-fare-arex-express",
+            "doc-fare-passes-cards",
+            "doc-foreigner-transit-cards",
+            "doc-seoul-arex-transfer",
+            "doc-seoul-help-desks",
+            "doc-seoul-transit-basics",
+            "doc-tmoney-card",
+            "doc-wowpass"
+          ],
+          "knowledge_sha256": {
+            "README.md": "27bb59aa3979dd6531cb023d1e9536ede4cbec4bcc82a20d68e403f1d7e03e1d",
+            "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+            "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+            "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+            "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+            "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+            "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+            "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+            "doc-fare-arex-allstop.md": "2de23bdfee1f497a0bda7a3fdb5611a953d0d93f52e6a7230b7305f1c30e3c13",
+            "doc-fare-arex-express.md": "0642a0c52dc3ed9e6ea0198b4e65ae0b845f22f1d01f9c5865a12ac4ea839b07",
+            "doc-fare-passes-cards.md": "aad2ac353b2a0f7c872ca56e04149e1e7b95149cc8801667bda762b0153a9f58",
+            "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+            "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+            "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+            "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+            "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+            "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+          },
+          "code_sha256": {
+            "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+            "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+            "src/hangil_rag/loader.py": "a23d86b92e2a14a13f3bf9ae16ccaaf1beda3d6115cb59926b211349465aa217",
+            "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+            "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+            "src/hangil_rag/search_memory.py": "79e39abbdc7b44ac39d0d5f9b17d32be23a9e0b0f9167efff01fbebf6ccab691",
+            "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+          },
+          "live_model_calls": 0,
+          "live_embedding_calls": 0
+        },
+        "runner_sha256": "7c7c5ac06a2a97f5d3dcb2ce446b24b396f1f00092ca226c5c38e116640a5aa2",
+        "rag_inputs_sha256": "e20f59ba94b507f8ce818b2ed0fd6d939d2bc39dd97b956326aa54c93a770aa1",
+        "checks": [
+          {
+            "id": "API-01-train-clarification",
+            "passed": true,
+            "expected": "needs_clarification",
+            "actual": "needs_clarification"
+          },
+          {
+            "id": "API-02-card-clarification",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "train_type": "allstop"
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "train_type": "allstop"
+            }
+          },
+          {
+            "id": "API-03-persisted-slots",
+            "passed": true,
+            "expected": {
+              "poi": "poi-allstop-tickets",
+              "card": "no",
+              "state": "needs_location"
+            },
+            "actual": {
+              "poi": "poi-allstop-tickets",
+              "card": "no",
+              "state": "needs_location"
+            }
+          },
+          {
+            "id": "API-04-photo-boundary",
+            "passed": true,
+            "expected": 200,
+            "actual": 200
+          },
+          {
+            "id": "API-05-location-candidate",
+            "passed": true,
+            "expected": {
+              "status": "needs_confirmation",
+              "first": "line4-gates"
+            },
+            "actual": {
+              "status": "needs_confirmation",
+              "first": "line4-gates"
+            }
+          },
+          {
+            "id": "API-06-confirmation",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "ready_to_navigate"
+            },
+            "actual": {
+              "http": 200,
+              "state": "ready_to_navigate"
+            }
+          },
+          {
+            "id": "API-07-registered-route",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "start": "line4-gates",
+              "goal": "allstop-tickets"
+            },
+            "actual": {
+              "http": 200,
+              "start": "line4-gates",
+              "goal": "allstop-tickets"
+            }
+          },
+          {
+            "id": "API-08-navigation_started",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "navigating"
+            },
+            "actual": {
+              "http": 200,
+              "state": "navigating"
+            }
+          },
+          {
+            "id": "API-08-arrived",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "arrived"
+            },
+            "actual": {
+              "http": 200,
+              "state": "arrived"
+            }
+          },
+          {
+            "id": "API-10-card-present",
+            "passed": true,
+            "expected": {
+              "poi": "poi-allstop-platform",
+              "card": "yes"
+            },
+            "actual": {
+              "poi": "poi-allstop-platform",
+              "card": "yes"
+            }
+          },
+          {
+            "id": "API-11-express-english",
+            "passed": true,
+            "expected": "poi-express-tickets",
+            "actual": "poi-express-tickets"
+          },
+          {
+            "id": "API-12-unsure-without-timetable",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "has_comparison_source": true,
+              "items": []
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "has_comparison_source": true,
+              "items": []
+            }
+          },
+          {
+            "id": "API-13-fare-with-rag-evidence",
+            "passed": true,
+            "expected": {
+              "status": "answered",
+              "fare_source_with_date_url": true
+            },
+            "actual": {
+              "status": "answered",
+              "fare_source_with_date_url": true
+            }
+          },
+          {
+            "id": "API-14-unregistered-poi",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "status": "needs_clarification",
+              "destination": null
+            },
+            "actual": {
+              "http": 200,
+              "status": "needs_clarification",
+              "destination": null
+            }
+          },
+          {
+            "id": "API-15-photo-question",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "status": "answered",
+              "has_ticket_source": true
+            },
+            "actual": {
+              "http": 200,
+              "status": "answered",
+              "has_ticket_source": true
+            }
+          },
+          {
+            "id": "API-16-comparison-without-evidence",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "sources": [],
+              "items": [],
+              "has_unverified_note": true
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "sources": [],
+              "items": [],
+              "has_unverified_note": true
+            }
+          },
+          {
+            "id": "API-19-fare-without-evidence-control",
+            "passed": true,
+            "expected": {
+              "status": "cannot_answer",
+              "sources": [],
+              "has_digits": false
+            },
+            "actual": {
+              "status": "cannot_answer",
+              "sources": [],
+              "has_digits": false
+            }
+          },
+          {
+            "id": "API-17-malformed-photo",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "status": "no_match",
+              "candidates": [],
+              "action": "recapture",
+              "hint": true
+            },
+            "actual": {
+              "http": 200,
+              "status": "no_match",
+              "candidates": [],
+              "action": "recapture",
+              "hint": true
+            }
+          },
+          {
+            "id": "API-18-manual-after-no-match",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "ready_to_navigate",
+              "node": "line4-gates"
+            },
+            "actual": {
+              "http": 200,
+              "state": "ready_to_navigate",
+              "node": "line4-gates"
+            }
+          },
+          {
+            "id": "API-09-llm-down-fallback",
+            "passed": true,
+            "expected": "destination_set",
+            "actual": "destination_set"
+          },
+          {
+            "id": "INT-08-vision-down",
+            "passed": true,
+            "expected": {
+              "http": 503,
+              "error_code": "AI_SERVICE_UNAVAILABLE"
+            },
+            "actual": {
+              "http": 503,
+              "error_code": "AI_SERVICE_UNAVAILABLE"
+            }
+          },
+          {
+            "id": "API-20-purchase-intent",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "intent": "purchase_arex_ticket"
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "intent": "purchase_arex_ticket"
+            }
+          },
+          {
+            "id": "API-21-purchase-followup",
+            "passed": true,
+            "expected": {
+              "intent": "purchase_arex_ticket",
+              "poi": "poi-express-tickets"
+            },
+            "actual": {
+              "intent": "purchase_arex_ticket",
+              "poi": "poi-express-tickets"
+            }
+          },
+          {
+            "id": "API-22-exit-persisted-slots",
+            "passed": true,
+            "expected": {
+              "intent": "navigate_to_exit",
+              "exit_number": "1",
+              "has_single_use_card": "yes",
+              "single_use_card_returned": "no",
+              "poi": "poi-single-use-card-refund"
+            },
+            "actual": {
+              "intent": "navigate_to_exit",
+              "exit_number": "1",
+              "has_single_use_card": "yes",
+              "single_use_card_returned": "no",
+              "poi": "poi-single-use-card-refund"
+            }
+          },
+          {
+            "id": "API-23-exit-after-return",
+            "passed": true,
+            "expected": {
+              "exit_number": "1",
+              "returned": "yes",
+              "poi": "poi-exit-1"
+            },
+            "actual": {
+              "exit_number": "1",
+              "returned": "yes",
+              "poi": "poi-exit-1"
+            }
+          },
+          {
+            "id": "API-24-boarding-without-ticket",
+            "passed": true,
+            "expected": {
+              "intent": "board_arex",
+              "ticket": "no",
+              "poi": "poi-express-tickets"
+            },
+            "actual": {
+              "intent": "board_arex",
+              "ticket": "no",
+              "poi": "poi-express-tickets"
+            }
+          },
+          {
+            "id": "API-25-boarding-ticket-persisted",
+            "passed": true,
+            "expected": {
+              "intent": "board_arex",
+              "ticket": "yes",
+              "poi": "poi-express-platform"
+            },
+            "actual": {
+              "intent": "board_arex",
+              "ticket": "yes",
+              "poi": "poi-express-platform"
+            }
+          },
+          {
+            "id": "API-26-plan-follows-reported-refund",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "refund_status": "REFUNDED",
+              "unfinished_refund_steps": 0
+            },
+            "actual": {
+              "http": 200,
+              "refund_status": "REFUNDED",
+              "unfinished_refund_steps": 0
+            }
+          }
+        ],
+        "passed": 28,
+        "total": 28,
+        "production_ai_quality_measured": false
+      },
+      "production_entrypoint": {
+        "probe_version": "r6-production-entrypoint-v1",
+        "executed_at_kst": "2026-10-26T10:07:58.240792+09:00",
+        "commits": {
+          "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+          "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+          "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+          "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+          "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+          "oneload-rag": "fd84f9b9c1da00369b1a76094006494cb8bf7abb"
+        },
+        "map": {
+          "source_repository": "oneload-data",
+          "path": "maps/seoul-station.json",
+          "map_id": "seoul-station",
+          "version": "2026-10-25.2",
+          "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+        },
+        "rag": {
+          "repository": "oneload-rag",
+          "commit": "fd84f9b9c1da00369b1a76094006494cb8bf7abb",
+          "working_tree_clean": true,
+          "backend": "MemorySearch",
+          "min_score": 0.25,
+          "k": 3,
+          "relative_cutoff": 0.5,
+          "scope_gate_min_coverage": 0.25,
+          "community": false,
+          "document_ids": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types",
+            "doc-climate-card-short-term",
+            "doc-deposit-refund",
+            "doc-express-ticket",
+            "doc-fare-arex-allstop",
+            "doc-fare-arex-express",
+            "doc-fare-passes-cards",
+            "doc-foreigner-transit-cards",
+            "doc-seoul-arex-transfer",
+            "doc-seoul-help-desks",
+            "doc-seoul-transit-basics",
+            "doc-tmoney-card",
+            "doc-wowpass"
+          ],
+          "knowledge_sha256": {
+            "README.md": "27bb59aa3979dd6531cb023d1e9536ede4cbec4bcc82a20d68e403f1d7e03e1d",
+            "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+            "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+            "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+            "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+            "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+            "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+            "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+            "doc-fare-arex-allstop.md": "2de23bdfee1f497a0bda7a3fdb5611a953d0d93f52e6a7230b7305f1c30e3c13",
+            "doc-fare-arex-express.md": "0642a0c52dc3ed9e6ea0198b4e65ae0b845f22f1d01f9c5865a12ac4ea839b07",
+            "doc-fare-passes-cards.md": "aad2ac353b2a0f7c872ca56e04149e1e7b95149cc8801667bda762b0153a9f58",
+            "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+            "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+            "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+            "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+            "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+            "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+          },
+          "code_sha256": {
+            "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+            "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+            "src/hangil_rag/loader.py": "a23d86b92e2a14a13f3bf9ae16ccaaf1beda3d6115cb59926b211349465aa217",
+            "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+            "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+            "src/hangil_rag/search_memory.py": "79e39abbdc7b44ac39d0d5f9b17d32be23a9e0b0f9167efff01fbebf6ccab691",
+            "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+          },
+          "live_model_calls": 0,
+          "live_embedding_calls": 0
+        },
+        "entrypoint_sha256": "75b12b65ff3b4c522d08e22ffa261e1b6728b6e858530102e5d7928c71c0c8a7",
+        "scope": "Actual global app; FakeLLM provider; forced local official MemorySearch; disposable DB. Not deployed runtime or AI quality.",
+        "checks": [
+          {
+            "id": "PROD-01-default-assembly",
+            "expected": [
+              true,
+              true,
+              true
+            ],
+            "actual": [
+              true,
+              true,
+              true
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-02-official-fare",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "id": "PROD-03-shared-vision",
+            "expected": [
+              200,
+              "needs_confirmation",
+              true
+            ],
+            "actual": [
+              200,
+              "needs_confirmation",
+              true
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-04-empty-search-control",
+            "expected": [
+              "cannot_answer",
+              []
+            ],
+            "actual": [
+              "cannot_answer",
+              []
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-05-no-key-fallback",
+            "expected": [
+              "RuleAgent",
+              "NoVision"
+            ],
+            "actual": [
+              "RuleAgent",
+              "NoVision"
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-06-fallback-official-sources",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "id": "PROD-07-fallback-refuses-unverified-fare",
+            "expected": [
+              "cannot_answer",
+              []
+            ],
+            "actual": [
+              "cannot_answer",
+              []
+            ],
+            "passed": true
+          }
+        ],
+        "passed": 7,
+        "total": 7,
+        "real_model_calls": 0,
+        "real_embedding_calls": 0,
+        "deployed_runtime_verified": false,
+        "runner_sha256": "44eee1eb3c669b50c659466ed10e8277040783c59c3a42fe4d90f2ad8396948e"
+      },
+      "agent_compatibility": {
+        "exit_code": 1,
+        "reason": "Selected Data map differs from Agent mocks/maps snapshot; no automatic source copying or patching",
+        "e2e_status": "NOT_RUN"
+      }
+    },
+    "latest_pr4_315701a": {
+      "commits": {
+        "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+        "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+        "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+        "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+        "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+        "oneload-rag": "315701aa803ccaa50d724e53b17b683af74ae8d3"
+      },
+      "map": {
+        "source_repository": "oneload-data",
+        "path": "maps/seoul-station.json",
+        "map_id": "seoul-station",
+        "version": "2026-10-25.2",
+        "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+      },
+      "rag_full_suite": {
+        "tests": 129,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "xfail": 0,
+        "passed": 129,
+        "failed_cases": [],
+        "expected_failures": []
+      },
+      "upstream_checks": {
+        "steps": [
+          {
+            "name": "data-own-validator",
+            "exit_code": 0
+          },
+          {
+            "name": "agent-compat-e2e",
+            "exit_code": 1
+          },
+          {
+            "name": "rag-tests",
+            "exit_code": 0
+          },
+          {
+            "name": "rag-backend-e2e",
+            "exit_code": 0
+          }
+        ],
+        "database": "own disposable PostgreSQL17; removed",
+        "real_model_calls": 0,
+        "real_embedding_calls": 0
+      },
+      "backend": {
+        "tests": 72,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "xfail": 0,
+        "passed": 72,
+        "failed_cases": [],
+        "expected_failures": []
+      },
+      "official_rag_api": {
+        "probe_version": "r6-boundary-v2",
+        "executed_at_utc": "2026-10-26T01:10:51.835582+00:00",
+        "commits": {
+          "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+          "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+          "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+          "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+          "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+          "oneload-rag": "315701aa803ccaa50d724e53b17b683af74ae8d3"
+        },
+        "map": {
+          "source_repository": "oneload-data",
+          "path": "maps/seoul-station.json",
+          "map_id": "seoul-station",
+          "version": "2026-10-25.2",
+          "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+        },
+        "scope": "Real Backend API + R2 modules; FakeLLM, rag knowledge, synthetic JPEG; disposable DB; explicit injection, not production defaults",
+        "knowledge_profile": "rag",
+        "rag": {
+          "repository": "oneload-rag",
+          "commit": "315701aa803ccaa50d724e53b17b683af74ae8d3",
+          "working_tree_clean": true,
+          "backend": "MemorySearch",
+          "min_score": 0.25,
+          "k": 3,
+          "relative_cutoff": 0.5,
+          "scope_gate_min_coverage": 0.25,
+          "community": false,
+          "document_ids": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types",
+            "doc-climate-card-short-term",
+            "doc-deposit-refund",
+            "doc-express-ticket",
+            "doc-fare-arex-allstop",
+            "doc-fare-arex-express",
+            "doc-fare-passes-cards",
+            "doc-foreigner-transit-cards",
+            "doc-seoul-arex-transfer",
+            "doc-seoul-help-desks",
+            "doc-seoul-transit-basics",
+            "doc-tmoney-card",
+            "doc-wowpass"
+          ],
+          "knowledge_sha256": {
+            "README.md": "27bb59aa3979dd6531cb023d1e9536ede4cbec4bcc82a20d68e403f1d7e03e1d",
+            "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+            "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+            "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+            "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+            "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+            "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+            "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+            "doc-fare-arex-allstop.md": "2de23bdfee1f497a0bda7a3fdb5611a953d0d93f52e6a7230b7305f1c30e3c13",
+            "doc-fare-arex-express.md": "0642a0c52dc3ed9e6ea0198b4e65ae0b845f22f1d01f9c5865a12ac4ea839b07",
+            "doc-fare-passes-cards.md": "aad2ac353b2a0f7c872ca56e04149e1e7b95149cc8801667bda762b0153a9f58",
+            "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+            "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+            "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+            "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+            "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+            "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+          },
+          "code_sha256": {
+            "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+            "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+            "src/hangil_rag/loader.py": "a23d86b92e2a14a13f3bf9ae16ccaaf1beda3d6115cb59926b211349465aa217",
+            "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+            "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+            "src/hangil_rag/search_memory.py": "3eb51fa68788b35f4ac6d8f0f173f7f85ec6eaad670f99672271f254290323d4",
+            "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+          },
+          "live_model_calls": 0,
+          "live_embedding_calls": 0
+        },
+        "runner_sha256": "7c7c5ac06a2a97f5d3dcb2ce446b24b396f1f00092ca226c5c38e116640a5aa2",
+        "rag_inputs_sha256": "e20f59ba94b507f8ce818b2ed0fd6d939d2bc39dd97b956326aa54c93a770aa1",
+        "checks": [
+          {
+            "id": "API-01-train-clarification",
+            "passed": true,
+            "expected": "needs_clarification",
+            "actual": "needs_clarification"
+          },
+          {
+            "id": "API-02-card-clarification",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "train_type": "allstop"
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "train_type": "allstop"
+            }
+          },
+          {
+            "id": "API-03-persisted-slots",
+            "passed": true,
+            "expected": {
+              "poi": "poi-allstop-tickets",
+              "card": "no",
+              "state": "needs_location"
+            },
+            "actual": {
+              "poi": "poi-allstop-tickets",
+              "card": "no",
+              "state": "needs_location"
+            }
+          },
+          {
+            "id": "API-04-photo-boundary",
+            "passed": true,
+            "expected": 200,
+            "actual": 200
+          },
+          {
+            "id": "API-05-location-candidate",
+            "passed": true,
+            "expected": {
+              "status": "needs_confirmation",
+              "first": "line4-gates"
+            },
+            "actual": {
+              "status": "needs_confirmation",
+              "first": "line4-gates"
+            }
+          },
+          {
+            "id": "API-06-confirmation",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "ready_to_navigate"
+            },
+            "actual": {
+              "http": 200,
+              "state": "ready_to_navigate"
+            }
+          },
+          {
+            "id": "API-07-registered-route",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "start": "line4-gates",
+              "goal": "allstop-tickets"
+            },
+            "actual": {
+              "http": 200,
+              "start": "line4-gates",
+              "goal": "allstop-tickets"
+            }
+          },
+          {
+            "id": "API-08-navigation_started",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "navigating"
+            },
+            "actual": {
+              "http": 200,
+              "state": "navigating"
+            }
+          },
+          {
+            "id": "API-08-arrived",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "arrived"
+            },
+            "actual": {
+              "http": 200,
+              "state": "arrived"
+            }
+          },
+          {
+            "id": "API-10-card-present",
+            "passed": true,
+            "expected": {
+              "poi": "poi-allstop-platform",
+              "card": "yes"
+            },
+            "actual": {
+              "poi": "poi-allstop-platform",
+              "card": "yes"
+            }
+          },
+          {
+            "id": "API-11-express-english",
+            "passed": true,
+            "expected": "poi-express-tickets",
+            "actual": "poi-express-tickets"
+          },
+          {
+            "id": "API-12-unsure-without-timetable",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "has_comparison_source": true,
+              "items": []
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "has_comparison_source": true,
+              "items": []
+            }
+          },
+          {
+            "id": "API-13-fare-with-rag-evidence",
+            "passed": true,
+            "expected": {
+              "status": "answered",
+              "fare_source_with_date_url": true
+            },
+            "actual": {
+              "status": "answered",
+              "fare_source_with_date_url": true
+            }
+          },
+          {
+            "id": "API-14-unregistered-poi",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "status": "needs_clarification",
+              "destination": null
+            },
+            "actual": {
+              "http": 200,
+              "status": "needs_clarification",
+              "destination": null
+            }
+          },
+          {
+            "id": "API-15-photo-question",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "status": "answered",
+              "has_ticket_source": true
+            },
+            "actual": {
+              "http": 200,
+              "status": "answered",
+              "has_ticket_source": true
+            }
+          },
+          {
+            "id": "API-16-comparison-without-evidence",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "sources": [],
+              "items": [],
+              "has_unverified_note": true
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "sources": [],
+              "items": [],
+              "has_unverified_note": true
+            }
+          },
+          {
+            "id": "API-19-fare-without-evidence-control",
+            "passed": true,
+            "expected": {
+              "status": "cannot_answer",
+              "sources": [],
+              "has_digits": false
+            },
+            "actual": {
+              "status": "cannot_answer",
+              "sources": [],
+              "has_digits": false
+            }
+          },
+          {
+            "id": "API-17-malformed-photo",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "status": "no_match",
+              "candidates": [],
+              "action": "recapture",
+              "hint": true
+            },
+            "actual": {
+              "http": 200,
+              "status": "no_match",
+              "candidates": [],
+              "action": "recapture",
+              "hint": true
+            }
+          },
+          {
+            "id": "API-18-manual-after-no-match",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "state": "ready_to_navigate",
+              "node": "line4-gates"
+            },
+            "actual": {
+              "http": 200,
+              "state": "ready_to_navigate",
+              "node": "line4-gates"
+            }
+          },
+          {
+            "id": "API-09-llm-down-fallback",
+            "passed": true,
+            "expected": "destination_set",
+            "actual": "destination_set"
+          },
+          {
+            "id": "INT-08-vision-down",
+            "passed": true,
+            "expected": {
+              "http": 503,
+              "error_code": "AI_SERVICE_UNAVAILABLE"
+            },
+            "actual": {
+              "http": 503,
+              "error_code": "AI_SERVICE_UNAVAILABLE"
+            }
+          },
+          {
+            "id": "API-20-purchase-intent",
+            "passed": true,
+            "expected": {
+              "status": "needs_clarification",
+              "intent": "purchase_arex_ticket"
+            },
+            "actual": {
+              "status": "needs_clarification",
+              "intent": "purchase_arex_ticket"
+            }
+          },
+          {
+            "id": "API-21-purchase-followup",
+            "passed": true,
+            "expected": {
+              "intent": "purchase_arex_ticket",
+              "poi": "poi-express-tickets"
+            },
+            "actual": {
+              "intent": "purchase_arex_ticket",
+              "poi": "poi-express-tickets"
+            }
+          },
+          {
+            "id": "API-22-exit-persisted-slots",
+            "passed": true,
+            "expected": {
+              "intent": "navigate_to_exit",
+              "exit_number": "1",
+              "has_single_use_card": "yes",
+              "single_use_card_returned": "no",
+              "poi": "poi-single-use-card-refund"
+            },
+            "actual": {
+              "intent": "navigate_to_exit",
+              "exit_number": "1",
+              "has_single_use_card": "yes",
+              "single_use_card_returned": "no",
+              "poi": "poi-single-use-card-refund"
+            }
+          },
+          {
+            "id": "API-23-exit-after-return",
+            "passed": true,
+            "expected": {
+              "exit_number": "1",
+              "returned": "yes",
+              "poi": "poi-exit-1"
+            },
+            "actual": {
+              "exit_number": "1",
+              "returned": "yes",
+              "poi": "poi-exit-1"
+            }
+          },
+          {
+            "id": "API-24-boarding-without-ticket",
+            "passed": true,
+            "expected": {
+              "intent": "board_arex",
+              "ticket": "no",
+              "poi": "poi-express-tickets"
+            },
+            "actual": {
+              "intent": "board_arex",
+              "ticket": "no",
+              "poi": "poi-express-tickets"
+            }
+          },
+          {
+            "id": "API-25-boarding-ticket-persisted",
+            "passed": true,
+            "expected": {
+              "intent": "board_arex",
+              "ticket": "yes",
+              "poi": "poi-express-platform"
+            },
+            "actual": {
+              "intent": "board_arex",
+              "ticket": "yes",
+              "poi": "poi-express-platform"
+            }
+          },
+          {
+            "id": "API-26-plan-follows-reported-refund",
+            "passed": true,
+            "expected": {
+              "http": 200,
+              "refund_status": "REFUNDED",
+              "unfinished_refund_steps": 0
+            },
+            "actual": {
+              "http": 200,
+              "refund_status": "REFUNDED",
+              "unfinished_refund_steps": 0
+            }
+          }
+        ],
+        "passed": 28,
+        "total": 28,
+        "production_ai_quality_measured": false
+      },
+      "production_entrypoint": {
+        "probe_version": "r6-production-entrypoint-v1",
+        "executed_at_kst": "2026-10-26T10:10:53.656889+09:00",
+        "commits": {
+          "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+          "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+          "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+          "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+          "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+          "oneload-rag": "315701aa803ccaa50d724e53b17b683af74ae8d3"
+        },
+        "map": {
+          "source_repository": "oneload-data",
+          "path": "maps/seoul-station.json",
+          "map_id": "seoul-station",
+          "version": "2026-10-25.2",
+          "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+        },
+        "rag": {
+          "repository": "oneload-rag",
+          "commit": "315701aa803ccaa50d724e53b17b683af74ae8d3",
+          "working_tree_clean": true,
+          "backend": "MemorySearch",
+          "min_score": 0.25,
+          "k": 3,
+          "relative_cutoff": 0.5,
+          "scope_gate_min_coverage": 0.25,
+          "community": false,
+          "document_ids": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types",
+            "doc-climate-card-short-term",
+            "doc-deposit-refund",
+            "doc-express-ticket",
+            "doc-fare-arex-allstop",
+            "doc-fare-arex-express",
+            "doc-fare-passes-cards",
+            "doc-foreigner-transit-cards",
+            "doc-seoul-arex-transfer",
+            "doc-seoul-help-desks",
+            "doc-seoul-transit-basics",
+            "doc-tmoney-card",
+            "doc-wowpass"
+          ],
+          "knowledge_sha256": {
+            "README.md": "27bb59aa3979dd6531cb023d1e9536ede4cbec4bcc82a20d68e403f1d7e03e1d",
+            "doc-allstop-ticket.md": "78595954ee672ef23ad7492759444e413b363b8a402a87473bce6327a44a3535",
+            "doc-arex-train-types.md": "ac8c3f318c040128ad32aa268f97994798c0408b2b94d5201b45218776c03cfe",
+            "doc-climate-card-short-term.md": "0986e43587da7bcf22fc60f219cc197de446e352f142f3713897e592ede8f161",
+            "doc-community-arex-payments.md": "dc53ba71f1ccfc2e45e0aa9d66e3028c37e0ed84c1a6d55163b1a95693fdb8f2",
+            "doc-community-seoul-station-tips.md": "fd41e63ce1093de53d751022f5da1b950dcc1b7d0416b34b3c33eb8ea63b8f9f",
+            "doc-deposit-refund.md": "988379a5fee99aaf155080176397761a4be2222e638beb2ddb0965fdc0274a12",
+            "doc-express-ticket.md": "50b42857d8928645fca984bf3b438e4447c56016ef36506edd7a039e28f87231",
+            "doc-fare-arex-allstop.md": "2de23bdfee1f497a0bda7a3fdb5611a953d0d93f52e6a7230b7305f1c30e3c13",
+            "doc-fare-arex-express.md": "0642a0c52dc3ed9e6ea0198b4e65ae0b845f22f1d01f9c5865a12ac4ea839b07",
+            "doc-fare-passes-cards.md": "aad2ac353b2a0f7c872ca56e04149e1e7b95149cc8801667bda762b0153a9f58",
+            "doc-foreigner-transit-cards.md": "13679179d092c342275f6ab44cc3a3f7bffe4b3306f1b9350ca350c60f81b3d8",
+            "doc-seoul-arex-transfer.md": "6f3be49746b8db5121e4ba3148d0b92637ee975beb0252e5f48ef044c6eea32a",
+            "doc-seoul-help-desks.md": "dc7a87935ed604aa285868c0d6522379c452b67369dd250d433db21b1d10aeae",
+            "doc-seoul-transit-basics.md": "5a6ab67ce4e1f2cd570bf7c58abade12b42b0e0497b73b3219830872eb68daf2",
+            "doc-tmoney-card.md": "79d9fbb353f4e5703926c9b6a5396c16111e7110f8c30c2ddd3ef21f8ee0a90b",
+            "doc-wowpass.md": "eabcd090f1ee6a39707b5a5cdf516fd0cfdafcf8765692ed87162653ce0dec2e"
+          },
+          "code_sha256": {
+            "src/hangil_rag/__init__.py": "38878308f42458b5f638744f3871bebf1f2bf8fdac5d1d1af1fb9cd48bd1fd20",
+            "src/hangil_rag/ingest.py": "1db2f46ef30b1e6267e113e7a84457ad3141ec48afe588748f33d61ed690f2e5",
+            "src/hangil_rag/loader.py": "a23d86b92e2a14a13f3bf9ae16ccaaf1beda3d6115cb59926b211349465aa217",
+            "src/hangil_rag/mcp_server.py": "d2698aac11ce7ffdb7761222b0a8d83d62d7a838892f2a059cccc0cc57c47203",
+            "src/hangil_rag/schemas.py": "a5744e6c17ce2fef610d4df8023c16718913dca5f21af10a24e629180e1ee529",
+            "src/hangil_rag/search_memory.py": "3eb51fa68788b35f4ac6d8f0f173f7f85ec6eaad670f99672271f254290323d4",
+            "src/hangil_rag/search_pgvector.py": "e0a2fe7e794f0cb95d7691c382ff2c6ca8d3891534afe1b55f38b4ecbc5ab03e"
+          },
+          "live_model_calls": 0,
+          "live_embedding_calls": 0
+        },
+        "entrypoint_sha256": "75b12b65ff3b4c522d08e22ffa261e1b6728b6e858530102e5d7928c71c0c8a7",
+        "scope": "Actual global app; FakeLLM provider; forced local official MemorySearch; disposable DB. Not deployed runtime or AI quality.",
+        "checks": [
+          {
+            "id": "PROD-01-default-assembly",
+            "expected": [
+              true,
+              true,
+              true
+            ],
+            "actual": [
+              true,
+              true,
+              true
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-02-official-fare",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "id": "PROD-03-shared-vision",
+            "expected": [
+              200,
+              "needs_confirmation",
+              true
+            ],
+            "actual": [
+              200,
+              "needs_confirmation",
+              true
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-04-empty-search-control",
+            "expected": [
+              "cannot_answer",
+              []
+            ],
+            "actual": [
+              "cannot_answer",
+              []
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-05-no-key-fallback",
+            "expected": [
+              "RuleAgent",
+              "NoVision"
+            ],
+            "actual": [
+              "RuleAgent",
+              "NoVision"
+            ],
+            "passed": true
+          },
+          {
+            "id": "PROD-06-fallback-official-sources",
+            "expected": true,
+            "actual": true,
+            "passed": true
+          },
+          {
+            "id": "PROD-07-fallback-refuses-unverified-fare",
+            "expected": [
+              "cannot_answer",
+              []
+            ],
+            "actual": [
+              "cannot_answer",
+              []
+            ],
+            "passed": true
+          }
+        ],
+        "passed": 7,
+        "total": 7,
+        "real_model_calls": 0,
+        "real_embedding_calls": 0,
+        "deployed_runtime_verified": false,
+        "runner_sha256": "44eee1eb3c669b50c659466ed10e8277040783c59c3a42fe4d90f2ad8396948e"
+      },
+      "agent_compatibility": {
+        "exit_code": 1,
+        "reason": "Selected Data map differs from Agent mocks/maps snapshot; no automatic source copying or patching",
+        "e2e_status": "NOT_RUN"
+      }
+    }
+  },
+  "route_extra_evidence": "reports/routes-current-20261026.json",
+  "retrieval_evidence": "reports/retrieval-regression-20261026.json",
+  "grounding_control": {
+    "profile": "main",
+    "scope": "Controlled FakeLLM with two official document hits; source structure and NO_ANSWER handling, not real AI quality",
+    "map": {
+      "source_repository": "oneload-data",
+      "path": "maps/seoul-station.json",
+      "map_id": "seoul-station",
+      "version": "2026-10-25.2",
+      "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+    },
+    "injected_documents": [
+      "doc-allstop-ticket",
+      "doc-arex-train-types"
+    ],
+    "checks": [
+      {
+        "id": "one-citation",
+        "passed": true,
+        "expected": {
+          "status": "answered",
+          "sources": [
+            "doc-allstop-ticket"
+          ]
+        },
+        "actual": {
+          "status": "answered",
+          "sources": [
+            "doc-allstop-ticket"
+          ]
+        },
+        "visible_citation_numbers": [
+          "1"
+        ],
+        "answer_length": 18
+      },
+      {
+        "id": "no-answer",
+        "passed": true,
+        "expected": {
+          "status": "cannot_answer",
+          "sources": []
+        },
+        "actual": {
+          "status": "cannot_answer",
+          "sources": []
+        },
+        "visible_citation_numbers": [],
+        "answer_length": 39
+      },
+      {
+        "id": "invalid-citation",
+        "passed": true,
+        "expected": {
+          "status": "cannot_answer",
+          "sources": []
+        },
+        "actual": {
+          "status": "cannot_answer",
+          "sources": []
+        },
+        "visible_citation_numbers": [],
+        "answer_length": 39
+      },
+      {
+        "id": "missing-citation",
+        "passed": true,
+        "expected": {
+          "status": "cannot_answer",
+          "sources": []
+        },
+        "actual": {
+          "status": "cannot_answer",
+          "sources": []
+        },
+        "visible_citation_numbers": [],
+        "answer_length": 39
+      },
+      {
+        "id": "both-citations",
+        "passed": true,
+        "expected": {
+          "status": "answered",
+          "sources": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types"
+          ]
+        },
+        "actual": {
+          "status": "answered",
+          "sources": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types"
+          ]
+        },
+        "visible_citation_numbers": [
+          "1",
+          "2"
+        ],
+        "answer_length": 28
+      },
+      {
+        "id": "citation-after-truncation",
+        "passed": false,
+        "expected": {
+          "status": "answered",
+          "sources": [
+            "doc-allstop-ticket"
+          ]
+        },
+        "actual": {
+          "status": "answered",
+          "sources": [
+            "doc-allstop-ticket",
+            "doc-arex-train-types"
+          ]
+        },
+        "visible_citation_numbers": [
+          "1"
+        ],
+        "answer_length": 600
+      }
+    ],
+    "passed": 5,
+    "total": 6,
+    "model_calls": 0,
+    "embedding_calls": 0
+  },
+  "frontend_contract": {
+    "recorded_at_kst": "2026-10-26T10:10:09.331197+09:00",
+    "scope": "Current local Backend public schema versus App generated TypeScript; no DB/model calls",
+    "app_commit": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+    "backend_commit": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+    "backend_intents": [
+      "navigate_to_poi",
+      "navigate_to_exit",
+      "purchase_arex_ticket",
+      "board_arex",
+      "ticket_purchase_and_navigation",
+      "payment_question",
+      "usage_question",
+      "report_off_route",
+      "out_of_scope"
+    ],
+    "app_intents": [
+      "navigate_to_poi",
+      "out_of_scope",
+      "payment_question",
+      "report_off_route",
+      "ticket_purchase_and_navigation",
+      "usage_question"
+    ],
+    "missing_intents": [
+      "board_arex",
+      "navigate_to_exit",
+      "purchase_arex_ticket"
+    ],
+    "missing_slots": [
+      "exit_number",
+      "has_single_use_card",
+      "single_use_card_returned",
+      "has_ticket"
+    ],
+    "backend_message_out_has_plan": true,
+    "app_schema_has_plan_api": false,
+    "app_schema_has_step_api": false,
+    "app_generated_schema_sha256": "d149702d69f8f9410463e9441250e5c131e9a705c030a7cba221a08b8af13a16",
+    "issue": "https://github.com/team-onetruck/oneload-app/issues/41",
+    "limitation": "Type synchronization gap; not evidence of a phone crash. Does not prove the action-plan UI works."
+  },
+  "decision": {
+    "standard_main_exit": 0,
+    "full_product_accepted": false,
+    "latest_pr4_merged": false,
+    "latest_pr4_threshold_approved": false,
+    "latest_pr4_v3_positive_top3": "22/24",
+    "latest_pr4_v3_out_of_scope_empty": "8/24",
+    "latest_pr4_v3_false_positives": 16,
+    "fresh_v4": "NOT_RUN",
+    "existing_search_gate_changed": false,
+    "qa_issue3_state_observed": "open"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "uv_pip_check": "81 packages compatible",
+    "lock": "requirements-validation.lock.txt",
+    "lock_sha256": "c7e96ebf619c10adc64cb635f1401cbb6b9b3508d4396097da2610f9e16ba856",
+    "node": "v26.7.0",
+    "pnpm": "11.13.0",
+    "app_install": "offline frozen lock; passed"
+  },
+  "limitations": {
+    "live_model_calls": 0,
+    "live_embedding_calls": 0,
+    "field_photo_gold": 0,
+    "human_component_reviews_pending": 21,
+    "browser": "mocked API/camera/sensors; no physical phone or real Backend browser acceptance",
+    "release_install_or_deployment": "NOT_RUN",
+    "R3_reported_live_LLM_metrics": "Third-party comment only; not reproduced or included in R6 pass counts",
+    "R3_criteria_change_proposal": "Discussion reference only; not adopted as user instruction",
+    "upstream_code_edits_commits_pushes": false,
+    "operational_or_existing_database_used": false,
+    "own_disposable_databases_removed": true
+  }
+}

@@ -1,5 +1,23 @@
 # 한길 R6 인수인계
 
+## 최신 main 전체 재검증 — 2026-10-26 10:12 KST
+
+[현재 결과·재현 범위](latest-main-retest-20261026.md) · [전체 증거](../reports/latest-main-retest-20261026.json) · [main 기준선](../reports/baseline.json) · [공개 검색 회귀](../reports/retrieval-regression-20261026.json).
+
+현재 검증 묶음은 QA55e0d53 기반+새 App 연결 소스 검토 / App **dace4c1** / Backend2ebd94d / Agent **21378b5** / Data72d5eb8 / Infra6cf4a65 / RAG main f99704d다. Agent PR11이 main에 병합됐고 App에는 표 구매 후 승강장 안내·현재 위치 처리·거리뷰 진행 표시 변경이 들어왔다. 사용자 원본7개와 원격 main이 테스트 전후 같음을 확인했고 별도 사본만 사용했다.
+
+**표준 전체 exit0:** QA51/51·Agent77통과/2xfail(총79)·Backend72/72·Data구조3/3·component20시나리오/21턴·모의API27/27·공식RAG28/28·전역app모의API7/7 통과다. 출구/반납기78/78·노드쌍1521/1521 연결, 무료구역870쌍의 불필요한 gate0건이다. App lint/타입/단위519/빌드·모의 화면26/26도 통과했다. 과거 지도 경로19건 실패를 현재 실패로 남기지 않는다.
+
+**전체 제품 인수는 미승인:** RAG main98/101·실패3(지도 버전2·POI 기대1), Agent 지도 사본 호환 exit1/E2E NOT_RUN, 인용 제어5/6·잘린 인용 출처 잔존1건, App#41의 intent3·슬롯4·plan/steps 생성 타입 누락이 남는다. Agent xfail2건과 사람 검토21턴도 통과로 세지 않는다.
+
+RAG PR4는 검사 중 fd84f9b→**315701a**로 바뀌어 각각 분리했다. 최신315701a는 RAG129/129·Backend72·API28/7·RAG↔Backend E2E 통과이며 지도 버전·POI 기대 검사는 개선됐다. 하지만 공개v3 회귀 top3 22/24·범위밖 빈 결과8/24(오탐16)로 기존 검색 조건에 미달한다. RAG main과 후보를 합산하지 않고 PR4는 open이다. QA#3 최신 R3 댓글의 답변 단계로 기준을 옮기자는 제안은 참고이며, 사용자의 기준 변경/실제 모델 호출 지시로 채택하지 않았다. **v4·R6 실제 모델 답변 평가는 NOT_RUN, QA#3 임계값 미승인/open**이다. v1/v2/v3는 이미 공개돼 새 미관찰 평가로 재사용하지 않는다.
+
+새 App 변경의 호출 흐름을 읽고 `eval/frontend_wiring.json`에 app-dace4c1 소스 해시·근거를 추가한 뒤 전체 검사를 실행했다. 동결 질문·정답·실행기·기준은 변경하지 않았다. 새 Python 설치 없이 기존3.12.14·81패키지 호환 환경을 재사용했고 App은 frozen lock으로 설치했다. 원시 로그·비밀값은 공개하지 않는다.
+
+다음은 RAG 지도/검색·R2 지도 사본·인용 잘림·App 생성 계약 보완, 검색/답변 평가 기준 합의와 새 평가 사전 고정, 사람 검토·실제 모바일/현장 인수다. R3가 보고한 실제 LLM 수치를 R6 검사에 합산하지 않는다. 실제 모델/임베딩0회, 운영/기존DB·배포 사용 없음, QA가 만든 DB/서버만 정리했다. 코드·문서·commit/push 대상은 QA뿐이며 다른 역할 코드·이슈·댓글·PR·태그는 변경하지 않는다. 시작 프롬프트는 채팅에만 작성한다.
+
+---
+
 ## QA #3 v3 판정·새 main 관찰 — 2026-10-26
 
 사용자의 QA 이슈 해결 요청에 따라 열린 이슈#3의 최신 R3 요청(RAG PR4 v3 평가)을 처리했다. [실패 사례·완료 조건·재현](issue3-v3-review-20261026.md) · [검색 증거](../reports/retrieval-v3-review-20261026.json) · [연결/새 main 증거](../reports/issue3-compatibility-20261026.json).

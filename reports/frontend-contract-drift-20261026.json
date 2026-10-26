@@ -1,0 +1,42 @@
+{
+  "recorded_at_kst": "2026-10-26T10:10:09.331197+09:00",
+  "scope": "Current local Backend public schema versus App generated TypeScript; no DB/model calls",
+  "app_commit": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+  "backend_commit": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+  "backend_intents": [
+    "navigate_to_poi",
+    "navigate_to_exit",
+    "purchase_arex_ticket",
+    "board_arex",
+    "ticket_purchase_and_navigation",
+    "payment_question",
+    "usage_question",
+    "report_off_route",
+    "out_of_scope"
+  ],
+  "app_intents": [
+    "navigate_to_poi",
+    "out_of_scope",
+    "payment_question",
+    "report_off_route",
+    "ticket_purchase_and_navigation",
+    "usage_question"
+  ],
+  "missing_intents": [
+    "board_arex",
+    "navigate_to_exit",
+    "purchase_arex_ticket"
+  ],
+  "missing_slots": [
+    "exit_number",
+    "has_single_use_card",
+    "single_use_card_returned",
+    "has_ticket"
+  ],
+  "backend_message_out_has_plan": true,
+  "app_schema_has_plan_api": false,
+  "app_schema_has_step_api": false,
+  "app_generated_schema_sha256": "d149702d69f8f9410463e9441250e5c131e9a705c030a7cba221a08b8af13a16",
+  "issue": "https://github.com/team-onetruck/oneload-app/issues/41",
+  "limitation": "Type synchronization gap; not evidence of a phone crash. Does not prove the action-plan UI works."
+}

@@ -1,10 +1,10 @@
 {
-  "executed_at_kst": "2026-10-26T08:37:37.052844+09:00",
+  "executed_at_kst": "2026-10-26T10:07:33.514974+09:00",
   "commits": {
-    "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+    "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
     "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
-    "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
-    "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+    "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
     "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
     "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
   },
@@ -12,8 +12,8 @@
     "source_repository": "oneload-data",
     "path": "maps/seoul-station.json",
     "map_id": "seoul-station",
-    "version": "2026-10-25.1",
-    "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
+    "version": "2026-10-25.2",
+    "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
   },
   "runner_sha256": "a387f0569e58899fdd92c6d4ec0d7d0b514c870a85d9f215fd215da7da4aa4e5",
   "scope": "Registered directed graph with default RouteOptions. No field validation; identity paths included.",
@@ -21,8 +21,160 @@
     {
       "start": "ktx-hall",
       "destination_poi_id": "poi-single-use-card-refund",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "station-plaza",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "arex-concourse",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "express-tickets",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "express-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "express-gates",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "express-gates",
+        "express-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "allstop-tickets",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "allstop-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "allstop-gates",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "allstop-gates",
+        "allstop-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "express-platform",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "express-platform",
+        "express-gates",
+        "express-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "allstop-platform",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "allstop-platform",
+        "allstop-gates",
+        "allstop-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "arex-transfer-passage",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "arex-transfer-passage",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "metro-north-passage",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "metro-north-passage",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
     },
     {
       "start": "line1-gates",
@@ -34,12 +186,6 @@
       ]
     },
     {
-      "start": "line4-gates",
-      "destination_poi_id": "poi-single-use-card-refund",
-      "reachable": false,
-      "path": null
-    },
-    {
       "start": "single-use-card-refund",
       "destination_poi_id": "poi-single-use-card-refund",
       "reachable": true,
@@ -48,58 +194,439 @@
       ]
     },
     {
+      "start": "line1-concourse",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "line1-concourse",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "line1-gates-east",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "gtx-a-transfer",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "gtx-a-transfer",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "metro-center",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "metro-center",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "line4-gates",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "line4-concourse",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "line4-concourse",
+        "line1-concourse",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "line4-gates-east",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "line4-gates-east",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "line1-platform",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "line1-platform",
+        "line1-concourse",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "line4-platform",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "line4-platform",
+        "line4-concourse",
+        "line1-concourse",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "korail-platform-3-4",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "korail-platform-3-4",
+        "line1-concourse",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
       "start": "exit-1",
       "destination_poi_id": "poi-single-use-card-refund",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
     },
     {
-      "start": "arex-concourse",
+      "start": "exit-2",
       "destination_poi_id": "poi-single-use-card-refund",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-2",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
     },
     {
-      "start": "express-tickets",
+      "start": "exit-3",
       "destination_poi_id": "poi-single-use-card-refund",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-3",
+        "metro-north-passage",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
     },
     {
-      "start": "express-gates",
+      "start": "exit-4",
       "destination_poi_id": "poi-single-use-card-refund",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-4",
+        "metro-north-passage",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
     },
     {
-      "start": "allstop-tickets",
+      "start": "exit-5",
       "destination_poi_id": "poi-single-use-card-refund",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-5",
+        "metro-north-passage",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
     },
     {
-      "start": "allstop-gates",
+      "start": "exit-6",
       "destination_poi_id": "poi-single-use-card-refund",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-6",
+        "metro-north-passage",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
     },
     {
-      "start": "express-platform",
+      "start": "exit-7",
       "destination_poi_id": "poi-single-use-card-refund",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-7",
+        "metro-north-passage",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
     },
     {
-      "start": "allstop-platform",
+      "start": "exit-8",
       "destination_poi_id": "poi-single-use-card-refund",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-8",
+        "metro-north-passage",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "exit-9",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "exit-9",
+        "metro-north-passage",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "exit-9-1",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "exit-9-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "exit-10",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "exit-10",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "exit-11",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "exit-11",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "exit-12",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "exit-12",
+        "line4-gates-east",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "exit-13",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "exit-13",
+        "line4-gates-east",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "exit-14",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "exit-14",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
+    },
+    {
+      "start": "exit-15",
+      "destination_poi_id": "poi-single-use-card-refund",
+      "reachable": true,
+      "path": [
+        "exit-15",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1",
+        "line1-gates-east",
+        "line1-gates",
+        "single-use-card-refund"
+      ]
     },
     {
       "start": "ktx-hall",
       "destination_poi_id": "poi-exit-1",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "ktx-hall",
+        "station-plaza",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "station-plaza",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "station-plaza",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "arex-concourse",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "express-tickets",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "express-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "express-gates",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "express-gates",
+        "express-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "allstop-tickets",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "allstop-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "allstop-gates",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "allstop-gates",
+        "allstop-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "express-platform",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "express-platform",
+        "express-gates",
+        "express-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "allstop-platform",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "allstop-platform",
+        "allstop-gates",
+        "allstop-tickets",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "arex-transfer-passage",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "arex-transfer-passage",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "metro-north-passage",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "metro-north-passage",
+        "line1-gates",
+        "line1-gates-east",
+        "exit-1"
+      ]
     },
     {
       "start": "line1-gates",
@@ -107,15 +634,9 @@
       "reachable": true,
       "path": [
         "line1-gates",
-        "single-use-card-refund",
+        "line1-gates-east",
         "exit-1"
       ]
-    },
-    {
-      "start": "line4-gates",
-      "destination_poi_id": "poi-exit-1",
-      "reachable": false,
-      "path": null
     },
     {
       "start": "single-use-card-refund",
@@ -123,6 +644,117 @@
       "reachable": true,
       "path": [
         "single-use-card-refund",
+        "line1-gates",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "line1-concourse",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "line1-concourse",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "line1-gates-east",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "gtx-a-transfer",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "gtx-a-transfer",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "metro-center",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "line4-gates",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "line4-concourse",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "line4-concourse",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "line4-gates-east",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "line4-gates-east",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "line1-platform",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "line1-platform",
+        "line1-concourse",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "line4-platform",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "line4-platform",
+        "line4-concourse",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "korail-platform-3-4",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "korail-platform-3-4",
+        "line1-concourse",
+        "line1-gates-east",
         "exit-1"
       ]
     },
@@ -135,50 +767,186 @@
       ]
     },
     {
-      "start": "arex-concourse",
+      "start": "exit-2",
       "destination_poi_id": "poi-exit-1",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-2",
+        "line1-gates-east",
+        "exit-1"
+      ]
     },
     {
-      "start": "express-tickets",
+      "start": "exit-3",
       "destination_poi_id": "poi-exit-1",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-3",
+        "metro-north-passage",
+        "line1-gates",
+        "line1-gates-east",
+        "exit-1"
+      ]
     },
     {
-      "start": "express-gates",
+      "start": "exit-4",
       "destination_poi_id": "poi-exit-1",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-4",
+        "metro-north-passage",
+        "line1-gates",
+        "line1-gates-east",
+        "exit-1"
+      ]
     },
     {
-      "start": "allstop-tickets",
+      "start": "exit-5",
       "destination_poi_id": "poi-exit-1",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-5",
+        "metro-north-passage",
+        "line1-gates",
+        "line1-gates-east",
+        "exit-1"
+      ]
     },
     {
-      "start": "allstop-gates",
+      "start": "exit-6",
       "destination_poi_id": "poi-exit-1",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-6",
+        "metro-north-passage",
+        "line1-gates",
+        "line1-gates-east",
+        "exit-1"
+      ]
     },
     {
-      "start": "express-platform",
+      "start": "exit-7",
       "destination_poi_id": "poi-exit-1",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-7",
+        "metro-north-passage",
+        "line1-gates",
+        "line1-gates-east",
+        "exit-1"
+      ]
     },
     {
-      "start": "allstop-platform",
+      "start": "exit-8",
       "destination_poi_id": "poi-exit-1",
-      "reachable": false,
-      "path": null
+      "reachable": true,
+      "path": [
+        "exit-8",
+        "metro-north-passage",
+        "line1-gates",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "exit-9",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "exit-9",
+        "metro-north-passage",
+        "line1-gates",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "exit-9-1",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "exit-9-1",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "exit-10",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "exit-10",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "exit-11",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "exit-11",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "exit-12",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "exit-12",
+        "line4-gates-east",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "exit-13",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "exit-13",
+        "line4-gates-east",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "exit-14",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "exit-14",
+        "line4-gates",
+        "metro-center",
+        "line1-gates-east",
+        "exit-1"
+      ]
+    },
+    {
+      "start": "exit-15",
+      "destination_poi_id": "poi-exit-1",
+      "reachable": true,
+      "path": [
+        "exit-15",
+        "arex-concourse",
+        "ktx-hall",
+        "station-plaza",
+        "exit-1"
+      ]
     }
   ],
-  "reachable": 5,
-  "total": 24,
+  "reachable": 78,
+  "total": 78,
   "field_verified": false,
   "real_model_calls": 0
 }

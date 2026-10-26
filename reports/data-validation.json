@@ -21,11 +21,11 @@
       "source_repository": "oneload-data",
       "path": "maps/seoul-station.json",
       "map_id": "seoul-station",
-      "version": "2026-10-25.1",
-      "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42",
-      "nodes": 12,
-      "edges": 12,
-      "pois": 6,
+      "version": "2026-10-25.2",
+      "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18",
+      "nodes": 39,
+      "edges": 106,
+      "pois": 40,
       "panoramas": 6,
       "example_panoramas": 6
     }
@@ -41,12 +41,12 @@
   "validation_scope": "Backend MapData and reference validation; schema copy equality; local photo files",
   "field_photo_accuracy_measured": false,
   "commits": {
-    "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+    "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
     "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
-    "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
-    "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+    "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
     "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
     "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
   },
-  "checked_at_kst": "2026-10-26T08:37:36.703164+09:00"
+  "checked_at_kst": "2026-10-26T10:07:33.233297+09:00"
 }

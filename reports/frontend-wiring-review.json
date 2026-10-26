@@ -1,5 +1,5 @@
 {
-  "scope": "Actual historical Git source snapshots and current checkout; source review only, browser E2E NOT_RUN",
+  "scope": "Historical source checks retained; current incremental source review only. Separate current mocked-browser26/26 result in latest-main-retest-20261026.json; real Backend/browser and phone acceptance not run.",
   "historical_checks": [
     {
       "profile": "app-bc2d9f1",
@@ -27,6 +27,36 @@
     "method": "reviewed_runtime_source_fingerprints",
     "runtime_browser_e2e": "NOT_RUN",
     "functional_acceptance": "pending_independent_runtime_checks",
+    "snapshot_sha256": "182a569cd258ae10868fd5a3a638bd692e07c0b0d0c9c35a9d7279f7f8f1b1c6",
+    "status": "wired",
+    "profile": "app-dace4c1",
+    "reviewed_commit": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+    "connected_features": [
+      "chat",
+      "confirmation",
+      "localization",
+      "navigation_events",
+      "routes"
+    ],
+    "missing_features": [],
+    "evidence": [
+      "src/screens.tsx user actions -> store.tsx sendText/sendSuggested/pickDestination -> askServer -> sendChat -> api/index.ts -> HTTP adapter /messages",
+      "analyzePhoto -> locateOnServer -> compressImage -> sendPhoto -> /localizations; candidates remain unconfirmed until confirmLocation user action -> sendConfirmation -> /location-confirmations",
+      "routeOnServer -> sendRoute -> createRoute /routes; returned route/session drive guide, 2D and streetview; navigation_started/arrived/cancelled go through event outbox -> postNavigationEvents",
+      "api/index.ts constructs only createHttpAdapter(createApiClient()); mock adapter has no application entry path. Removed demo controls do not remove HTTP wiring.",
+      "Current camera compass overlay, sensor survey and AR math foundation are separate from 2D/streetview acceptance; native engine is not connected and App PR39 is unmerged draft.",
+      "Generated schema retains six intents and lacks plan/steps API. Agent #7 residual frontend contract task remains. Source review does not assert mobile runtime acceptance.",
+      "2026-10-26 incremental review of all changed runtime TS/TSX against12ba6c6: boughtTicket -> say -> askServer -> sendChat; server message is preserved, only current-place action presentation changes.",
+      "Zero-step route -> arrive -> event outbox; regular nextStep uses same arrive path. Existing HTTP adapter, photo confirmation, route revision and session API call paths are unchanged.",
+      "Streetview progress/destination-label changes are presentation only; masked browser tests are separate. No claim of real Backend browser or phone acceptance."
+    ],
+    "registry_sha256": "7f405b858cd9164fb5de622ab13491c693b6779d33ffdb0de3ea39d8d855b997"
+  },
+  "checked_at_kst": "2026-10-26T10:16:08.880695+09:00",
+  "previous_current": {
+    "method": "reviewed_runtime_source_fingerprints",
+    "runtime_browser_e2e": "NOT_RUN",
+    "functional_acceptance": "pending_independent_runtime_checks",
     "snapshot_sha256": "6ba18657a8212138723a273b61dbabf0fc1aa5f56c08903f1e7eb3c627a7d29b",
     "status": "wired",
     "profile": "app-b5d6835",
@@ -49,6 +79,5 @@
       "Verified by source review; CI does not substitute for real Backend/mobile browser acceptance"
     ],
     "registry_sha256": "99492502904b1a5727b6926fef7d4195d094cf128123cd0841f8be9b6b2bce37"
-  },
-  "checked_at_kst": "2026-10-23T11:37:39.434875+09:00"
+  }
 }

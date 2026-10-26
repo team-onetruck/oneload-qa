@@ -1,62 +1,62 @@
 {
   "date": "2026-10-26",
-  "executed_at_kst": "2026-10-26T08:37:50.180411+09:00",
+  "executed_at_kst": "2026-10-26T10:07:47.770610+09:00",
   "commits": {
-    "oneload-app": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
+    "oneload-app": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
     "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
-    "oneload_agent": "a732577eee46e918f05eac41a5ebc5833489b1c1",
-    "oneload-data": "89ec570da39d7d64278805d3f5e7536b18c41a4f",
+    "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+    "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
     "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
     "oneload-rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
   },
-  "overall_exit_code": 1,
+  "overall_exit_code": 0,
   "steps": [
     {
       "name": "qa-tests",
       "exit_code": 0,
-      "elapsed_s": 3.333
+      "elapsed_s": 3.062
     },
     {
       "name": "data-validation",
       "exit_code": 0,
-      "elapsed_s": 0.158
+      "elapsed_s": 0.092
     },
     {
       "name": "route-connectivity",
-      "exit_code": 1,
-      "elapsed_s": 0.357
+      "exit_code": 0,
+      "elapsed_s": 0.288
     },
     {
       "name": "agent-tests",
       "exit_code": 0,
-      "elapsed_s": 1.228
+      "elapsed_s": 1.165
     },
     {
       "name": "contract-audit",
       "exit_code": 0,
-      "elapsed_s": 1.657
+      "elapsed_s": 1.489
     },
     {
       "name": "component-eval",
       "exit_code": 0,
-      "elapsed_s": 0.831
+      "elapsed_s": 0.766
     },
     {
       "name": "backend-and-integration",
       "exit_code": 0,
-      "elapsed_s": 9.394
+      "elapsed_s": 10.82
     }
   ],
   "map": {
     "source_repository": "oneload-data",
     "path": "maps/seoul-station.json",
     "map_id": "seoul-station",
-    "version": "2026-10-25.1",
-    "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42"
+    "version": "2026-10-25.2",
+    "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
   },
   "qa": {
     "suite": {
-      "tests": 49,
+      "tests": 51,
       "failures": 0,
       "errors": 0,
       "skipped": 0
@@ -70,11 +70,11 @@
         "source_repository": "oneload-data",
         "path": "maps/seoul-station.json",
         "map_id": "seoul-station",
-        "version": "2026-10-25.1",
-        "sha256": "e91194c521b2b4cd5ce12269f50a458960cdccff98ad927d8f01de06259c3a42",
-        "nodes": 12,
-        "edges": 12,
-        "pois": 6,
+        "version": "2026-10-25.2",
+        "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18",
+        "nodes": 39,
+        "edges": 106,
+        "pois": 40,
         "panoramas": 6,
         "example_panoramas": 6
       }
@@ -88,136 +88,23 @@
     "validation_scope": "Backend MapData and reference validation; schema copy equality; local photo files"
   },
   "route_connectivity": {
-    "reachable": 5,
-    "total": 24,
-    "failed": [
-      {
-        "start": "ktx-hall",
-        "destination_poi_id": "poi-single-use-card-refund",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "line4-gates",
-        "destination_poi_id": "poi-single-use-card-refund",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "exit-1",
-        "destination_poi_id": "poi-single-use-card-refund",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "arex-concourse",
-        "destination_poi_id": "poi-single-use-card-refund",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "express-tickets",
-        "destination_poi_id": "poi-single-use-card-refund",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "express-gates",
-        "destination_poi_id": "poi-single-use-card-refund",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "allstop-tickets",
-        "destination_poi_id": "poi-single-use-card-refund",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "allstop-gates",
-        "destination_poi_id": "poi-single-use-card-refund",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "express-platform",
-        "destination_poi_id": "poi-single-use-card-refund",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "allstop-platform",
-        "destination_poi_id": "poi-single-use-card-refund",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "ktx-hall",
-        "destination_poi_id": "poi-exit-1",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "line4-gates",
-        "destination_poi_id": "poi-exit-1",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "arex-concourse",
-        "destination_poi_id": "poi-exit-1",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "express-tickets",
-        "destination_poi_id": "poi-exit-1",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "express-gates",
-        "destination_poi_id": "poi-exit-1",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "allstop-tickets",
-        "destination_poi_id": "poi-exit-1",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "allstop-gates",
-        "destination_poi_id": "poi-exit-1",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "express-platform",
-        "destination_poi_id": "poi-exit-1",
-        "reachable": false,
-        "path": null
-      },
-      {
-        "start": "allstop-platform",
-        "destination_poi_id": "poi-exit-1",
-        "reachable": false,
-        "path": null
-      }
-    ],
+    "reachable": 78,
+    "total": 78,
+    "failed": [],
     "scope": "Registered directed graph with default RouteOptions. No field validation; identity paths included.",
     "field_verified": false
   },
   "agent": {
     "suite": {
-      "tests": 47,
+      "tests": 79,
       "failures": 0,
       "errors": 0,
-      "skipped": 0
+      "skipped": 2
     },
     "model": "FakeLLM",
-    "checkout": "Local synchronized main"
+    "checkout": "Local synchronized main",
+    "passed": 77,
+    "xfail": 2
   },
   "backend": {
     "suite": {
@@ -227,7 +114,7 @@
       "skipped": 0
     },
     "run": {
-      "started_at_kst": "2026-10-26T08:37:40.911738+09:00",
+      "started_at_kst": "2026-10-26T10:07:37.026034+09:00",
       "repository": "oneload-backend",
       "commit": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
       "python": "3.12.14",
@@ -264,31 +151,27 @@
     "deployed_runtime_verified": false
   },
   "frontend": {
-    "commit": "12ba6c6f198d6641512b3e06287bb6ca7da8bdfc",
-    "status": "automated_mock_checks_passed",
+    "commit": "dace4c19cf9980fde8cbde9ad99821cdb15fd0d3",
+    "status": "passed",
     "browser_e2e_executed": true,
     "source_wiring": {
       "status": "wired",
       "validation_level": "reviewed_source_only",
-      "registry_sha256": "527b2dd0b0ed4ed555e40f7e8930df2951f2348c29c37a4a16fdf1d8579535ba",
+      "registry_sha256": "7f405b858cd9164fb5de622ab13491c693b6779d33ffdb0de3ea39d8d855b997",
       "runtime_browser_e2e": "NOT_RUN"
     },
-    "scope": "retained results from the same unchanged commit",
-    "local_automated_verification": {
-      "unit_tests_passed": 513,
-      "lint": "passed",
-      "typecheck": "passed",
-      "build": "passed",
-      "evidence": "reports/git-main-review-20261025.json"
+    "lint": true,
+    "typecheck": true,
+    "unit_tests": 519,
+    "build": true,
+    "browser": {
+      "expected": 26,
+      "unexpected": 0,
+      "flaky": 0,
+      "skipped": 0
     },
-    "mock_browser_e2e": {
-      "passed": 24,
-      "failed": 0,
-      "skipped": 0,
-      "profile": "Pixel7 + DesktopChrome, intercepted API",
-      "actual_backend_ui_integration": false
-    },
-    "physical_phone": "NOT_RUN"
+    "scope": "mocked API, camera and sensors; blocked backend proxy; not real phone or backend acceptance",
+    "source_review": "app-dace4c1; incremental review recorded in eval/frontend_wiring.json"
   },
   "real_llm_calls": 0,
   "real_embedding_calls": 0,
@@ -305,9 +188,18 @@
     "production_wiring.py": "8ac771e0521e61ead369965cdaaa298dfb507e5afd9fcb2254300fe37f465ab3",
     "qa_inputs.py": "160e412e2f2710995e4ac71e216efff26fe952679d21473ce9b9bc84e6512d77",
     "rag_inputs.py": "e20f59ba94b507f8ce818b2ed0fd6d939d2bc39dd97b956326aa54c93a770aa1",
-    "recheck_rag_issue3.py": "ed277a0270e2ad13da5d9c983b6bcdee6006c162427960f07f02ac4c63a0e223",
+    "recheck_rag_issue3.py": "126fee7d2381871b0e84098f5ffdffb1992d932c885bfeb2d6690328abde3dc7",
     "run_backend_tests.py": "b77292319db36f1781bef51931e4914eaca7d8e0357c99400e23a8af12c67a1f",
     "run_checks.py": "c9ab2be62b13fc4863f13f9e7e77b07d27dced7b682620d44587113caad3b46e",
     "validate_data.py": "7d648fef59d9361abf691c49a5ad35d3da553dce695df6dbcc881707a7feecd9"
+  },
+  "supplementary_review": {
+    "evidence": "reports/latest-main-retest-20261026.json",
+    "standard_overall_exit_code": 0,
+    "full_product_accepted": false,
+    "main_rag_full_suite": "98/101; map metadata and POI expectation failures3",
+    "grounding_control": "5/6; source remains after citation truncation",
+    "agent_fixture_compatibility": "exit1; preflight mismatch, E2E NOT_RUN",
+    "real_models_tested": false
   }
 }
