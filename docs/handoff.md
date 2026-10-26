@@ -1,5 +1,15 @@
 # 한길 R6 인수인계
 
+## RAG 답글 재확인 — 2026-10-26 11:15 KST
+
+[RAG#3 마지막 R3 답글](https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6400838070)은 이전 확인과 같다(댓글5개). 후속 [PR4 답글](https://github.com/team-onetruck/oneload-rag/pull/4#issuecomment-6405968667)과 [QA#3 답글](https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6405968366)은 검색 top3≥90%와 최종 답변의 근거 없는 정보/무관 출처0으로 기준을 나누고 새 미관찰v4로 판정해 달라는 요청이다. R3 자체 실제 LLM 수치는 R6 독립 검증으로 합산하지 않는다.
+
+R6가 실행한315701a의 공개v3는22/24·차단8/24로 기존 검색 조건 미달이다. 기준 분리 제안은 합리적인 검토 대상이지만, 이번 확인만으로 기존 기준·실패·종료 상태를 바꾸지 않았다. 새 기준에는 거절 상태/문구·출처 기대를 먼저 명확히 정하고 질문·gold·정책을 사전 고정해야 한다. v4/실제 모델 판정은 NOT_RUN이다.
+
+PR4 최신 관찰 head는 **024f3076574d02aa2347c9a9bc486629355c42c4**, open/미병합이다. 마지막 전체 실행315701a와 마지막 정적 대조b6e3ad3을 구분하며 새 head의 동작 동일성이나 통과를 주장하지 않는다. [답글·판정·버전 관찰](../reports/rag-reply-review-20261026.json). 이번에는 재검사·실제 모델/임베딩·DB·배포·이슈/댓글 변경을 수행하지 않았다. 한길 관련 자료만 기록했다.
+
+---
+
 ## 본인 작성 이슈 점검 — 2026-10-26 10:46 KST
 
 [18건별 판정·최신 답글·정리 방향](authored-issue-review-20261026.md) · [구조화 관찰](../reports/authored-issue-review-20261026.json). mootwo0202 작성 한길 이슈는 **열림4·닫힘14**다. 계정의 다른 프로젝트 이슈는 채팅에서 전달하며 이 공개 저장소에는 내용을 복사하지 않았다.

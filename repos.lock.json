@@ -122,7 +122,7 @@
       "previous_qa_baseline_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
     }
   ],
-  "updated_at_kst": "2026-10-26T10:46:32.642210+09:00",
+  "updated_at_kst": "2026-10-26T11:15:04.173497+09:00",
   "rag_profile_evidence": [
     "reports/rag-integration-probe.json",
     "reports/production-api-probe.json",
@@ -234,9 +234,11 @@
       "merged": false,
       "evidence": "reports/latest-main-retest-20261026.json",
       "decision": "Regression only; v3 top3 22/24 but false positives16/24. Existing gate not met; fresh v4 not run.",
-      "latest_observed_head": "b6e3ad39d98125080109b5e5a2111d25bcc7beaf",
+      "latest_observed_head": "024f3076574d02aa2347c9a9bc486629355c42c4",
       "latest_static_review": "reports/authored-issue-review-20261026.json",
-      "latest_observed_head_executed": false
+      "latest_observed_head_executed": false,
+      "latest_observed_at_kst": "2026-10-26T11:15:04.173497+09:00",
+      "latest_reply_review": "reports/rag-reply-review-20261026.json"
     }
   },
   "qa_issue3_v3_review": {
@@ -283,5 +285,12 @@
     "evidence": "reports/authored-issue-review-20261026.json",
     "app_run": "40253863816: verify/e2e/deploy success; runtime endpoint not inspected",
     "agent_run": "40251210562: test/backend tests success, map Contract check failure, deploy skipped"
+  },
+  "rag_reply_review": {
+    "reviewed_at_kst": "2026-10-26T11:15:04.173497+09:00",
+    "evidence": "reports/rag-reply-review-20261026.json",
+    "issue3_latest_reply_unchanged": true,
+    "criteria_changed": false,
+    "fresh_v4": "NOT_RUN"
   }
 }

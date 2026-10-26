@@ -1,0 +1,50 @@
+{
+  "reviewed_at_kst": "2026-10-26T11:15:04.173497+09:00",
+  "scope": "Hangil RAG issue3 and its direct PR4/QA3 discussion only; read-only review, no issue/comment/state change or new test run",
+  "issue": {
+    "url": "https://github.com/team-onetruck/oneload-rag/issues/3",
+    "state": "open",
+    "comments": 5,
+    "last_R3_reply": "https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6400838070",
+    "last_R3_reply_updated_at_kst": "2026-10-26T02:35:00+09:00",
+    "changed_since_previous_review": false
+  },
+  "followups": {
+    "PR_reply": "https://github.com/team-onetruck/oneload-rag/pull/4#issuecomment-6405968667",
+    "QA_reply": "https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6405968366",
+    "proposal": "Search: positive top3>=90%; final response: no unsupported facts/prices or irrelevant sources; precommit new unseen v4 for judgment.",
+    "R3_self_reported_v3": {
+      "positive_retrieval_top3": "22/24",
+      "out_of_scope_retrieval_empty": "8/24",
+      "live_LLM_positive_answers": "20/24",
+      "live_LLM_unsupported_information": 0,
+      "live_LLM_metrics_independently_reproduced_by_R6": false
+    }
+  },
+  "R6_evidence": {
+    "last_executed_RAG_head": "315701aa803ccaa50d724e53b17b683af74ae8d3",
+    "report": "reports/latest-main-retest-20261026.json",
+    "public_v3_top3": "22/24",
+    "public_v3_out_of_scope_empty": "8/24",
+    "existing_search_gate_met": false,
+    "last_static_review_RAG_head": "b6e3ad39d98125080109b5e5a2111d25bcc7beaf",
+    "static_review_report": "reports/authored-issue-review-20261026.json"
+  },
+  "latest_PR_observation": {
+    "url": "https://github.com/team-onetruck/oneload-rag/pull/4",
+    "state": "open",
+    "merged": false,
+    "head": "024f3076574d02aa2347c9a9bc486629355c42c4",
+    "updated_at_kst": "2026-10-26T11:07:49+09:00",
+    "executed_by_R6": false,
+    "behavior_equivalent_to_previous_head_verified": false
+  },
+  "judgment": {
+    "proposal": "Separating retrieval and final-answer grounding is reasonable, but it is a proposed new evaluation contract, not proof that the existing failed search gate passed.",
+    "criteria_changed": false,
+    "new_v4": "NOT_RUN",
+    "live_model_embedding_calls": 0,
+    "issue_close": "No closure performed; agreement and independent new evaluation remain.",
+    "next": "Agree the new gate and exact refusal/source expectations, freeze questions/gold/policy before outputs, then compare regression and new evaluation without relabeling earlier failures."
+  }
+}
