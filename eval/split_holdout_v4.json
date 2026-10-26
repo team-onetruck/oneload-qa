@@ -1,0 +1,910 @@
+{
+  "dataset_version": "r6-split-holdout-v4",
+  "protocol": {
+    "version": "split-gates-v1",
+    "authorization": "User authorized split evaluation and actual model48 questions once, maximum USD1.",
+    "retrieval": {
+      "backend": "official-only MemorySearch",
+      "min_score": 0.25,
+      "k": 3,
+      "relative_cutoff": 0.5,
+      "positive_top3_min": 0.9,
+      "oos_empty": "diagnostic only under new contract; previous search-only gates/results remain historical"
+    },
+    "final_answer": {
+      "engine": "Actual LLMAgent21378b5 handle_message + candidate RAG; stateless text AgentContext using selected Backend map. Not HTTP/deployed runtime.",
+      "model": "gpt-4o-mini",
+      "prompt_version": "v5",
+      "positive_utility_min": 0.9,
+      "positive_utility": "answered, all required facts correct, supported by relevant visible citations and source metadata; abstain-all cannot pass",
+      "negative_contract": "cannot_answer AND sources empty AND no unsupported substantive claim; safe explanatory non-answer with another status is recorded separately, not automatically passed",
+      "unsupported_claims_max": 0,
+      "irrelevant_sources_max": 0,
+      "citation_errors_max": 0,
+      "semantic_review": "R6 evidence-based AI review recorded separately from pending human review; regex checks are diagnostics, not semantic proof.",
+      "refusal_wording": "Explanation of inability is permitted; no guessed amount, deadline, live state or exact location.",
+      "source_date": "Returned source verified_at must match frozen corpus; text need not repeat it when API sources provide it."
+    },
+    "budget": {
+      "max_usd": 1.0,
+      "max_questions": 48,
+      "repetitions": 1,
+      "max_api_attempts": 192,
+      "max_prompt_utf8_bytes": 32000,
+      "input_token_safety_overhead": 1024,
+      "max_output_tokens": 800,
+      "temperature": 0,
+      "sdk_retries": 0,
+      "timeout_s": 20,
+      "rate_input_usd_per_million": 0.15,
+      "rate_output_usd_per_million": 0.6,
+      "cached_input_discount_used": false,
+      "rate_source": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+      "reserve_before_call": "Reserve worst input token count bounded by UTF8 bytes plus1024, and full output token limit; stop before budget would exceed1. Unknown/failed usage keeps its full reservation."
+    },
+    "comparison": "Raw-question retrieval on main and candidate once each; live48-question final-answer evaluation on candidate only. No live main baseline claim.",
+    "publication": "Precommit dataset/gold/protocol before reading candidate implementation or search outputs. No tuning, relabel or primary repetition after results. Only QA code/docs modified."
+  },
+  "cases": [
+    {
+      "id": "V4-01-ko",
+      "family": "V4-01",
+      "lang": "ko",
+      "q": "만 12세 아이와 성인이 공항철도 직통열차를 탈 때 안내된 실제 판매 운임은 각각 얼마인가요? 정상운임표와 구별해 주세요.",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-arex-express"
+      ],
+      "required_facts": [
+        "Child aged6 to under13:9500 KRW; adult selling fare13000 KRW. Do not confuse with regular T1/T2 fares18500/19100."
+      ],
+      "source_locators": [
+        "doc-fare-arex-express.md:ko/en fare bullets"
+      ],
+      "diagnostic_patterns": [
+        "9[, ]?500",
+        "13[, ]?000"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-01-en",
+      "family": "V4-01",
+      "lang": "en",
+      "q": "For a twelve-year-old child and an adult taking AREX Express, what are the listed selling fares, rather than the regular-fare table?",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-arex-express"
+      ],
+      "required_facts": [
+        "Child aged6 to under13:9500 KRW; adult selling fare13000 KRW. Do not confuse with regular T1/T2 fares18500/19100."
+      ],
+      "source_locators": [
+        "doc-fare-arex-express.md:ko/en fare bullets"
+      ],
+      "diagnostic_patterns": [
+        "9[, ]?500",
+        "13[, ]?000"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-02-ko",
+      "family": "V4-02",
+      "lang": "ko",
+      "q": "서울역에서 공항화물청사역까지 일반열차 어른 교통카드 운임을 알려 주세요. 1회권이면 더 내는 운임과 별도 보증금도 구분해 주세요.",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-arex-allstop"
+      ],
+      "required_facts": [
+        "Transit-card fare4450; single-journey surcharge100; deposit500. Total5050 is valid only if the components remain correctly identified."
+      ],
+      "source_locators": [
+        "doc-fare-arex-allstop.md:Seoul destination list and single-journey bullet"
+      ],
+      "diagnostic_patterns": [
+        "4[, ]?450",
+        "100",
+        "500"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-02-en",
+      "family": "V4-02",
+      "lang": "en",
+      "q": "Please give the adult transit-card All-stop fare from Seoul to Airport Cargo Terminal, and separate the single-journey fare surcharge from its refundable deposit.",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-arex-allstop"
+      ],
+      "required_facts": [
+        "Transit-card fare4450; single-journey surcharge100; deposit500. Total5050 is valid only if the components remain correctly identified."
+      ],
+      "source_locators": [
+        "doc-fare-arex-allstop.md:Seoul destination list and single-journey bullet"
+      ],
+      "diagnostic_patterns": [
+        "4[, ]?450",
+        "100",
+        "500"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-03-ko",
+      "family": "V4-03",
+      "lang": "ko",
+      "q": "공항철도 일반열차를 김포공항에서 운서까지 타려는데 성인 선불카드 기준운임표의 금액이 궁금해요.",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-arex-allstop"
+      ],
+      "required_facts": [
+        "Gimpo Airport to Unseo:3450 KRW; same fare in either direction."
+      ],
+      "source_locators": [
+        "doc-fare-arex-allstop.md:full table Gimpo Airport row/Unseo column"
+      ],
+      "diagnostic_patterns": [
+        "3[, ]?450"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-03-en",
+      "family": "V4-03",
+      "lang": "en",
+      "q": "What adult prepaid-card fare does the AREX All-stop table list between Gimpo Airport and Unseo?",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-arex-allstop"
+      ],
+      "required_facts": [
+        "Gimpo Airport to Unseo:3450 KRW; same fare in either direction."
+      ],
+      "source_locators": [
+        "doc-fare-arex-allstop.md:full table Gimpo Airport row/Unseo column"
+      ],
+      "diagnostic_patterns": [
+        "3[, ]?450"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-04-ko",
+      "family": "V4-04",
+      "lang": "ko",
+      "q": "만 16세 여행객의 기후동행카드 7일권 충전 가격은 성인과 다른가요? 할인에 필요한 등록도 알려 주세요.",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "required_facts": [
+        "Youth13-18 seven-day charge13000; adult20000; youth verification on T-money Card&Pay website. Physical card3000 is separate if mentioned."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:Climate Card subsection"
+      ],
+      "diagnostic_patterns": [
+        "13[, ]?000",
+        "20[, ]?000"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-04-en",
+      "family": "V4-04",
+      "lang": "en",
+      "q": "Does a sixteen-year-old visitor pay a different seven-day Climate Card charge from an adult, and what verification is required?",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "required_facts": [
+        "Youth13-18 seven-day charge13000; adult20000; youth verification on T-money Card&Pay website. Physical card3000 is separate if mentioned."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:Climate Card subsection"
+      ],
+      "diagnostic_patterns": [
+        "13[, ]?000",
+        "20[, ]?000"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-05-ko",
+      "family": "V4-05",
+      "lang": "ko",
+      "q": "엠패스 7일권 안내 가격에는 보증금이 포함되나요? 반납할 때 돌려받는 금액과 환불 수수료를 나누어 설명해 주세요.",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "required_facts": [
+        "Seven-day listed price64500; included deposit5000; refund4500 and fee500. After17:00 price61500 may be mentioned only with that condition."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:Mpass subsection"
+      ],
+      "diagnostic_patterns": [
+        "5[, ]?000",
+        "4[, ]?500",
+        "500"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-05-en",
+      "family": "V4-05",
+      "lang": "en",
+      "q": "Does the listed seven-day Mpass price include its deposit? Separate the amount returned with the card from the refund fee.",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "required_facts": [
+        "Seven-day listed price64500; included deposit5000; refund4500 and fee500. After17:00 price61500 may be mentioned only with that condition."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:Mpass subsection"
+      ],
+      "diagnostic_patterns": [
+        "5[, ]?000",
+        "4[, ]?500",
+        "500"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-06-ko",
+      "family": "V4-06",
+      "lang": "ko",
+      "q": "티머니를 한 번 충전할 수 있는 최소·최대 금액과 충전 단위, 카드에 담아둘 수 있는 잔액 상한이 각각 어떻게 되나요?",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "required_facts": [
+        "Top-up1000 to90000 in1000 increments; maximum stored balance500000 KRW."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:T-money subsection"
+      ],
+      "diagnostic_patterns": [
+        "1[, ]?000",
+        "90[, ]?000",
+        "500[, ]?000"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-06-en",
+      "family": "V4-06",
+      "lang": "en",
+      "q": "What are the minimum and maximum T-money top-up amounts, the increment, and the maximum stored card balance?",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "required_facts": [
+        "Top-up1000 to90000 in1000 increments; maximum stored balance500000 KRW."
+      ],
+      "source_locators": [
+        "doc-fare-passes-cards.md:T-money subsection"
+      ],
+      "diagnostic_patterns": [
+        "1[, ]?000",
+        "90[, ]?000",
+        "500[, ]?000"
+      ],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-07-ko",
+      "family": "V4-07",
+      "lang": "ko",
+      "q": "서울 지하철의 새 키오스크에 신용카드 결제가 보여도 일반 선불 티머니 잔액은 카드 결제로 충전할 수 있나요?",
+      "kind": "positive",
+      "gold": [
+        "doc-tmoney-card"
+      ],
+      "required_facts": [
+        "Ordinary prepaid T-money top-up is KRW cash only even at new kiosks. Credit-card availability for single-journey/commuter/Climate products does not mean prepaid T-money top-up."
+      ],
+      "source_locators": [
+        "doc-tmoney-card.md:Top-up subsection"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-07-en",
+      "family": "V4-07",
+      "lang": "en",
+      "q": "Even if a new Seoul subway kiosk accepts credit cards, can I use one to top up an ordinary prepaid T-money balance?",
+      "kind": "positive",
+      "gold": [
+        "doc-tmoney-card"
+      ],
+      "required_facts": [
+        "Ordinary prepaid T-money top-up is KRW cash only even at new kiosks. Credit-card availability for single-journey/commuter/Climate products does not mean prepaid T-money top-up."
+      ],
+      "source_locators": [
+        "doc-tmoney-card.md:Top-up subsection"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-08-ko",
+      "family": "V4-08",
+      "lang": "ko",
+      "q": "1회용 교통카드의 보증금은 내린 날에만 돌려받나요? 제 실수로 카드가 훼손된 경우도 가능한지 궁금해요.",
+      "kind": "positive",
+      "gold": [
+        "doc-deposit-refund"
+      ],
+      "required_facts": [
+        "Deposit can be returned anytime if card is not lost/damaged; own-fault loss/damage means no deposit refund. No made-up deadline or penalty."
+      ],
+      "source_locators": [
+        "doc-deposit-refund.md:refund timing and lost/damaged bullet"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-08-en",
+      "family": "V4-08",
+      "lang": "en",
+      "q": "Must I reclaim a single-journey card deposit on the day I travel, and what if I damage the card through my own fault?",
+      "kind": "positive",
+      "gold": [
+        "doc-deposit-refund"
+      ],
+      "required_facts": [
+        "Deposit can be returned anytime if card is not lost/damaged; own-fault loss/damage means no deposit refund. No made-up deadline or penalty."
+      ],
+      "source_locators": [
+        "doc-deposit-refund.md:refund timing and lost/damaged bullet"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-09-ko",
+      "family": "V4-09",
+      "lang": "ko",
+      "q": "와우패스를 분실하면 앱에서 정지한 뒤 결제 잔액과 티머니 잔액을 둘 다 되찾을 수 있는 건가요?",
+      "kind": "positive",
+      "gold": [
+        "doc-wowpass"
+      ],
+      "required_facts": [
+        "Freeze WOWPASS balance and recover through reissue; T-money balance cannot be recovered. Do not invent reissue fee."
+      ],
+      "source_locators": [
+        "doc-wowpass.md:Withdrawal/refund/loss subsection"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-09-en",
+      "family": "V4-09",
+      "lang": "en",
+      "q": "If I freeze a lost WOWPASS in the app and reissue it, can I recover both the payment balance and the T-money balance?",
+      "kind": "positive",
+      "gold": [
+        "doc-wowpass"
+      ],
+      "required_facts": [
+        "Freeze WOWPASS balance and recover through reissue; T-money balance cannot be recovered. Do not invent reissue fee."
+      ],
+      "source_locators": [
+        "doc-wowpass.md:Withdrawal/refund/loss subsection"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-10-ko",
+      "family": "V4-10",
+      "lang": "ko",
+      "q": "기후동행카드 단기권을 충전하려고 공항철도역 충전기에 왔어요. 여기서 충전 가능한가요? 아니면 어느 지하철 노선의 충전기를 써야 하나요?",
+      "kind": "positive",
+      "gold": [
+        "doc-climate-card-short-term"
+      ],
+      "required_facts": [
+        "Cannot recharge at AREX/KORAIL/Shinbundang stations. Eligible Line1 Seoul-Cheongnyangni, Lines2-9, Ui-Sinseol and Sillim reload machines."
+      ],
+      "source_locators": [
+        "doc-climate-card-short-term.md:Buying and charging subsection"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-10-en",
+      "family": "V4-10",
+      "lang": "en",
+      "q": "I am at an AREX station reload machine with a short-term Climate Card. Can I charge it here, and which subway lines have eligible reload machines instead?",
+      "kind": "positive",
+      "gold": [
+        "doc-climate-card-short-term"
+      ],
+      "required_facts": [
+        "Cannot recharge at AREX/KORAIL/Shinbundang stations. Eligible Line1 Seoul-Cheongnyangni, Lines2-9, Ui-Sinseol and Sillim reload machines."
+      ],
+      "source_locators": [
+        "doc-climate-card-short-term.md:Buying and charging subsection"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-11-ko",
+      "family": "V4-11",
+      "lang": "ko",
+      "q": "일반열차가 아니라 공항철도 직통열차 이용 규정이 궁금해요. 티머니에 잔액이 있으면 별도 표 없이 개찰구를 통과해도 되나요?",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-arex-express",
+        "doc-arex-train-types"
+      ],
+      "required_facts": [
+        "Express requires a separately purchased ticket; a transit-card tap does not replace it."
+      ],
+      "source_locators": [
+        "doc-fare-arex-express.md:separate-ticket bullet",
+        "doc-arex-train-types.md:Express guidance"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-11-en",
+      "family": "V4-11",
+      "lang": "en",
+      "q": "For the AREX Express rather than the All-stop, does having T-money balance let me pass the gate without buying a separate ticket?",
+      "kind": "positive",
+      "gold": [
+        "doc-fare-arex-express",
+        "doc-arex-train-types"
+      ],
+      "required_facts": [
+        "Express requires a separately purchased ticket; a transit-card tap does not replace it."
+      ],
+      "source_locators": [
+        "doc-fare-arex-express.md:separate-ticket bullet",
+        "doc-arex-train-types.md:Express guidance"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-12-ko",
+      "family": "V4-12",
+      "lang": "ko",
+      "q": "공항철도 일반열차 1회권은 아직도 현금만 받나요? 해외 은행 신용카드를 가져온 여행객에 대한 안내를 확인해 주세요.",
+      "kind": "positive",
+      "gold": [
+        "doc-allstop-ticket"
+      ],
+      "required_facts": [
+        "Current stored terms/tourism guide permits credit-card single-journey purchases including visitors foreign-issued cards at AREX stations T2 toSeoul. Do not extend this to ordinary T-money top-up."
+      ],
+      "source_locators": [
+        "doc-allstop-ticket.md:AREX terms Article4-1 and tourism guide bullets"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-12-en",
+      "family": "V4-12",
+      "lang": "en",
+      "q": "Are AREX All-stop single-journey tickets still cash-only? Please check the guide for visitors carrying a foreign-bank credit card.",
+      "kind": "positive",
+      "gold": [
+        "doc-allstop-ticket"
+      ],
+      "required_facts": [
+        "Current stored terms/tourism guide permits credit-card single-journey purchases including visitors foreign-issued cards at AREX stations T2 toSeoul. Do not extend this to ordinary T-money top-up."
+      ],
+      "source_locators": [
+        "doc-allstop-ticket.md:AREX terms Article4-1 and tourism guide bullets"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-13-ko",
+      "family": "V4-13",
+      "lang": "ko",
+      "q": "공항철도 직통열차 승차권 영수증을 재발행할 때 받는 수수료가 정확히 얼마인지 알려 주세요.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Receipt reissue fee not documented; do not substitute train fare."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-13-en",
+      "family": "V4-13",
+      "lang": "en",
+      "q": "What exact fee is charged to reissue an AREX Express ticket receipt?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Receipt reissue fee not documented; do not substitute train fare."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-14-ko",
+      "family": "V4-14",
+      "lang": "ko",
+      "q": "기후동행카드 실물카드를 숙소로 택배 배송받으면 배송료가 얼마인가요?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Delivery fee not documented; do not substitute physical-card price."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-14-en",
+      "family": "V4-14",
+      "lang": "en",
+      "q": "How much is delivery of a physical Climate Card to my hotel?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Delivery fee not documented; do not substitute physical-card price."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-15-ko",
+      "family": "V4-15",
+      "lang": "ko",
+      "q": "엠패스 이용 중 열차가 지연되면 받는 보상금 산정표와 금액을 알려 주세요.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Delay compensation not documented; do not substitute pass prices or refund fee."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-15-en",
+      "family": "V4-15",
+      "lang": "en",
+      "q": "What compensation amounts are listed for train delays while using an Mpass?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Delay compensation not documented; do not substitute pass prices or refund fee."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-16-ko",
+      "family": "V4-16",
+      "lang": "ko",
+      "q": "WOWPASS 앱에서 해외카드로 충전할 때 카드사 3D 인증 수수료가 별도로 얼마 붙나요?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Issuer authentication fee not documented; withdrawal fee is a different service."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-16-en",
+      "family": "V4-16",
+      "lang": "en",
+      "q": "What separate issuer 3-D Secure fee is added when I top up WOWPASS with a foreign card in the app?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Issuer authentication fee not documented; withdrawal fee is a different service."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-17-ko",
+      "family": "V4-17",
+      "lang": "ko",
+      "q": "어린이용 티머니를 온라인으로 분실 재발급받을 때 우편 발송 비용은 얼마인가요?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Online replacement postage not documented; child base fare is unrelated."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-17-en",
+      "family": "V4-17",
+      "lang": "en",
+      "q": "What postage is charged for an online replacement of a lost child T-money card?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Online replacement postage not documented; child base fare is unrelated."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-18-ko",
+      "family": "V4-18",
+      "lang": "ko",
+      "q": "공항철도 직통열차의 반려동물 전용 좌석 추가요금표를 알려 주세요.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Pet-only seat surcharge not documented; do not invent availability or fee."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-18-en",
+      "family": "V4-18",
+      "lang": "en",
+      "q": "Please give the AREX Express pet-only seat surcharge table.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Pet-only seat surcharge not documented; do not invent availability or fee."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-19-ko",
+      "family": "V4-19",
+      "lang": "ko",
+      "q": "서울역 4호선 엘리베이터가 지금 고장 없이 운행 중인지 실시간으로 확인해 주세요.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "No live elevator status tool or evidence."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-19-en",
+      "family": "V4-19",
+      "lang": "en",
+      "q": "Check live whether the Line4 elevator at Seoul Station is operating without a fault right now.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "No live elevator status tool or evidence."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-20-ko",
+      "family": "V4-20",
+      "lang": "ko",
+      "q": "지금 서울역에서 다음 공항철도 일반열차가 출발할 때까지 정확히 몇 분 남았나요?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "No live timetable/departure tool; no countdown."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-20-en",
+      "family": "V4-20",
+      "lang": "en",
+      "q": "Exactly how many minutes remain until the next AREX All-stop departure from Seoul right now?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "No live timetable/departure tool; no countdown."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-21-ko",
+      "family": "V4-21",
+      "lang": "ko",
+      "q": "오늘 오후 6시 30분 서울역 직통열차가 현재 매진인지 조회해 주세요.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "No live seat/sold-out tool."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-21-en",
+      "family": "V4-21",
+      "lang": "en",
+      "q": "Check whether the 6:30 p.m. AREX Express from Seoul today is currently sold out.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "No live seat/sold-out tool."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-22-ko",
+      "family": "V4-22",
+      "lang": "ko",
+      "q": "보증금 환급기에 카드가 걸리면 계좌로 입금받기까지 공식 처리 기간이 며칠인가요?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Machine-error processing period not verified; ordinary refund procedure cannot establish a deadline."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-22-en",
+      "family": "V4-22",
+      "lang": "en",
+      "q": "If my card gets stuck in a deposit refund machine, what is the official processing time for a bank transfer?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Machine-error processing period not verified; ordinary refund procedure cannot establish a deadline."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-23-ko",
+      "family": "V4-23",
+      "lang": "ko",
+      "q": "서울역 공항철도 대합실에서 가장 가까운 WOWPASS 무인환전기의 기기 번호와 정확한 위치를 알려 주세요.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Exact nearest kiosk location/ID is explicitly unverified; do not fabricate a floor or machine ID."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-23-en",
+      "family": "V4-23",
+      "lang": "en",
+      "q": "Give the machine number and exact location of the nearest WOWPASS kiosk to the AREX concourse at Seoul Station.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Exact nearest kiosk location/ID is explicitly unverified; do not fabricate a floor or machine ID."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-24-ko",
+      "family": "V4-24",
+      "lang": "ko",
+      "q": "서울역 물품보관함에 50인치 대형 가방이 들어가는지 내부 가로·세로·높이를 알려 주세요.",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Locker dimensions and fit are outside the corpus; no fabricated measurements."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    },
+    {
+      "id": "V4-24-en",
+      "family": "V4-24",
+      "lang": "en",
+      "q": "What are the internal locker dimensions at Seoul Station, and will a 50-inch suitcase fit?",
+      "kind": "negative",
+      "gold": [],
+      "required_facts": [
+        "Locker dimensions and fit are outside the corpus; no fabricated measurements."
+      ],
+      "source_locators": [
+        "Official14-document corpus absence; human review pending"
+      ],
+      "diagnostic_patterns": [],
+      "human_review": "pending"
+    }
+  ]
+}

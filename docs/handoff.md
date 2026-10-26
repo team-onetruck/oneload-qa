@@ -1,5 +1,11 @@
 # 한길 R6 인수인계
 
+## 검색·답변 분리 v4 사전 고정 — 2026-10-26
+
+사용자가 분리 평가와 실제 모델48문항1회·최대USD1을 승인했다. [사전 규칙](split-v4-protocol.md)·eval/split_holdout_v4.json·meta를 후보024f307 구현/새 출력 확인 전에 먼저 commit/push한다. 검색top3≥90%와 최종답변의 근거/출처/거절·양성 유용성을 나눠 기록한다. 기존 v1~v3 실패·기준선은 보존하고 새 결과를 사전판정하지 않는다. 현재는 준비 단계이며 실제 호출/합격/종료는 아직 아니다.
+
+---
+
 ## RAG 답글 재확인 — 2026-10-26 11:15 KST
 
 [RAG#3 마지막 R3 답글](https://github.com/team-onetruck/oneload-rag/issues/3#issuecomment-6400838070)은 이전 확인과 같다(댓글5개). 후속 [PR4 답글](https://github.com/team-onetruck/oneload-rag/pull/4#issuecomment-6405968667)과 [QA#3 답글](https://github.com/team-onetruck/oneload-qa/issues/3#issuecomment-6405968366)은 검색 top3≥90%와 최종 답변의 근거 없는 정보/무관 출처0으로 기준을 나누고 새 미관찰v4로 판정해 달라는 요청이다. R3 자체 실제 LLM 수치는 R6 독립 검증으로 합산하지 않는다.
