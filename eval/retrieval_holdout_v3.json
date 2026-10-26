@@ -1,0 +1,505 @@
+{
+  "dataset_version": "r6-retrieval-holdout-v3",
+  "created_at_utc": "2026-10-26T00:02:18.313131+00:00",
+  "authored_by": "R6 synthetic bilingual corpus-grounded questions; no human-certified service answers",
+  "protocol": {
+    "primary_backend": "official-only MemorySearch",
+    "primary_min_score": 0.25,
+    "k": 3,
+    "relative_cutoff": 0.5,
+    "proposed_qa_gate": {
+      "positive_top3_recall_min": 0.9,
+      "out_of_scope_false_positives_max": 0
+    },
+    "positive_regression_guard": "No previously-passing positive query may become failing on exposed R6v1/v2 and R3 diagnostic sets. Report aggregate and per-case regressions.",
+    "evaluation": "Commit questions, gold and policy before reading candidate implementation or running either version. One run per pinned revision; no sweep, relabel or post-result threshold change.",
+    "comparison_unit": "Each pinned RAG revision with its own official knowledge metadata; candidate changes code and knowledge metadata, not an isolated code-only experiment.",
+    "exposure_note": "Candidate title/file list and issue discussion were seen; candidate implementation, new metadata contents and outputs were not. New wording overlaps known intents/corpus; paired translations are correlated, not48 independent users."
+  },
+  "cases": [
+    {
+      "id": "H3-01-ko",
+      "family": "express-regular-terminal-fares",
+      "lang": "ko",
+      "q": "직통열차 두 구간의 정상운임은 서로 같은가요? T1과 T2를 비교해 주세요.",
+      "gold": [
+        "doc-fare-arex-express"
+      ],
+      "source_locator": "normal fares for T1/T2",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-01-en",
+      "family": "express-regular-terminal-fares",
+      "lang": "en",
+      "q": "Are the AREX Express regular fares to Terminal 1 and Terminal 2 identical?",
+      "gold": [
+        "doc-fare-arex-express"
+      ],
+      "source_locator": "normal fares for T1/T2",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-02-ko",
+      "family": "express-senior-eligibility",
+      "lang": "ko",
+      "q": "직통열차 경로 할인을 받으려면 내국인이어야 하나요? 나이와 신분증 조건도 알고 싶어요.",
+      "gold": [
+        "doc-fare-arex-express"
+      ],
+      "source_locator": "senior discount eligibility",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-02-en",
+      "family": "express-senior-eligibility",
+      "lang": "en",
+      "q": "Does the AREX Express senior discount require Korean nationality and identification?",
+      "gold": [
+        "doc-fare-arex-express"
+      ],
+      "source_locator": "senior discount eligibility",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-03-ko",
+      "family": "allstop-seoul-geomam-fare",
+      "lang": "ko",
+      "q": "서울역에서 검암역까지 일반열차를 선불 교통카드로 타면 어른 운임은 얼마인가요?",
+      "gold": [
+        "doc-fare-arex-allstop"
+      ],
+      "source_locator": "Seoul row / Geomam column",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-03-en",
+      "family": "allstop-seoul-geomam-fare",
+      "lang": "en",
+      "q": "What is the adult prepaid-transit-card fare on the All-stop train from Seoul Station to Geomam?",
+      "gold": [
+        "doc-fare-arex-allstop"
+      ],
+      "source_locator": "Seoul row / Geomam column",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-04-ko",
+      "family": "allstop-gongdeok-gimpo-fare",
+      "lang": "ko",
+      "q": "일반열차 운임표에 공덕에서 김포공항까지 성인 교통카드 요금이 나와 있나요?",
+      "gold": [
+        "doc-fare-arex-allstop"
+      ],
+      "source_locator": "Gongdeok row / Gimpo column",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-04-en",
+      "family": "allstop-gongdeok-gimpo-fare",
+      "lang": "en",
+      "q": "Does the All-stop fare table list the adult transit-card fare from Gongdeok to Gimpo Airport?",
+      "gold": [
+        "doc-fare-arex-allstop"
+      ],
+      "source_locator": "Gongdeok row / Gimpo column",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-05-ko",
+      "family": "climate-two-day-card-separate",
+      "lang": "ko",
+      "q": "기후동행카드 2일권 충전액과 플라스틱 카드 값은 따로 내나요?",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "source_locator": "Climate Card short-term pass amounts and physical card price",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-05-en",
+      "family": "climate-two-day-card-separate",
+      "lang": "en",
+      "q": "For a two-day Climate Card pass, is the plastic card price separate from the loaded pass amount?",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "source_locator": "Climate Card short-term pass amounts and physical card price",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-06-ko",
+      "family": "mpass-evening-three-day",
+      "lang": "ko",
+      "q": "엠패스를 저녁 다섯 시 넘어서 살 때 3일권 가격 안내가 있나요?",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "source_locator": "Mpass prices after17:00",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-06-en",
+      "family": "mpass-evening-three-day",
+      "lang": "en",
+      "q": "Is there a listed price for a three-day Mpass bought after five in the evening?",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "source_locator": "Mpass prices after17:00",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-07-ko",
+      "family": "wowpass-vs-tmoney-refund-fees",
+      "lang": "ko",
+      "q": "WOWPASS 결제 잔액 출금 수수료와 티머니 잔액 환불 수수료가 같은가요?",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "source_locator": "WOWPASS withdrawal fee and T-money refund fee",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-07-en",
+      "family": "wowpass-vs-tmoney-refund-fees",
+      "lang": "en",
+      "q": "Are the WOWPASS payment-balance withdrawal fee and the T-money balance refund fee the same?",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "source_locator": "WOWPASS withdrawal fee and T-money refund fee",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-08-ko",
+      "family": "travel-card-plus-purchase-price",
+      "lang": "ko",
+      "q": "티머니트래블카드와 티머니트래블카드 플러스의 구매 가격 차이가 자료에 있나요?",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "source_locator": "Tmoney Travel Card / Plus sale prices",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-08-en",
+      "family": "travel-card-plus-purchase-price",
+      "lang": "en",
+      "q": "Can I compare the purchase prices of Tmoney Travel Card and Tmoney Travel Card Plus in the guide?",
+      "gold": [
+        "doc-fare-passes-cards"
+      ],
+      "source_locator": "Tmoney Travel Card / Plus sale prices",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-09-ko",
+      "family": "express-foreign-jcb-machine",
+      "lang": "ko",
+      "q": "직통열차 표를 현장 발매기에서 외국 발급 JCB 카드로 결제할 수 있나요?",
+      "gold": [
+        "doc-express-ticket"
+      ],
+      "source_locator": "payment methods / foreign card brands",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-09-en",
+      "family": "express-foreign-jcb-machine",
+      "lang": "en",
+      "q": "Can I pay for an Express ticket at the station machine using a foreign-issued JCB card?",
+      "gold": [
+        "doc-express-ticket"
+      ],
+      "source_locator": "payment methods / foreign card brands",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-10-ko",
+      "family": "allstop-foreign-card-situation",
+      "lang": "ko",
+      "q": "지갑에 외국 은행 신용카드만 있어요. 공항철도 일반열차 1회권을 그 카드로 발급받을 수 있나요?",
+      "gold": [
+        "doc-allstop-ticket"
+      ],
+      "source_locator": "credit cards / foreign-issued cards",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-10-en",
+      "family": "allstop-foreign-card-situation",
+      "lang": "en",
+      "q": "I only have a credit card from a bank abroad. Can I use it to buy an AREX All-stop single-journey ticket?",
+      "gold": [
+        "doc-allstop-ticket"
+      ],
+      "source_locator": "credit cards / foreign-issued cards",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-11-ko",
+      "family": "arex-line4-transfer-floor",
+      "lang": "ko",
+      "q": "공항철도에서 내려 지하철 4호선으로 갈아타려면 몇 층 표지를 따라가나요?",
+      "gold": [
+        "doc-seoul-arex-transfer",
+        "doc-allstop-ticket",
+        "doc-seoul-help-desks"
+      ],
+      "source_locator": "B3 transfer to Lines1/4",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-11-en",
+      "family": "arex-line4-transfer-floor",
+      "lang": "en",
+      "q": "After leaving the Airport Railroad, which floor has the signs for transferring to subway Line 4?",
+      "gold": [
+        "doc-seoul-arex-transfer",
+        "doc-allstop-ticket",
+        "doc-seoul-help-desks"
+      ],
+      "source_locator": "B3 transfer to Lines1/4",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-12-ko",
+      "family": "refund-after-gate",
+      "lang": "ko",
+      "q": "1회용 카드 보증금 환급기를 쓰려면 도착역 개찰구를 통과한 뒤여야 하나요?",
+      "gold": [
+        "doc-deposit-refund"
+      ],
+      "source_locator": "refund machine after arrival-station gate",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-12-en",
+      "family": "refund-after-gate",
+      "lang": "en",
+      "q": "Should I leave the arrival-station ticket gates before using the single-journey deposit refund machine?",
+      "gold": [
+        "doc-deposit-refund"
+      ],
+      "source_locator": "refund machine after arrival-station gate",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-13-ko",
+      "family": "express-window-seat-extra",
+      "lang": "ko",
+      "q": "공항철도 직통열차 좌석을 창가로 바꾸려면 추가 비용이 얼마인가요?",
+      "gold": [],
+      "source_locator": "No window-seat change surcharge in corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-13-en",
+      "family": "express-window-seat-extra",
+      "lang": "en",
+      "q": "How much extra does changing to a window seat on the AREX Express cost?",
+      "gold": [],
+      "source_locator": "No window-seat change surcharge in corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-14-ko",
+      "family": "station-locker-four-hours",
+      "lang": "ko",
+      "q": "공항철도 역사 안 짐 보관함을 네 시간 쓰는 요금이 궁금해요.",
+      "gold": [],
+      "source_locator": "No luggage-locker tariff in corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-14-en",
+      "family": "station-locker-four-hours",
+      "lang": "en",
+      "q": "What is the price for using a luggage locker inside an AREX station for four hours?",
+      "gold": [],
+      "source_locator": "No luggage-locker tariff in corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-15-ko",
+      "family": "tmoney-delivery-charge",
+      "lang": "ko",
+      "q": "티머니 카드를 숙소로 배송받으려면 배송비를 얼마나 내나요?",
+      "gold": [],
+      "source_locator": "No card-delivery tariff in corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-15-en",
+      "family": "tmoney-delivery-charge",
+      "lang": "en",
+      "q": "How much is delivery if I want a T-money card sent to my accommodation?",
+      "gold": [],
+      "source_locator": "No card-delivery tariff in corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-16-ko",
+      "family": "wowpass-reissue-cost",
+      "lang": "ko",
+      "q": "WOWPASS 카드를 분실해서 다시 발급받을 때 내는 수수료가 있나요?",
+      "gold": [],
+      "source_locator": "Reissue is mentioned but no reissue fee is stated",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-16-en",
+      "family": "wowpass-reissue-cost",
+      "lang": "en",
+      "q": "What fee is charged to reissue a lost WOWPASS card?",
+      "gold": [],
+      "source_locator": "Reissue is mentioned but no reissue fee is stated",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-17-ko",
+      "family": "climate-hanriver-ferry-fare",
+      "lang": "ko",
+      "q": "기후동행카드를 가지고 있는데 한강버스 1회 승선료가 얼마인가요?",
+      "gold": [],
+      "source_locator": "Exclusion is documented; water-bus fare is not",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-17-en",
+      "family": "climate-hanriver-ferry-fare",
+      "lang": "en",
+      "q": "I have a Climate Card; how much is a single ride on the Han River water bus?",
+      "gold": [],
+      "source_locator": "Exclusion is documented; water-bus fare is not",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-18-ko",
+      "family": "ktx-first-class-upgrade",
+      "lang": "ko",
+      "q": "서울역에서 KTX 특실로 바꾸려면 추가 요금을 얼마나 내나요?",
+      "gold": [],
+      "source_locator": "Transfer location exists; KTX upgrade tariff does not",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-18-en",
+      "family": "ktx-first-class-upgrade",
+      "lang": "en",
+      "q": "How much is the extra charge to upgrade to KTX first class at Seoul Station?",
+      "gold": [],
+      "source_locator": "Transfer location exists; KTX upgrade tariff does not",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-19-ko",
+      "family": "city-terminal-flight-change-fee",
+      "lang": "ko",
+      "q": "서울역 도심공항터미널에서 항공권 날짜를 바꾸는 수수료가 얼마예요?",
+      "gold": [],
+      "source_locator": "Airport-terminal services do not document airline change fees",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-19-en",
+      "family": "city-terminal-flight-change-fee",
+      "lang": "en",
+      "q": "What is the flight-date change fee at the Seoul Station city airport terminal?",
+      "gold": [],
+      "source_locator": "Airport-terminal services do not document airline change fees",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-20-ko",
+      "family": "station-wheelchair-rental-fee",
+      "lang": "ko",
+      "q": "공항철도 역에서 휠체어를 빌리는 비용을 알려 주세요.",
+      "gold": [],
+      "source_locator": "No wheelchair-rental tariff in corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-20-en",
+      "family": "station-wheelchair-rental-fee",
+      "lang": "en",
+      "q": "Please tell me the wheelchair rental charge at an Airport Railroad station.",
+      "gold": [],
+      "source_locator": "No wheelchair-rental tariff in corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-21-ko",
+      "family": "refund-exchange-rate",
+      "lang": "ko",
+      "q": "외국 카드로 티머니 잔액을 돌려받으면 어떤 환율로 계산되나요?",
+      "gold": [],
+      "source_locator": "Refund fee is not a foreign-card refund exchange rate",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-21-en",
+      "family": "refund-exchange-rate",
+      "lang": "en",
+      "q": "Which exchange rate is used when a T-money balance is refunded to a foreign card?",
+      "gold": [],
+      "source_locator": "Refund fee is not a foreign-card refund exchange rate",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-22-ko",
+      "family": "next-express-sold-out",
+      "lang": "ko",
+      "q": "지금 다음 직통열차 출발편이 매진됐는지 확인해 주세요.",
+      "gold": [],
+      "source_locator": "No live seat-inventory tool or corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-22-en",
+      "family": "next-express-sold-out",
+      "lang": "en",
+      "q": "Please check whether the very next Express departure is sold out right now.",
+      "gold": [],
+      "source_locator": "No live seat-inventory tool or corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-23-ko",
+      "family": "tmoney-refund-processing-days",
+      "lang": "ko",
+      "q": "티머니 단말기 오류로 환불을 신청하면 처리가 끝날 때까지 며칠 걸리나요?",
+      "gold": [],
+      "source_locator": "No processing-duration guarantee for terminal errors",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-23-en",
+      "family": "tmoney-refund-processing-days",
+      "lang": "en",
+      "q": "How many days does a refund take after a T-money terminal error?",
+      "gold": [],
+      "source_locator": "No processing-duration guarantee for terminal errors",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-24-ko",
+      "family": "lost-express-ticket-penalty",
+      "lang": "ko",
+      "q": "공항철도 직통열차 표를 잃어버렸을 때 벌금을 얼마나 내나요?",
+      "gold": [],
+      "source_locator": "No lost-Express-ticket penalty in corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    },
+    {
+      "id": "H3-24-en",
+      "family": "lost-express-ticket-penalty",
+      "lang": "en",
+      "q": "How much is the penalty for losing an AREX Express ticket?",
+      "gold": [],
+      "source_locator": "No lost-Express-ticket penalty in corpus",
+      "gold_status": "R6 corpus-grounded draft; pending independent human review"
+    }
+  ]
+}

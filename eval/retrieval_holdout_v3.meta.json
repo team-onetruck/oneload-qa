@@ -1,0 +1,19 @@
+{
+  "dataset_version": "r6-retrieval-holdout-v3",
+  "sha256": "ed34a3fa3237eff4833ff8f090eccde89cc813d8dac8cbee8f1657d751f02d6a",
+  "frozen_at_utc": "2026-10-26T00:02:18.313793+00:00",
+  "cases": 48,
+  "positive": 24,
+  "out_of_scope": 24,
+  "families": 24,
+  "search_outputs_seen_at_freeze": false,
+  "candidate_implementation_seen_at_freeze": false,
+  "candidate_title_and_changed_file_names_seen": true,
+  "before_rag_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+  "candidate_rag_commit": "d83e89fadf17c397b45103a8c0b529d6a539c38d",
+  "base_qa_commit": "c5b4292e476607c967aff92159ea601ba0cd7f98",
+  "no_exact_overlap_with_exposed_sets": true,
+  "positive_price_questions": 16,
+  "positive_non_price_questions": 8,
+  "note": "Freeze commit is recorded in result report to avoid a self-referential hash."
+}
