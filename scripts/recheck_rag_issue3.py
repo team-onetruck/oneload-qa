@@ -45,11 +45,9 @@ def validate_holdout(data, meta, known_ids, exposed_queries):
         raise ValueError("Holdout was not frozen before observing search results")
 
 
-def worker(root, qa, diagnostic_repo):
-    holdout_path, meta_path = (
-        qa / "eval/retrieval_holdout_v2.json",
-        qa / "eval/retrieval_holdout_v2.meta.json",
-    )
+def worker(root, qa, diagnostic_repo, holdout_path=None, meta_path=None):
+    holdout_path = holdout_path or qa / "eval/retrieval_holdout_v2.json"
+    meta_path = meta_path or qa / "eval/retrieval_holdout_v2.meta.json"
     data, meta = json.loads(holdout_path.read_text()), json.loads(meta_path.read_text())
     if digest(holdout_path) != meta["sha256"]:
         raise ValueError("Frozen dataset hash mismatch")
@@ -69,7 +67,13 @@ def worker(root, qa, diagnostic_repo):
         yaml.safe_load(r3_path.read_text())["cases"],
         yaml.safe_load(r3_hold_path.read_text())["cases"],
     )
-    exposed = {c["q"].strip().casefold() for c in [*r6, *r3, *r3_hold]}
+    v2_path = qa / "eval/retrieval_holdout_v2.json"
+    exposed_v2 = (
+        json.loads(v2_path.read_text())["cases"]
+        if holdout_path.resolve() != v2_path.resolve()
+        else []
+    )
+    exposed = {c["q"].strip().casefold() for c in [*r6, *r3, *r3_hold, *exposed_v2]}
     validate_holdout(data, meta, set(inputs["document_ids"]), exposed)
     # Fixed protocol. All questions/gold and the gate were committed before this line.
     fresh = score(data["cases"], search)
@@ -109,6 +113,9 @@ def worker(root, qa, diagnostic_repo):
             "r3_exposed": digest(r3_hold_path),
         },
     }
+    if exposed_v2:
+        result["r6_exposed_v2"] = score(exposed_v2, search)
+        result["dataset_hashes"]["r6_exposed_v2"] = digest(v2_path)
     _, final = load_rag(root, data["protocol"]["primary_min_score"])
     if final != inputs or digest(holdout_path) != meta["sha256"]:
         raise ValueError("Inputs changed during evaluation")
@@ -122,14 +129,24 @@ def main():
     ap.add_argument("--freeze-repo", type=Path)
     ap.add_argument("--freeze-commit")
     ap.add_argument("--output", type=Path, required=True)
+    ap.add_argument("--dataset", type=Path, help="Precommitted dataset; default: v2")
+    ap.add_argument("--metadata", type=Path, help="Matching precommitted metadata")
     ap.add_argument("--worker-root", type=Path, help=argparse.SUPPRESS)
     ap.add_argument("--diagnostic-repo", type=Path, help=argparse.SUPPRESS)
     args = ap.parse_args()
     qa = Path(__file__).resolve().parents[1]
+    holdout_path = (args.dataset or qa / "eval/retrieval_holdout_v2.json").resolve()
+    meta_path = (args.metadata or qa / "eval/retrieval_holdout_v2.meta.json").resolve()
     if args.output.exists():
         ap.error("Use a new report path")
     if args.worker_root:
-        result = worker(args.worker_root.resolve(), qa, args.diagnostic_repo.resolve())
+        result = worker(
+            args.worker_root.resolve(),
+            qa,
+            args.diagnostic_repo.resolve(),
+            holdout_path,
+            meta_path,
+        )
     else:
         if not all(
             (args.before_root, args.after_root, args.freeze_repo, args.freeze_commit)
@@ -137,12 +154,13 @@ def main():
             ap.error(
                 "before-root, after-root, freeze-repo and freeze-commit are required"
             )
-        for name in ("retrieval_holdout_v2.json", "retrieval_holdout_v2.meta.json"):
+        for path in (holdout_path, meta_path):
+            relative = path.relative_to(qa).as_posix()
             committed = subprocess.check_output(
-                ["git", "show", f"{args.freeze_commit}:eval/{name}"],
+                ["git", "show", f"{args.freeze_commit}:{relative}"],
                 cwd=args.freeze_repo,
             )
-            if committed != (qa / "eval" / name).read_bytes():
+            if committed != path.read_bytes():
                 ap.error("Holdout differs from the pre-evaluation Git commit")
         args.output.parent.mkdir(parents=True, exist_ok=True)
         measurements = {}
@@ -156,25 +174,55 @@ def main():
                     str(root.resolve()),
                     "--diagnostic-repo",
                     str(args.after_root.resolve() / "oneload-rag"),
+                    "--dataset",
+                    str(holdout_path),
+                    "--metadata",
+                    str(meta_path),
                     "--output",
                     str(child),
                 ],
                 check=True,
             )
             measurements[label] = json.loads(child.read_text())
-        data = json.loads((qa / "eval/retrieval_holdout_v2.json").read_text())
+        data = json.loads(holdout_path.read_text())
         held = measurements["after"]["fresh_holdout"]
         gate = data["protocol"]["proposed_qa_gate"]
         acceptable = (
             held["top3"] / held["positive_total"] >= gate["positive_top3_recall_min"]
             and held["false_positives"] <= gate["out_of_scope_false_positives_max"]
         )
+        regressions = []
+        for group, previous in measurements["before"].items():
+            if (
+                group == "fresh_holdout"
+                or not isinstance(previous, dict)
+                or "rows" not in previous
+            ):
+                continue
+            current = {r["id"]: r for r in measurements["after"][group]["rows"]}
+            for row in previous["rows"]:
+                if row["gold"] and row["passed"] and not current[row["id"]]["passed"]:
+                    regressions.append(
+                        {
+                            "group": group,
+                            "id": row["id"],
+                            "question": row["question"],
+                            "gold": row["gold"],
+                            "before": row["retrieved"],
+                            "after": current[row["id"]]["retrieved"],
+                        }
+                    )
+        fresh_met = acceptable
+        if data["protocol"].get("positive_regression_guard"):
+            acceptable = acceptable and not regressions
         result = {
             "executed_at_utc": datetime.now(UTC).isoformat(),
             "dataset_version": data["dataset_version"],
             "freeze_commit": args.freeze_commit,
             "protocol": data["protocol"],
             "measurements": measurements,
+            "fresh_holdout_gate_met": fresh_met,
+            "positive_regressions": regressions,
             "decision": "fresh_holdout_gate_met"
             if acceptable
             else "fresh_holdout_gate_not_met",
