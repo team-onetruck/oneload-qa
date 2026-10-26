@@ -1,0 +1,193 @@
+{
+  "recorded_at_kst": "2026-10-26T11:46:10.754745+09:00",
+  "qa_base": "846f0ecd6dfd3b9151a7ee2a4524fd88da1d46cd",
+  "freeze_commit": "a4aa8495c5db4bfaf19a1149e09789fdd1e242f3",
+  "dataset_sha256": "a9ecdf632bfaf110dc12d1615974023a52d4a48b135e03b554975650e5365dd7",
+  "scope": "Hangil only. Separate raw retrieval, controlled answer contract and live factual answer evaluation. No product source modification.",
+  "authorization": {
+    "split_evaluation_requested": true,
+    "initial_live_authorization": "48 questions once, maximum USD1",
+    "latest_user_steering": "Actual answer evaluation deferred after authentication failure. No further live calls without explicit resume."
+  },
+  "criteria": {
+    "version": "split-gates-v1",
+    "raw_positive_retrieval_top3_min": 0.9,
+    "retrieval_oos_empty": "diagnostic",
+    "final_unsupported_claims_max": 0,
+    "final_irrelevant_sources_max": 0,
+    "final_citation_errors_max": 0,
+    "final_negative_contract": "cannot_answer and sources0 and no unsupported substantive claim",
+    "positive_answer_utility_min": 0.9,
+    "semantic_assessment": "Cannot be proved by FakeLLM or regex; evidence-based R6 review and pending human review distinguished",
+    "historical_search_gates_and_failures_relabelled": false
+  },
+  "retrieval": {
+    "main": {
+      "positive_total": 24,
+      "top1": 15,
+      "top3": 16,
+      "out_of_scope_total": 24,
+      "out_of_scope_empty": 18,
+      "false_positives": 6,
+      "objective": 0.6153846153846154
+    },
+    "candidate": {
+      "positive_total": 24,
+      "top1": 17,
+      "top3": 19,
+      "out_of_scope_total": 24,
+      "out_of_scope_empty": 14,
+      "false_positives": 10,
+      "objective": 0.6031746031746031
+    },
+    "candidate_gate_met": false,
+    "candidate_missing_positive_ids": [
+      "V4-06-en",
+      "V4-08-ko",
+      "V4-11-ko",
+      "V4-11-en",
+      "V4-12-en"
+    ],
+    "evidence": [
+      "reports/split-v4-retrieval-main.json",
+      "reports/split-v4-retrieval-candidate.json"
+    ],
+    "post_result_scope_diagnostic": {
+      "note": "Scope-reason/coverage inspection only, not a repeated retrieval scoring run or threshold adjustment.",
+      "rows": [
+        {
+          "id": "V4-06-en",
+          "reason": "out_of_scope coverage=0.23",
+          "coverage": 0.22671351504750253
+        },
+        {
+          "id": "V4-08-ko",
+          "reason": "out_of_scope coverage=0.24",
+          "coverage": 0.23738107006701797
+        },
+        {
+          "id": "V4-11-ko",
+          "reason": "out_of_scope coverage=0.20",
+          "coverage": 0.19531786514018007
+        },
+        {
+          "id": "V4-11-en",
+          "reason": "out_of_scope coverage=0.19",
+          "coverage": 0.18543236978867364
+        },
+        {
+          "id": "V4-12-en",
+          "reason": "out_of_scope coverage=0.24",
+          "coverage": 0.23686641725518098
+        }
+      ]
+    }
+  },
+  "answer_contract_control": {
+    "passed": 5,
+    "total": 6,
+    "failures": [
+      "citation-after-truncation"
+    ],
+    "mode": "controlled FakeLLM; no factual accuracy claim",
+    "evidence": "reports/split-v4-answer-contract.json"
+  },
+  "actual_answer_quality": {
+    "status": "DEFERRED_BY_USER_AFTER_AUTH_FAILURE",
+    "completed_questions": 0,
+    "planned_questions": 48,
+    "api_requests_attempted": 1,
+    "successful_model_responses": 0,
+    "failure_class": "AuthenticationError",
+    "unsupported_facts": null,
+    "irrelevant_sources": null,
+    "positive_utility": null,
+    "negative_refusal_quality": null,
+    "human_review": "pending",
+    "evidence": "reports/split-v4-live-attempt.json",
+    "cost": {
+      "usage_returned": false,
+      "actual_billed_cost_usd": null,
+      "conservative_reservation_usd": "0.00114405",
+      "reservation_is_not_actual_charge": true,
+      "authorized_total_cap_usd": 1,
+      "resume_must_carry_previous_reservation": true
+    }
+  },
+  "qa_tests": {
+    "tests": 61,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "quality_acceptance": {
+    "overall": "NOT_ACCEPTED",
+    "retrieval": "FAIL:19/24 below90%",
+    "mock_contract": "FAIL:visible citation truncation leaves extra source",
+    "live_semantics": "NOT_RUN/USER_DEFERRED",
+    "RAG_or_QA_issue_closed": false
+  },
+  "reproducibility": {
+    "model": "gpt-4o-mini",
+    "prompt_version": "v5",
+    "provider": "official OpenAI API",
+    "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+    "retries": 0,
+    "max_prompt_utf8_bytes": 32000,
+    "input_token_safety_overhead": 1024,
+    "max_output_tokens": 800,
+    "attempt_cap": 192,
+    "output_overwrite_rejected": true,
+    "runner_hashes_at_execution": {
+      "retrieval_main": "ce4b10eea5e68feee929e40a8269303df9346b335df465246b031e7196610d68",
+      "retrieval_candidate": "ce4b10eea5e68feee929e40a8269303df9346b335df465246b031e7196610d68",
+      "live_attempt": "ce4b10eea5e68feee929e40a8269303df9346b335df465246b031e7196610d68"
+    },
+    "final_script_sha256": "f510be1d6d4512897117770198d4db939460890f9902dcd59495d2673ce58b0a",
+    "post_attempt_runner_change": "Added safe local key selection and carried-budget resume for zero-answer auth failure; no primary search/model rerun. Added2 resume regression tests."
+  },
+  "preservation": {
+    "oneload-app": {
+      "head": "1d0fc11a81b3ea9c316d14621d8dd57361bb18de",
+      "clean": true,
+      "head_matches_before": true
+    },
+    "oneload-backend": {
+      "head": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+      "clean": true,
+      "head_matches_before": true
+    },
+    "oneload_agent": {
+      "head": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+      "clean": true,
+      "head_matches_before": true
+    },
+    "oneload-data": {
+      "head": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+      "clean": true,
+      "head_matches_before": true
+    },
+    "oneload-rag": {
+      "head": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+      "clean": true,
+      "head_matches_before": true
+    },
+    "oneload-infra": {
+      "head": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+      "clean": true,
+      "head_matches_before": true
+    }
+  },
+  "limitations": {
+    "gold_human_review": "48 cases pending",
+    "synthetic_bilingual_pairs_correlated": true,
+    "same_corpus_intent_overlap": true,
+    "now_exposed_v4": "Regression only for future revised implementations; no same-set optimization/approval. First live evaluation on same frozen code requires explicit user resume.",
+    "HTTP_or_deployed_runtime": "NOT_RUN in this experiment",
+    "live_main_answer_baseline": "NOT_RUN",
+    "real_embedding_calls": 0,
+    "field_or_phone_validation": false,
+    "database_or_deployment_used": false,
+    "raw_logs_or_credentials_published": false
+  }
+}

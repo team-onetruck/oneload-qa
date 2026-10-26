@@ -1,0 +1,112 @@
+{
+  "executed_at_utc": "2026-10-26T02:41:31.086500+00:00",
+  "commits": {
+    "oneload-app": "1d0fc11a81b3ea9c316d14621d8dd57361bb18de",
+    "oneload-backend": "2ebd94d3b93999a196fdfbec8dfa4331a3d51451",
+    "oneload_agent": "21378b5ba02651a2e2f2f84b47612df4ea6cea5b",
+    "oneload-data": "72d5eb89eeae8fa3870e4c90da0b06c6f9717c98",
+    "oneload-infra": "6cf4a65ca6e34f0e673dadf428e2c2e925d20107",
+    "oneload-rag": "024f3076574d02aa2347c9a9bc486629355c42c4"
+  },
+  "map": {
+    "source_repository": "oneload-data",
+    "path": "maps/seoul-station.json",
+    "map_id": "seoul-station",
+    "version": "2026-10-25.2",
+    "sha256": "6c30e61ebb8ee26517458567e843e9c6168dc630873f9841b644b3f88cc79b18"
+  },
+  "checks": [
+    {
+      "id": "one-citation",
+      "passed": true,
+      "expected": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket"
+        ]
+      },
+      "actual": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket"
+        ]
+      }
+    },
+    {
+      "id": "no-answer",
+      "passed": true,
+      "expected": {
+        "status": "cannot_answer",
+        "sources": []
+      },
+      "actual": {
+        "status": "cannot_answer",
+        "sources": []
+      }
+    },
+    {
+      "id": "invalid-citation",
+      "passed": true,
+      "expected": {
+        "status": "cannot_answer",
+        "sources": []
+      },
+      "actual": {
+        "status": "cannot_answer",
+        "sources": []
+      }
+    },
+    {
+      "id": "missing-citation",
+      "passed": true,
+      "expected": {
+        "status": "cannot_answer",
+        "sources": []
+      },
+      "actual": {
+        "status": "cannot_answer",
+        "sources": []
+      }
+    },
+    {
+      "id": "both-citations",
+      "passed": true,
+      "expected": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types"
+        ]
+      },
+      "actual": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types"
+        ]
+      }
+    },
+    {
+      "id": "citation-after-truncation",
+      "passed": false,
+      "expected": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket"
+        ]
+      },
+      "actual": {
+        "status": "answered",
+        "sources": [
+          "doc-allstop-ticket",
+          "doc-arex-train-types"
+        ]
+      }
+    }
+  ],
+  "passed": 5,
+  "total": 6,
+  "live_model_calls": 0,
+  "live_embedding_calls": 0,
+  "scope": "Preselected two-document hits and controlled FakeLLM strings. Mechanical citation/refusal contract only; not factuality, real-model accuracy or retrieval quality."
+}

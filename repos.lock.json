@@ -11,7 +11,7 @@
     "note": "Latest full main standard suite exit0, QA51; supplementary upstream and quality failures remain separately recorded.",
     "reviewed_head_commit": "e8dd0a12078a8d60d84e844430924dce8d5f0e33",
     "merged_commit": "0bb40cb76d09819be6d8f0d66b11b360cbfcbb0c",
-    "latest_observed_main_commit": "d52e390fb1436203e76434887a881511f2af34a7",
+    "latest_observed_main_commit": "a4aa8495c5db4bfaf19a1149e09789fdd1e242f3",
     "open_issue_review_evidence": "reports/open-issue-review-20261025.json",
     "current_main_review_execution_commit": "55e0d53 + reviewed Frontend profile app-dace4c1; publication commit is self",
     "issue3_tested_code_base": "7fc51da + generalized dataset selector and exposed-positive guard (runner SHA in retrieval-v3-review report); final commit is self"
@@ -122,7 +122,7 @@
       "previous_qa_baseline_commit": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93"
     }
   ],
-  "updated_at_kst": "2026-10-26T11:15:04.173497+09:00",
+  "updated_at_kst": "2026-10-26T11:46:10.754745+09:00",
   "rag_profile_evidence": [
     "reports/rag-integration-probe.json",
     "reports/production-api-probe.json",
@@ -292,5 +292,22 @@
     "issue3_latest_reply_unchanged": true,
     "criteria_changed": false,
     "fresh_v4": "NOT_RUN"
+  },
+  "split_evaluation_v4": {
+    "document": "docs/split-v4-review.md",
+    "evidence": "reports/split-v4-summary.json",
+    "freeze_commit": "a4aa8495c5db4bfaf19a1149e09789fdd1e242f3",
+    "dataset_sha256": "a9ecdf632bfaf110dc12d1615974023a52d4a48b135e03b554975650e5365dd7",
+    "main_rag": "f99704d3ced3cfd351eaaf65f0aeeefdc8882f93",
+    "candidate_rag": "024f3076574d02aa2347c9a9bc486629355c42c4",
+    "retrieval_main_top3": "16/24",
+    "retrieval_candidate_top3": "19/24",
+    "new_retrieval_gate_met": false,
+    "answer_contract": "FakeLLM5/6; not factuality",
+    "live_phase": "USER_DEFERRED after auth error;0/48 outputs",
+    "latest_qa_tests": 61,
+    "main_baseline_replaced": false,
+    "actual_answer_calls_allowed_now": false,
+    "latest_user_request": "Defer actual answer evaluation"
   }
 }
